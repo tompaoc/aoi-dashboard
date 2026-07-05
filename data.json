@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05 15:04",
+  "updated": "2026-07-05 15:32",
   "regime": "?",
   "daily": {
     "start": 5000.0,
@@ -121,7 +121,36 @@
     "closed": 0,
     "wins": 0,
     "winrate": 0,
-    "open": [],
+    "open": [
+      {
+        "sym": "JSTUSDT",
+        "side": "LONG",
+        "entry": 0.09091,
+        "now": 0.09091,
+        "stop": 0.0904,
+        "trail": 0.09070453,
+        "rr": 2.0,
+        "uR": 0.0,
+        "risk_pct": 0.56,
+        "notional": 1000.0,
+        "reason": "",
+        "tf": "15m"
+      },
+      {
+        "sym": "JASMYUSDT",
+        "side": "LONG",
+        "entry": 0.00476,
+        "now": 0.00476,
+        "stop": 0.00455,
+        "trail": 0.00461995,
+        "rr": 2.0,
+        "uR": 0.0,
+        "risk_pct": 4.41,
+        "notional": 1000.0,
+        "reason": "",
+        "tf": "15m"
+      }
+    ],
     "recent": []
   }
 }

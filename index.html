@@ -70,6 +70,13 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 .mini .v{font-size:20px;font-weight:800;margin-top:3px}
 .foot{text-align:center;color:var(--muted);font-size:11px;padding:6px 12px 20px}
 .blink{animation:bl 2s infinite} @keyframes bl{50%{opacity:.4}}
+#search{flex:0 0 140px}
+.fav{cursor:pointer;font-size:18px;user-select:none;color:var(--muted)}
+.watchbar{display:flex;gap:6px;flex-wrap:wrap;padding:8px 13px;border-bottom:1px solid var(--line);align-items:center}
+.wchip{background:#0a1526;border:1px solid var(--line);border-radius:20px;padding:3px 7px 3px 11px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px}
+.wchip:hover{border-color:var(--cyan)} .wchip .x{color:var(--muted);font-weight:700}.wchip .x:hover{color:var(--red)}
+.hotrow{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer;font-size:12.5px}
+.hotrow:hover{color:var(--cyan)} .hotrow .rk{color:var(--muted);display:inline-block;width:20px}
 @media(max-width:1050px){.grid{grid-template-columns:1fr}.botbar{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -108,6 +115,9 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
   <!-- CENTER -->
   <main class="panel chartwrap">
     <div class="ctrl">
+      <input id="search" list="coinlist" placeholder="🔍 ค้นหา..." autocomplete="off">
+      <datalist id="coinlist"></datalist>
+      <span class="fav" id="fav" title="เพิ่ม/เอาออก watchlist">☆</span>
       <select id="coin"></select>
       <span class="tf active" data-tf="15m">15m</span>
       <span class="tf" data-tf="1h">1h</span>
@@ -115,6 +125,7 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
       <span class="tf" data-tf="1d">1D</span>
       <span class="price-now mono" id="cprice">—</span>
     </div>
+    <div class="watchbar" id="watchbar"><span class="lbl">⭐ Watchlist:</span></div>
     <div id="chart"></div>
     <div style="padding:6px 13px;font-size:11px;color:var(--muted)">
       <span class="cy">━</span> EMA10 &nbsp; <span class="up">━</span> EMA25 &nbsp;
@@ -131,6 +142,8 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
       <div class="regime q" id="regime">—</div>
       <div id="prices"><div class="lbl">กำลังโหลดราคา…</div></div>
     </div>
+    <div class="ph"><span class="t">🔥 Volume มาแรง (24h)</span></div>
+    <div class="pb" id="hot"><div class="lbl">กำลังโหลด…</div></div>
   </aside>
 </div>
 
@@ -278,7 +291,50 @@ function buildCoinList(){
   document.getElementById('coin').innerHTML=set.map(s=>`<option value="${s}">${s.replace('USDT','/USDT')}</option>`).join('');
   document.getElementById('coin').value=COIN;
 }
-function selectCoin(s){COIN=s;document.getElementById('coin').value=s;loadChart();}
+function selectCoin(s){COIN=s;const sel=document.getElementById('coin');
+  if([...sel.options].some(op=>op.value===s))sel.value=s;loadChart();updateFav();}
+
+// ---- search เหรียญ (ทุกเหรียญ USDT บน Binance) ----
+let ALLSYMS=[];
+async function loadSymbols(){
+  try{const d=await(await fetch(`${BINANCE}/exchangeInfo`)).json();
+    ALLSYMS=d.symbols.filter(s=>s.status==='TRADING'&&s.quoteAsset==='USDT').map(s=>s.symbol).sort();
+    document.getElementById('coinlist').innerHTML=ALLSYMS.map(s=>`<option value="${s}">${s.replace('USDT','/USDT')}</option>`).join('');
+  }catch(e){console.warn('syms',e);}
+}
+document.getElementById('search').addEventListener('change',e=>{
+  let v=e.target.value.toUpperCase().trim().replace('/','');if(!v)return;
+  if(!v.endsWith('USDT'))v+='USDT';
+  if(ALLSYMS.includes(v)){selectCoin(v);e.target.value='';}
+  else e.target.value='';
+});
+
+// ---- watchlist (จำในเบราว์เซอร์ localStorage) ----
+function getWatch(){try{return JSON.parse(localStorage.getItem('aoi_watch')||'[]');}catch(e){return[];}}
+function setWatch(w){localStorage.setItem('aoi_watch',JSON.stringify(w));renderWatch();}
+function renderWatch(){
+  const w=getWatch();
+  document.getElementById('watchbar').innerHTML='<span class="lbl">⭐ Watchlist:</span>'+
+    (w.length?w.map(s=>`<span class="wchip" onclick="selectCoin('${s}')">${s.replace('USDT','')}<span class="x" onclick="event.stopPropagation();rmWatch('${s}')">×</span></span>`).join('')
+     :'<span class="muted" style="font-size:12px">กด ☆ ข้างช่องค้นหา เพื่อเพิ่มเหรียญที่ดูอยู่</span>');
+  updateFav();
+}
+function rmWatch(s){setWatch(getWatch().filter(x=>x!==s));}
+function updateFav(){const f=document.getElementById('fav');const inW=getWatch().includes(COIN);
+  f.textContent=inW?'★':'☆';f.style.color=inW?'var(--amber)':'var(--muted)';}
+document.getElementById('fav').addEventListener('click',()=>{
+  const w=getWatch();setWatch(w.includes(COIN)?w.filter(x=>x!==COIN):[...w,COIN]);});
+
+// ---- อันดับเหรียญ volume มาแรง (top gainer + วอลุ่มพอ) ----
+async function loadHot(){
+  try{const d=await(await fetch(`${BINANCE}/ticker/24hr`)).json();
+    const rows=d.filter(t=>t.symbol.endsWith('USDT')&&+t.quoteVolume>5e6&&!/(UP|DOWN|BULL|BEAR)USDT$/.test(t.symbol))
+      .sort((a,b)=>+b.priceChangePercent-+a.priceChangePercent).slice(0,10);
+    document.getElementById('hot').innerHTML=rows.map((t,i)=>`<div class="hotrow" onclick="selectCoin('${t.symbol}')">
+      <span><span class="rk">${i+1}</span>${t.symbol.replace('USDT','')}</span>
+      <span class="up">▲ ${(+t.priceChangePercent).toFixed(1)}%</span></div>`).join('');
+  }catch(e){console.warn('hot',e);}
+}
 
 // ---- clock ----
 function tick(){const d=new Date();
@@ -293,8 +349,8 @@ document.querySelectorAll('.tf').forEach(b=>b.addEventListener('click',()=>{
   b.classList.add('active');TF=b.dataset.tf;loadChart();}));
 
 initChart();tick();setInterval(tick,1000);
-loadBot();loadChart();loadPrices();loadMacro();
-setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);
+loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();
+setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);
 </script>
 </body>
 </html>

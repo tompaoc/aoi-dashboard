@@ -1,0 +1,165 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AOI Bot — Dashboard</title>
+<style>
+:root{--bg:#f4f6f9;--card:#ffffff;--ink:#141922;--muted:#6c7787;--line:#e5e9f0;
+--pos:#0f9d63;--neg:#dc4b45;--warn:#c6881a;--accent:#0f766e;--chip:#eef2f7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);
+font-variant-numeric:tabular-nums;line-height:1.5;padding:20px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.brand{font-size:15px;font-weight:700;letter-spacing:.02em}
+.brand .dot{color:var(--accent)}
+.sub{font-size:12px;color:var(--muted)}
+.pill{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.02em}
+.pill.pos{background:#dff3ea;color:#0b7a4d} .pill.neg{background:#fbe6e5;color:#b23430}
+.pill.warn{background:#f8eeda;color:#96660f}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:14px 0}
+.hero .big{font-size:42px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.hero .big .u{font-size:18px;font-weight:600;color:var(--muted)}
+.hero .line{font-size:14px;color:var(--muted);margin-top:6px}
+.safety{display:flex;align-items:center;gap:8px;margin-top:14px;padding:10px 14px;border-radius:10px;font-size:13.5px;font-weight:600}
+.safety.pos{background:#eef8f2;color:#0b7a4d} .safety.warn{background:#fbf3e2;color:#96660f} .safety.neg{background:#fceceb;color:#b23430}
+.spark{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+.spark .h{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi .v{font-size:19px;font-weight:750} .kpi .l{font-size:11px;color:var(--muted);margin-top:1px}
+h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:20px 0 10px;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+.pc-top{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.side{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;letter-spacing:.03em}
+.side.pos{background:#dff3ea;color:#0b7a4d} .side.neg{background:#fbe6e5;color:#b23430}
+.sym{font-weight:700;font-size:15px} .upr{margin-left:auto;font-weight:700;font-size:13.5px}
+.pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;font-size:13px}
+.pc-grid .lbl{color:var(--muted);margin-right:6px} .pc-grid .val{font-weight:600}
+.pc-reason{font-size:11.5px;color:var(--muted);margin-top:9px;padding-top:8px;border-top:1px solid var(--line)}
+.pos{color:var(--pos)} .neg{color:var(--neg)} .muted{color:var(--muted)}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:20px;padding:3px 11px;font-size:12.5px;font-weight:600}
+.al-row{font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+td.num{text-align:right;font-weight:600}
+.foot{margin-top:22px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;line-height:1.7}
+.stale{display:none;background:var(--warn);color:#fff;border-radius:10px;padding:11px 14px;margin-bottom:12px;font-weight:600;font-size:13.5px}
+@media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.hero .big{font-size:34px}}
+</style></head><body><div class="wrap">
+<div class="top">
+  <div><div class="brand">AOI <span class="dot">●</span> Trading Bot</div>
+       <div class="sub">อัปเดต 2026-07-05 12:39 · เงินสมมติ (paper)</div></div>
+  <span class="pill neg">ตลาด: หมี</span>
+</div>
+<div id="stale" class="stale"></div>
+<div class="hero">
+  <div class="big">4,897 <span class="u">USDT</span></div>
+  <div class="line"><span class="neg" style="font-weight:700">-2.1%</span> จากเริ่ม 5,000 · ถือ 6 ไม้ · เงินสด 2,355</div>
+  <div class="safety pos">🛡️ ความปลอดภัย: ปกติ · drawdown 2.1% (เบรก 15% / kill 25%) · เสี่ยงเปิดรวม 5.7%</div>
+</div>
+<div class="spark"><div class="h">เส้นเงิน (equity)</div><svg viewBox="0 0 680 90" width="100%" height="90" preserveAspectRatio="none" style="display:block"><polygon points="0,90 0.0,0.0 226.7,90.0 453.3,73.9 680.0,87.1 680,90" fill="var(--neg)" opacity="0.08"/><polyline points="0.0,0.0 226.7,90.0 453.3,73.9 680.0,87.1" fill="none" stroke="var(--neg)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+<div class="kpis">
+  <div class="kpi"><div class="v neg">-2.1%</div><div class="l">ผลตอบแทน</div></div>
+  <div class="kpi"><div class="v">0%</div><div class="l">Win (3 ไม้)</div></div>
+  <div class="kpi"><div class="v">0.00</div><div class="l">Profit factor</div></div>
+  <div class="kpi"><div class="v neg">2.1%</div><div class="l">Max drawdown</div></div>
+</div>
+<h2>ไม้ที่ถืออยู่ (6)</h2>
+<div class="grid"><div class="card pos-card">
+      <div class="pc-top">
+        <span class="side neg">SHORT</span>
+        <span class="sym">BCHUSDT</span>
+        <span class="upr neg">-3.9% · -0.42R</span>
+      </div>
+      <div class="pc-grid">
+        <div><span class="lbl">เข้า</span><span class="val">227.7</span></div>
+        <div><span class="lbl">ตอนนี้</span><span class="val">236.5</span></div>
+        <div><span class="lbl">SL จริง</span><span class="val neg">248.734</span></div>
+        <div><span class="lbl">ขนาด</span><span class="val">500</span></div>
+      </div>
+      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 1.7</div>
+    </div><div class="card pos-card">
+      <div class="pc-top">
+        <span class="side neg">SHORT</span>
+        <span class="sym">TONUSDT</span>
+        <span class="upr pos">-0.0% · +0.00R</span>
+      </div>
+      <div class="pc-grid">
+        <div><span class="lbl">เข้า</span><span class="val">1.6</span></div>
+        <div><span class="lbl">ตอนนี้</span><span class="val">1.6</span></div>
+        <div><span class="lbl">SL จริง</span><span class="val neg">1.71144</span></div>
+        <div><span class="lbl">ขนาด</span><span class="val">468</span></div>
+      </div>
+      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 1.8</div>
+    </div><div class="card pos-card">
+      <div class="pc-top">
+        <span class="side neg">SHORT</span>
+        <span class="sym">ICPUSDT</span>
+        <span class="upr pos">+0.7% · +0.07R</span>
+      </div>
+      <div class="pc-grid">
+        <div><span class="lbl">เข้า</span><span class="val">2.228</span></div>
+        <div><span class="lbl">ตอนนี้</span><span class="val">2.212</span></div>
+        <div><span class="lbl">SL จริง</span><span class="val neg">2.34348</span></div>
+        <div><span class="lbl">ขนาด</span><span class="val">475</span></div>
+      </div>
+      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 2.0</div>
+    </div><div class="card pos-card">
+      <div class="pc-top">
+        <span class="side neg">SHORT</span>
+        <span class="sym">HEMIUSDT</span>
+        <span class="upr pos">+4.7% · +0.28R</span>
+      </div>
+      <div class="pc-grid">
+        <div><span class="lbl">เข้า</span><span class="val">0.00486</span></div>
+        <div><span class="lbl">ตอนนี้</span><span class="val">0.00463</span></div>
+        <div><span class="lbl">SL จริง</span><span class="val neg">0.00542338</span></div>
+        <div><span class="lbl">ขนาด</span><span class="val">298</span></div>
+      </div>
+      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 2.0</div>
+    </div><div class="card pos-card">
+      <div class="pc-top">
+        <span class="side neg">SHORT</span>
+        <span class="sym">POLUSDT</span>
+        <span class="upr pos">+1.4% · +0.18R</span>
+      </div>
+      <div class="pc-grid">
+        <div><span class="lbl">เข้า</span><span class="val">0.07394</span></div>
+        <div><span class="lbl">ตอนนี้</span><span class="val">0.07291</span></div>
+        <div><span class="lbl">SL จริง</span><span class="val neg">0.0771691</span></div>
+        <div><span class="lbl">ขนาด</span><span class="val">500</span></div>
+      </div>
+      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 2.0</div>
+    </div><div class="card pos-card">
+      <div class="pc-top">
+        <span class="side neg">SHORT</span>
+        <span class="sym">SAGAUSDT</span>
+        <span class="upr neg">-0.6% · -0.03R</span>
+      </div>
+      <div class="pc-grid">
+        <div><span class="lbl">เข้า</span><span class="val">0.01371</span></div>
+        <div><span class="lbl">ตอนนี้</span><span class="val">0.01379</span></div>
+        <div><span class="lbl">SL จริง</span><span class="val neg">0.0147365</span></div>
+        <div><span class="lbl">ขนาด</span><span class="val">300</span></div>
+      </div>
+      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 2.0</div>
+    </div></div>
+<h2>เฝ้าอยู่ (watchlist) + เตือนล่าสุด</h2>
+<div class="card"><div class="chips"><span class="chip">ONDO</span><span class="chip">BTC</span><span class="chip">ETH</span><span class="chip">SOL</span><span class="chip">HEMI</span><span class="chip">SAGA</span></div><div class="muted" style="font-size:13px">ยังไม่มีเตือน — เงียบ = ปกติ</div></div>
+<h2>ไม้ที่ปิดแล้ว</h2>
+<table><tr><th>เหรียญ</th><th class="num">เข้า</th><th class="num">ออก</th><th class="num">ผล(R)</th><th class="num">กำไร</th><th>วัน</th></tr><tr><td>🔴 MIRAUSDT</td><td class="num">0.0459</td><td class="num">0.0571</td><td class="num neg">-1.00R</td><td class="num neg">-50</td><td class="muted">2026-07-03</td></tr><tr><td>🔴 SLPUSDT</td><td class="num">0.000537</td><td class="num">0.000556</td><td class="num neg">-0.14R</td><td class="num neg">-7</td><td class="muted">2026-07-03</td></tr><tr><td>🔴 MIRAUSDT</td><td class="num">0.0461</td><td class="num">0.0571</td><td class="num neg">-1.00R</td><td class="num neg">-50</td><td class="muted">2026-07-03</td></tr></table>
+<div class="foot">
+🤖 บอทเดินเองทุกเช้า 8 โมง · เฝ้าเหรียญทุกชั่วโมง · ทุกอย่างเป็นเงินสมมติ (ยังไม่ใช้เงินจริง)<br>
+🔴 หยุดฉุกเฉิน: สร้างไฟล์ KILL_SWITCH ในโฟลเดอร์ phase1 · ⏸️ พัก: ปิด task ใน Task Scheduler
+</div>
+</div>
+<script>
+(function(){var last=new Date("2026-07-05 12:39".replace(" ","T"));
+var days=Math.floor((Date.now()-last)/86400000);
+if(days>=2){var b=document.getElementById("stale");b.style.display="block";
+b.innerHTML="⚠️ ข้อมูลเก่า "+days+" วัน (ล่าสุด 2026-07-05 12:39) — บอทอาจไม่ได้รัน เช็ค Task Scheduler + bot_log.txt";}})();
+</script>
+</body></html>

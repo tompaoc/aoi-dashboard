@@ -1,165 +1,300 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8">
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AOI Bot — Dashboard</title>
+<title>AOI Terminal</title>
+<script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
 <style>
-:root{--bg:#f4f6f9;--card:#ffffff;--ink:#141922;--muted:#6c7787;--line:#e5e9f0;
---pos:#0f9d63;--neg:#dc4b45;--warn:#c6881a;--accent:#0f766e;--chip:#eef2f7}
+:root{
+  --bg:#060a12; --panel:#0c121f; --panel2:#0a0f1a; --line:rgba(0,190,255,.16);
+  --cyan:#00d4ff; --green:#00e676; --red:#ff3b5c; --amber:#ffb020; --purple:#9b6bff;
+  --ink:#dbe7f5; --muted:#5f7089; --glow:0 0 12px rgba(0,190,255,.25);
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);
-font-variant-numeric:tabular-nums;line-height:1.5;padding:20px 16px 60px}
-.wrap{max-width:720px;margin:0 auto}
-.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:4px}
-.brand{font-size:15px;font-weight:700;letter-spacing:.02em}
-.brand .dot{color:var(--accent)}
-.sub{font-size:12px;color:var(--muted)}
-.pill{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.02em}
-.pill.pos{background:#dff3ea;color:#0b7a4d} .pill.neg{background:#fbe6e5;color:#b23430}
-.pill.warn{background:#f8eeda;color:#96660f}
-.hero{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:14px 0}
-.hero .big{font-size:42px;font-weight:800;letter-spacing:-.02em;line-height:1}
-.hero .big .u{font-size:18px;font-weight:600;color:var(--muted)}
-.hero .line{font-size:14px;color:var(--muted);margin-top:6px}
-.safety{display:flex;align-items:center;gap:8px;margin-top:14px;padding:10px 14px;border-radius:10px;font-size:13.5px;font-weight:600}
-.safety.pos{background:#eef8f2;color:#0b7a4d} .safety.warn{background:#fbf3e2;color:#96660f} .safety.neg{background:#fceceb;color:#b23430}
-.spark{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:14px}
-.spark .h{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.kpi .v{font-size:19px;font-weight:750} .kpi .l{font-size:11px;color:var(--muted);margin-top:1px}
-h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:20px 0 10px;font-weight:700}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
-.pc-top{display:flex;align-items:center;gap:8px;margin-bottom:9px}
-.side{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;letter-spacing:.03em}
-.side.pos{background:#dff3ea;color:#0b7a4d} .side.neg{background:#fbe6e5;color:#b23430}
-.sym{font-weight:700;font-size:15px} .upr{margin-left:auto;font-weight:700;font-size:13.5px}
-.pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;font-size:13px}
-.pc-grid .lbl{color:var(--muted);margin-right:6px} .pc-grid .val{font-weight:600}
-.pc-reason{font-size:11.5px;color:var(--muted);margin-top:9px;padding-top:8px;border-top:1px solid var(--line)}
-.pos{color:var(--pos)} .neg{color:var(--neg)} .muted{color:var(--muted)}
-.empty{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
-.chip{background:var(--chip);border:1px solid var(--line);border-radius:20px;padding:3px 11px;font-size:12.5px;font-weight:600}
-.al-row{font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)}
-table{width:100%;border-collapse:collapse;font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-th,td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--line)}
-th{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
-td.num{text-align:right;font-weight:600}
-.foot{margin-top:22px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;line-height:1.7}
-.stale{display:none;background:var(--warn);color:#fff;border-radius:10px;padding:11px 14px;margin-bottom:12px;font-weight:600;font-size:13.5px}
-@media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.hero .big{font-size:34px}}
-</style></head><body><div class="wrap">
-<div class="top">
-  <div><div class="brand">AOI <span class="dot">●</span> Trading Bot</div>
-       <div class="sub">อัปเดต 2026-07-05 12:39 · เงินสมมติ (paper)</div></div>
-  <span class="pill neg">ตลาด: หมี</span>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:
+  radial-gradient(1200px 600px at 50% -10%,#0d1830 0%,var(--bg) 60%);
+  color:var(--ink);min-height:100vh;font-variant-numeric:tabular-nums;overflow-x:hidden}
+.mono{font-family:'Consolas','SF Mono',monospace}
+.up{color:var(--green)} .down{color:var(--red)} .cy{color:var(--cyan)}
+/* header ticker */
+.topbar{display:flex;align-items:center;gap:22px;padding:9px 18px;border-bottom:1px solid var(--line);
+  background:linear-gradient(90deg,#0a1424,#0c1a30);font-size:12.5px;overflow:hidden;white-space:nowrap}
+.topbar .brand{font-weight:800;letter-spacing:.06em;color:var(--cyan);text-shadow:var(--glow);font-size:15px}
+.topbar .tk{color:var(--muted)} .topbar .tk b{color:var(--ink);font-weight:600}
+/* layout */
+.grid{display:grid;grid-template-columns:300px 1fr 300px;gap:12px;padding:12px;align-items:start}
+.panel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+  border-radius:10px;box-shadow:inset 0 0 30px rgba(0,120,200,.04),0 0 0 1px rgba(0,0,0,.3)}
+.ph{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;border-bottom:1px solid var(--line)}
+.ph .t{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);text-shadow:var(--glow);font-weight:700}
+.pb{padding:12px 13px}
+.lbl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.big{font-size:26px;font-weight:800;letter-spacing:-.01em}
+/* recommendation */
+.rec{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:800}
+.badge{font-size:11px;font-weight:800;padding:3px 9px;border-radius:5px;letter-spacing:.05em}
+.badge.s{background:rgba(255,59,92,.16);color:var(--red);border:1px solid rgba(255,59,92,.4)}
+.badge.l{background:rgba(0,230,118,.14);color:var(--green);border:1px solid rgba(0,230,118,.4)}
+.kv{display:flex;justify-content:space-between;padding:5px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,.03)}
+.kv .k{color:var(--muted)}
+/* gauge */
+.gauge{position:relative;width:120px;height:120px;margin:6px auto}
+.gauge .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.gauge .num b{font-size:30px;font-weight:800} .gauge .num span{font-size:10px;color:var(--muted)}
+/* chart */
+.chartwrap{min-height:520px}
+.ctrl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 13px;border-bottom:1px solid var(--line)}
+select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);border-radius:6px;
+  padding:6px 10px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.tf.active{background:rgba(0,212,255,.15);border-color:var(--cyan);color:var(--cyan)}
+.price-now{margin-left:auto;font-size:22px;font-weight:800}
+#chart{width:100%;height:440px}
+/* right prices */
+.prow{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.prow .sym{font-weight:700;font-size:13.5px} .prow .px{font-size:13px}
+.prow .chg{font-size:12px;font-weight:700;min-width:62px;text-align:right}
+.clock{text-align:center;padding:4px 0 10px} .clock .t{font-size:30px;font-weight:800;letter-spacing:.04em;color:var(--cyan);text-shadow:var(--glow)}
+.regime{text-align:center;font-weight:800;font-size:15px;padding:8px;border-radius:8px;margin-bottom:8px}
+.regime.bear{background:rgba(255,59,92,.12);color:var(--red)} .regime.bull{background:rgba(0,230,118,.12);color:var(--green)}
+.regime.sideway,.regime.q{background:rgba(255,176,32,.12);color:var(--amber)}
+/* positions */
+.pos{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12.5px}
+.pos .r1{display:flex;justify-content:space-between;align-items:center}
+.pos .side{font-size:10px;font-weight:800;padding:1px 6px;border-radius:4px}
+.pos .side.LONG{background:rgba(0,230,118,.14);color:var(--green)} .pos .side.SHORT{background:rgba(255,59,92,.14);color:var(--red)}
+/* bottom */
+.botbar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 12px 14px}
+.mini{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.mini .l{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mini .v{font-size:20px;font-weight:800;margin-top:3px}
+.foot{text-align:center;color:var(--muted);font-size:11px;padding:6px 12px 20px}
+.blink{animation:bl 2s infinite} @keyframes bl{50%{opacity:.4}}
+@media(max-width:1050px){.grid{grid-template-columns:1fr}.botbar{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="brand">◆ AOI TERMINAL</span>
+  <span class="tk">REGIME <b id="tk-regime" class="cy">—</b></span>
+  <span class="tk">FEAR &amp; GREED <b id="tk-fng">—</b></span>
+  <span class="tk">BTC DOMINANCE <b id="tk-dom">—</b></span>
+  <span class="tk">FUNDING <b id="tk-fund">—</b></span>
+  <span class="tk">พอร์ต Daily <b id="tk-daily">—</b></span>
+  <span class="tk">15m <b id="tk-15m">—</b></span>
+  <span class="tk blink" style="margin-left:auto;color:var(--green)">● LIVE</span>
 </div>
-<div id="stale" class="stale"></div>
-<div class="hero">
-  <div class="big">4,897 <span class="u">USDT</span></div>
-  <div class="line"><span class="neg" style="font-weight:700">-2.1%</span> จากเริ่ม 5,000 · ถือ 6 ไม้ · เงินสด 2,355</div>
-  <div class="safety pos">🛡️ ความปลอดภัย: ปกติ · drawdown 2.1% (เบรก 15% / kill 25%) · เสี่ยงเปิดรวม 5.7%</div>
+
+<div class="grid">
+  <!-- LEFT -->
+  <aside class="panel">
+    <div class="ph"><span class="t">Signal · แนะนำ</span><span class="lbl" id="sig-coin">—</span></div>
+    <div class="pb">
+      <div class="lbl">Trade Recommendation</div>
+      <div class="rec" id="rec">—</div>
+      <div class="lbl" style="margin-top:2px">Entry ราคาปัจจุบัน</div>
+      <div class="big mono" id="rec-entry">—</div>
+      <div class="gauge"><canvas id="gauge" width="120" height="120"></canvas>
+        <div class="num"><b id="gauge-n" class="cy">—</b><span>SIGNAL</span></div></div>
+      <div class="kv"><span class="k">🎯 TP / เป้า</span><span class="mono up" id="rec-tp">—</span></div>
+      <div class="kv"><span class="k">🛡️ Stop / SL</span><span class="mono down" id="rec-sl">—</span></div>
+      <div class="kv"><span class="k">RR</span><span class="mono" id="rec-rr">—</span></div>
+    </div>
+    <div class="ph"><span class="t">ไม้ที่ถือ (Daily+15m)</span></div>
+    <div class="pb" id="positions" style="max-height:260px;overflow:auto"><div class="lbl">กำลังโหลด…</div></div>
+  </aside>
+
+  <!-- CENTER -->
+  <main class="panel chartwrap">
+    <div class="ctrl">
+      <select id="coin"></select>
+      <span class="tf active" data-tf="15m">15m</span>
+      <span class="tf" data-tf="1h">1h</span>
+      <span class="tf" data-tf="4h">4h</span>
+      <span class="tf" data-tf="1d">1D</span>
+      <span class="price-now mono" id="cprice">—</span>
+    </div>
+    <div id="chart"></div>
+    <div style="padding:6px 13px;font-size:11px;color:var(--muted)">
+      <span class="cy">━</span> EMA10 &nbsp; <span class="up">━</span> EMA25 &nbsp;
+      <span class="down">━</span> EMA50 &nbsp; <span style="color:var(--purple)">━</span> EMA200
+      &nbsp;·&nbsp; เส้นขาว=จุดเข้าไม้ · เส้นแดง=SL (ถ้าบอทถือเหรียญนี้)
+    </div>
+  </main>
+
+  <!-- RIGHT -->
+  <aside class="panel">
+    <div class="ph"><span class="t">Market Dashboard</span><span class="lbl" id="today">—</span></div>
+    <div class="pb">
+      <div class="clock"><div class="t mono" id="clock">--:--:--</div><div class="lbl" id="clockd">—</div></div>
+      <div class="regime q" id="regime">—</div>
+      <div id="prices"><div class="lbl">กำลังโหลดราคา…</div></div>
+    </div>
+  </aside>
 </div>
-<div class="spark"><div class="h">เส้นเงิน (equity)</div><svg viewBox="0 0 680 90" width="100%" height="90" preserveAspectRatio="none" style="display:block"><polygon points="0,90 0.0,0.0 226.7,90.0 453.3,73.9 680.0,87.1 680,90" fill="var(--neg)" opacity="0.08"/><polyline points="0.0,0.0 226.7,90.0 453.3,73.9 680.0,87.1" fill="none" stroke="var(--neg)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
-<div class="kpis">
-  <div class="kpi"><div class="v neg">-2.1%</div><div class="l">ผลตอบแทน</div></div>
-  <div class="kpi"><div class="v">0%</div><div class="l">Win (3 ไม้)</div></div>
-  <div class="kpi"><div class="v">0.00</div><div class="l">Profit factor</div></div>
-  <div class="kpi"><div class="v neg">2.1%</div><div class="l">Max drawdown</div></div>
+
+<div class="botbar">
+  <div class="mini"><div class="l">Market Cap รวม</div><div class="v mono" id="m-mcap">—</div></div>
+  <div class="mini"><div class="l">BTC Dominance</div><div class="v mono" id="m-dom">—</div></div>
+  <div class="mini"><div class="l">Fear &amp; Greed</div><div class="v mono" id="m-fng">—</div></div>
+  <div class="mini"><div class="l">พอร์ตรวม (paper)</div><div class="v mono" id="m-port">—</div></div>
 </div>
-<h2>ไม้ที่ถืออยู่ (6)</h2>
-<div class="grid"><div class="card pos-card">
-      <div class="pc-top">
-        <span class="side neg">SHORT</span>
-        <span class="sym">BCHUSDT</span>
-        <span class="upr neg">-3.9% · -0.42R</span>
-      </div>
-      <div class="pc-grid">
-        <div><span class="lbl">เข้า</span><span class="val">227.7</span></div>
-        <div><span class="lbl">ตอนนี้</span><span class="val">236.5</span></div>
-        <div><span class="lbl">SL จริง</span><span class="val neg">248.734</span></div>
-        <div><span class="lbl">ขนาด</span><span class="val">500</span></div>
-      </div>
-      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 1.7</div>
-    </div><div class="card pos-card">
-      <div class="pc-top">
-        <span class="side neg">SHORT</span>
-        <span class="sym">TONUSDT</span>
-        <span class="upr pos">-0.0% · +0.00R</span>
-      </div>
-      <div class="pc-grid">
-        <div><span class="lbl">เข้า</span><span class="val">1.6</span></div>
-        <div><span class="lbl">ตอนนี้</span><span class="val">1.6</span></div>
-        <div><span class="lbl">SL จริง</span><span class="val neg">1.71144</span></div>
-        <div><span class="lbl">ขนาด</span><span class="val">468</span></div>
-      </div>
-      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 1.8</div>
-    </div><div class="card pos-card">
-      <div class="pc-top">
-        <span class="side neg">SHORT</span>
-        <span class="sym">ICPUSDT</span>
-        <span class="upr pos">+0.7% · +0.07R</span>
-      </div>
-      <div class="pc-grid">
-        <div><span class="lbl">เข้า</span><span class="val">2.228</span></div>
-        <div><span class="lbl">ตอนนี้</span><span class="val">2.212</span></div>
-        <div><span class="lbl">SL จริง</span><span class="val neg">2.34348</span></div>
-        <div><span class="lbl">ขนาด</span><span class="val">475</span></div>
-      </div>
-      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 2.0</div>
-    </div><div class="card pos-card">
-      <div class="pc-top">
-        <span class="side neg">SHORT</span>
-        <span class="sym">HEMIUSDT</span>
-        <span class="upr pos">+4.7% · +0.28R</span>
-      </div>
-      <div class="pc-grid">
-        <div><span class="lbl">เข้า</span><span class="val">0.00486</span></div>
-        <div><span class="lbl">ตอนนี้</span><span class="val">0.00463</span></div>
-        <div><span class="lbl">SL จริง</span><span class="val neg">0.00542338</span></div>
-        <div><span class="lbl">ขนาด</span><span class="val">298</span></div>
-      </div>
-      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 2.0</div>
-    </div><div class="card pos-card">
-      <div class="pc-top">
-        <span class="side neg">SHORT</span>
-        <span class="sym">POLUSDT</span>
-        <span class="upr pos">+1.4% · +0.18R</span>
-      </div>
-      <div class="pc-grid">
-        <div><span class="lbl">เข้า</span><span class="val">0.07394</span></div>
-        <div><span class="lbl">ตอนนี้</span><span class="val">0.07291</span></div>
-        <div><span class="lbl">SL จริง</span><span class="val neg">0.0771691</span></div>
-        <div><span class="lbl">ขนาด</span><span class="val">500</span></div>
-      </div>
-      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 2.0</div>
-    </div><div class="card pos-card">
-      <div class="pc-top">
-        <span class="side neg">SHORT</span>
-        <span class="sym">SAGAUSDT</span>
-        <span class="upr neg">-0.6% · -0.03R</span>
-      </div>
-      <div class="pc-grid">
-        <div><span class="lbl">เข้า</span><span class="val">0.01371</span></div>
-        <div><span class="lbl">ตอนนี้</span><span class="val">0.01379</span></div>
-        <div><span class="lbl">SL จริง</span><span class="val neg">0.0147365</span></div>
-        <div><span class="lbl">ขนาด</span><span class="val">300</span></div>
-      </div>
-      <div class="pc-reason">เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0 · RR 2.0</div>
-    </div></div>
-<h2>เฝ้าอยู่ (watchlist) + เตือนล่าสุด</h2>
-<div class="card"><div class="chips"><span class="chip">ONDO</span><span class="chip">BTC</span><span class="chip">ETH</span><span class="chip">SOL</span><span class="chip">HEMI</span><span class="chip">SAGA</span></div><div class="muted" style="font-size:13px">ยังไม่มีเตือน — เงียบ = ปกติ</div></div>
-<h2>ไม้ที่ปิดแล้ว</h2>
-<table><tr><th>เหรียญ</th><th class="num">เข้า</th><th class="num">ออก</th><th class="num">ผล(R)</th><th class="num">กำไร</th><th>วัน</th></tr><tr><td>🔴 MIRAUSDT</td><td class="num">0.0459</td><td class="num">0.0571</td><td class="num neg">-1.00R</td><td class="num neg">-50</td><td class="muted">2026-07-03</td></tr><tr><td>🔴 SLPUSDT</td><td class="num">0.000537</td><td class="num">0.000556</td><td class="num neg">-0.14R</td><td class="num neg">-7</td><td class="muted">2026-07-03</td></tr><tr><td>🔴 MIRAUSDT</td><td class="num">0.0461</td><td class="num">0.0571</td><td class="num neg">-1.00R</td><td class="num neg">-50</td><td class="muted">2026-07-03</td></tr></table>
-<div class="foot">
-🤖 บอทเดินเองทุกเช้า 8 โมง · เฝ้าเหรียญทุกชั่วโมง · ทุกอย่างเป็นเงินสมมติ (ยังไม่ใช้เงินจริง)<br>
-🔴 หยุดฉุกเฉิน: สร้างไฟล์ KILL_SWITCH ในโฟลเดอร์ phase1 · ⏸️ พัก: ปิด task ใน Task Scheduler
-</div>
-</div>
+<div class="foot">ข้อมูลเพื่อการศึกษา · เงินสมมติ (paper) · ราคาสดจาก Binance/CoinGecko · อัปเดตบอท: <span id="updated">—</span></div>
+
 <script>
-(function(){var last=new Date("2026-07-05 12:39".replace(" ","T"));
-var days=Math.floor((Date.now()-last)/86400000);
-if(days>=2){var b=document.getElementById("stale");b.style.display="block";
-b.innerHTML="⚠️ ข้อมูลเก่า "+days+" วัน (ล่าสุด 2026-07-05 12:39) — บอทอาจไม่ได้รัน เช็ค Task Scheduler + bot_log.txt";}})();
+const BINANCE='https://api.binance.com/api/v3';
+const MAJORS=['BTCUSDT','ETHUSDT','BNBUSDT','SOLUSDT','XRPUSDT','DOGEUSDT'];
+let TF='15m', COIN='BTCUSDT', BOT=null;
+let chart, candle, emaS={}, priceLines=[];
+
+function fmt(n){n=+n; if(n>=1000)return n.toLocaleString('en',{maximumFractionDigits:2});
+  if(n>=1)return n.toFixed(3); return n.toPrecision(4);}
+function pct(n){const s=(+n>=0?'+':'')+(+n).toFixed(2)+'%';return `<span class="${+n>=0?'up':'down'}">${s}</span>`;}
+
+// ---- chart ----
+function ema(vals,p){const k=2/(p+1);let e=vals[0],out=[e];for(let i=1;i<vals.length;i++){e=vals[i]*k+e*(1-k);out.push(e);}return out;}
+function initChart(){
+  chart=LightweightCharts.createChart(document.getElementById('chart'),{
+    layout:{background:{color:'transparent'},textColor:'#6b7d95'},
+    grid:{vertLines:{color:'rgba(255,255,255,.03)'},horzLines:{color:'rgba(255,255,255,.03)'}},
+    timeScale:{borderColor:'rgba(0,190,255,.15)',timeVisible:true},
+    rightPriceScale:{borderColor:'rgba(0,190,255,.15)'},crosshair:{mode:0},
+    height:440});
+  candle=chart.addCandlestickSeries({upColor:'#00e676',downColor:'#ff3b5c',
+    wickUpColor:'#00e676',wickDownColor:'#ff3b5c',borderVisible:false});
+  const cols={10:'#00d4ff',25:'#00e676',50:'#ff9800',200:'#9b6bff'};
+  for(const p of [10,25,50,200]) emaS[p]=chart.addLineSeries({color:cols[p],lineWidth:1,priceLineVisible:false,lastValueVisible:false});
+  new ResizeObserver(()=>chart.applyOptions({width:document.getElementById('chart').clientWidth})).observe(document.getElementById('chart'));
+}
+async function loadChart(){
+  try{
+    const r=await fetch(`${BINANCE}/klines?symbol=${COIN}&interval=${TF}&limit=320`);
+    const d=await r.json();
+    const bars=d.map(k=>({time:Math.floor(k[0]/1000),open:+k[1],high:+k[2],low:+k[3],close:+k[4]}));
+    candle.setData(bars);
+    const closes=bars.map(b=>b.close);
+    for(const p of [10,25,50,200]){const e=ema(closes,p);
+      emaS[p].setData(bars.map((b,i)=>({time:b.time,value:e[i]})).slice(p));}
+    document.getElementById('cprice').innerHTML=fmt(closes.at(-1));
+    drawPositionLines();
+    chart.timeScale().fitContent();
+  }catch(e){console.warn('chart',e);}
+}
+function drawPositionLines(){
+  priceLines.forEach(l=>candle.removePriceLine(l));priceLines=[];
+  if(!BOT)return;
+  const all=[...(BOT.daily?.open||[]),...(BOT.m15?.open||[])].filter(p=>p.sym===COIN);
+  for(const p of all){
+    priceLines.push(candle.createPriceLine({price:p.entry,color:'#fff',lineWidth:1,lineStyle:2,title:`เข้า ${p.side}`}));
+    priceLines.push(candle.createPriceLine({price:p.stop,color:'#ff3b5c',lineWidth:1,lineStyle:2,title:'SL'}));
+    if(p.trail)priceLines.push(candle.createPriceLine({price:p.trail,color:'#ff9800',lineWidth:1,lineStyle:3,title:'trail'}));
+  }
+}
+
+// ---- gauge ----
+function drawGauge(v){
+  const c=document.getElementById('gauge'),x=c.getContext('2d');x.clearRect(0,0,120,120);
+  const cx=60,cy=60,r=48;
+  x.lineWidth=9;x.strokeStyle='rgba(255,255,255,.06)';x.beginPath();x.arc(cx,cy,r,0.75*Math.PI,2.25*Math.PI);x.stroke();
+  const col=v>=66?'#00e676':v>=40?'#ffb020':'#ff3b5c';
+  x.strokeStyle=col;x.shadowColor=col;x.shadowBlur=12;x.beginPath();
+  x.arc(cx,cy,r,0.75*Math.PI,(0.75+1.5*v/100)*Math.PI);x.stroke();x.shadowBlur=0;
+  document.getElementById('gauge-n').textContent=v;
+  document.getElementById('gauge-n').style.color=col;
+}
+
+// ---- right: live prices ----
+async function loadPrices(){
+  try{
+    const q=encodeURIComponent(JSON.stringify(MAJORS));
+    const d=await (await fetch(`${BINANCE}/ticker/24hr?symbols=${q}`)).json();
+    document.getElementById('prices').innerHTML=d.map(t=>`<div class="prow">
+      <span class="sym">${t.symbol.replace('USDT','')}</span>
+      <span class="px mono">${fmt(t.lastPrice)}</span>
+      <span class="chg ${+t.priceChangePercent>=0?'up':'down'}">${(+t.priceChangePercent>=0?'▲':'▼')} ${(+t.priceChangePercent).toFixed(2)}%</span></div>`).join('');
+  }catch(e){console.warn('prices',e);}
+}
+
+// ---- bottom + ticker: F&G, dominance, mcap, funding ----
+async function loadMacro(){
+  try{const f=await (await fetch('https://api.alternative.me/fng/')).json();
+    const v=f.data[0].value,cls=f.data[0].value_classification;
+    const col=v<25?'down':v>60?'up':'';
+    document.getElementById('tk-fng').innerHTML=`<span class="${col}">${v} ${cls}</span>`;
+    document.getElementById('m-fng').innerHTML=`<span class="${col}">${v} · ${cls}</span>`;}catch(e){}
+  try{const g=await (await fetch('https://api.coingecko.com/api/v3/global')).json();
+    const d=g.data,dom=d.market_cap_percentage.btc.toFixed(1),
+      mc=(d.total_market_cap.usd/1e12).toFixed(2);
+    document.getElementById('tk-dom').textContent=dom+'%';
+    document.getElementById('m-dom').textContent=dom+'%';
+    document.getElementById('m-mcap').textContent='$'+mc+'T';}catch(e){}
+  try{const fr=await (await fetch('https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT')).json();
+    const r=(+fr.lastFundingRate*100).toFixed(3);
+    document.getElementById('tk-fund').innerHTML=`<span class="${+r>=0?'up':'down'}">${r}%</span>`;}catch(e){}
+}
+
+// ---- bot data.json ----
+async function loadBot(){
+  try{
+    BOT=await (await fetch('./data.json?_='+Date.now())).json();
+    document.getElementById('updated').textContent=BOT.updated;
+    const rg=BOT.regime||'q',rgT={bear:'🔴 หมี',bull:'🟢 กระทิง',sideway:'🟡 ไซด์เวย์'}[rg]||'🟡 —';
+    const re=document.getElementById('regime');re.textContent='REGIME: '+rgT;re.className='regime '+rg;
+    document.getElementById('tk-regime').textContent=rgT;
+    const pk=(o,el,tk)=>{if(!o)return;const c=o.return>=0?'up':'down';
+      document.getElementById(el).innerHTML=`<span class="${c}">${o.mtm.toLocaleString()} (${o.return>=0?'+':''}${o.return}%)</span>`;
+      if(tk)document.getElementById(tk).innerHTML=`<span class="${c}">${o.return>=0?'+':''}${o.return}%</span>`;};
+    document.getElementById('tk-daily').innerHTML=BOT.daily?`<span class="${BOT.daily.return>=0?'up':'down'}">${BOT.daily.return>=0?'+':''}${BOT.daily.return}%</span>`:'—';
+    document.getElementById('tk-15m').innerHTML=BOT.m15?`<span class="${BOT.m15.return>=0?'up':'down'}">${BOT.m15.return>=0?'+':''}${BOT.m15.return}%</span>`:'—';
+    const dP=BOT.daily?BOT.daily.mtm:0,mP=BOT.m15?BOT.m15.mtm:0;
+    document.getElementById('m-port').textContent=(dP+mP).toLocaleString('en',{maximumFractionDigits:0})+' USDT';
+    renderPositions();renderRec();buildCoinList();
+  }catch(e){console.warn('bot',e);document.getElementById('positions').innerHTML='<div class="lbl">ยังไม่มีข้อมูลบอท (data.json)</div>';}
+}
+function renderPositions(){
+  const all=[...(BOT.daily?.open||[]).map(p=>({...p,src:'D'})),...(BOT.m15?.open||[]).map(p=>({...p,src:'15m'}))];
+  if(!all.length){document.getElementById('positions').innerHTML='<div class="lbl">ไม่มีไม้ที่ถือ — ถือเงินสดรอ</div>';return;}
+  document.getElementById('positions').innerHTML=all.map(p=>`<div class="pos" onclick="selectCoin('${p.sym}')" style="cursor:pointer">
+    <div class="r1"><span><span class="side ${p.side}">${p.side}</span> <b>${p.sym.replace('USDT','')}</b> <span class="lbl">${p.src}</span></span>
+    <span class="${p.uR>=0?'up':'down'} mono">${p.uR>=0?'+':''}${p.uR}R</span></div>
+    <div class="lbl mono" style="margin-top:3px">เข้า ${fmt(p.entry)} · SL ${fmt(p.stop)} · RR ${p.rr}</div></div>`).join('');
+}
+function renderRec(){
+  const all=[...(BOT.daily?.open||[]),...(BOT.m15?.open||[])];
+  if(!all.length){document.getElementById('rec').innerHTML='<span class="lbl">ไม่มีสัญญาณ — รอจังหวะ</span>';drawGauge(0);return;}
+  const p=all.sort((a,b)=>(b.rr||0)-(a.rr||0))[0];
+  document.getElementById('sig-coin').textContent=p.sym.replace('USDT','');
+  document.getElementById('rec').innerHTML=`<span class="badge ${p.side==='LONG'?'l':'s'}">${p.side==='LONG'?'▲ LONG':'▼ SHORT'}</span>`;
+  document.getElementById('rec-entry').textContent=fmt(p.entry);
+  document.getElementById('rec-sl').textContent=fmt(p.stop);
+  document.getElementById('rec-tp').textContent=p.rr?('RR '+p.rr):'—';
+  document.getElementById('rec-rr').textContent=p.rr||'—';
+  drawGauge(Math.min(99,Math.round((p.rr||1)*33+(p.uR>0?15:0))));
+}
+function buildCoinList(){
+  const held=[...(BOT?.daily?.open||[]),...(BOT?.m15?.open||[])].map(p=>p.sym);
+  const set=[...new Set([...MAJORS,...held])];
+  document.getElementById('coin').innerHTML=set.map(s=>`<option value="${s}">${s.replace('USDT','/USDT')}</option>`).join('');
+  document.getElementById('coin').value=COIN;
+}
+function selectCoin(s){COIN=s;document.getElementById('coin').value=s;loadChart();}
+
+// ---- clock ----
+function tick(){const d=new Date();
+  document.getElementById('clock').textContent=d.toLocaleTimeString('en-GB');
+  document.getElementById('clockd').textContent=d.toLocaleDateString('th-TH',{weekday:'long',day:'numeric',month:'short'});
+  document.getElementById('today').textContent=d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'});}
+
+// ---- wire ----
+document.getElementById('coin').addEventListener('change',e=>{COIN=e.target.value;loadChart();});
+document.querySelectorAll('.tf').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tf').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');TF=b.dataset.tf;loadChart();}));
+
+initChart();tick();setInterval(tick,1000);
+loadBot();loadChart();loadPrices();loadMacro();
+setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);
 </script>
-</body></html>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>AOI Leaderboard</title>
+<style>
+:root{--bg:#060a12;--panel:#0c121f;--line:rgba(0,190,255,.16);--cyan:#00d4ff;--green:#00e676;--red:#ff3b5c;--amber:#ffb020;--ink:#dbe7f5;--muted:#5f7089}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:radial-gradient(1200px 600px at 50% -10%,#0d1830,var(--bg) 60%);color:var(--ink);min-height:100vh;font-variant-numeric:tabular-nums;padding:16px}
+.wrap{max-width:760px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.brand{font-weight:800;letter-spacing:.05em;color:var(--cyan);font-size:16px;text-shadow:0 0 12px rgba(0,190,255,.3)}
+.nav a{color:var(--muted);text-decoration:none;font-size:13px;margin-left:14px}.nav a:hover{color:var(--cyan)}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.hero .big{font-size:24px;font-weight:800;color:var(--green)} .hero .s{font-size:13px;color:var(--muted);margin-top:3px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.ph{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:12px}
+table{width:100%;border-collapse:collapse;font-size:13.5px} td,th{padding:9px 8px;border-bottom:1px solid var(--line)}
+th{font-size:10px;text-transform:uppercase;color:var(--muted);text-align:left}
+td.rk{font-size:16px;width:34px} td.nm{font-weight:700} td.num{text-align:right;font-weight:600} .muted{color:var(--muted)}
+.barwrap{background:rgba(255,255,255,.05);border-radius:4px;height:10px;width:100%;min-width:80px}
+.bar{height:10px;border-radius:4px}
+.note{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6}
+</style></head><body><div class="wrap">
+<div class="top"><span class="brand">◆ AOI LEADERBOARD</span>
+  <span class="nav"><a href="index.html">🖥️ Terminal</a><a href="performance.html">📊 Performance</a></span></div>
+<div class="hero"><div class="big">🏆 Breakout นำอยู่</div>
+  <div class="s">จัดอันดับด้วยผลงานล่าสุด 120 วัน (cap5R = ตัดไม้มหึมา เชื่อได้) · "ฤดูตอนนี้เหมาะกับใคร"</div></div>
+<div class="panel"><div class="ph">🏆 อันดับกลยุทธ์ (ล่าสุด 120 วัน)</div>
+  <table><tr><th></th><th>กลยุทธ์</th><th>ผลงานล่าสุด</th><th class="num">cap5R</th><th class="num">win</th><th class="num">n</th><th class="num">ทั้งหมด</th></tr><tr>
+      <td class="rk">🥇</td>
+      <td class="nm">Breakout</td>
+      <td><div class="barwrap"><div class="bar" style="width:49%;background:var(--green)"></div></div></td>
+      <td class="num" style="color:var(--green)">+0.21R</td>
+      <td class="num">35%</td>
+      <td class="num muted">97</td>
+      <td class="num muted">+0.35R</td></tr><tr>
+      <td class="rk">🥈</td>
+      <td class="nm">Momentum</td>
+      <td><div class="barwrap"><div class="bar" style="width:53%;background:var(--red)"></div></div></td>
+      <td class="num" style="color:var(--red)">-0.23R</td>
+      <td class="num">22%</td>
+      <td class="num muted">358</td>
+      <td class="num muted">+0.13R</td></tr><tr>
+      <td class="rk">🥉</td>
+      <td class="nm">Pullback</td>
+      <td><div class="barwrap"><div class="bar" style="width:100%;background:var(--red)"></div></div></td>
+      <td class="num" style="color:var(--red)">-0.43R</td>
+      <td class="num">21%</td>
+      <td class="num muted">62</td>
+      <td class="num muted">+0.04R</td></tr></table>
+  <div class="note">🥇 = ควรใช้ตอนนี้ · cap5R บวกมาก = ฤดูของกลยุทธ์นั้น · เทียบคอลัมน์ "ล่าสุด" กับ "ทั้งหมด" ดูว่ากำลังมาแรงหรือแผ่ว<br>
+  <b>บทเรียนเรา:</b> ไม่มีกลยุทธ์ไหนนำตลอด — Router สลับใช้ตามฤดูอัตโนมัติ · หน้านี้ให้คุณเห็นว่าตอนนี้ฤดูอะไร</div></div>
+<div style="text-align:center;color:var(--muted);font-size:11px">เงินสมมติ · backtest ต่อเนื่องบนข้อมูลจริง · อัปเดต 2026-07-05 22:50</div>
+</div></body></html>

@@ -1,0 +1,62 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>AOI Performance</title>
+<style>
+:root{--bg:#060a12;--panel:#0c121f;--line:rgba(0,190,255,.16);--cyan:#00d4ff;--green:#00e676;
+--red:#ff3b5c;--amber:#ffb020;--ink:#dbe7f5;--muted:#5f7089}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:radial-gradient(1200px 600px at 50% -10%,#0d1830,var(--bg) 60%);
+color:var(--ink);min-height:100vh;font-variant-numeric:tabular-nums;padding:16px}
+.mono{font-family:'Consolas',monospace} .pos{color:var(--green)} .neg{color:var(--red)} .muted{color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.brand{font-weight:800;letter-spacing:.05em;color:var(--cyan);font-size:16px;text-shadow:0 0 12px rgba(0,190,255,.3)}
+.nav a{color:var(--muted);text-decoration:none;font-size:13px;margin-left:14px} .nav a:hover{color:var(--cyan)}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:16px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+.kpi .v{font-size:19px;font-weight:800} .kpi .l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.ph{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:12px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal .dow{text-align:center;font-size:10px;color:var(--muted);padding-bottom:3px}
+.cell{aspect-ratio:1.2;border:1px solid rgba(255,255,255,.05);border-radius:7px;padding:5px 6px;position:relative;background:#0a0f1a}
+.cell.dim{background:transparent;border:none} .cell .dn{font-size:11px;color:var(--muted)}
+.cell .dp{position:absolute;bottom:5px;left:6px;font-size:11px;font-weight:700}
+.cell.pos{background:rgba(0,230,118,.12);border-color:rgba(0,230,118,.3)} .cell.pos .dp{color:var(--green)}
+.cell.neg{background:rgba(255,59,92,.12);border-color:rgba(255,59,92,.3)} .cell.neg .dp{color:var(--red)}
+.srow{display:flex;align-items:center;gap:8px;padding:2px 0;font-size:12px}
+.sh{width:64px;color:var(--muted)} .sbar{height:12px;border-radius:3px;min-width:4px}
+.sp{margin-left:auto;font-weight:600;font-size:11.5px}
+table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-size:10px;text-transform:uppercase;color:var(--muted)} td.num{text-align:right;font-weight:600}
+@media(max-width:640px){.kpis{grid-template-columns:repeat(3,1fr)}.cell .dp{font-size:9px}}
+</style></head><body><div class="wrap">
+<div class="top"><span class="brand">◆ AOI PERFORMANCE</span>
+  <span class="nav"><a href="index.html">🖥️ Terminal</a><a href="simple.html">📄 Simple</a></span></div>
+
+<div class="kpis">
+  <div class="kpi"><div class="v neg">-151</div><div class="l">P&L รวม (USDT)</div></div>
+  <div class="kpi"><div class="v">0%</div><div class="l">Win rate</div></div>
+  <div class="kpi"><div class="v">5</div><div class="l">ไม้ปิด</div></div>
+  <div class="kpi"><div class="v">0.00</div><div class="l">Profit factor</div></div>
+  <div class="kpi"><div class="v pos">+0</div><div class="l">กำไรเฉลี่ย/ไม้</div></div>
+  <div class="kpi"><div class="v neg">-30</div><div class="l">ขาดทุนเฉลี่ย/ไม้</div></div>
+</div>
+
+<div class="panel"><div class="ph">📈 Equity Curve (กำไรสะสม Daily+15m)</div><svg viewBox="0 0 820 120" width="100%" height="120" preserveAspectRatio="none"><polyline points="0,120 28,99 57,116 85,0 113,0 141,0 170,0 198,0 226,0 254,0 283,0 311,0 339,0 368,0 396,0 424,0 452,0 481,0 509,40 537,40 566,40 594,40 622,50 650,50 679,50 707,50 735,50 763,50 792,50 820,50" fill="none" stroke="var(--red)" stroke-width="2"/></svg></div>
+
+<div class="panel"><div class="ph">📅 PnL Calendar — ก.ค. 2569</div>
+  <div class="cal">
+    <div class="dow">อา</div><div class="dow">จ</div><div class="dow">อ</div><div class="dow">พ</div>
+    <div class="dow">พฤ</div><div class="dow">ศ</div><div class="dow">ส</div><div class="cell dim"></div><div class="cell dim"></div><div class="cell dim"></div><div class="cell"><span class="dn">1</span></div><div class="cell"><span class="dn">2</span></div><div class="cell neg"><span class="dn">3</span><span class="dp">-106</span></div><div class="cell"><span class="dn">4</span></div><div class="cell neg"><span class="dn">5</span><span class="dp">-44</span></div><div class="cell"><span class="dn">6</span></div><div class="cell"><span class="dn">7</span></div><div class="cell"><span class="dn">8</span></div><div class="cell"><span class="dn">9</span></div><div class="cell"><span class="dn">10</span></div><div class="cell"><span class="dn">11</span></div><div class="cell"><span class="dn">12</span></div><div class="cell"><span class="dn">13</span></div><div class="cell"><span class="dn">14</span></div><div class="cell"><span class="dn">15</span></div><div class="cell"><span class="dn">16</span></div><div class="cell"><span class="dn">17</span></div><div class="cell"><span class="dn">18</span></div><div class="cell"><span class="dn">19</span></div><div class="cell"><span class="dn">20</span></div><div class="cell"><span class="dn">21</span></div><div class="cell"><span class="dn">22</span></div><div class="cell"><span class="dn">23</span></div><div class="cell"><span class="dn">24</span></div><div class="cell"><span class="dn">25</span></div><div class="cell"><span class="dn">26</span></div><div class="cell"><span class="dn">27</span></div><div class="cell"><span class="dn">28</span></div><div class="cell"><span class="dn">29</span></div><div class="cell"><span class="dn">30</span></div><div class="cell"><span class="dn">31</span></div><div class="cell dim"></div></div>
+  <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+    วันดีสุด <span class="pos">-44</span> (2026-07-05) · แย่สุด <span class="neg">-106</span> (2026-07-03)</div>
+</div>
+
+<div class="panel"><div class="ph">🕐 Session Analysis — PnL รายชั่วโมง (เวลาไทย · 🌙=London/NY)</div><div class="srow"><span class="sh">00:00 🌙</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">01:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">02:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">03:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">04:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">05:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">06:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">07:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">08:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">09:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">10:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">11:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">12:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">13:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">14:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">15:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">16:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">17:00</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">18:00</span><span class="sbar" style="width:100%;background:var(--red)"></span><span class="sp neg">-35 (1)</span></div><div class="srow"><span class="sh">19:00</span><span class="sbar" style="width:26%;background:var(--red)"></span><span class="sp neg">-9 (1)</span></div><div class="srow"><span class="sh">20:00 🌙</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">21:00 🌙</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">22:00 🌙</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div><div class="srow"><span class="sh">23:00 🌙</span><span class="sbar" style="width:2%;background:var(--line)"></span><span class="sp ">+0 (0)</span></div></div>
+
+<div class="panel"><div class="ph">🔚 ไม้ปิดล่าสุด</div>
+  <table><tr><th>วันปิด</th><th>บอท</th><th>เหรียญ</th><th class="num">ผล(R)</th><th class="num">กำไร</th></tr><tr><td>2026-07-05</td><td>15m</td><td>JASMY</td><td class="num neg">-0.76R</td><td class="num neg">-35</td></tr><tr><td>2026-07-05</td><td>15m</td><td>XTZ</td><td class="num neg">-0.16R</td><td class="num neg">-9</td></tr><tr><td>2026-07-03</td><td>D</td><td>MIRA</td><td class="num neg">-1.00R</td><td class="num neg">-50</td></tr><tr><td>2026-07-03</td><td>D</td><td>SLP</td><td class="num neg">-0.14R</td><td class="num neg">-7</td></tr><tr><td>2026-07-03</td><td>D</td><td>MIRA</td><td class="num neg">-1.00R</td><td class="num neg">-50</td></tr></table></div>
+
+<div style="text-align:center;color:var(--muted);font-size:11px;margin-top:8px">
+  เงินสมมติ (paper) · track record กำลังสะสม · อัปเดต 2026-07-05 21:09</div>
+</div></body></html>

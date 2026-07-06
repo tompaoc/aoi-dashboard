@@ -1,55 +1,55 @@
 {
   "symbol": "BTCUSDT",
-  "price": 62853.4,
+  "price": 62876.57,
   "tfs": [
     {
       "tf": "4H",
-      "price": 62853.4,
-      "premium": 61809.4,
+      "price": 62876.57,
+      "premium": 61810.01,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 559.8,
+      "macd": 561.6,
       "rsi": 57,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": true,
-      "ema10": 62953.12,
-      "ema25": 62366.21,
-      "ema50": 61820.71,
+      "ema10": 62957.33,
+      "ema25": 62368.0,
+      "ema50": 61821.62,
       "trend": "up",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 62853.4,
-      "premium": 62963.19,
+      "price": 62876.57,
+      "premium": 62964.97,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -1049.3,
+      "macd": -1047.5,
       "rsi": 49,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 62053.77,
-      "ema25": 62963.19,
-      "ema50": 65736.67,
+      "ema10": 62057.99,
+      "ema25": 62964.97,
+      "ema50": 65737.58,
       "trend": "down",
       "ma_cross": "death"
     },
     {
       "tf": "Week",
-      "price": 62853.4,
-      "premium": 73169.14,
+      "price": 62876.57,
+      "premium": 73170.92,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -5919.8,
+      "macd": -5918.0,
       "rsi": 38,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 66738.77,
-      "ema25": 73169.14,
-      "ema50": 80105.61,
+      "ema10": 66742.99,
+      "ema25": 73170.92,
+      "ema50": 80106.52,
       "trend": "down",
       "ma_cross": "death"
     }
@@ -58,7 +58,7 @@
   "week_conditions": [
     {
       "n": 1,
-      "txt": "เบรค Premium Week (EMA25 $73,169)",
+      "txt": "เบรค Premium Week (EMA25 $73,171)",
       "ok": false
     },
     {
@@ -77,7 +77,7 @@
   "scenarios": [
     {
       "dir": "ขึ้น",
-      "if": "เบรค Day premium $62,963 + RSI overbought",
+      "if": "เบรค Day premium $62,965 + RSI overbought",
       "then": "มีโอกาสวิ่งเทส supply โซนบน (เช่น Week premium) ทีละ step"
     },
     {
@@ -183,12 +183,12 @@
   "flips": [
     {
       "price": 62710.59,
-      "dist": -0.2,
+      "dist": -0.3,
       "role": "support"
     },
     {
       "price": 59565.46,
-      "dist": -5.2,
+      "dist": -5.3,
       "role": "support"
     },
     {
@@ -208,22 +208,22 @@
     },
     {
       "price": 69496.59,
-      "dist": 10.6,
+      "dist": 10.5,
       "role": "resistance"
     }
   ],
   "ladder_buy": [
     {
       "name": "4H EMA25 (เส้น trim)",
-      "price": 62366.21,
+      "price": 62368.0,
       "dist": -0.8
     }
   ],
   "ladder_trim": [
     {
       "name": "Day EMA25 (premium)",
-      "price": 62963.19,
-      "dist": 0.2
+      "price": 62964.97,
+      "dist": 0.1
     },
     {
       "name": "Swing high (Day)",
@@ -233,7 +233,7 @@
     {
       "name": "Swing high (Day)",
       "price": 67292.15,
-      "dist": 7.1
+      "dist": 7.0
     },
     {
       "name": "Swing high (Day)",

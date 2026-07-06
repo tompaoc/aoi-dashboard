@@ -108,6 +108,11 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 .flipchip{font-size:12px;padding:5px 10px;border-radius:6px;font-family:ui-monospace,monospace;border:1px solid var(--line)}
 .flipchip.support{background:rgba(0,230,118,.08);color:var(--green);border-color:rgba(0,230,118,.3)}
 .flipchip.resistance{background:rgba(255,59,92,.08);color:var(--red);border-color:rgba(255,59,92,.3)}
+.optbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:8px}
+.optcard{background:#0a0f1a;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:12px}
+.optcard .h{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.optcard .big{font-size:16px;font-weight:800;font-family:ui-monospace,monospace}
+.wall{display:flex;justify-content:space-between;gap:8px;font-family:ui-monospace,monospace;font-size:12px;padding:2px 0}
 @media(max-width:1050px){.grid{grid-template-columns:1fr}.botbar{grid-template-columns:1fr 1fr}.plan-tfs{grid-template-columns:1fr}.planlow{grid-template-columns:1fr!important}}
 </style>
 </head>
@@ -200,6 +205,9 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
   <div class="lbl" style="margin:12px 0 6px">🔀 Flip Zones (รับ↔ต้านสลับ — เส้นจุดบนกราฟ BTC)</div>
   <div class="flips" id="plan-flips"></div>
 
+  <div class="lbl" style="margin:14px 0 6px">🎲 Options (Deribit) — กำแพง OI + Max Pain <span id="opt-meta" style="text-transform:none;letter-spacing:0;color:var(--muted)"></span></div>
+  <div id="plan-opt" class="optbox"></div>
+
   <div class="planlow" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
     <div><div class="lbl" style="margin-bottom:6px">✅ 3 เงื่อนไข Week ยืนยันโมเมนตัมกลับตัว (ครู AOI) — <span id="plan-confirm">—</span></div><div id="plan-conds"></div></div>
     <div><div class="lbl" style="margin-bottom:6px">🗺️ 2 Scenarios — เตรียม action ทั้ง 2 ทาง</div><div class="scen" id="plan-scen"></div></div>
@@ -251,6 +259,7 @@ async function loadChart(){
     document.getElementById('cprice').innerHTML=fmt(closes.at(-1));
     drawPositionLines();
     drawFlipLines();
+    drawOptLines();
     chart.timeScale().fitContent();
   }catch(e){console.warn('chart',e);}
 }
@@ -273,6 +282,16 @@ function drawFlipLines(){
     flipLines.push(candle.createPriceLine({price:f.price,color:col,lineWidth:1,lineStyle:1,
       title:f.role==='support'?'รับ':'ต้าน'}));
   }
+}
+let optLines=[];
+function drawOptLines(){
+  optLines.forEach(l=>candle.removePriceLine(l));optLines=[];
+  if(!OPT)return;
+  const o=OPT.currencies[COIN.replace('USDT','')];if(!o)return;
+  const m=o.main;
+  optLines.push(candle.createPriceLine({price:m.max_pain,color:'rgba(0,212,255,.6)',lineWidth:1,lineStyle:3,title:'Max Pain'}));
+  if(m.call_walls[0])optLines.push(candle.createPriceLine({price:m.call_walls[0].strike,color:'rgba(255,59,92,.4)',lineWidth:1,lineStyle:1,title:'Call wall'}));
+  if(m.put_walls[0])optLines.push(candle.createPriceLine({price:m.put_walls[0].strike,color:'rgba(0,230,118,.4)',lineWidth:1,lineStyle:1,title:'Put wall'}));
 }
 
 // ---- gauge ----
@@ -445,6 +464,31 @@ async function loadPlan(){
   }catch(e){console.warn('plan',e);document.getElementById('plan-stage').textContent='ยังไม่มีข้อมูล plan (บอทยังไม่ได้สร้าง plan.json)';}
 }
 
+// ---- C: Options (Deribit) — OI walls + Max Pain ----
+let OPT=null;
+async function loadOptions(){
+  try{
+    OPT=await(await fetch('./options.json?_='+Date.now())).json();
+    renderOptions();drawOptLines();
+  }catch(e){console.warn('opt',e);document.getElementById('plan-opt').innerHTML='<div class="lbl" style="text-transform:none">— ยังไม่มีข้อมูล options (ต้อง run deribit_oi.py)</div>';}
+}
+function renderOptions(){
+  if(!OPT)return;
+  const cur=COIN.replace('USDT',''),o=(OPT.currencies||{})[cur]||OPT.currencies.BTC;
+  const box=document.getElementById('plan-opt');
+  if(!o){box.innerHTML='<div class="lbl">—</div>';document.getElementById('opt-meta').textContent='';return;}
+  const m=o.main,mpRel=(m.max_pain-o.spot)/o.spot*100;
+  document.getElementById('opt-meta').textContent=`· ${o.currency} · หมดอายุ ${m.expiry} (${m.days}วัน)`;
+  const wallRow=(w,role)=>`<div class="wall"><span style="color:${role==='c'?'var(--red)':'var(--green)'}">$${w.strike.toLocaleString()}</span><span class="zd">${w.oi.toLocaleString()}</span></div>`;
+  box.innerHTML=`
+    <div class="optcard"><div class="h">🎯 Max Pain</div><div class="big cy">$${m.max_pain.toLocaleString()}</div>
+      <div class="zd" style="margin-top:3px">ราคา ${mpRel>=0?'+':''}${mpRel.toFixed(1)}% จาก max pain</div></div>
+    <div class="optcard"><div class="h">🔴 Call walls (ต้าน)</div>${m.call_walls.map(w=>wallRow(w,'c')).join('')}</div>
+    <div class="optcard"><div class="h">🟢 Put walls (รับ)</div>${m.put_walls.map(w=>wallRow(w,'p')).join('')}</div>
+    <div class="optcard"><div class="h">Put/Call ratio</div><div class="big">${m.pcr??'—'}</div>
+      <div class="zd" style="margin-top:3px">${m.pcr!=null?(m.pcr>1?'put หนากว่า (ป้องกัน/กลัว)':'call หนากว่า (ไล่ราคา)'):''}</div></div>`;
+}
+
 // ---- clock ----
 function tick(){const d=new Date();
   document.getElementById('clock').textContent=d.toLocaleTimeString('en-GB');
@@ -452,14 +496,14 @@ function tick(){const d=new Date();
   document.getElementById('today').textContent=d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'});}
 
 // ---- wire ----
-document.getElementById('coin').addEventListener('change',e=>{COIN=e.target.value;loadChart();});
+document.getElementById('coin').addEventListener('change',e=>{COIN=e.target.value;loadChart();renderOptions();});
 document.querySelectorAll('.tf').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.tf').forEach(x=>x.classList.remove('active'));
   b.classList.add('active');TF=b.dataset.tf;loadChart();}));
 
 initChart();tick();setInterval(tick,1000);
-loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();
-setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);
+loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();
+setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);
 </script>
 </body>
 </html>

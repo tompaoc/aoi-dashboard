@@ -113,6 +113,12 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 .optcard .h{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
 .optcard .big{font-size:16px;font-weight:800;font-family:ui-monospace,monospace}
 .wall{display:flex;justify-content:space-between;gap:8px;font-family:ui-monospace,monospace;font-size:12px;padding:2px 0}
+.gradebadge{font-size:13px;font-weight:800;padding:3px 11px;border-radius:8px;letter-spacing:.03em}
+.gradebadge.A{background:rgba(0,230,118,.18);color:var(--green);border:1px solid rgba(0,230,118,.5)}
+.gradebadge.B{background:rgba(0,212,255,.15);color:var(--cyan);border:1px solid rgba(0,212,255,.45)}
+.gradebadge.C{background:rgba(255,176,32,.14);color:var(--amber);border:1px solid rgba(255,176,32,.4)}
+.flowbar{display:flex;gap:2px;align-items:flex-end;height:34px;margin-top:6px}
+.flowbar>i{flex:1;border-radius:2px 2px 0 0;min-height:2px}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tagchip{font-size:12px;font-weight:600;padding:5px 11px;border-radius:20px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.35);color:var(--ink)}
 .relaybox{background:#0a0f1a;border:1px solid var(--line);border-radius:8px;padding:12px}
@@ -211,8 +217,9 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 <div class="planpanel">
   <div class="ph" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
     <span class="t" style="color:var(--cyan);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">🎯 AOI PLAN — BTC · Plan &gt; Predict</span>
-    <span id="plan-conf" class="confmeter">—</span></div>
+    <span style="display:flex;gap:8px;align-items:center"><span id="plan-grade" class="gradebadge">—</span><span id="plan-conf" class="confmeter">—</span></span></div>
   <div class="stage" id="plan-stage">กำลังโหลด…</div>
+  <div class="lbl" id="plan-gradepol" style="text-transform:none;letter-spacing:0;margin:5px 0 0"></div>
   <div class="tags" id="plan-tags" style="margin:8px 0"></div>
   <div class="lbl" id="plan-cascade" style="margin:6px 0 8px;text-transform:none;letter-spacing:0"></div>
 
@@ -237,6 +244,9 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 
   <div class="lbl" style="margin:14px 0 6px">🎲 Options (Deribit) — กำแพง OI + Max Pain <span id="opt-meta" style="text-transform:none;letter-spacing:0;color:var(--muted)"></span></div>
   <div id="plan-opt" class="optbox"></div>
+
+  <div class="lbl" style="margin:14px 0 6px">🌊 External Flows — หลักฐานภายนอกยืนยันราคา (BTC)</div>
+  <div id="plan-flows" class="optbox"></div>
 
   <div class="planlow" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
     <div><div class="lbl" style="margin-bottom:6px">✅ 3 เงื่อนไข Week ยืนยันโมเมนตัมกลับตัว (ครู AOI) — <span id="plan-confirm">—</span></div><div id="plan-conds"></div></div>
@@ -464,7 +474,12 @@ async function loadPlan(){
     document.getElementById('plan-stage').textContent=p.stage;
     document.getElementById('plan-cascade').textContent=p.cascade;
     document.getElementById('plan-confirm').textContent='Week confirm '+p.week_confirm;
-    // ── confluence meter ──
+    // ── setup grade + confluence meter ──
+    if(p.grade){const gb=document.getElementById('plan-grade');
+      gb.className='gradebadge '+p.grade.grade[0];
+      gb.textContent='เกรด '+p.grade.grade+' ('+p.grade.score+'/'+p.grade.max+')';
+      gb.title=p.grade.policy;
+      document.getElementById('plan-gradepol').textContent='📋 นโยบายจัดการไม้ (long): '+p.grade.policy;}
     const cf=p.confluence,cm=document.getElementById('plan-conf');
     cm.className='confmeter '+cf.bias;
     cm.textContent=`Confluence ${cf.bull}/${cf.total} bull · ${cf.pct}% · ${cf.bias.toUpperCase()}`;

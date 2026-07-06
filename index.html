@@ -534,6 +534,7 @@ async function loadPlan(){
           <div class="scact"><b>ทำ:</b> ${s.action}</div></div>`).join('')
       : p.scenarios.map(s=>`<div class="scenb"><div style="font-weight:700">${s.dir}</div><div>${s.if}</div></div>`).join('');
     drawFlipLines();
+    if(FLOWS)renderFlows();
   }catch(e){console.warn('plan',e);document.getElementById('plan-stage').textContent='ยังไม่มีข้อมูล plan (บอทยังไม่ได้สร้าง plan.json)';}
 }
 
@@ -562,6 +563,40 @@ function renderOptions(){
       <div class="zd" style="margin-top:3px">${m.pcr!=null?(m.pcr>1?'put หนากว่า (ป้องกัน/กลัว)':'call หนากว่า (ไล่ราคา)'):''}</div></div>`;
 }
 
+// ---- External Flows (ETF net-flow + BTC Dominance) ----
+let FLOWS=null;
+async function loadFlows(){
+  try{
+    FLOWS=await(await fetch('./flows.json?_='+Date.now())).json();
+    renderFlows();
+  }catch(e){console.warn('flows',e);document.getElementById('plan-flows').innerHTML='<div class="lbl" style="text-transform:none;letter-spacing:0">— ยังไม่มีข้อมูล flows (ต้อง run external_flows.py)</div>';}
+}
+function renderFlows(){
+  if(!FLOWS)return;
+  const etf=FLOWS.etf,bd=FLOWS.btcd;let html='';
+  if(etf){
+    const rec=etf.recent,mx=Math.max(...rec.map(x=>Math.abs(x.flow)),1),lf=etf.latest;
+    const bars=rec.map(x=>`<i style="height:${Math.max(Math.abs(x.flow)/mx*100,5)}%;background:${x.flow>=0?'var(--green)':'var(--red)'}" title="${x.date}: ${x.flow}M"></i>`).join('');
+    html+=`<div class="optcard"><div class="h">💵 BTC ETF net-flow (Farside)</div>
+      <div class="big ${lf.flow>=0?'up':'down'}">${lf.flow>=0?'+':''}${lf.flow}M</div>
+      <div class="zd">${lf.date}${etf.consec_outflow>=2?` · 🔴 ไหลออก ${etf.consec_outflow} วันติด`:''}</div>
+      <div class="flowbar">${bars}</div></div>`;
+  }
+  if(bd){
+    const col=bd.status.startsWith('alt')?'var(--green)':bd.status==='btc-favorable'?'var(--red)':'var(--amber)';
+    html+=`<div class="optcard"><div class="h">🧭 BTC Dominance</div>
+      <div class="big" style="color:${col}">${bd.btcd}%</div>
+      <div class="zd">${bd.note}${bd.chg7!=null?` · 7d ${bd.chg7>=0?'+':''}${bd.chg7}`:` · (สะสมทิศ ${bd.n_hist}d)`}</div></div>`;
+  }
+  // combined trigger (โพสต์ 3,6): ปิดใต้ EMA10 + ETF outflow วันเดียวกัน = แบ่งออก
+  if(etf&&PLAN&&PLAN.behavior){const dr=PLAN.behavior.drive;
+    if(!dr.above&&etf.outflow){
+      html+=`<div class="optcard" style="border-color:rgba(255,59,92,.5)"><div class="h" style="color:var(--red)">⚠️ สัญญาณแบ่งออก</div>
+        <div style="font-size:12px;line-height:1.5">ราคาปิดใต้ EMA10 + ETF ไหลออกวันเดียวกัน (trigger คู่ของครู) — พิจารณาแบ่งทำกำไร</div></div>`;
+    }}
+  document.getElementById('plan-flows').innerHTML=html||'<div class="lbl">—</div>';
+}
+
 // ---- clock ----
 function tick(){const d=new Date();
   document.getElementById('clock').textContent=d.toLocaleTimeString('en-GB');
@@ -575,8 +610,8 @@ document.querySelectorAll('.tf').forEach(b=>b.addEventListener('click',()=>{
   b.classList.add('active');TF=b.dataset.tf;loadChart();}));
 
 initChart();tick();setInterval(tick,1000);
-loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();
-setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);
+loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();loadFlows();
+setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);setInterval(loadFlows,300000);
 </script>
 </body>
 </html>

@@ -77,7 +77,17 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 .wchip:hover{border-color:var(--cyan)} .wchip .x{color:var(--muted);font-weight:700}.wchip .x:hover{color:var(--red)}
 .hotrow{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer;font-size:12.5px}
 .hotrow:hover{color:var(--cyan)} .hotrow .rk{color:var(--muted);display:inline-block;width:20px}
-@media(max-width:1050px){.grid{grid-template-columns:1fr}.botbar{grid-template-columns:1fr 1fr}}
+.planpanel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:10px;margin:0 12px 14px;padding:14px 16px}
+.plan-tfs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0}
+.tfcard{background:#0a0f1a;border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.tfcard .h{font-weight:700;font-size:13px;margin-bottom:5px}
+.tfcard .kv{display:flex;justify-content:space-between;font-size:12px;padding:2px 0;color:var(--muted)}
+.tfcard .kv b{color:var(--ink);font-weight:600}
+.cond{display:flex;align-items:center;gap:8px;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.scen{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.scenb{border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12.5px}
+.stage{font-size:14px;font-weight:700;padding:8px 12px;border-radius:8px;background:#0a1526;margin-bottom:6px}
+@media(max-width:1050px){.grid{grid-template-columns:1fr}.botbar{grid-template-columns:1fr 1fr}.plan-tfs{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -147,6 +157,19 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
     <div class="ph"><span class="t">🔥 Volume มาแรง (24h)</span></div>
     <div class="pb" id="hot"><div class="lbl">กำลังโหลด…</div></div>
   </aside>
+</div>
+
+<div class="planpanel">
+  <div class="ph" style="display:flex;justify-content:space-between;align-items:center">
+    <span class="t" style="color:var(--cyan);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">🎯 AOI PLAN — BTC · Plan &gt; Predict</span>
+    <span class="lbl" id="plan-confirm">—</span></div>
+  <div class="stage" id="plan-stage">กำลังโหลด…</div>
+  <div class="lbl" id="plan-cascade" style="margin:4px 0 2px"></div>
+  <div class="plan-tfs" id="plan-tfs"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px" class="planlow">
+    <div><div class="lbl" style="margin-bottom:6px">✅ 3 เงื่อนไข Week ยืนยันโมเมนตัมกลับตัว (ครู AOI)</div><div id="plan-conds"></div></div>
+    <div><div class="lbl" style="margin-bottom:6px">🗺️ 2 Scenarios — เตรียม action ทั้ง 2 ทาง</div><div class="scen" id="plan-scen"></div></div>
+  </div>
 </div>
 
 <div class="botbar">
@@ -338,6 +361,26 @@ async function loadHot(){
   }catch(e){console.warn('hot',e);}
 }
 
+// ---- AOI Plan panel (Plan > Predict) ----
+async function loadPlan(){
+  try{
+    const p=await(await fetch('./plan.json?_='+Date.now())).json();
+    document.getElementById('plan-stage').textContent=p.stage;
+    document.getElementById('plan-confirm').textContent='Week confirm '+p.week_confirm;
+    document.getElementById('plan-cascade').textContent=p.cascade;
+    document.getElementById('plan-tfs').innerHTML=p.tfs.map(t=>`<div class="tfcard">
+      <div class="h">${t.tf} <span style="color:${t.above_premium?'var(--green)':'var(--red)'};font-size:11px">${t.above_premium?'▲ เหนือ premium':'▼ ใต้ premium'}</span></div>
+      <div class="kv">Premium (EMA)<b>${(+t.premium).toLocaleString()}</b></div>
+      <div class="kv">MACD<b class="${t.macd_pos?'up':'down'}">${t.macd_pos?'เหนือ 0':'ใต้ 0'}</b></div>
+      <div class="kv">RSI<b>${t.rsi}${t.rsi_ob?' 🔥':t.rsi_os?' ❄️':t.rsi_reject_ob?' ⚠️reject':''}</b></div></div>`).join('');
+    document.getElementById('plan-conds').innerHTML=p.week_conditions.map(c=>`<div class="cond">
+      <span>${c.ok?'✅':'⬜'}</span><span style="color:${c.ok?'var(--green)':'var(--muted)'}">${c.txt}</span></div>`).join('');
+    document.getElementById('plan-scen').innerHTML=p.scenarios.map(s=>`<div class="scenb">
+      <div style="font-weight:700;color:${s.dir==='ขึ้น'?'var(--green)':'var(--red)'}">${s.dir==='ขึ้น'?'📈 ขึ้น':'📉 ลง'}</div>
+      <div class="muted" style="margin-top:4px">ถ้า: ${s.if}</div><div style="margin-top:3px">→ ${s.then}</div></div>`).join('');
+  }catch(e){console.warn('plan',e);document.getElementById('plan-stage').textContent='ยังไม่มีข้อมูล plan (บอทยังไม่ได้สร้าง plan.json)';}
+}
+
 // ---- clock ----
 function tick(){const d=new Date();
   document.getElementById('clock').textContent=d.toLocaleTimeString('en-GB');
@@ -351,8 +394,8 @@ document.querySelectorAll('.tf').forEach(b=>b.addEventListener('click',()=>{
   b.classList.add('active');TF=b.dataset.tf;loadChart();}));
 
 initChart();tick();setInterval(tick,1000);
-loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();
-setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);
+loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();
+setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);
 </script>
 </body>
 </html>

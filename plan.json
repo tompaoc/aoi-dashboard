@@ -1,0 +1,75 @@
+{
+  "symbol": "BTCUSDT",
+  "price": 62751.99,
+  "tfs": [
+    {
+      "tf": "4H",
+      "price": 62751.99,
+      "premium": 61807.0,
+      "above_premium": true,
+      "macd_pos": true,
+      "macd": 552.0,
+      "rsi": 56,
+      "rsi_ob": false,
+      "rsi_os": false,
+      "rsi_reject_ob": true
+    },
+    {
+      "tf": "Day",
+      "price": 62751.99,
+      "premium": 62955.0,
+      "above_premium": false,
+      "macd_pos": false,
+      "macd": -1057.0,
+      "rsi": 48,
+      "rsi_ob": false,
+      "rsi_os": false,
+      "rsi_reject_ob": false
+    },
+    {
+      "tf": "Week",
+      "price": 62752.0,
+      "premium": 73161.0,
+      "above_premium": false,
+      "macd_pos": false,
+      "macd": -5928.0,
+      "rsi": 38,
+      "rsi_ob": false,
+      "rsi_os": false,
+      "rsi_reject_ob": false
+    }
+  ],
+  "cascade": "🟡 MACD ขัดกันระหว่าง TF — โมเมนตัมกำลังเปลี่ยนผ่าน (ระวังสุด)",
+  "week_conditions": [
+    {
+      "n": 1,
+      "txt": "เบรค Premium Week (EMA25 $73,161)",
+      "ok": false
+    },
+    {
+      "n": 2,
+      "txt": "Week MACD เหนือ 0 (order ซื้อ > ขาย ครั้งแรกหลังหมี)",
+      "ok": false
+    },
+    {
+      "n": 3,
+      "txt": "Week RSI overbought (>70 = panic buy)",
+      "ok": false
+    }
+  ],
+  "week_confirm": "0/3",
+  "stage": "🔴 ก่อนด่าน 1 — ราคายังใต้ Day premium (relief rally ยังไม่ยืนยันอะไร)",
+  "scenarios": [
+    {
+      "dir": "ขึ้น",
+      "if": "เบรค Day premium $62,955 + RSI overbought",
+      "then": "มีโอกาสวิ่งเทส supply โซนบน (เช่น Week premium) ทีละ step"
+    },
+    {
+      "dir": "ลง",
+      "if": "เบรคไม่ได้ + เกิด panic sell (oversold อีกรอบ)",
+      "then": "ถูกดูดลงหา discount/settlement zone ล่าง"
+    }
+  ],
+  "note": "Plan > Predict — เห็นโครงสร้าง แล้วเตรียม action ทั้ง 2 ทาง ไม่ใช่เดาทางเดียว"
+}

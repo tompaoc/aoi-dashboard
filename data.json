@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06 22:06",
+  "updated": "2026-07-06 22:07",
   "regime": "bear",
   "daily": {
     "start": 5000.0,
@@ -115,38 +115,24 @@
   },
   "m15": {
     "start": 10000.0,
-    "balance": 9859.65,
-    "mtm": 10017.13,
-    "return": 0.17,
-    "closed": 14,
+    "balance": 9799.62,
+    "mtm": 9958.47,
+    "return": -0.42,
+    "closed": 16,
     "wins": 3,
-    "winrate": 21.4,
+    "winrate": 18.8,
     "open": [
       {
         "sym": "PYTHUSDT",
         "side": "LONG",
         "entry": 0.04098,
-        "now": 0.04412,
+        "now": 0.04408,
         "stop": 0.03928,
-        "trail": 0.04255092,
+        "trail": 0.04258537,
         "rr": 2.0,
-        "uR": 1.85,
+        "uR": 1.82,
         "risk_pct": 4.15,
         "notional": 993.26,
-        "reason": "",
-        "tf": "15m"
-      },
-      {
-        "sym": "KITEUSDT",
-        "side": "LONG",
-        "entry": 0.1213,
-        "now": 0.1205,
-        "stop": 0.1167,
-        "trail": 0.11932998,
-        "rr": 2.0,
-        "uR": -0.17,
-        "risk_pct": 3.79,
-        "notional": 992.3,
         "reason": "",
         "tf": "15m"
       },
@@ -154,11 +140,11 @@
         "sym": "AAVEUSDT",
         "side": "LONG",
         "entry": 90.35,
-        "now": 92.15,
+        "now": 90.86,
         "stop": 88.13,
-        "trail": 89.45854548,
+        "trail": 89.42981307,
         "rr": 2.0,
-        "uR": 0.81,
+        "uR": 0.23,
         "risk_pct": 2.46,
         "notional": 985.97,
         "reason": "",
@@ -168,42 +154,18 @@
         "sym": "DEXEUSDT",
         "side": "LONG",
         "entry": 25.53,
-        "now": 27.613,
+        "now": 27.554,
         "stop": 24.843,
-        "trail": 27.10029573,
+        "trail": 27.16643561,
         "rr": 2.0,
-        "uR": 3.03,
+        "uR": 2.95,
         "risk_pct": 2.69,
         "notional": 985.97,
-        "reason": "",
-        "tf": "15m"
-      },
-      {
-        "sym": "ATOMUSDT",
-        "side": "LONG",
-        "entry": 1.599,
-        "now": 1.579,
-        "stop": 1.567,
-        "trail": 1.57893556,
-        "rr": 2.0,
-        "uR": -0.62,
-        "risk_pct": 2.0,
-        "notional": 972.33,
         "reason": "",
         "tf": "15m"
       }
     ],
     "recent": [
-      {
-        "sym": "JSTUSDT",
-        "R": 1.57,
-        "pnl": 7.3
-      },
-      {
-        "sym": "BNBUSDT",
-        "R": 0.01,
-        "pnl": -1.2
-      },
       {
         "sym": "LINKUSDT",
         "R": -0.78,
@@ -233,6 +195,16 @@
         "sym": "TRXUSDT",
         "R": -1.0,
         "pnl": -4.8
+      },
+      {
+        "sym": "KITEUSDT",
+        "R": -1.0,
+        "pnl": -39.1
+      },
+      {
+        "sym": "ATOMUSDT",
+        "R": -1.0,
+        "pnl": -20.9
       }
     ]
   }

@@ -1,15 +1,15 @@
 {
-  "updated": "2026-07-06T10:52:27+00:00",
+  "updated": "2026-07-06T11:07:26+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 62886.29,
+      "spot": 62863.84,
       "main": {
         "expiry": "31JUL26",
         "days": 24.9,
         "max_pain": 64000,
-        "call_oi": 64277,
-        "put_oi": 25450,
+        "call_oi": 64278,
+        "put_oi": 25455,
         "pcr": 0.4,
         "call_walls": [
           {
@@ -52,13 +52,13 @@
         "expiry": "7JUL26",
         "days": 0.9,
         "max_pain": 62500,
-        "call_oi": 1971,
-        "put_oi": 5435,
-        "pcr": 2.76,
+        "call_oi": 1972,
+        "put_oi": 5460,
+        "pcr": 2.77,
         "call_walls": [
           {
             "strike": 65000,
-            "oi": 342
+            "oi": 343
           },
           {
             "strike": 62500,
@@ -84,23 +84,23 @@
           },
           {
             "strike": 60500,
-            "oi": 561
+            "oi": 577
           },
           {
             "strike": 61000,
-            "oi": 485
+            "oi": 488
           }
         ]
       }
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1770.74,
+      "spot": 1768.58,
       "main": {
         "expiry": "31JUL26",
         "days": 24.9,
         "max_pain": 1800,
-        "call_oi": 191713,
+        "call_oi": 191719,
         "put_oi": 111103,
         "pcr": 0.58,
         "call_walls": [
@@ -144,13 +144,13 @@
         "expiry": "7JUL26",
         "days": 0.9,
         "max_pain": 1750,
-        "call_oi": 9400,
-        "put_oi": 12306,
-        "pcr": 1.31,
+        "call_oi": 9587,
+        "put_oi": 12313,
+        "pcr": 1.28,
         "call_walls": [
           {
             "strike": 1800,
-            "oi": 3878
+            "oi": 3879
           },
           {
             "strike": 2000,
@@ -172,7 +172,7 @@
           },
           {
             "strike": 1700,
-            "oi": 1724
+            "oi": 1728
           },
           {
             "strike": 1750,

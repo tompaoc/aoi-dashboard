@@ -113,6 +113,29 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 .optcard .h{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
 .optcard .big{font-size:16px;font-weight:800;font-family:ui-monospace,monospace}
 .wall{display:flex;justify-content:space-between;gap:8px;font-family:ui-monospace,monospace;font-size:12px;padding:2px 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tagchip{font-size:12px;font-weight:600;padding:5px 11px;border-radius:20px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.35);color:var(--ink)}
+.relaybox{background:#0a0f1a;border:1px solid var(--line);border-radius:8px;padding:12px}
+.relaychain{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+.rung{flex:1;min-width:70px;text-align:center;padding:8px 6px;border-radius:8px;border:1px solid var(--line);position:relative}
+.rung .rtf{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.05em}
+.rung .rst{font-size:13px;font-weight:800;margin-top:3px}
+.rung .rrsi{font-size:10px;color:var(--muted);font-family:ui-monospace,monospace}
+.rung.ob{background:rgba(0,230,118,.14);border-color:rgba(0,230,118,.45)}
+.rung.os{background:rgba(255,59,92,.14);border-color:rgba(255,59,92,.45)}
+.rung.bull{background:rgba(0,230,118,.05)} .rung.bear{background:rgba(255,59,92,.05)}
+.arr{display:flex;align-items:center;color:var(--muted);font-size:16px;padding:0 2px}
+.behav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.bcard{background:#0a0f1a;border:1px solid var(--line);border-radius:8px;padding:10px 12px;text-align:center}
+.bcard .bv{font-size:20px;font-weight:800;font-family:ui-monospace,monospace}
+.bcard .bl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+.bcard .bs{font-size:11px;color:var(--muted);margin-top:4px}
+.scv{border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-size:12.5px;margin-bottom:8px;opacity:.6}
+.scv.active{opacity:1;box-shadow:0 0 0 1px currentColor inset}
+.scv.green{color:var(--green)} .scv.amber{color:var(--amber)} .scv.red{color:var(--red)}
+.scv .scname{font-weight:800;font-size:13px}
+.scv .scbody{color:var(--ink);margin-top:5px;line-height:1.5}
+.scv .scact{margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.06);color:var(--ink)}
 @media(max-width:1050px){.grid{grid-template-columns:1fr}.botbar{grid-template-columns:1fr 1fr}.plan-tfs{grid-template-columns:1fr}.planlow{grid-template-columns:1fr!important}}
 </style>
 </head>
@@ -190,12 +213,19 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
     <span class="t" style="color:var(--cyan);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">🎯 AOI PLAN — BTC · Plan &gt; Predict</span>
     <span id="plan-conf" class="confmeter">—</span></div>
   <div class="stage" id="plan-stage">กำลังโหลด…</div>
-  <div class="lbl" id="plan-cascade" style="margin:6px 0 10px;text-transform:none;letter-spacing:0"></div>
+  <div class="tags" id="plan-tags" style="margin:8px 0"></div>
+  <div class="lbl" id="plan-cascade" style="margin:6px 0 8px;text-transform:none;letter-spacing:0"></div>
 
-  <div class="lbl" style="margin-bottom:6px">📋 Checklist Grid ครู (เกณฑ์ × Timeframe)</div>
+  <div class="lbl" style="margin:10px 0 6px">🔗 Relay Tracker — โมเมนตัมส่งไม้ (ไม้ถึงชั้นไหนแล้ว)</div>
+  <div class="relaybox"><div class="relaychain" id="plan-relay"></div><div class="lbl" id="plan-relay-txt" style="text-transform:none;letter-spacing:0;margin-top:8px"></div></div>
+
+  <div class="lbl" style="margin:12px 0 6px">📋 Checklist Grid ครู (เกณฑ์ × Timeframe)</div>
   <div style="overflow-x:auto"><table class="gridtbl" id="plan-grid"></table></div>
 
   <div class="absbox" id="plan-abs" style="margin:12px 0"></div>
+
+  <div class="lbl" style="margin:12px 0 6px">📐 พฤติกรรมที่เส้น (Day) — เส้นยังเป็นแนวรับอยู่มั้ย</div>
+  <div class="behav" id="plan-behav"></div>
 
   <div class="planlow" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:4px">
     <div><div class="lbl" style="margin-bottom:6px">🟩 โซนสะสม (discount — ซื้อไม้ทีละชั้น)</div><div id="plan-buy"></div></div>
@@ -210,7 +240,7 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 
   <div class="planlow" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
     <div><div class="lbl" style="margin-bottom:6px">✅ 3 เงื่อนไข Week ยืนยันโมเมนตัมกลับตัว (ครู AOI) — <span id="plan-confirm">—</span></div><div id="plan-conds"></div></div>
-    <div><div class="lbl" style="margin-bottom:6px">🗺️ 2 Scenarios — เตรียม action ทั้ง 2 ทาง</div><div class="scen" id="plan-scen"></div></div>
+    <div><div class="lbl" style="margin-bottom:6px">🗺️ Scenarios — if → then → ทำอะไร (Plan &gt; Predict)</div><div id="plan-scen"></div></div>
   </div>
 </div>
 
@@ -457,9 +487,37 @@ async function loadPlan(){
     // ── existing: week conds + scenarios ──
     document.getElementById('plan-conds').innerHTML=p.week_conditions.map(c=>`<div class="cond">
       <span>${c.ok?'✅':'⬜'}</span><span style="color:${c.ok?'var(--green)':'var(--muted)'}">${c.txt}</span></div>`).join('');
-    document.getElementById('plan-scen').innerHTML=p.scenarios.map(s=>`<div class="scenb">
-      <div style="font-weight:700;color:${s.dir==='ขึ้น'?'var(--green)':'var(--red)'}">${s.dir==='ขึ้น'?'📈 ขึ้น':'📉 ลง'}</div>
-      <div class="muted" style="margin-top:4px">ถ้า: ${s.if}</div><div style="margin-top:3px">→ ${s.then}</div></div>`).join('');
+    // ── B4 context tags ──
+    document.getElementById('plan-tags').innerHTML=(p.tags||[]).length
+      ? p.tags.map(t=>`<span class="tagchip">${t.icon} ${t.txt}</span>`).join('')
+      : '<span class="lbl" style="text-transform:none;letter-spacing:0">— ไม่มีสัญญาณบริบทเด่นตอนนี้</span>';
+    // ── B1 relay tracker ──
+    if(p.relay){
+      const rr=p.relay.rungs;
+      document.getElementById('plan-relay').innerHTML=rr.map((r,i)=>{
+        const stTxt={ob:'OB 🔥',os:'OS ❄️',bull:'bull',bear:'bear'}[r.state]||r.state;
+        return `<div class="rung ${r.state}"><div class="rtf">${r.tf}</div><div class="rst">${stTxt}</div><div class="rrsi">RSI ${r.rsi}</div></div>`+
+          (i<rr.length-1?'<div class="arr">→</div>':'');
+      }).join('');
+      document.getElementById('plan-relay-txt').textContent=p.relay.txt;
+    }
+    // ── B2 behavior at line ──
+    if(p.behavior){
+      const b=p.behavior,rs=b.respect,dr=b.drive,ex=b.exhaustion;
+      const rc=rs.pct==null?'var(--muted)':rs.pct>=60?'var(--green)':rs.pct>=40?'var(--amber)':'var(--red)';
+      document.getElementById('plan-behav').innerHTML=`
+        <div class="bcard"><div class="bv" style="color:${rc}">${rs.pct==null?'—':rs.pct+'%'}</div><div class="bl">Line Respect (EMA25)</div><div class="bs">เด้ง ${rs.holds}/${rs.touches} เทส · ยืนเหนือเส้น ${rs.above_pct}%</div></div>
+        <div class="bcard"><div class="bv" style="color:${dr.above?'var(--green)':'var(--red)'}">${dr.bars}</div><div class="bl">Drive (เกาะ EMA10)</div><div class="bs">แท่งปิด${dr.above?'เหนือ':'ใต้'}เส้นติดกัน (ความยาวแถว)</div></div>
+        <div class="bcard"><div class="bv" style="color:${ex.flag?'var(--red)':'var(--green)'}">${ex.flag?'⚠️':'✅'}</div><div class="bl">Exhaustion</div><div class="bs">${ex.txt}</div></div>`;
+    }
+    // ── B3 scenario engine v2 ──
+    const sv=p.scenarios_v2||[];
+    document.getElementById('plan-scen').innerHTML=sv.length
+      ? sv.map(s=>`<div class="scv ${s.color}${s.active?' active':''}">
+          <div class="scname">${s.icon} ${s.name}${s.active?' · 🎯 น่าจะเป็นตอนนี้':''} <span class="lbl" style="float:right">${s.horizon}</span></div>
+          <div class="scbody"><b>ถ้า:</b> ${s.if}<br><b>→</b> ${s.then}</div>
+          <div class="scact"><b>ทำ:</b> ${s.action}</div></div>`).join('')
+      : p.scenarios.map(s=>`<div class="scenb"><div style="font-weight:700">${s.dir}</div><div>${s.if}</div></div>`).join('');
     drawFlipLines();
   }catch(e){console.warn('plan',e);document.getElementById('plan-stage').textContent='ยังไม่มีข้อมูล plan (บอทยังไม่ได้สร้าง plan.json)';}
 }

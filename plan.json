@@ -1,55 +1,55 @@
 {
   "symbol": "BTCUSDT",
-  "price": 62867.99,
+  "price": 62838.01,
   "tfs": [
     {
       "tf": "4H",
-      "price": 62867.99,
-      "premium": 61809.79,
+      "price": 62838.01,
+      "premium": 61809.0,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 560.9,
+      "macd": 558.5,
       "rsi": 57,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": true,
-      "ema10": 62955.77,
-      "ema25": 62367.34,
-      "ema50": 61821.28,
+      "ema10": 62950.32,
+      "ema25": 62365.03,
+      "ema50": 61820.1,
       "trend": "up",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 62867.99,
-      "premium": 62964.31,
+      "price": 62838.01,
+      "premium": 62962.01,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -1048.1,
+      "macd": -1050.5,
       "rsi": 49,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 62056.43,
-      "ema25": 62964.31,
-      "ema50": 65737.24,
+      "ema10": 62050.97,
+      "ema25": 62962.01,
+      "ema50": 65736.07,
       "trend": "down",
       "ma_cross": "death"
     },
     {
       "tf": "Week",
-      "price": 62867.99,
-      "premium": 73170.26,
+      "price": 62838.01,
+      "premium": 73167.95,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -5918.6,
+      "macd": -5921.0,
       "rsi": 38,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 66741.43,
-      "ema25": 73170.26,
-      "ema50": 80106.18,
+      "ema10": 66735.98,
+      "ema25": 73167.95,
+      "ema50": 80105.0,
       "trend": "down",
       "ma_cross": "death"
     }
@@ -58,7 +58,7 @@
   "week_conditions": [
     {
       "n": 1,
-      "txt": "เบรค Premium Week (EMA25 $73,170)",
+      "txt": "เบรค Premium Week (EMA25 $73,168)",
       "ok": false
     },
     {
@@ -77,13 +77,45 @@
   "scenarios": [
     {
       "dir": "ขึ้น",
-      "if": "เบรค Day premium $62,964 + RSI overbought",
+      "if": "เบรค Day premium $62,962 + RSI overbought",
       "then": "มีโอกาสวิ่งเทส supply โซนบน (เช่น Week premium) ทีละ step"
     },
     {
       "dir": "ลง",
       "if": "เบรคไม่ได้ + เกิด panic sell (oversold อีกรอบ)",
       "then": "ถูกดูดลงหา discount/settlement zone ล่าง"
+    }
+  ],
+  "scenarios_v2": [
+    {
+      "name": "ขึ้น (follow)",
+      "icon": "📈",
+      "color": "green",
+      "if": "เบรค Day premium $62,962 + Day RSI ไป overbought (panic buy เกิด)",
+      "then": "โมเมนตัมส่งขึ้นเทส Week premium เป็น step",
+      "action": "Follow — เพิ่มไม้ตาม relay 1H→4H, เก็บกำไรบางส่วนที่แต่ละ supply zone",
+      "horizon": "วัน–สัปดาห์",
+      "active": false
+    },
+    {
+      "name": "ออกข้าง (wait)",
+      "icon": "➡️",
+      "color": "amber",
+      "if": "หลุด/ต่ำกว่า premium แต่ Day RSI ยังไม่ oversold (ไม่มี panic sell)",
+      "then": "balance zone — เบรคทางไหนโดน order สวน จนกว่าจะเกิด imbalance",
+      "action": "ลด size / รอ — เก็บสั้นที่ขอบ zone เท่านั้น ห้ามไล่",
+      "horizon": "สัปดาห์–เดือน",
+      "active": true
+    },
+    {
+      "name": "ลง (de-risk)",
+      "icon": "📉",
+      "color": "red",
+      "if": "Day ปิด oversold ≥ 2 วันติด (selling pressure จริง)",
+      "then": "ถูกดูดหา discount/re-accumulation zone ล่าง อาจกินเวลา 2-3 เดือน",
+      "action": "De-risk — หยุดไม้ใหม่ฝั่ง long, ยอมปากำไรตาม plan, รอสะสมชุดใหม่",
+      "horizon": "2-3 เดือน",
+      "active": false
     }
   ],
   "grid": [
@@ -183,12 +215,12 @@
   "flips": [
     {
       "price": 62710.59,
-      "dist": -0.3,
+      "dist": -0.2,
       "role": "support"
     },
     {
       "price": 59565.46,
-      "dist": -5.3,
+      "dist": -5.2,
       "role": "support"
     },
     {
@@ -208,21 +240,21 @@
     },
     {
       "price": 69496.59,
-      "dist": 10.5,
+      "dist": 10.6,
       "role": "resistance"
     }
   ],
   "ladder_buy": [
     {
       "name": "4H EMA25 (เส้น trim)",
-      "price": 62367.34,
+      "price": 62365.03,
       "dist": -0.8
     }
   ],
   "ladder_trim": [
     {
       "name": "Day EMA25 (premium)",
-      "price": 62964.31,
+      "price": 62962.01,
       "dist": 0.2
     },
     {
@@ -233,7 +265,7 @@
     {
       "name": "Swing high (Day)",
       "price": 67292.15,
-      "dist": 7.0
+      "dist": 7.1
     },
     {
       "name": "Swing high (Day)",
@@ -249,5 +281,61 @@
     "run_dir": "ลง",
     "net10": 4.7
   },
+  "relay": {
+    "rungs": [
+      {
+        "tf": "1H",
+        "rsi": 45,
+        "macd_pos": false,
+        "state": "bear"
+      },
+      {
+        "tf": "4H",
+        "rsi": 57,
+        "macd_pos": true,
+        "state": "bull"
+      },
+      {
+        "tf": "Day",
+        "rsi": 49,
+        "macd_pos": false,
+        "state": "bear"
+      },
+      {
+        "tf": "Week",
+        "rsi": 38,
+        "macd_pos": false,
+        "state": "bear"
+      }
+    ],
+    "up_reach": 0,
+    "down_reach": 0,
+    "direction": "none",
+    "txt": "🟡 ยังไม่มี relay ชัด (ไม่มี TF ไหน OB/OS)"
+  },
+  "behavior": {
+    "respect": {
+      "pct": 50,
+      "touches": 4,
+      "holds": 2,
+      "above_pct": 17
+    },
+    "drive": {
+      "bars": 5,
+      "above": true
+    },
+    "exhaustion": {
+      "flag": false,
+      "txt": "ยังไม่เห็นสัญญาณแรงหมด",
+      "step_shrink": false,
+      "rsi_div": false
+    }
+  },
+  "tags": [
+    {
+      "icon": "🔄",
+      "txt": "Rebound-likely — ใต้ premium แต่ Day ยังไม่ oversold (panic sell ไม่เกิด)"
+    }
+  ],
   "note": "Plan > Predict — เห็นโครงสร้าง แล้วเตรียม action ทั้ง 2 ทาง ไม่ใช่เดาทางเดียว"
 }

@@ -1,20 +1,20 @@
 {
-  "updated": "2026-07-06T11:52:26+00:00",
+  "updated": "2026-07-06T12:06:39+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 62957.79,
+      "spot": 62063.61,
       "main": {
         "expiry": "31JUL26",
         "days": 24.8,
         "max_pain": 64000,
-        "call_oi": 64272,
-        "put_oi": 25462,
+        "call_oi": 64271,
+        "put_oi": 25502,
         "pcr": 0.4,
         "call_walls": [
           {
             "strike": 70000,
-            "oi": 7500
+            "oi": 7499
           },
           {
             "strike": 80000,
@@ -26,7 +26,7 @@
           },
           {
             "strike": 75000,
-            "oi": 3071
+            "oi": 3077
           }
         ],
         "put_walls": [
@@ -40,11 +40,11 @@
           },
           {
             "strike": 56000,
-            "oi": 2046
+            "oi": 2045
           },
           {
             "strike": 60000,
-            "oi": 2029
+            "oi": 2028
           }
         ]
       },
@@ -52,9 +52,9 @@
         "expiry": "7JUL26",
         "days": 0.8,
         "max_pain": 62500,
-        "call_oi": 1977,
-        "put_oi": 5488,
-        "pcr": 2.78,
+        "call_oi": 2015,
+        "put_oi": 6075,
+        "pcr": 3.01,
         "call_walls": [
           {
             "strike": 65000,
@@ -62,7 +62,7 @@
           },
           {
             "strike": 62500,
-            "oi": 331
+            "oi": 334
           },
           {
             "strike": 63000,
@@ -80,28 +80,28 @@
           },
           {
             "strike": 62000,
-            "oi": 720
+            "oi": 735
+          },
+          {
+            "strike": 59000,
+            "oi": 604
           },
           {
             "strike": 60500,
-            "oi": 577
-          },
-          {
-            "strike": 61000,
-            "oi": 488
+            "oi": 576
           }
         ]
       }
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1772.07,
+      "spot": 1742.39,
       "main": {
         "expiry": "31JUL26",
         "days": 24.8,
         "max_pain": 1800,
-        "call_oi": 191745,
-        "put_oi": 111103,
+        "call_oi": 191580,
+        "put_oi": 111102,
         "pcr": 0.58,
         "call_walls": [
           {
@@ -110,15 +110,15 @@
           },
           {
             "strike": 2000,
-            "oi": 11665
+            "oi": 11660
           },
           {
             "strike": 2200,
             "oi": 11164
           },
           {
-            "strike": 2400,
-            "oi": 10106
+            "strike": 1800,
+            "oi": 10306
           }
         ],
         "put_walls": [
@@ -144,13 +144,13 @@
         "expiry": "7JUL26",
         "days": 0.8,
         "max_pain": 1750,
-        "call_oi": 9841,
-        "put_oi": 12347,
-        "pcr": 1.25,
+        "call_oi": 10040,
+        "put_oi": 12856,
+        "pcr": 1.28,
         "call_walls": [
           {
             "strike": 1800,
-            "oi": 3880
+            "oi": 3879
           },
           {
             "strike": 2000,
@@ -158,11 +158,11 @@
           },
           {
             "strike": 1900,
-            "oi": 985
+            "oi": 989
           },
           {
-            "strike": 1775,
-            "oi": 896
+            "strike": 1825,
+            "oi": 987
           }
         ],
         "put_walls": [
@@ -172,11 +172,11 @@
           },
           {
             "strike": 1700,
-            "oi": 1740
+            "oi": 1752
           },
           {
             "strike": 1750,
-            "oi": 1413
+            "oi": 1443
           },
           {
             "strike": 1550,

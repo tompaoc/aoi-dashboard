@@ -1,61 +1,61 @@
 {
   "symbol": "BTCUSDT",
-  "price": 63790.0,
+  "price": 63782.0,
   "tfs": [
     {
       "tf": "4H",
-      "price": 63790.0,
-      "premium": 61896.82,
+      "price": 63782.0,
+      "premium": 61896.61,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 575.0,
-      "macd_gap": -23.4,
+      "macd": 574.4,
+      "macd_gap": -23.9,
       "macd_widening": false,
       "rsi": 63,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": true,
-      "ema10": 63148.49,
-      "ema25": 62535.28,
-      "ema50": 61949.56,
+      "ema10": 63147.04,
+      "ema25": 62534.67,
+      "ema50": 61949.25,
       "trend": "up",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 63790.0,
-      "premium": 63035.24,
+      "price": 63782.0,
+      "premium": 63034.62,
       "above_premium": true,
       "macd_pos": false,
-      "macd": -974.6,
-      "macd_gap": 713.0,
+      "macd": -975.2,
+      "macd_gap": 712.5,
       "macd_widening": true,
       "rsi": 52,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 62224.06,
-      "ema25": 63035.24,
-      "ema50": 65773.4,
+      "ema10": 62222.61,
+      "ema25": 63034.62,
+      "ema50": 65773.09,
       "trend": "down",
       "ma_cross": "death"
     },
     {
       "tf": "Week",
-      "price": 63790.0,
-      "premium": 73241.18,
+      "price": 63782.0,
+      "premium": 73240.57,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -5845.1,
-      "macd_gap": -223.4,
+      "macd": -5845.7,
+      "macd_gap": -223.9,
       "macd_widening": true,
       "rsi": 38,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 66909.07,
-      "ema25": 73241.18,
-      "ema50": 80142.34,
+      "ema10": 66907.61,
+      "ema25": 73240.57,
+      "ema50": 80142.02,
       "trend": "down",
       "ma_cross": "death"
     }
@@ -241,19 +241,19 @@
     },
     {
       "price": 67326.4,
-      "dist": 5.5,
+      "dist": 5.6,
       "role": "resistance"
     },
     {
       "price": 69496.59,
-      "dist": 8.9,
+      "dist": 9.0,
       "role": "resistance"
     }
   ],
   "ladder_buy": [
     {
       "name": "Day EMA25 (premium)",
-      "price": 63035.24,
+      "price": 63034.62,
       "dist": -1.2
     }
   ],
@@ -291,7 +291,7 @@
     "rungs": [
       {
         "tf": "1H",
-        "rsi": 62,
+        "rsi": 61,
         "macd_pos": true,
         "state": "bull"
       },

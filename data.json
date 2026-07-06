@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06 16:52",
+  "updated": "2026-07-06 17:07",
   "regime": "bear",
   "daily": {
     "start": 5000.0,
@@ -115,22 +115,22 @@
   },
   "m15": {
     "start": 10000.0,
-    "balance": 9864.42,
-    "mtm": 9892.92,
-    "return": -1.07,
-    "closed": 13,
+    "balance": 9859.65,
+    "mtm": 9888.86,
+    "return": -1.11,
+    "closed": 14,
     "wins": 3,
-    "winrate": 23.1,
+    "winrate": 21.4,
     "open": [
       {
         "sym": "PYTHUSDT",
         "side": "LONG",
         "entry": 0.04098,
-        "now": 0.04153,
+        "now": 0.04151,
         "stop": 0.03928,
-        "trail": 0.04076903,
+        "trail": 0.04078,
         "rr": 2.0,
-        "uR": 0.32,
+        "uR": 0.31,
         "risk_pct": 4.15,
         "notional": 993.26,
         "reason": "",
@@ -142,35 +142,16 @@
         "entry": 0.1213,
         "now": 0.1233,
         "stop": 0.1167,
-        "trail": 0.11825071,
+        "trail": 0.11834957,
         "rr": 2.0,
         "uR": 0.43,
         "risk_pct": 3.79,
         "notional": 992.3,
         "reason": "",
         "tf": "15m"
-      },
-      {
-        "sym": "TRXUSDT",
-        "side": "LONG",
-        "entry": 0.3296,
-        "now": 0.3292,
-        "stop": 0.3285,
-        "trail": 0.32866113,
-        "rr": 2.0,
-        "uR": -0.36,
-        "risk_pct": 0.33,
-        "notional": 986.44,
-        "reason": "",
-        "tf": "15m"
       }
     ],
     "recent": [
-      {
-        "sym": "WLFIUSDT",
-        "R": 0.33,
-        "pnl": 5.3
-      },
       {
         "sym": "JSTUSDT",
         "R": 1.57,
@@ -205,6 +186,11 @@
         "sym": "PUMPUSDT",
         "R": -1.0,
         "pnl": -28.6
+      },
+      {
+        "sym": "TRXUSDT",
+        "R": -1.0,
+        "pnl": -4.8
       }
     ]
   }

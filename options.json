@@ -1,15 +1,15 @@
 {
-  "updated": "2026-07-06T11:37:27+00:00",
+  "updated": "2026-07-06T11:52:26+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 62976.0,
+      "spot": 62957.79,
       "main": {
         "expiry": "31JUL26",
         "days": 24.8,
         "max_pain": 64000,
-        "call_oi": 64280,
-        "put_oi": 25460,
+        "call_oi": 64272,
+        "put_oi": 25462,
         "pcr": 0.4,
         "call_walls": [
           {
@@ -52,13 +52,13 @@
         "expiry": "7JUL26",
         "days": 0.8,
         "max_pain": 62500,
-        "call_oi": 1975,
-        "put_oi": 5481,
-        "pcr": 2.77,
+        "call_oi": 1977,
+        "put_oi": 5488,
+        "pcr": 2.78,
         "call_walls": [
           {
             "strike": 65000,
-            "oi": 343
+            "oi": 344
           },
           {
             "strike": 62500,
@@ -70,17 +70,17 @@
           },
           {
             "strike": 64000,
-            "oi": 249
+            "oi": 250
           }
         ],
         "put_walls": [
           {
             "strike": 60000,
-            "oi": 2425
+            "oi": 2426
           },
           {
             "strike": 62000,
-            "oi": 718
+            "oi": 720
           },
           {
             "strike": 60500,
@@ -95,7 +95,7 @@
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1774.65,
+      "spot": 1772.07,
       "main": {
         "expiry": "31JUL26",
         "days": 24.8,
@@ -145,7 +145,7 @@
         "days": 0.8,
         "max_pain": 1750,
         "call_oi": 9841,
-        "put_oi": 12344,
+        "put_oi": 12347,
         "pcr": 1.25,
         "call_walls": [
           {
@@ -176,7 +176,7 @@
           },
           {
             "strike": 1750,
-            "oi": 1410
+            "oi": 1413
           },
           {
             "strike": 1550,

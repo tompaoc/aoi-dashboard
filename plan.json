@@ -1,26 +1,26 @@
 {
   "symbol": "BTCUSDT",
-  "price": 62660.12,
+  "price": 62664.4,
   "tfs": [
     {
       "tf": "4H",
-      "price": 62660.12,
+      "price": 62664.4,
       "premium": 61804.0,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 544.0,
-      "rsi": 54,
+      "macd": 545.0,
+      "rsi": 55,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": true
     },
     {
       "tf": "Day",
-      "price": 62660.12,
-      "premium": 62948.0,
+      "price": 62664.4,
+      "premium": 62949.0,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -1065.0,
+      "macd": -1064.0,
       "rsi": 48,
       "rsi_ob": false,
       "rsi_os": false,
@@ -28,8 +28,8 @@
     },
     {
       "tf": "Week",
-      "price": 62660.12,
-      "premium": 73154.0,
+      "price": 62664.4,
+      "premium": 73155.0,
       "above_premium": false,
       "macd_pos": false,
       "macd": -5935.0,
@@ -43,7 +43,7 @@
   "week_conditions": [
     {
       "n": 1,
-      "txt": "เบรค Premium Week (EMA25 $73,154)",
+      "txt": "เบรค Premium Week (EMA25 $73,155)",
       "ok": false
     },
     {
@@ -62,7 +62,7 @@
   "scenarios": [
     {
       "dir": "ขึ้น",
-      "if": "เบรค Day premium $62,948 + RSI overbought",
+      "if": "เบรค Day premium $62,949 + RSI overbought",
       "then": "มีโอกาสวิ่งเทส supply โซนบน (เช่น Week premium) ทีละ step"
     },
     {

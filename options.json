@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-07T05:37:51+00:00",
+  "updated": "2026-07-07T05:52:44+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 63217.4,
+      "spot": 63255.34,
       "main": {
         "expiry": "31JUL26",
         "days": 24.1,
@@ -95,7 +95,7 @@
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1768.63,
+      "spot": 1770.34,
       "main": {
         "expiry": "31JUL26",
         "days": 24.1,

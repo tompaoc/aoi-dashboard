@@ -1,61 +1,61 @@
 {
   "symbol": "BTCUSDT",
-  "price": 63306.0,
+  "price": 63385.34,
   "tfs": [
     {
       "tf": "4H",
-      "price": 63306.0,
-      "premium": 62047.51,
+      "price": 63385.34,
+      "premium": 62049.59,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 479.5,
-      "macd_gap": -76.2,
+      "macd": 485.9,
+      "macd_gap": -71.1,
       "macd_widening": true,
-      "rsi": 56,
+      "rsi": 57,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": true,
-      "ema10": 63257.37,
-      "ema25": 62764.74,
-      "ema50": 62161.47,
+      "ema10": 63271.8,
+      "ema25": 62770.84,
+      "ema50": 62164.58,
       "trend": "up",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 63306.0,
-      "premium": 63073.96,
+      "price": 63385.34,
+      "premium": 63080.06,
       "above_premium": true,
       "macd_pos": false,
-      "macd": -796.3,
-      "macd_gap": 709.8,
+      "macd": -790.0,
+      "macd_gap": 714.9,
       "macd_widening": true,
       "rsi": 50,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 62458.27,
-      "ema25": 63073.96,
-      "ema50": 65686.13,
+      "ema10": 62472.7,
+      "ema25": 63080.06,
+      "ema50": 65689.25,
       "trend": "down",
       "ma_cross": "death"
     },
     {
       "tf": "Week",
-      "price": 63306.0,
-      "premium": 73203.95,
+      "price": 63385.34,
+      "premium": 73210.06,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -5883.7,
-      "macd_gap": -254.2,
+      "macd": -5877.4,
+      "macd_gap": -249.2,
       "macd_widening": true,
       "rsi": 38,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 66821.07,
-      "ema25": 73203.95,
-      "ema50": 80123.36,
+      "ema10": 66835.49,
+      "ema25": 73210.06,
+      "ema50": 80126.47,
       "trend": "down",
       "ma_cross": "death"
     }
@@ -64,7 +64,7 @@
   "week_conditions": [
     {
       "n": 1,
-      "txt": "เบรค Premium Week (EMA25 $73,204)",
+      "txt": "เบรค Premium Week (EMA25 $73,210)",
       "ok": false
     },
     {
@@ -83,7 +83,7 @@
   "scenarios": [
     {
       "dir": "ขึ้น",
-      "if": "เบรค Day premium $63,074 + RSI overbought",
+      "if": "เบรค Day premium $63,080 + RSI overbought",
       "then": "มีโอกาสวิ่งเทส supply โซนบน (เช่น Week premium) ทีละ step"
     },
     {
@@ -198,7 +198,7 @@
       "cells": [
         {
           "s": "neutral",
-          "t": "56 reject ⚠️"
+          "t": "57 reject ⚠️"
         },
         {
           "s": "neutral",
@@ -221,83 +221,83 @@
   "flips": [
     {
       "price": 62710.59,
-      "dist": -0.9,
+      "dist": -1.1,
       "role": "support"
     },
     {
       "price": 59565.46,
-      "dist": -5.9,
+      "dist": -6.0,
       "role": "support"
     },
     {
       "price": 57957.6,
-      "dist": -8.4,
+      "dist": -8.6,
       "role": "support"
     },
     {
       "price": 65634.21,
-      "dist": 3.7,
+      "dist": 3.5,
       "role": "resistance"
     },
     {
       "price": 67326.4,
-      "dist": 6.4,
+      "dist": 6.2,
       "role": "resistance"
     },
     {
       "price": 69496.59,
-      "dist": 9.8,
+      "dist": 9.6,
       "role": "resistance"
     }
   ],
   "ladder_buy": [
     {
       "name": "Day EMA25 (premium)",
-      "price": 63073.96,
-      "dist": -0.4
+      "price": 63080.06,
+      "dist": -0.5
     }
   ],
   "ladder_trim": [
     {
       "name": "Swing high (Day)",
       "price": 65622.83,
-      "dist": 3.7
+      "dist": 3.5
     },
     {
       "name": "Swing high (Day)",
       "price": 67292.15,
-      "dist": 6.3
+      "dist": 6.2
     },
     {
       "name": "Swing high (Day)",
       "price": 68698.7,
-      "dist": 8.5
+      "dist": 8.4
     },
     {
       "name": "Swing high (Day)",
       "price": 69988.83,
-      "dist": 10.6
+      "dist": 10.4
     }
   ],
   "absorption": {
-    "buy_pct": 68,
+    "buy_pct": 69,
     "side": "buy",
-    "txt": "🟢 แรงซื้อครอง — ผู้ขายถูกดูดซับ (68% แรงเป็นเขียว)",
+    "txt": "🟢 แรงซื้อครอง — ผู้ขายถูกดูดซับ (69% แรงเป็นเขียว)",
     "run": 1,
     "run_dir": "ลง",
-    "net10": 6.3
+    "net10": 6.4
   },
   "relay": {
     "rungs": [
       {
         "tf": "1H",
-        "rsi": 50,
+        "rsi": 51,
         "macd_pos": true,
         "state": "bull"
       },
       {
         "tf": "4H",
-        "rsi": 56,
+        "rsi": 57,
         "macd_pos": true,
         "state": "bull"
       },
@@ -363,7 +363,7 @@
     "policy": "อ่อน — รอ setup ชัดกว่านี้ / อยู่เฉย"
   },
   "wickzone": {
-    "px": 63306.0,
+    "px": 63385.34,
     "supply": {
       "lo": 73884.38,
       "hi": 74514.1,

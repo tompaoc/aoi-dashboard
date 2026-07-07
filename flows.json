@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T09:22:45+00:00",
+  "updated": "2026-07-07T09:37:34+00:00",
   "etf": {
     "recent": [
       {
@@ -51,12 +51,12 @@
     "outflow": false
   },
   "btcd": {
-    "btcd": 55.81,
+    "btcd": 55.8,
     "status": "alt-strong",
     "note": "< 56% — จังหวะ alts shoot แรง (เกณฑ์ครู)",
     "chg7": null,
     "n_hist": 2,
-    "total2": 1.003,
+    "total2": 1.002,
     "total2_chg7": null,
     "rotation": null,
     "caveat": "MA 25/50 สัปดาห์แบบครูต้องใช้ข้อมูลเสียเงิน — เวอร์ชันนี้ใช้เกณฑ์ + สะสมทิศเอง"

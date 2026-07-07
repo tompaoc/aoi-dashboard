@@ -1,14 +1,14 @@
 {
-  "updated": "2026-07-07T05:09:31+00:00",
+  "updated": "2026-07-07T05:22:54+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 63085.64,
+      "spot": 62956.14,
       "main": {
         "expiry": "31JUL26",
         "days": 24.1,
         "max_pain": 64000,
-        "call_oi": 65555,
+        "call_oi": 65560,
         "put_oi": 25781,
         "pcr": 0.39,
         "call_walls": [
@@ -22,11 +22,11 @@
           },
           {
             "strike": 68000,
-            "oi": 3520
+            "oi": 3522
           },
           {
             "strike": 75000,
-            "oi": 3190
+            "oi": 3195
           }
         ],
         "put_walls": [
@@ -53,12 +53,12 @@
         "days": 0.1,
         "max_pain": 62500,
         "call_oi": 2440,
-        "put_oi": 6307,
+        "put_oi": 6312,
         "pcr": 2.59,
         "call_walls": [
           {
             "strike": 63000,
-            "oi": 394
+            "oi": 395
           },
           {
             "strike": 62500,
@@ -95,13 +95,13 @@
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1762.41,
+      "spot": 1760.48,
       "main": {
         "expiry": "31JUL26",
         "days": 24.1,
         "max_pain": 1800,
-        "call_oi": 198009,
-        "put_oi": 113661,
+        "call_oi": 198013,
+        "put_oi": 113662,
         "pcr": 0.57,
         "call_walls": [
           {
@@ -144,21 +144,21 @@
         "expiry": "7JUL26",
         "days": 0.1,
         "max_pain": 1775,
-        "call_oi": 13298,
-        "put_oi": 16891,
-        "pcr": 1.27,
+        "call_oi": 13872,
+        "put_oi": 16976,
+        "pcr": 1.22,
         "call_walls": [
           {
             "strike": 1800,
             "oi": 4026
           },
           {
-            "strike": 1900,
-            "oi": 1854
+            "strike": 1775,
+            "oi": 2243
           },
           {
-            "strike": 1775,
-            "oi": 1669
+            "strike": 1900,
+            "oi": 1854
           },
           {
             "strike": 1825,
@@ -176,7 +176,7 @@
           },
           {
             "strike": 1725,
-            "oi": 2033
+            "oi": 2129
           },
           {
             "strike": 1750,

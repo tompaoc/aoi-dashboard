@@ -1,61 +1,61 @@
 {
   "symbol": "BTCUSDT",
-  "price": 63519.57,
+  "price": 63513.63,
   "tfs": [
     {
       "tf": "4H",
-      "price": 63519.56,
-      "premium": 62088.81,
+      "price": 63513.63,
+      "premium": 62088.66,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 474.9,
-      "macd_gap": -65.9,
+      "macd": 474.5,
+      "macd_gap": -66.3,
       "macd_widening": true,
       "rsi": 58,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 63319.92,
-      "ema25": 62829.9,
-      "ema50": 62218.49,
+      "ema10": 63318.84,
+      "ema25": 62829.45,
+      "ema50": 62218.26,
       "trend": "up",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 63519.57,
-      "premium": 63090.39,
+      "price": 63513.63,
+      "premium": 63089.93,
       "above_premium": true,
       "macd_pos": false,
-      "macd": -779.2,
-      "macd_gap": 723.4,
+      "macd": -779.7,
+      "macd_gap": 723.1,
       "macd_widening": true,
       "rsi": 51,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 62497.1,
-      "ema25": 63090.39,
-      "ema50": 65694.51,
+      "ema10": 62496.02,
+      "ema25": 63089.93,
+      "ema50": 65694.28,
       "trend": "down",
       "ma_cross": "death"
     },
     {
       "tf": "Week",
-      "price": 63519.57,
-      "premium": 73220.38,
+      "price": 63513.63,
+      "premium": 73219.93,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -5866.7,
-      "macd_gap": -240.6,
+      "macd": -5867.1,
+      "macd_gap": -241.0,
       "macd_widening": true,
       "rsi": 38,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 66859.9,
-      "ema25": 73220.38,
-      "ema50": 80131.73,
+      "ema10": 66858.82,
+      "ema25": 73219.93,
+      "ema50": 80131.5,
       "trend": "down",
       "ma_cross": "death"
     }
@@ -231,7 +231,7 @@
     },
     {
       "price": 57957.6,
-      "dist": -8.8,
+      "dist": -8.7,
       "role": "support"
     },
     {
@@ -253,7 +253,7 @@
   "ladder_buy": [
     {
       "name": "Day EMA25 (premium)",
-      "price": 63090.39,
+      "price": 63089.93,
       "dist": -0.7
     }
   ],
@@ -369,7 +369,7 @@
     "policy": "อ่อน — รอ setup ชัดกว่านี้ / อยู่เฉย"
   },
   "wickzone": {
-    "px": 63519.57,
+    "px": 63513.63,
     "supply": {
       "lo": 73884.38,
       "hi": 74514.1,

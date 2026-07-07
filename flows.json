@@ -1,11 +1,7 @@
 {
-  "updated": "2026-07-07T11:52:35+00:00",
+  "updated": "2026-07-07T12:06:05+00:00",
   "etf": {
     "recent": [
-      {
-        "date": "22 Jun 2026",
-        "flow": -68.3
-      },
       {
         "date": "23 Jun 2026",
         "flow": -113.8
@@ -41,22 +37,26 @@
       {
         "date": "06 Jul 2026",
         "flow": 265.7
+      },
+      {
+        "date": "07 Jul 2026",
+        "flow": 0.0
       }
     ],
     "latest": {
-      "date": "06 Jul 2026",
-      "flow": 265.7
+      "date": "07 Jul 2026",
+      "flow": 0.0
     },
     "consec_outflow": 0,
     "outflow": false
   },
   "btcd": {
-    "btcd": 55.8,
+    "btcd": 55.84,
     "status": "alt-strong",
     "note": "< 56% — จังหวะ alts shoot แรง (เกณฑ์ครู)",
     "chg7": null,
     "n_hist": 2,
-    "total2": 1.003,
+    "total2": 1.005,
     "total2_chg7": null,
     "rotation": null,
     "ma10": null,

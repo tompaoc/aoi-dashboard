@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-07T12:07:30+00:00",
+  "updated": "2026-07-07T12:22:30+00:00",
   "days_ahead": 30,
   "rows": [
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 1.6,
+      "days": 1.5,
       "date": "2026-07-09",
       "usd_m": 30.5,
       "pct_supply": 3.66,
@@ -55,7 +55,7 @@
     {
       "symbol": "APT",
       "name": "Aptos",
-      "days": 5.2,
+      "days": 5.1,
       "date": "2026-07-12",
       "usd_m": 2.1,
       "pct_supply": 0.39,

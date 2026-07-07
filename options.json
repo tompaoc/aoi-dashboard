@@ -1,4 +1,189 @@
 {
-  "updated": "2026-07-07T10:22:26+00:00",
-  "currencies": {}
+  "updated": "2026-07-07T10:37:45+00:00",
+  "currencies": {
+    "BTC": {
+      "currency": "BTC",
+      "spot": 63244.15,
+      "main": {
+        "expiry": "31JUL26",
+        "days": 23.9,
+        "max_pain": 64000,
+        "call_oi": 65540,
+        "put_oi": 25818,
+        "pcr": 0.39,
+        "call_walls": [
+          {
+            "strike": 70000,
+            "oi": 7219
+          },
+          {
+            "strike": 80000,
+            "oi": 6923
+          },
+          {
+            "strike": 68000,
+            "oi": 3570
+          },
+          {
+            "strike": 75000,
+            "oi": 3190
+          }
+        ],
+        "put_walls": [
+          {
+            "strike": 50000,
+            "oi": 3056
+          },
+          {
+            "strike": 52000,
+            "oi": 2179
+          },
+          {
+            "strike": 56000,
+            "oi": 2065
+          },
+          {
+            "strike": 60000,
+            "oi": 1994
+          }
+        ]
+      },
+      "near": {
+        "expiry": "8JUL26",
+        "days": 0.9,
+        "max_pain": 62500,
+        "call_oi": 849,
+        "put_oi": 1409,
+        "pcr": 1.66,
+        "call_walls": [
+          {
+            "strike": 69000,
+            "oi": 153
+          },
+          {
+            "strike": 65000,
+            "oi": 98
+          },
+          {
+            "strike": 64500,
+            "oi": 95
+          },
+          {
+            "strike": 67000,
+            "oi": 91
+          }
+        ],
+        "put_walls": [
+          {
+            "strike": 60000,
+            "oi": 304
+          },
+          {
+            "strike": 59000,
+            "oi": 285
+          },
+          {
+            "strike": 58000,
+            "oi": 148
+          },
+          {
+            "strike": 61000,
+            "oi": 136
+          }
+        ]
+      }
+    },
+    "ETH": {
+      "currency": "ETH",
+      "spot": 1775.72,
+      "main": {
+        "expiry": "31JUL26",
+        "days": 23.9,
+        "max_pain": 1800,
+        "call_oi": 197912,
+        "put_oi": 113652,
+        "pcr": 0.57,
+        "call_walls": [
+          {
+            "strike": 1900,
+            "oi": 13973
+          },
+          {
+            "strike": 1800,
+            "oi": 13564
+          },
+          {
+            "strike": 2200,
+            "oi": 11264
+          },
+          {
+            "strike": 2400,
+            "oi": 10603
+          }
+        ],
+        "put_walls": [
+          {
+            "strike": 1800,
+            "oi": 13402
+          },
+          {
+            "strike": 1600,
+            "oi": 12403
+          },
+          {
+            "strike": 1500,
+            "oi": 11671
+          },
+          {
+            "strike": 1200,
+            "oi": 9536
+          }
+        ]
+      },
+      "near": {
+        "expiry": "8JUL26",
+        "days": 0.9,
+        "max_pain": 1775,
+        "call_oi": 6763,
+        "put_oi": 6795,
+        "pcr": 1.0,
+        "call_walls": [
+          {
+            "strike": 1850,
+            "oi": 1588
+          },
+          {
+            "strike": 1800,
+            "oi": 912
+          },
+          {
+            "strike": 1925,
+            "oi": 905
+          },
+          {
+            "strike": 1825,
+            "oi": 697
+          }
+        ],
+        "put_walls": [
+          {
+            "strike": 1700,
+            "oi": 1260
+          },
+          {
+            "strike": 1500,
+            "oi": 1051
+          },
+          {
+            "strike": 1600,
+            "oi": 1006
+          },
+          {
+            "strike": 1725,
+            "oi": 951
+          }
+        ]
+      }
+    }
+  }
 }

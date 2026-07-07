@@ -130,6 +130,8 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 .rung.ob{background:rgba(0,230,118,.14);border-color:rgba(0,230,118,.45)}
 .rung.os{background:rgba(255,59,92,.14);border-color:rgba(255,59,92,.45)}
 .rung.bull{background:rgba(0,230,118,.05)} .rung.bear{background:rgba(255,59,92,.05)}
+.rung.rej-ob{background:rgba(255,176,32,.14);border-color:rgba(255,176,32,.45)}
+.rung.rej-os{background:rgba(0,212,255,.1);border-color:rgba(0,212,255,.4)}
 .arr{display:flex;align-items:center;color:var(--muted);font-size:16px;padding:0 2px}
 .behav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .bcard{background:#0a0f1a;border:1px solid var(--line);border-radius:8px;padding:10px 12px;text-align:center}
@@ -239,6 +241,9 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
     <div><div class="lbl" style="margin-bottom:6px">🟥 โซน trim/ขาย (premium — แบ่งขายทีละชั้น)</div><div id="plan-trim"></div></div>
   </div>
 
+  <div class="lbl" style="margin:12px 0 6px">🟦 Balance Zone (Day) — กล่องสมดุล + เส้นกลางกล่อง + เป้า 1:1 (measured move)</div>
+  <div id="plan-box" class="optbox"></div>
+
   <div class="lbl" style="margin:12px 0 6px">🔀 Zones — Flip (รับ↔ต้าน) · ✨Golden (fibo) · 🕯️Wick (supply/demand แท้)</div>
   <div class="flips" id="plan-flips"></div>
 
@@ -328,6 +333,12 @@ function drawFlipLines(){
   const wz=PLAN.wickzone;
   if(wz&&wz.supply)flipLines.push(candle.createPriceLine({price:wz.supply.lo,color:'rgba(255,59,92,.35)',lineWidth:1,lineStyle:3,title:'Wick supply'}));
   if(wz&&wz.demand)flipLines.push(candle.createPriceLine({price:wz.demand.hi,color:'rgba(0,230,118,.35)',lineWidth:1,lineStyle:3,title:'Wick demand'}));
+  const bx=PLAN.box;
+  if(bx){
+    flipLines.push(candle.createPriceLine({price:bx.hi,color:'rgba(0,212,255,.4)',lineWidth:1,lineStyle:2,title:'กล่องบน'}));
+    flipLines.push(candle.createPriceLine({price:bx.lo,color:'rgba(0,212,255,.4)',lineWidth:1,lineStyle:2,title:'กล่องล่าง'}));
+    flipLines.push(candle.createPriceLine({price:bx.mid,color:'rgba(255,176,32,.5)',lineWidth:1,lineStyle:3,title:'กลางกล่อง'}));
+  }
 }
 let optLines=[];
 function drawOptLines(){
@@ -509,6 +520,18 @@ async function loadPlan(){
     if(p.wickzone&&p.wickzone.supply){const w=p.wickzone.supply;zhtml+=`<span class="flipchip resistance">🕯️ Wick supply $${w.lo.toLocaleString()}–${w.hi.toLocaleString()}</span>`;}
     if(p.wickzone&&p.wickzone.demand){const w=p.wickzone.demand;zhtml+=`<span class="flipchip support">🕯️ Wick demand $${w.lo.toLocaleString()}–${w.hi.toLocaleString()}</span>`;}
     document.getElementById('plan-flips').innerHTML=zhtml||'<div class="lbl">—</div>';
+    // ── Balance Zone box (11 โพสต์ — ธีมใหญ่สุดรอบ 6) ──
+    const bx=p.box,boxEl=document.getElementById('plan-box');
+    if(bx){
+      const stTh={'in-box':'อยู่ในกล่อง','broke-up':'🟢 เบรคขึ้น','broke-down':'🔴 เบรคลง'}[bx.state]||bx.state;
+      const posTh={mid:'กลางกล่อง (order กองเยอะสุด)',upper:'ครึ่งบน',lower:'ครึ่งล่าง'}[bx.pos]||'';
+      boxEl.innerHTML=`<div class="optcard"><div class="h">🟦 สถานะกล่อง</div><div class="big" style="font-size:15px">${stTh}</div>
+          <div class="zd">${posTh}${posTh?' · ':''}${bx.bars} แท่ง${bx.false_break?` · false-break ${bx.false_break}×`:''}</div></div>
+        <div class="optcard"><div class="h">กรอบกล่อง</div><div class="zd">บน $${bx.hi.toLocaleString()}</div>
+          <div class="zd" style="color:var(--amber)">กลาง $${bx.mid.toLocaleString()}</div><div class="zd">ล่าง $${bx.lo.toLocaleString()}</div></div>
+        <div class="optcard"><div class="h">🎯 เป้า 1:1 (measured)</div><div class="zd" style="color:var(--green)">เบรคบน → $${bx.target_up.toLocaleString()}</div>
+          <div class="zd" style="color:var(--red)">เบรคล่าง → $${bx.target_dn.toLocaleString()}</div><div class="zd">ระยะกล่อง $${bx.height.toLocaleString()}</div></div>`;
+    }else{boxEl.innerHTML='<div class="lbl" style="text-transform:none;letter-spacing:0">— ยังไม่เกิดกล่องสมดุลชัด (RSI ยังแตะ OB/OS อยู่)</div>';}
     // ── existing: week conds + scenarios ──
     document.getElementById('plan-conds').innerHTML=p.week_conditions.map(c=>`<div class="cond">
       <span>${c.ok?'✅':'⬜'}</span><span style="color:${c.ok?'var(--green)':'var(--muted)'}">${c.txt}</span></div>`).join('');
@@ -520,7 +543,7 @@ async function loadPlan(){
     if(p.relay){
       const rr=p.relay.rungs;
       document.getElementById('plan-relay').innerHTML=rr.map((r,i)=>{
-        const stTxt={ob:'OB 🔥',os:'OS ❄️',bull:'bull',bear:'bear'}[r.state]||r.state;
+        const stTxt={ob:'OB 🔥',os:'OS ❄️',bull:'bull',bear:'bear','rej-ob':'ปฏิเสธ OB','rej-os':'ปฏิเสธ OS'}[r.state]||r.state;
         return `<div class="rung ${r.state}"><div class="rtf">${r.tf}</div><div class="rst">${stTxt}</div><div class="rrsi">RSI ${r.rsi}</div></div>`+
           (i<rr.length-1?'<div class="arr">→</div>':'');
       }).join('');
@@ -531,7 +554,7 @@ async function loadPlan(){
       const b=p.behavior,dr=b.drive,ex=b.exhaustion,al=b.active_line||b.respect;
       const rc=al.pct==null?'var(--muted)':al.pct>=60?'var(--green)':al.pct>=40?'var(--amber)':'var(--red)';
       document.getElementById('plan-behav').innerHTML=`
-        <div class="bcard"><div class="bv" style="color:${rc}">${al.pct==null?'—':al.pct+'%'}</div><div class="bl">Active Line (EMA${al.period||25})</div><div class="bs">เส้นที่ตลาดเคารพสุด · เด้ง ${al.holds}/${al.touches} เทส</div></div>
+        <div class="bcard"><div class="bv" style="color:${rc}">${al.pct==null?'—':al.pct+'%'}</div><div class="bl">Active Line (EMA${al.period||25} · ${al.side==='resistance'?'ต้าน':'รับ'})</div><div class="bs">เส้นที่ตลาดเคารพสุด · ${al.side==='resistance'?'ตบใต้':'เด้งเหนือ'} ${al.holds}/${al.touches} เทส</div></div>
         <div class="bcard"><div class="bv" style="color:${dr.above?'var(--green)':'var(--red)'}">${dr.bars}</div><div class="bl">Drive (เกาะ EMA10)</div><div class="bs">แท่งปิด${dr.above?'เหนือ':'ใต้'}เส้นติดกัน (ความยาวแถว)</div></div>
         <div class="bcard"><div class="bv" style="color:${ex.flag?'var(--red)':'var(--green)'}">${ex.flag?'⚠️':'✅'}</div><div class="bl">Exhaustion</div><div class="bs">${ex.txt}</div></div>`;
     }
@@ -596,7 +619,8 @@ function renderFlows(){
     const col=bd.status.startsWith('alt')?'var(--green)':bd.status==='btc-favorable'?'var(--red)':'var(--amber)';
     html+=`<div class="optcard"><div class="h">🧭 BTC Dominance</div>
       <div class="big" style="color:${col}">${bd.btcd}%</div>
-      <div class="zd">${bd.note}${bd.chg7!=null?` · 7d ${bd.chg7>=0?'+':''}${bd.chg7}`:` · (สะสมทิศ ${bd.n_hist}d)`}</div></div>`;
+      <div class="zd">${bd.note}${bd.chg7!=null?` · 7d ${bd.chg7>=0?'+':''}${bd.chg7}`:` · (สะสมทิศ ${bd.n_hist}d)`}</div>
+      ${bd.ma10!=null?`<div class="zd">MA10 ${bd.ma10}% · ${bd.vs_ma10==='below'?'🟢 หลุด MA10 (D อ่อนลง → ลุ้น alts)':'🔴 ยืนเหนือ MA10'}</div>`:''}</div>`;
     if(bd.total2!=null){
       html+=`<div class="optcard"><div class="h">🔁 TOTAL2 (alts mcap)</div>
         <div class="big cy">$${bd.total2}T</div>

@@ -1,15 +1,15 @@
 {
-  "updated": "2026-07-07T11:37:51+00:00",
+  "updated": "2026-07-07T11:52:33+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 63235.19,
+      "spot": 63385.88,
       "main": {
         "expiry": "31JUL26",
         "days": 23.8,
         "max_pain": 64000,
-        "call_oi": 65746,
-        "put_oi": 26009,
+        "call_oi": 65762,
+        "put_oi": 25989,
         "pcr": 0.4,
         "call_walls": [
           {
@@ -22,7 +22,7 @@
           },
           {
             "strike": 68000,
-            "oi": 3570
+            "oi": 3577
           },
           {
             "strike": 75000,
@@ -40,7 +40,7 @@
           },
           {
             "strike": 56000,
-            "oi": 2065
+            "oi": 2066
           },
           {
             "strike": 60000,
@@ -52,9 +52,9 @@
         "expiry": "8JUL26",
         "days": 0.8,
         "max_pain": 62500,
-        "call_oi": 861,
-        "put_oi": 1424,
-        "pcr": 1.65,
+        "call_oi": 865,
+        "put_oi": 1457,
+        "pcr": 1.69,
         "call_walls": [
           {
             "strike": 69000,
@@ -62,7 +62,7 @@
           },
           {
             "strike": 64500,
-            "oi": 98
+            "oi": 99
           },
           {
             "strike": 65000,
@@ -88,14 +88,14 @@
           },
           {
             "strike": 61000,
-            "oi": 136
+            "oi": 132
           }
         ]
       }
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1777.08,
+      "spot": 1778.82,
       "main": {
         "expiry": "31JUL26",
         "days": 23.8,
@@ -144,8 +144,8 @@
         "expiry": "8JUL26",
         "days": 0.8,
         "max_pain": 1775,
-        "call_oi": 6785,
-        "put_oi": 6829,
+        "call_oi": 6783,
+        "put_oi": 6824,
         "pcr": 1.01,
         "call_walls": [
           {
@@ -154,7 +154,7 @@
           },
           {
             "strike": 1800,
-            "oi": 912
+            "oi": 909
           },
           {
             "strike": 1925,
@@ -162,7 +162,7 @@
           },
           {
             "strike": 1825,
-            "oi": 697
+            "oi": 698
           }
         ],
         "put_walls": [

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T08:37:46+00:00",
+  "updated": "2026-07-08T08:52:53+00:00",
   "etf": {
     "recent": [
       {
@@ -51,12 +51,12 @@
     "outflow": false
   },
   "btcd": {
-    "btcd": 55.93,
+    "btcd": 55.94,
     "status": "alt-strong",
     "note": "< 56% — จังหวะ alts shoot แรง (เกณฑ์ครู)",
     "chg7": null,
     "n_hist": 3,
-    "total2": 0.979,
+    "total2": 0.978,
     "total2_chg7": null,
     "rotation": null,
     "ma10": 55.8,

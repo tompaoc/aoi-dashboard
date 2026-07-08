@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T08:37:49+00:00",
+  "updated": "2026-07-08T08:52:59+00:00",
   "days_ahead": 30,
   "rows": [
     {
@@ -108,7 +108,7 @@
       "days": 12.1,
       "date": "2026-07-20",
       "usd_m": 4.6,
-      "pct_supply": 2.96,
+      "pct_supply": 2.97,
       "big": true,
       "category": "noncirculating"
     },

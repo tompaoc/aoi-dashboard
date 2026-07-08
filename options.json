@@ -1,15 +1,15 @@
 {
-  "updated": "2026-07-08T11:52:45+00:00",
+  "updated": "2026-07-08T12:07:21+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 62325.34,
+      "spot": 62392.24,
       "main": {
         "expiry": "31JUL26",
         "days": 22.8,
         "max_pain": 64000,
-        "call_oi": 65951,
-        "put_oi": 26267,
+        "call_oi": 65969,
+        "put_oi": 26266,
         "pcr": 0.4,
         "call_walls": [
           {
@@ -26,7 +26,7 @@
           },
           {
             "strike": 75000,
-            "oi": 3191
+            "oi": 3221
           }
         ],
         "put_walls": [
@@ -52,9 +52,9 @@
         "expiry": "9JUL26",
         "days": 0.8,
         "max_pain": 62500,
-        "call_oi": 1221,
-        "put_oi": 1545,
-        "pcr": 1.27,
+        "call_oi": 1218,
+        "put_oi": 1582,
+        "pcr": 1.3,
         "call_walls": [
           {
             "strike": 65000,
@@ -76,11 +76,11 @@
         "put_walls": [
           {
             "strike": 59000,
-            "oi": 328
+            "oi": 317
           },
           {
             "strike": 60000,
-            "oi": 260
+            "oi": 308
           },
           {
             "strike": 60500,
@@ -95,13 +95,13 @@
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1747.94,
+      "spot": 1749.01,
       "main": {
         "expiry": "31JUL26",
         "days": 22.8,
         "max_pain": 1800,
-        "call_oi": 197387,
-        "put_oi": 114742,
+        "call_oi": 197397,
+        "put_oi": 114359,
         "pcr": 0.58,
         "call_walls": [
           {
@@ -118,13 +118,13 @@
           },
           {
             "strike": 2000,
-            "oi": 10547
+            "oi": 10557
           }
         ],
         "put_walls": [
           {
             "strike": 1800,
-            "oi": 13017
+            "oi": 12947
           },
           {
             "strike": 1600,
@@ -144,8 +144,8 @@
         "expiry": "9JUL26",
         "days": 0.8,
         "max_pain": 1750,
-        "call_oi": 7870,
-        "put_oi": 12289,
+        "call_oi": 7839,
+        "put_oi": 12253,
         "pcr": 1.56,
         "call_walls": [
           {
@@ -154,7 +154,7 @@
           },
           {
             "strike": 1775,
-            "oi": 985
+            "oi": 987
           },
           {
             "strike": 1825,
@@ -162,7 +162,7 @@
           },
           {
             "strike": 1900,
-            "oi": 778
+            "oi": 777
           }
         ],
         "put_walls": [
@@ -172,7 +172,7 @@
           },
           {
             "strike": 1725,
-            "oi": 1937
+            "oi": 1940
           },
           {
             "strike": 1650,

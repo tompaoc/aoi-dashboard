@@ -1,0 +1,78 @@
+{
+  "updated": "2026-07-08T09:51:36+00:00",
+  "days_ahead": 30,
+  "events": [
+    {
+      "date": "2026-07-08",
+      "days": 0,
+      "code": "FED",
+      "label": "FOMC",
+      "forecast": null,
+      "previous": null,
+      "imminent": true
+    },
+    {
+      "date": "2026-07-14",
+      "days": 6,
+      "code": "CPI",
+      "label": "CPI เงินเฟ้อ",
+      "forecast": null,
+      "previous": 2.9,
+      "imminent": false
+    },
+    {
+      "date": "2026-07-14",
+      "days": 6,
+      "code": "FED",
+      "label": "Fed Chair แถลง",
+      "forecast": null,
+      "previous": null,
+      "imminent": false
+    },
+    {
+      "date": "2026-07-15",
+      "days": 7,
+      "code": "PPI",
+      "label": "PPI ราคาผู้ผลิต",
+      "forecast": null,
+      "previous": 1.1,
+      "imminent": false
+    },
+    {
+      "date": "2026-07-16",
+      "days": 8,
+      "code": "RETAIL",
+      "label": "ยอดค้าปลีก",
+      "forecast": null,
+      "previous": 0.9,
+      "imminent": false
+    },
+    {
+      "date": "2026-07-29",
+      "days": 21,
+      "code": "FED",
+      "label": "Fed ดอกเบี้ย (FOMC)",
+      "forecast": null,
+      "previous": 3.75,
+      "imminent": false
+    },
+    {
+      "date": "2026-07-30",
+      "days": 22,
+      "code": "GDP",
+      "label": "GDP",
+      "forecast": null,
+      "previous": 2.1,
+      "imminent": false
+    },
+    {
+      "date": "2026-07-30",
+      "days": 22,
+      "code": "PCE",
+      "label": "Core PCE (Fed ดูตัวนี้)",
+      "forecast": null,
+      "previous": 0.3,
+      "imminent": false
+    }
+  ]
+}

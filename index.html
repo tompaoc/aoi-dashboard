@@ -263,6 +263,9 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
   <div class="lbl" style="margin:14px 0 6px">🔓 Token Unlocks — ปฏิทิน supply shock (ครูช็อตตรงวัน unlock) <span id="unlock-meta" style="text-transform:none;letter-spacing:0;color:var(--muted)"></span></div>
   <div id="plan-unlocks" class="unlockbox"></div>
 
+  <div class="lbl" style="margin:14px 0 6px">📅 Economic Calendar — event มหภาค (ครูอ่านทุกเช้า · ก่อน event = ระวังผันผวน) <span id="econ-meta" style="text-transform:none;letter-spacing:0;color:var(--muted)"></span></div>
+  <div id="plan-econ" class="unlockbox"></div>
+
   <div class="planlow" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
     <div><div class="lbl" style="margin-bottom:6px">✅ 3 เงื่อนไข Week ยืนยันโมเมนตัมกลับตัว (ครู AOI) — <span id="plan-confirm">—</span></div><div id="plan-conds"></div></div>
     <div><div class="lbl" style="margin-bottom:6px">🗺️ Scenarios — if → then → ทำอะไร (Plan &gt; Predict)</div><div id="plan-scen"></div></div>
@@ -675,6 +678,26 @@ function renderUnlocks(){
   }).join('');
 }
 
+// ---- Economic Calendar (event มหภาค — ครูอ่านทุกเช้า, TG mining) ----
+let ECON=null;
+async function loadEcon(){
+  try{ECON=await(await fetch('./econ.json?_='+Date.now())).json();renderEcon();}
+  catch(e){console.warn('econ',e);document.getElementById('plan-econ').innerHTML='<div class="lbl" style="text-transform:none;letter-spacing:0">— ยังไม่มีข้อมูล (run econ_calendar.py)</div>';}
+}
+function renderEcon(){
+  if(!ECON)return;
+  const rows=ECON.events||[],el=document.getElementById('plan-econ');
+  document.getElementById('econ-meta').textContent=rows.length?`· ${ECON.days_ahead} วันข้างหน้า · ⚠️=ใกล้ (≤2วัน)`:'';
+  if(!rows.length){el.innerHTML='<div class="lbl" style="text-transform:none;letter-spacing:0">— ไม่มี event ใหญ่ใน '+(ECON.days_ahead||30)+' วัน</div>';return;}
+  el.innerHTML=rows.map(r=>{
+    const fc=(r.forecast!=null&&r.forecast!=='')?` · คาด ${r.forecast}`:'';
+    return `<div class="unlockrow${r.imminent?' big':''}">
+      <span class="us">${r.label}</span>
+      <span class="uv">อีก <b style="color:var(--amber)">${r.days}</b> วัน${fc}${r.imminent?' 🔴 ระวังผันผวน':''}</span>
+      <span class="ux">${r.date}</span></div>`;
+  }).join('');
+}
+
 // ---- clock ----
 function tick(){const d=new Date();
   document.getElementById('clock').textContent=d.toLocaleTimeString('en-GB');
@@ -688,8 +711,8 @@ document.querySelectorAll('.tf').forEach(b=>b.addEventListener('click',()=>{
   b.classList.add('active');TF=b.dataset.tf;loadChart();}));
 
 initChart();tick();setInterval(tick,1000);
-loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();loadFlows();loadUnlocks();
-setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);setInterval(loadFlows,300000);setInterval(loadUnlocks,600000);
+loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();loadFlows();loadUnlocks();loadEcon();
+setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);setInterval(loadFlows,300000);setInterval(loadUnlocks,600000);setInterval(loadEcon,600000);
 </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T08:52:59+00:00",
+  "updated": "2026-07-08T09:07:57+00:00",
   "days_ahead": 30,
   "rows": [
     {
@@ -105,7 +105,7 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 12.1,
+      "days": 12.0,
       "date": "2026-07-20",
       "usd_m": 4.6,
       "pct_supply": 2.97,
@@ -115,7 +115,7 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 12.6,
+      "days": 12.5,
       "date": "2026-07-20",
       "usd_m": 10.3,
       "pct_supply": 3.01,
@@ -135,7 +135,7 @@
     {
       "symbol": "WLD",
       "name": "Worldcoin",
-      "days": 15.4,
+      "days": 15.3,
       "date": "2026-07-23",
       "usd_m": 4.1,
       "pct_supply": 0.32,

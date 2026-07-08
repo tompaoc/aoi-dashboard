@@ -1,61 +1,61 @@
 {
   "symbol": "BTCUSDT",
-  "price": 62625.01,
+  "price": 62516.01,
   "tfs": [
     {
       "tf": "4H",
-      "price": 62625.01,
-      "premium": 62203.82,
+      "price": 62516.01,
+      "premium": 62200.95,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 299.9,
-      "macd_gap": -157.4,
+      "macd": 291.2,
+      "macd_gap": -164.4,
       "macd_widening": true,
       "rsi": 47,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 63199.62,
-      "ema25": 62927.34,
-      "ema50": 62365.89,
+      "ema10": 63179.8,
+      "ema25": 62918.96,
+      "ema50": 62361.62,
       "trend": "up",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 62625.01,
-      "premium": 63043.54,
+      "price": 62516.01,
+      "premium": 63035.16,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -714.0,
-      "macd_gap": 632.9,
+      "macd": -722.7,
+      "macd_gap": 626.0,
       "macd_widening": false,
       "rsi": 47,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 62497.21,
-      "ema25": 63043.54,
-      "ema50": 65568.28,
+      "ema10": 62477.39,
+      "ema25": 63035.16,
+      "ema50": 65564.0,
       "trend": "down",
       "ma_cross": "death"
     },
     {
       "tf": "Week",
-      "price": 62625.0,
-      "premium": 73151.57,
+      "price": 62516.01,
+      "premium": 73143.19,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -5938.0,
-      "macd_gap": -297.7,
+      "macd": -5946.7,
+      "macd_gap": -304.7,
       "macd_widening": true,
       "rsi": 37,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 66697.25,
-      "ema25": 73151.57,
-      "ema50": 80096.65,
+      "ema10": 66677.43,
+      "ema25": 73143.19,
+      "ema50": 80092.38,
       "trend": "down",
       "ma_cross": "death"
     }
@@ -64,7 +64,7 @@
   "week_conditions": [
     {
       "n": 1,
-      "txt": "เบรค Premium Week (EMA25 $73,152)",
+      "txt": "เบรค Premium Week (EMA25 $73,143)",
       "ok": false
     },
     {
@@ -83,7 +83,7 @@
   "scenarios": [
     {
       "dir": "ขึ้น",
-      "if": "เบรค Day premium $63,044 + RSI overbought",
+      "if": "เบรค Day premium $63,035 + RSI overbought",
       "then": "มีโอกาสวิ่งเทส supply โซนบน (เช่น Week premium) ทีละ step"
     },
     {
@@ -221,27 +221,27 @@
   "flips": [
     {
       "price": 59565.46,
-      "dist": -4.9,
+      "dist": -4.7,
       "role": "support"
     },
     {
       "price": 57957.6,
-      "dist": -7.5,
+      "dist": -7.3,
       "role": "support"
     },
     {
       "price": 62710.59,
-      "dist": 0.1,
+      "dist": 0.3,
       "role": "resistance"
     },
     {
       "price": 65634.21,
-      "dist": 4.8,
+      "dist": 5.0,
       "role": "resistance"
     },
     {
       "price": 67326.4,
-      "dist": 7.5,
+      "dist": 7.7,
       "role": "resistance"
     }
   ],
@@ -249,38 +249,38 @@
   "ladder_trim": [
     {
       "name": "4H EMA25 (เส้น trim)",
-      "price": 62927.34,
-      "dist": 0.5
+      "price": 62918.96,
+      "dist": 0.6
     },
     {
       "name": "Day EMA50",
-      "price": 65568.28,
-      "dist": 4.7
+      "price": 65564.0,
+      "dist": 4.9
     },
     {
       "name": "Swing high (Day)",
       "price": 67292.15,
-      "dist": 7.5
+      "dist": 7.6
     },
     {
       "name": "Swing high (Day)",
       "price": 68698.7,
-      "dist": 9.7
+      "dist": 9.9
     }
   ],
   "absorption": {
-    "buy_pct": 67,
+    "buy_pct": 66,
     "side": "buy",
-    "txt": "🟢 แรงซื้อครอง — ผู้ขายถูกดูดซับ (67% แรงเป็นเขียว)",
+    "txt": "🟢 แรงซื้อครอง — ผู้ขายถูกดูดซับ (66% แรงเป็นเขียว)",
     "run": 2,
     "run_dir": "ลง",
-    "net10": 3.9
+    "net10": 3.7
   },
   "relay": {
     "rungs": [
       {
         "tf": "1H",
-        "rsi": 38,
+        "rsi": 36,
         "macd_pos": false,
         "state": "bear"
       },
@@ -366,7 +366,7 @@
     "policy": "อ่อน — รอ setup ชัดกว่านี้ / อยู่เฉย"
   },
   "wickzone": {
-    "px": 62625.01,
+    "px": 62516.01,
     "supply": {
       "lo": 73884.38,
       "hi": 74275.66,

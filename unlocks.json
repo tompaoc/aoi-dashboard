@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-08T07:22:47+00:00",
+  "updated": "2026-07-08T07:37:48+00:00",
   "days_ahead": 30,
   "rows": [
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 0.8,
+      "days": 0.7,
       "date": "2026-07-09",
       "usd_m": 30.5,
       "pct_supply": 3.66,

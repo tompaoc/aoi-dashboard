@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T06:37:48+00:00",
+  "updated": "2026-07-08T06:52:49+00:00",
   "days_ahead": 30,
   "rows": [
     {
@@ -7,7 +7,7 @@
       "name": "Stable",
       "days": 0.8,
       "date": "2026-07-09",
-      "usd_m": 30.8,
+      "usd_m": 30.5,
       "pct_supply": 3.66,
       "big": true,
       "category": "farming"
@@ -47,7 +47,7 @@
       "name": "Solana",
       "days": 4.1,
       "date": "2026-07-12",
-      "usd_m": 32.9,
+      "usd_m": 32.7,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -67,8 +67,8 @@
       "name": "Pump",
       "days": 4.5,
       "date": "2026-07-12",
-      "usd_m": 84.0,
-      "pct_supply": 13.45,
+      "usd_m": 83.7,
+      "pct_supply": 13.44,
       "big": true,
       "category": "insiders"
     },
@@ -105,10 +105,10 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 12.2,
+      "days": 12.1,
       "date": "2026-07-20",
       "usd_m": 4.5,
-      "pct_supply": 2.97,
+      "pct_supply": 2.96,
       "big": true,
       "category": "noncirculating"
     },
@@ -117,7 +117,7 @@
       "name": "LayerZero",
       "days": 12.6,
       "date": "2026-07-20",
-      "usd_m": 10.3,
+      "usd_m": 10.4,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -125,17 +125,17 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 14.7,
+      "days": 14.6,
       "date": "2026-07-22",
       "usd_m": 0.6,
-      "pct_supply": 6.32,
+      "pct_supply": 6.33,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "WLD",
       "name": "Worldcoin",
-      "days": 15.5,
+      "days": 15.4,
       "date": "2026-07-23",
       "usd_m": 4.2,
       "pct_supply": 0.32,
@@ -145,7 +145,7 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 15.7,
+      "days": 15.6,
       "date": "2026-07-23",
       "usd_m": 58.5,
       "pct_supply": 1.35,

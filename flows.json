@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T08:07:46+00:00",
+  "updated": "2026-07-08T08:22:45+00:00",
   "etf": {
     "recent": [
       {
@@ -51,7 +51,7 @@
     "outflow": false
   },
   "btcd": {
-    "btcd": 56.07,
+    "btcd": 56.03,
     "status": "alt-favorable",
     "note": "< 58% — เงินเริ่มเข้า alts",
     "chg7": null,

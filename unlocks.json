@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T06:22:49+00:00",
+  "updated": "2026-07-08T06:37:48+00:00",
   "days_ahead": 30,
   "rows": [
     {
@@ -115,7 +115,7 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 12.7,
+      "days": 12.6,
       "date": "2026-07-20",
       "usd_m": 10.3,
       "pct_supply": 3.01,

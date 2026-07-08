@@ -1,61 +1,61 @@
 {
   "symbol": "BTCUSDT",
-  "price": 61989.34,
+  "price": 61814.57,
   "tfs": [
     {
       "tf": "4H",
-      "price": 61989.34,
-      "premium": 62204.92,
+      "price": 61814.57,
+      "premium": 62200.33,
       "above_premium": false,
       "macd_pos": true,
-      "macd": 197.4,
-      "macd_gap": -211.3,
+      "macd": 183.4,
+      "macd_gap": -222.4,
       "macd_widening": true,
-      "rsi": 42,
+      "rsi": 41,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 63018.74,
-      "ema25": 62873.89,
-      "ema50": 62361.05,
+      "ema10": 62986.97,
+      "ema25": 62860.44,
+      "ema50": 62354.2,
       "trend": "side",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 61989.34,
-      "premium": 62994.65,
+      "price": 61814.57,
+      "premium": 62981.2,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -764.7,
-      "macd_gap": 592.4,
+      "macd": -778.7,
+      "macd_gap": 581.2,
       "macd_widening": false,
       "rsi": 45,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 62381.64,
-      "ema25": 62994.65,
-      "ema50": 65543.35,
+      "ema10": 62349.86,
+      "ema25": 62981.2,
+      "ema50": 65536.49,
       "trend": "down",
       "ma_cross": "death"
     },
     {
       "tf": "Week",
-      "price": 61989.34,
-      "premium": 73102.67,
+      "price": 61814.57,
+      "premium": 73089.23,
       "above_premium": false,
       "macd_pos": false,
-      "macd": -5988.7,
-      "macd_gap": -338.3,
+      "macd": -6002.7,
+      "macd_gap": -349.4,
       "macd_widening": true,
       "rsi": 37,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 66581.67,
-      "ema25": 73102.67,
-      "ema50": 80071.72,
+      "ema10": 66549.9,
+      "ema25": 73089.23,
+      "ema50": 80064.87,
       "trend": "down",
       "ma_cross": "death"
     }
@@ -64,7 +64,7 @@
   "week_conditions": [
     {
       "n": 1,
-      "txt": "เบรค Premium Week (EMA25 $73,103)",
+      "txt": "เบรค Premium Week (EMA25 $73,089)",
       "ok": false
     },
     {
@@ -83,7 +83,7 @@
   "scenarios": [
     {
       "dir": "ขึ้น",
-      "if": "เบรค Day premium $62,995 + RSI overbought",
+      "if": "เบรค Day premium $62,981 + RSI overbought",
       "then": "มีโอกาสวิ่งเทส supply โซนบน (เช่น Week premium) ทีละ step"
     },
     {
@@ -198,7 +198,7 @@
       "cells": [
         {
           "s": "neutral",
-          "t": "42"
+          "t": "41"
         },
         {
           "s": "neutral",
@@ -221,27 +221,27 @@
   "flips": [
     {
       "price": 59565.46,
-      "dist": -3.9,
+      "dist": -3.6,
       "role": "support"
     },
     {
       "price": 57957.6,
-      "dist": -6.5,
+      "dist": -6.2,
       "role": "support"
     },
     {
       "price": 62710.59,
-      "dist": 1.2,
+      "dist": 1.4,
       "role": "resistance"
     },
     {
       "price": 65634.21,
-      "dist": 5.9,
+      "dist": 6.2,
       "role": "resistance"
     },
     {
       "price": 67326.4,
-      "dist": 8.6,
+      "dist": 8.9,
       "role": "resistance"
     }
   ],
@@ -249,44 +249,44 @@
   "ladder_trim": [
     {
       "name": "4H EMA25 (เส้น trim)",
-      "price": 62873.89,
-      "dist": 1.4
+      "price": 62860.44,
+      "dist": 1.7
     },
     {
       "name": "Day EMA50",
-      "price": 65543.35,
-      "dist": 5.7
+      "price": 65536.49,
+      "dist": 6.0
     },
     {
       "name": "Swing high (Day)",
       "price": 67292.15,
-      "dist": 8.6
+      "dist": 8.9
     },
     {
       "name": "Swing high (Day)",
       "price": 68698.7,
-      "dist": 10.8
+      "dist": 11.1
     }
   ],
   "absorption": {
-    "buy_pct": 62,
-    "side": "buy",
-    "txt": "🟢 แรงซื้อครอง — ผู้ขายถูกดูดซับ (62% แรงเป็นเขียว)",
+    "buy_pct": 61,
+    "side": "mixed",
+    "txt": "🟡 สู้กันสูสี (61% ซื้อ) — ยังไม่มีฝั่งชนะชัด",
     "run": 2,
     "run_dir": "ลง",
-    "net10": 2.9
+    "net10": 2.6
   },
   "relay": {
     "rungs": [
       {
         "tf": "1H",
-        "rsi": 32,
+        "rsi": 31,
         "macd_pos": false,
         "state": "bear"
       },
       {
         "tf": "4H",
-        "rsi": 42,
+        "rsi": 41,
         "macd_pos": true,
         "state": "rej-ob"
       },
@@ -366,7 +366,7 @@
     "policy": "อ่อน — รอ setup ชัดกว่านี้ / อยู่เฉย"
   },
   "wickzone": {
-    "px": 61989.34,
+    "px": 61814.57,
     "supply": {
       "lo": 73884.38,
       "hi": 74275.66,

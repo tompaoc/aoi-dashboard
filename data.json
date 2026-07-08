@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-08 21:37",
+  "updated": "2026-07-08 21:52",
   "regime": "bear",
   "daily": {
     "start": 5000.0,
     "balance": 4893.51,
-    "mtm": 4921.81,
-    "return": -1.56,
+    "mtm": 4904.65,
+    "return": -1.91,
     "closed": 3,
     "wins": 0,
     "winrate": 0.0,
@@ -14,11 +14,11 @@
         "sym": "BCHUSDT",
         "side": "SHORT",
         "entry": 227.7,
-        "now": 232.8,
+        "now": 234.6,
         "stop": 248.73432495,
-        "trail": 263.39370816,
+        "trail": 263.4642964,
         "rr": 1.7,
-        "uR": -0.24,
+        "uR": -0.33,
         "risk_pct": 9.2,
         "notional": 500.0,
         "reason": "เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0",
@@ -42,11 +42,11 @@
         "sym": "ICPUSDT",
         "side": "SHORT",
         "entry": 2.228,
-        "now": 2.166,
+        "now": 2.184,
         "stop": 2.46235722,
-        "trail": 2.32560704,
+        "trail": 2.32699165,
         "rr": 2.0,
-        "uR": 0.26,
+        "uR": 0.19,
         "risk_pct": 10.5,
         "notional": 475.34,
         "reason": "เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0",
@@ -56,11 +56,11 @@
         "sym": "HEMIUSDT",
         "side": "SHORT",
         "entry": 0.00486,
-        "now": 0.00458,
+        "now": 0.00465,
         "stop": 0.0056747,
-        "trail": 0.00531318,
+        "trail": 0.00531928,
         "rr": 2.0,
-        "uR": 0.34,
+        "uR": 0.26,
         "risk_pct": 16.8,
         "notional": 298.27,
         "reason": "เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0",
@@ -70,11 +70,11 @@
         "sym": "POLUSDT",
         "side": "SHORT",
         "entry": 0.07394,
-        "now": 0.07638,
+        "now": 0.07687,
         "stop": 0.07968536,
-        "trail": 0.077416,
+        "trail": 0.0774537,
         "rr": 2.0,
-        "uR": -0.42,
+        "uR": -0.51,
         "risk_pct": 7.8,
         "notional": 500.0,
         "reason": "เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0",
@@ -84,11 +84,11 @@
         "sym": "SAGAUSDT",
         "side": "SHORT",
         "entry": 0.01371,
-        "now": 0.01254,
+        "now": 0.01262,
         "stop": 0.01599716,
-        "trail": 0.01447884,
+        "trail": 0.014485,
         "rr": 2.0,
-        "uR": 0.51,
+        "uR": 0.48,
         "risk_pct": 16.7,
         "notional": 299.72,
         "reason": "เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0",
@@ -115,22 +115,36 @@
   },
   "m15": {
     "start": 10000.0,
-    "balance": 9864.91,
-    "mtm": 10189.01,
-    "return": 1.89,
-    "closed": 29,
-    "wins": 7,
-    "winrate": 24.1,
+    "balance": 9936.93,
+    "mtm": 9976.94,
+    "return": -0.23,
+    "closed": 24,
+    "wins": 6,
+    "winrate": 25.0,
     "open": [
+      {
+        "sym": "POLUSDT",
+        "side": "LONG",
+        "entry": 0.07554,
+        "now": 0.07669,
+        "stop": 0.07456,
+        "trail": 0.07589693,
+        "rr": 2.0,
+        "uR": 1.17,
+        "risk_pct": 1.3,
+        "notional": 987.11,
+        "reason": "",
+        "tf": "15m"
+      },
       {
         "sym": "JSTUSDT",
         "side": "LONG",
         "entry": 0.09329,
-        "now": 0.09548,
+        "now": 0.09563,
         "stop": 0.09241,
-        "trail": 0.09408359,
+        "trail": 0.09412159,
         "rr": 2.0,
-        "uR": 2.49,
+        "uR": 2.66,
         "risk_pct": 0.94,
         "notional": 995.17,
         "reason": "",
@@ -139,86 +153,58 @@
       {
         "sym": "MORPHOUSDT",
         "side": "LONG",
-        "entry": 2.047,
-        "now": 2.094,
-        "stop": 1.983,
-        "trail": 2.03527904,
+        "entry": 2.124,
+        "now": 2.124,
+        "stop": 2.079,
+        "trail": 2.09875462,
         "rr": 2.0,
-        "uR": 0.73,
-        "risk_pct": 3.13,
-        "notional": 991.0,
-        "reason": "",
-        "tf": "15m"
-      },
-      {
-        "sym": "TIAUSDT",
-        "side": "LONG",
-        "entry": 0.391,
-        "now": 0.3866,
-        "stop": 0.3798,
-        "trail": 0.38360975,
-        "rr": 2.0,
-        "uR": -0.39,
-        "risk_pct": 2.86,
-        "notional": 986.49,
-        "reason": "",
-        "tf": "15m"
-      },
-      {
-        "sym": "KAITOUSDT",
-        "side": "LONG",
-        "entry": 0.6542,
-        "now": 0.8459,
-        "stop": 0.6004,
-        "trail": 0.6167214,
-        "rr": 2.0,
-        "uR": 3.56,
-        "risk_pct": 8.22,
-        "notional": 986.49,
+        "uR": 0.0,
+        "risk_pct": 2.12,
+        "notional": 993.69,
         "reason": "",
         "tf": "15m"
       }
     ],
     "recent": [
       {
+        "sym": "PYTHUSDT",
+        "R": 2.04,
+        "pnl": 82.4
+      },
+      {
+        "sym": "AAVEUSDT",
+        "R": 0.48,
+        "pnl": 10.2
+      },
+      {
+        "sym": "LTCUSDT",
+        "R": -1.0,
+        "pnl": -7.6
+      },
+      {
+        "sym": "AVAXUSDT",
+        "R": -1.0,
+        "pnl": -13.5
+      },
+      {
+        "sym": "DEXEUSDT",
+        "R": 3.32,
+        "pnl": 86.7
+      },
+      {
         "sym": "APTUSDT",
         "R": -0.33,
         "pnl": -6.1
       },
       {
-        "sym": "ICPUSDT",
-        "R": -0.5,
-        "pnl": -5.9
-      },
-      {
         "sym": "TRXUSDT",
-        "R": -0.7,
-        "pnl": -3.6
-      },
-      {
-        "sym": "DEXEUSDT",
-        "R": -0.51,
-        "pnl": -24.0
-      },
-      {
-        "sym": "GNOUSDT",
         "R": -1.0,
-        "pnl": -8.2
+        "pnl": -4.5
       },
       {
-        "sym": "POLUSDT",
-        "R": 0.8,
-        "pnl": 8.7
-      },
-      {
-        "sym": "UNIUSDT",
-        "R": -0.89,
-        "pnl": -32.8
-      },
-      {
-        "sym": "PENDLEUSDT",
-        "R": -0.75,
-        "pnl": -21.1
+        "sym": "ICPUSDT",
+        "R": -1.0,
+        "pnl": -10.3
       }
     ]
   }

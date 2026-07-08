@@ -1,11 +1,11 @@
 {
   "symbol": "BTCUSDT",
-  "price": 61918.42,
+  "price": 61917.99,
   "tfs": [
     {
       "tf": "4H",
-      "price": 61918.42,
-      "premium": 62203.06,
+      "price": 61917.99,
+      "premium": 62203.05,
       "above_premium": false,
       "macd_pos": true,
       "macd": 191.7,
@@ -15,16 +15,16 @@
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 63005.85,
-      "ema25": 62868.43,
-      "ema50": 62358.27,
+      "ema10": 63005.77,
+      "ema25": 62868.4,
+      "ema50": 62358.25,
       "trend": "side",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 61918.42,
-      "premium": 62989.19,
+      "price": 61917.99,
+      "premium": 62989.16,
       "above_premium": false,
       "macd_pos": false,
       "macd": -770.4,
@@ -34,16 +34,16 @@
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 62368.74,
-      "ema25": 62989.19,
-      "ema50": 65540.57,
+      "ema10": 62368.66,
+      "ema25": 62989.16,
+      "ema50": 65540.55,
       "trend": "down",
       "ma_cross": "death"
     },
     {
       "tf": "Week",
-      "price": 61918.42,
-      "premium": 73097.22,
+      "price": 61917.99,
+      "premium": 73097.18,
       "above_premium": false,
       "macd_pos": false,
       "macd": -5994.4,
@@ -53,9 +53,9 @@
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 66568.78,
-      "ema25": 73097.22,
-      "ema50": 80068.94,
+      "ema10": 66568.7,
+      "ema25": 73097.18,
+      "ema50": 80068.92,
       "trend": "down",
       "ma_cross": "death"
     }
@@ -249,13 +249,13 @@
   "ladder_trim": [
     {
       "name": "4H EMA25 (เส้น trim)",
-      "price": 62868.43,
+      "price": 62868.4,
       "dist": 1.5
     },
     {
       "name": "Day EMA50",
-      "price": 65540.57,
-      "dist": 5.8
+      "price": 65540.55,
+      "dist": 5.9
     },
     {
       "name": "Swing high (Day)",
@@ -366,7 +366,7 @@
     "policy": "อ่อน — รอ setup ชัดกว่านี้ / อยู่เฉย"
   },
   "wickzone": {
-    "px": 61918.42,
+    "px": 61917.99,
     "supply": {
       "lo": 73884.38,
       "hi": 74275.66,
@@ -401,7 +401,7 @@
   },
   "week_derisk": {
     "below_ema10": true,
-    "ema10": 66568.78,
+    "ema10": 66568.7,
     "note": "⚠️ Week หลุด EMA10 — FOMO คนหมด (จุดถอย/ลด size เร็วกว่า cycle gate ราย month)"
   },
   "note": "Plan > Predict — เห็นโครงสร้าง แล้วเตรียม action ทั้ง 2 ทาง ไม่ใช่เดาทางเดียว"

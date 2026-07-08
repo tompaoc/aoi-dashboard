@@ -1,15 +1,15 @@
 {
-  "updated": "2026-07-08T10:07:54+00:00",
+  "updated": "2026-07-08T10:09:12+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 61926.12,
+      "spot": 61919.3,
       "main": {
         "expiry": "31JUL26",
         "days": 22.9,
         "max_pain": 64000,
         "call_oi": 65932,
-        "put_oi": 26265,
+        "put_oi": 26266,
         "pcr": 0.4,
         "call_walls": [
           {
@@ -95,7 +95,7 @@
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1733.51,
+      "spot": 1733.64,
       "main": {
         "expiry": "31JUL26",
         "days": 22.9,

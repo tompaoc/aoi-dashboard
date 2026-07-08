@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T05:37:59+00:00",
+  "updated": "2026-07-08T05:52:50+00:00",
   "days_ahead": 30,
   "rows": [
     {
@@ -45,7 +45,7 @@
     {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 4.2,
+      "days": 4.1,
       "date": "2026-07-12",
       "usd_m": 32.9,
       "pct_supply": 0.07,

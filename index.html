@@ -199,6 +199,7 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
       <span class="tf" data-tf="4h">4h</span>
       <span class="tf" data-tf="1d">1D</span>
       <span class="price-now mono" id="cprice">—</span>
+      <span id="coin-risk" style="font-size:11px;margin-left:10px;font-weight:600"></span>
     </div>
     <div class="watchbar" id="watchbar"><span class="lbl">⭐ Watchlist:</span></div>
     <div id="chart"></div>
@@ -315,6 +316,7 @@ async function loadChart(){
     for(const p of [10,25,50,200]){const e=ema(closes,p);
       emaS[p].setData(bars.map((b,i)=>({time:b.time,value:e[i]})).slice(p));}
     document.getElementById('cprice').innerHTML=fmt(closes.at(-1));
+    renderRisk();
     drawPositionLines();
     drawFlipLines();
     drawOptLines();
@@ -688,6 +690,21 @@ function renderUnlocks(){
   }).join('');
 }
 
+// ---- Contagion / real-utility filter (TG student-group — ครู flag เหรียญอาจเป็นศูนย์) ----
+let CONTAGION=null;
+async function loadContagion(){
+  try{CONTAGION=await(await fetch('./contagion.json?_='+Date.now())).json();renderRisk();}
+  catch(e){console.warn('contagion',e);}
+}
+function renderRisk(){
+  const el=document.getElementById('coin-risk');if(!el)return;
+  if(!CONTAGION){el.textContent='';return;}
+  const base=COIN.replace('USDT',''),f=(CONTAGION.flag||{})[base],u=(CONTAGION.utility||{})[base];
+  if(f)el.innerHTML=`<span style="color:var(--red)" title="เสี่ยงล้ม/เป็นศูนย์สูง — เข้าเล่นสั้น คุมไซซ์ (เกณฑ์ครู)">⚠️ ${f}</span>`;
+  else if(u)el.innerHTML=`<span style="color:var(--green)" title="zero-risk ต่ำกว่า (มี utility จริง)">✅ ${u}</span>`;
+  else el.textContent='';
+}
+
 // ---- Economic Calendar (event มหภาค — ครูอ่านทุกเช้า, TG mining) ----
 let ECON=null;
 async function loadEcon(){
@@ -721,8 +738,8 @@ document.querySelectorAll('.tf').forEach(b=>b.addEventListener('click',()=>{
   b.classList.add('active');TF=b.dataset.tf;loadChart();}));
 
 initChart();tick();setInterval(tick,1000);
-loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();loadFlows();loadUnlocks();loadEcon();
-setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);setInterval(loadFlows,300000);setInterval(loadUnlocks,600000);setInterval(loadEcon,600000);
+loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();loadFlows();loadUnlocks();loadEcon();loadContagion();
+setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);setInterval(loadFlows,300000);setInterval(loadUnlocks,600000);setInterval(loadEcon,600000);setInterval(loadContagion,1800000);
 </script>
 </body>
 </html>

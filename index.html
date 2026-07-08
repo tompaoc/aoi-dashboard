@@ -227,6 +227,7 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
     <span class="t" style="color:var(--cyan);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">🎯 AOI PLAN — BTC · Plan &gt; Predict</span>
     <span style="display:flex;gap:8px;align-items:center"><span id="plan-grade" class="gradebadge">—</span><span id="plan-conf" class="confmeter">—</span></span></div>
   <div class="stage" id="plan-stage">กำลังโหลด…</div>
+  <div id="plan-weekderisk" style="font-size:12.5px;font-weight:700;margin:6px 0 0"></div>
   <div class="lbl" id="plan-gradepol" style="text-transform:none;letter-spacing:0;margin:5px 0 0"></div>
   <div class="tags" id="plan-tags" style="margin:8px 0"></div>
   <div class="lbl" id="plan-cascade" style="margin:6px 0 8px;text-transform:none;letter-spacing:0"></div>
@@ -498,6 +499,8 @@ async function loadPlan(){
     const p=await(await fetch('./plan.json?_='+Date.now())).json();
     PLAN=p;
     document.getElementById('plan-stage').textContent=p.stage;
+    if(p.week_derisk){const wd=p.week_derisk,el=document.getElementById('plan-weekderisk');
+      el.textContent=wd.note;el.style.color=wd.below_ema10?'var(--red)':'var(--green)';}
     document.getElementById('plan-cascade').textContent=p.cascade;
     document.getElementById('plan-confirm').textContent='Week confirm '+p.week_confirm;
     // ── setup grade + confluence meter ──

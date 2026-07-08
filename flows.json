@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T09:52:51+00:00",
+  "updated": "2026-07-08T10:07:55+00:00",
   "etf": {
     "recent": [
       {
@@ -51,12 +51,12 @@
     "outflow": false
   },
   "btcd": {
-    "btcd": 55.95,
+    "btcd": 55.96,
     "status": "alt-strong",
     "note": "< 56% — จังหวะ alts shoot แรง (เกณฑ์ครู)",
     "chg7": null,
     "n_hist": 3,
-    "total2": 0.98,
+    "total2": 0.978,
     "total2_chg7": null,
     "rotation": null,
     "ma10": 55.8,
@@ -68,5 +68,16 @@
     "date": "2026-07-29",
     "days": 21,
     "note": "ก่อน event = สภาพคล่องสูง/ผันผวน — 'กำไรเกิดแล้วต้องรักษา' (ครู)"
+  },
+  "vix": {
+    "vix": 18.52,
+    "status": "mid",
+    "note": "🟡 กลางๆ (14-20)",
+    "trend": "↑ กังวลเพิ่ม"
+  },
+  "funding": {
+    "pct": 0.0018,
+    "status": "balanced",
+    "note": "🟡 positioning สมดุล"
   }
 }

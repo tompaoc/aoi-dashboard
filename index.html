@@ -647,6 +647,16 @@ function renderFlows(){
       <div class="big" style="font-size:14px">${ev.name}</div>
       <div class="zd">${ev.date} · อีก ${ev.days} วัน · ${ev.note}</div></div>`;
   }
+  if(FLOWS.vix){const v=FLOWS.vix,col=v.status==='fear'?'var(--red)':v.status==='calm'?'var(--green)':'var(--amber)';
+    html+=`<div class="optcard"><div class="h">😨 VIX (ความกลัวหุ้น = risk on/off)</div>
+      <div class="big" style="color:${col}">${v.vix}</div>
+      <div class="zd">${v.note} · ${v.trend}</div></div>`;
+  }
+  if(FLOWS.funding){const f=FLOWS.funding,col=f.status==='long-crowded'?'var(--red)':f.status==='short-crowded'?'var(--green)':'var(--amber)';
+    html+=`<div class="optcard"><div class="h">⚖️ Funding rate (BTC perp — positioning)</div>
+      <div class="big" style="color:${col}">${f.pct>=0?'+':''}${f.pct}%</div>
+      <div class="zd">${f.note}</div></div>`;
+  }
   // combined trigger (โพสต์ 3,6): ปิดใต้ EMA10 + ETF outflow วันเดียวกัน = แบ่งออก
   if(etf&&PLAN&&PLAN.behavior){const dr=PLAN.behavior.drive;
     if(!dr.above&&etf.outflow){

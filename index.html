@@ -157,7 +157,9 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 
 <div class="topbar">
   <span class="brand">◆ AOI TERMINAL</span>
+  <a href="app.html" style="color:#ffb020;text-decoration:none;font-size:12px;font-weight:700">✨ แอปใหม่</a>
   <a href="performance.html" style="color:var(--cyan);text-decoration:none;font-size:12px;font-weight:600">📊 Performance</a>
+  <a href="journal.html" style="color:var(--cyan);text-decoration:none;font-size:12px;font-weight:600">📔 Journal</a>
   <a href="leaderboard.html" style="color:var(--cyan);text-decoration:none;font-size:12px;font-weight:600">🏆 Leaderboard</a>
   <span class="tk">REGIME <b id="tk-regime" class="cy">—</b></span>
   <span class="tk">FEAR &amp; GREED <b id="tk-fng">—</b></span>
@@ -266,6 +268,9 @@ select,.tf{background:#0a1526;color:var(--ink);border:1px solid var(--line);bord
 
   <div class="lbl" style="margin:14px 0 6px">📅 Economic Calendar — event มหภาค (ครูอ่านทุกเช้า · ก่อน event = ระวังผันผวน) <span id="econ-meta" style="text-transform:none;letter-spacing:0;color:var(--muted)"></span></div>
   <div id="plan-econ" class="unlockbox"></div>
+
+  <div class="lbl" style="margin:14px 0 6px">📐 สถิติแนว — ราคาแทงเลยแนวกี่ % ก่อนเด้ง (วัดจากอดีต · แทน SD-tool ครูที่ยังไม่ปล่อย) <span id="lvl-meta" style="text-transform:none;letter-spacing:0;color:var(--muted)"></span></div>
+  <div id="plan-levels" class="optbox"></div>
 
   <div class="planlow" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
     <div><div class="lbl" style="margin-bottom:6px">✅ 3 เงื่อนไข Week ยืนยันโมเมนตัมกลับตัว (ครู AOI) — <span id="plan-confirm">—</span></div><div id="plan-conds"></div></div>
@@ -610,7 +615,11 @@ function renderOptions(){
     <div class="optcard"><div class="h">🔴 Call walls (ต้าน)</div>${m.call_walls.map(w=>wallRow(w,'c')).join('')}</div>
     <div class="optcard"><div class="h">🟢 Put walls (รับ)</div>${m.put_walls.map(w=>wallRow(w,'p')).join('')}</div>
     <div class="optcard"><div class="h">Put/Call ratio</div><div class="big">${m.pcr??'—'}</div>
-      <div class="zd" style="margin-top:3px">${m.pcr!=null?(m.pcr>1?'put หนากว่า (ป้องกัน/กลัว)':'call หนากว่า (ไล่ราคา)'):''}</div></div>`;
+      <div class="zd" style="margin-top:3px">${m.pcr!=null?(m.pcr>1?'put หนากว่า (ป้องกัน/กลัว)':'call หนากว่า (ไล่ราคา)'):''}</div></div>
+    ${(m.growth&&m.growth.tracking&&m.growth.top_growing&&m.growth.top_growing.length)?`
+    <div class="optcard" style="border-color:rgba(255,176,32,.4)"><div class="h">🔺 เสา OI โต (เป้าขยับ · ${m.growth.days}d)</div>
+      ${m.growth.top_growing.slice(0,3).map(g=>`<div class="wall"><span style="color:var(--amber)">$${g.strike.toLocaleString()}</span><span class="zd">+${g.delta.toLocaleString()}</span></div>`).join('')}
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.4">${m.growth.note}</div></div>`:''}`;
 }
 
 // ---- External Flows (ETF net-flow + BTC Dominance) ----
@@ -725,6 +734,31 @@ function renderEcon(){
   }).join('');
 }
 
+// ---- Level stats (สถิติ reject/overshoot — เวอร์ชันเรา แทน SD-tool ครู) ----
+let LVL=null;
+async function loadLevels(){
+  try{LVL=await(await fetch('./level_stats.json?_='+Date.now())).json();renderLevels();}
+  catch(e){console.warn('levels',e);document.getElementById('plan-levels').innerHTML='<div class="lbl" style="text-transform:none;letter-spacing:0">— ยังไม่มีข้อมูล (run level_stats.py)</div>';}
+}
+function renderLevels(){
+  if(!LVL)return;
+  const el=document.getElementById('plan-levels');const A=LVL.ALL||{};
+  const base=COIN.replace('USDT','')+'USDT',cur=(LVL.assets||{})[base];
+  document.getElementById('lvl-meta').textContent=A.n_interactions?`· รวม ${A.n_interactions} ครั้ง · reject ${Math.round((A.reject_rate||0)*100)}%`:'';
+  const row=(name,x)=>{
+    if(!x||!x.n_interactions)return '';
+    const rr=x.reject_rate!=null?Math.round(x.reject_rate*100)+'%':'—';
+    const p75=x.overshoot_p75!=null?x.overshoot_p75+'%':'—',p90=x.overshoot_p90!=null?x.overshoot_p90+'%':'—';
+    return `<div class="optrow"><span class="ol">${name}</span>
+      <span class="ov">แนวเด้ง <b style="color:var(--green)">${rr}</b> · แทงเลยแนว p75 <b style="color:var(--amber)">${p75}</b> · p90 ${p90} <span style="color:var(--muted)">(n=${x.n_interactions})</span></span></div>`;
+  };
+  let html=row('รวมทุกเหรียญ',A);
+  if(cur)html+=row('👉 '+COIN.replace('USDT',''),cur);
+  const p75=A.overshoot_p75;
+  html+=`<div class="lbl" style="text-transform:none;letter-spacing:0;margin-top:8px;color:var(--amber)">→ วาง stop ห่างแนวอย่างน้อย ~${p75}% (p75) กัน wick เขี่ยออก · ยืนยัน EXP-020 "stop กว้างสำคัญ"</div>`;
+  el.innerHTML=html;
+}
+
 // ---- clock ----
 function tick(){const d=new Date();
   document.getElementById('clock').textContent=d.toLocaleTimeString('en-GB');
@@ -732,14 +766,14 @@ function tick(){const d=new Date();
   document.getElementById('today').textContent=d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'});}
 
 // ---- wire ----
-document.getElementById('coin').addEventListener('change',e=>{COIN=e.target.value;loadChart();renderOptions();renderUnlocks();});
+document.getElementById('coin').addEventListener('change',e=>{COIN=e.target.value;loadChart();renderOptions();renderUnlocks();renderLevels();});
 document.querySelectorAll('.tf').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.tf').forEach(x=>x.classList.remove('active'));
   b.classList.add('active');TF=b.dataset.tf;loadChart();}));
 
 initChart();tick();setInterval(tick,1000);
-loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();loadFlows();loadUnlocks();loadEcon();loadContagion();
-setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);setInterval(loadFlows,300000);setInterval(loadUnlocks,600000);setInterval(loadEcon,600000);setInterval(loadContagion,1800000);
+loadBot();loadChart();loadPrices();loadMacro();loadSymbols();renderWatch();loadHot();loadPlan();loadOptions();loadFlows();loadUnlocks();loadEcon();loadContagion();loadLevels();
+setInterval(loadChart,30000);setInterval(loadPrices,15000);setInterval(loadMacro,60000);setInterval(loadBot,60000);setInterval(loadHot,30000);setInterval(loadPlan,60000);setInterval(loadOptions,300000);setInterval(loadFlows,300000);setInterval(loadUnlocks,600000);setInterval(loadEcon,600000);setInterval(loadContagion,1800000);setInterval(loadLevels,1800000);
 </script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+{
+  "updated": "2026-07-09T14:20:14+00:00",
+  "method": "swing-pivot reject/overshoot, Daily, WIN=10",
+  "assets": {
+    "BTCUSDT": {
+      "n_interactions": 27,
+      "n_reject": 18,
+      "n_break": 9,
+      "reject_rate": 0.667
+    },
+    "ETHUSDT": {
+      "n_interactions": 41,
+      "n_reject": 35,
+      "n_break": 6,
+      "reject_rate": 0.854,
+      "overshoot_median": 5.06,
+      "overshoot_p75": 8.85,
+      "overshoot_p90": 11.12,
+      "n_overshoot": 32
+    },
+    "SOLUSDT": {
+      "n_interactions": 35,
+      "n_reject": 24,
+      "n_break": 11,
+      "reject_rate": 0.686,
+      "overshoot_median": 7.68,
+      "overshoot_p75": 9.61,
+      "overshoot_p90": 14.62,
+      "n_overshoot": 24
+    }
+  },
+  "ALL": {
+    "n_interactions": 4587,
+    "n_reject": 3526,
+    "n_break": 1061,
+    "reject_rate": 0.769,
+    "overshoot_median": 4.71,
+    "overshoot_p75": 9.68,
+    "overshoot_p90": 15.6,
+    "n_overshoot": 3230
+  }
+}

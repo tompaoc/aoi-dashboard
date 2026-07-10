@@ -231,22 +231,26 @@ async function loadChart(){
 }
 function drawLevels(){
   priceLines.forEach(l=>candle.removePriceLine(l));priceLines=[];
-  const add=(price,color,style,title)=>{if(price)priceLines.push(candle.createPriceLine({price:+price,color,lineWidth:1,lineStyle:style,title}));};
-  const R=cvar('--red'),G=cvar('--grn'),A=cvar('--acc'),M=cvar('--amb');
-  // positions on this coin
+  const px=+(($('ch-px').textContent||'').replace(/,/g,''))||0;
+  const R=cvar('--red'),G=cvar('--grn'),A=cvar('--acc'),INK=cvar('--ink');
+  const line=(price,color,style,title)=>priceLines.push(candle.createPriceLine({price:+price,color,lineWidth:1,lineStyle:style,title:title||''}));
+  // ไม้ที่ถือบนเหรียญนี้ (สำคัญสุด — โชว์เสมอ)
   (BOT&&BOT.daily&&BOT.daily.open||[]).filter(p=>p.sym===COIN).forEach(p=>{
-    add(p.entry,cvar('--ink'),2,'เข้า');add(p.stop,R,2,'จุดยอมแพ้');if(p.trail)add(p.trail,M,3,'trail');});
-  // plan levels (BTC)
+    line(p.entry,INK,2,'เข้า');line(p.stop,R,2,'SL');});
+  // รวมแนวต้าน/รับ จากทุกแหล่ง แล้วเลือกเฉพาะ "ใกล้สุด" ฝั่งละ 1-2 (ห่างราคา >1.2% กันป้ายชนกัน)
+  const res=[],sup=[]; let mp=null;
   if(PLAN&&COIN===PLAN.symbol){
-    (PLAN.flips||[]).forEach(f=>add(f.price,f.role==='support'?G:R,1,f.role==='support'?'รับ':'ต้าน'));
-    if(PLAN.golden){add(PLAN.golden.hi,M,2,'Golden');add(PLAN.golden.lo,M,2,'');}
-    if(PLAN.box){add(PLAN.box.hi,A,2,'กล่องบน');add(PLAN.box.lo,A,2,'กล่องล่าง');add(PLAN.box.mid,M,3,'กลาง');}
+    (PLAN.flips||[]).forEach(f=>(f.role==='support'?sup:res).push(f.price));
+    if(PLAN.box){res.push(PLAN.box.hi);sup.push(PLAN.box.lo);} if(PLAN.golden)sup.push(PLAN.golden.hi);
   }
-  // options
-  if(OPT&&OPT.currencies){const o=OPT.currencies[COIN.replace('USDT','')];if(o&&o.main){
-    add(o.main.max_pain,A,3,'Max Pain');
-    if(o.main.call_walls&&o.main.call_walls[0])add(o.main.call_walls[0].strike,R,1,'Call wall');
-    if(o.main.put_walls&&o.main.put_walls[0])add(o.main.put_walls[0].strike,G,1,'Put wall');}}
+  if(OPT&&OPT.currencies){const o=OPT.currencies[COIN.replace('USDT','')];if(o&&o.main){mp=o.main.max_pain;
+    if(o.main.call_walls&&o.main.call_walls[0])res.push(o.main.call_walls[0].strike);
+    if(o.main.put_walls&&o.main.put_walls[0])sup.push(o.main.put_walls[0].strike);}}
+  if(px){
+    [...new Set(res)].filter(p=>p>px*1.012).sort((a,b)=>a-b).slice(0,2).forEach((p,i)=>line(p,R,i?3:1,i?'':'ต้าน'));
+    [...new Set(sup)].filter(p=>p<px*0.988).sort((a,b)=>b-a).slice(0,2).forEach((p,i)=>line(p,G,i?3:1,i?'':'รับ'));
+    if(mp&&Math.abs(mp-px)/px>0.008)line(mp,A,3,'Max Pain');
+  }
 }
 
 // ---- regime ----

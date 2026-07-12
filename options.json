@@ -1,20 +1,20 @@
 {
-  "updated": "2026-07-11T06:15:14+00:00",
+  "updated": "2026-07-12T08:59:12+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 64213.32,
+      "spot": 63999.72,
       "main": {
         "expiry": "31JUL26",
-        "days": 20.1,
+        "days": 19.0,
         "max_pain": 64000,
-        "call_oi": 67272,
-        "put_oi": 27351,
+        "call_oi": 67393,
+        "put_oi": 27500,
         "pcr": 0.41,
         "call_walls": [
           {
             "strike": 70000,
-            "oi": 8059
+            "oi": 8108
           },
           {
             "strike": 80000,
@@ -22,7 +22,7 @@
           },
           {
             "strike": 68000,
-            "oi": 3748
+            "oi": 3743
           },
           {
             "strike": 75000,
@@ -32,30 +32,30 @@
         "put_walls": [
           {
             "strike": 50000,
-            "oi": 2982
+            "oi": 3052
           },
           {
             "strike": 52000,
-            "oi": 2344
+            "oi": 2325
           },
           {
             "strike": 56000,
-            "oi": 2084
+            "oi": 2083
           },
           {
             "strike": 60000,
-            "oi": 1861
+            "oi": 1864
           }
         ],
         "growth": {
           "tracking": true,
           "base_date": "2026-07-09",
-          "days": 2,
+          "days": 3,
           "top_growing": [
             {
               "strike": 70000,
-              "oi": 8969,
-              "delta": 713
+              "oi": 9017,
+              "delta": 761
             },
             {
               "strike": 46000,
@@ -64,179 +64,179 @@
             },
             {
               "strike": 48000,
-              "oi": 909,
-              "delta": 253
+              "oi": 939,
+              "delta": 283
             },
             {
               "strike": 69000,
-              "oi": 1698,
-              "delta": 141
+              "oi": 1757,
+              "delta": 200
             }
           ],
-          "note": "เสาโตเด่นที่ $70,000 (+713 OI ใน 2d) — เจ้ามือเติมประกันตรงนี้ → เป้า/แนวขยับเข้าหา"
+          "note": "เสาโตเด่นที่ $70,000 (+761 OI ใน 3d) — เจ้ามือเติมประกันตรงนี้ → เป้า/แนวขยับเข้าหา"
         }
       },
       "near": {
-        "expiry": "11JUL26",
-        "days": 0.1,
+        "expiry": "13JUL26",
+        "days": 1.0,
         "max_pain": 63500,
-        "call_oi": 1615,
-        "put_oi": 1496,
-        "pcr": 0.93,
+        "call_oi": 1277,
+        "put_oi": 2572,
+        "pcr": 2.01,
         "call_walls": [
           {
             "strike": 64000,
-            "oi": 270
-          },
-          {
-            "strike": 65000,
-            "oi": 244
+            "oi": 239
           },
           {
             "strike": 65500,
-            "oi": 223
+            "oi": 229
           },
           {
-            "strike": 64500,
-            "oi": 179
+            "strike": 63500,
+            "oi": 139
+          },
+          {
+            "strike": 66000,
+            "oi": 132
           }
         ],
         "put_walls": [
           {
             "strike": 63000,
-            "oi": 235
+            "oi": 508
           },
           {
-            "strike": 63500,
-            "oi": 190
-          },
-          {
-            "strike": 62500,
-            "oi": 180
+            "strike": 61500,
+            "oi": 466
           },
           {
             "strike": 60000,
-            "oi": 159
+            "oi": 390
+          },
+          {
+            "strike": 61000,
+            "oi": 330
           }
         ]
       }
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 1798.44,
+      "spot": 1804.83,
       "main": {
         "expiry": "31JUL26",
-        "days": 20.1,
+        "days": 19.0,
         "max_pain": 1800,
-        "call_oi": 204720,
-        "put_oi": 118729,
-        "pcr": 0.58,
+        "call_oi": 205086,
+        "put_oi": 121417,
+        "pcr": 0.59,
         "call_walls": [
           {
-            "strike": 1900,
-            "oi": 14913
+            "strike": 2000,
+            "oi": 15154
           },
           {
-            "strike": 2000,
-            "oi": 14798
+            "strike": 1900,
+            "oi": 14914
           },
           {
             "strike": 1800,
-            "oi": 13992
+            "oi": 13956
           },
           {
             "strike": 2400,
-            "oi": 11441
+            "oi": 11440
           }
         ],
         "put_walls": [
           {
-            "strike": 1800,
-            "oi": 12780
+            "strike": 1600,
+            "oi": 13567
           },
           {
-            "strike": 1600,
-            "oi": 12414
+            "strike": 1800,
+            "oi": 12841
           },
           {
             "strike": 1500,
-            "oi": 11734
+            "oi": 12054
           },
           {
             "strike": 1200,
-            "oi": 9953
+            "oi": 9959
           }
         ],
         "growth": {
           "tracking": true,
           "base_date": "2026-07-09",
-          "days": 2,
+          "days": 3,
           "top_growing": [
             {
               "strike": 1900,
-              "oi": 17177,
-              "delta": 1929
+              "oi": 17178,
+              "delta": 1930
             },
             {
               "strike": 2000,
-              "oi": 18188,
-              "delta": 1072
+              "oi": 18543,
+              "delta": 1427
+            },
+            {
+              "strike": 1600,
+              "oi": 16833,
+              "delta": 1202
             },
             {
               "strike": 3100,
               "oi": 1775,
               "delta": 1000
-            },
-            {
-              "strike": 1000,
-              "oi": 8837,
-              "delta": 917
             }
           ],
-          "note": "เสาโตเด่นที่ $1,900 (+1,929 OI ใน 2d) — เจ้ามือเติมประกันตรงนี้ → เป้า/แนวขยับเข้าหา"
+          "note": "เสาโตเด่นที่ $1,900 (+1,930 OI ใน 3d) — เจ้ามือเติมประกันตรงนี้ → เป้า/แนวขยับเข้าหา"
         }
       },
       "near": {
-        "expiry": "11JUL26",
-        "days": 0.1,
-        "max_pain": 1775,
-        "call_oi": 13151,
-        "put_oi": 12812,
-        "pcr": 0.97,
+        "expiry": "13JUL26",
+        "days": 1.0,
+        "max_pain": 1800,
+        "call_oi": 17988,
+        "put_oi": 6573,
+        "pcr": 0.37,
         "call_walls": [
           {
-            "strike": 1850,
-            "oi": 1993
-          },
-          {
             "strike": 1875,
-            "oi": 1836
+            "oi": 5772
           },
           {
-            "strike": 1900,
-            "oi": 1646
+            "strike": 2000,
+            "oi": 2584
+          },
+          {
+            "strike": 1925,
+            "oi": 2475
           },
           {
             "strike": 1800,
-            "oi": 1598
+            "oi": 2026
           }
         ],
         "put_walls": [
           {
-            "strike": 1675,
-            "oi": 3006
+            "strike": 1750,
+            "oi": 1472
+          },
+          {
+            "strike": 1800,
+            "oi": 969
           },
           {
             "strike": 1775,
-            "oi": 2596
+            "oi": 923
           },
           {
-            "strike": 1750,
-            "oi": 2462
-          },
-          {
-            "strike": 1725,
-            "oi": 1370
+            "strike": 1625,
+            "oi": 893
           }
         ]
       }

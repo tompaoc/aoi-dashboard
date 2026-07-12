@@ -1,33 +1,13 @@
 {
-  "updated": "2026-07-11T06:15:16+00:00",
+  "updated": "2026-07-12T08:59:14+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "ME",
-      "name": "Magic Eden",
-      "days": 0.0,
-      "date": "2026-07-11",
-      "usd_m": 0.5,
-      "pct_supply": 1.15,
-      "big": true,
-      "category": "noncirculating"
-    },
-    {
-      "symbol": "RAIN",
-      "name": "Rain",
-      "days": 0.1,
-      "date": "2026-07-11",
-      "usd_m": 207.2,
-      "pct_supply": 2.17,
-      "big": true,
-      "category": "ecosystem"
-    },
-    {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 1.1,
+      "days": 0.0,
       "date": "2026-07-12",
-      "usd_m": 32.2,
+      "usd_m": 31.7,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -35,7 +15,7 @@
     {
       "symbol": "APT",
       "name": "Aptos",
-      "days": 1.4,
+      "days": 0.3,
       "date": "2026-07-12",
       "usd_m": 2.0,
       "pct_supply": 0.39,
@@ -45,37 +25,27 @@
     {
       "symbol": "BB",
       "name": "BounceBit",
-      "days": 1.5,
+      "days": 0.4,
       "date": "2026-07-12",
       "usd_m": 0.4,
-      "pct_supply": 5.39,
+      "pct_supply": 5.38,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 1.5,
+      "days": 0.4,
       "date": "2026-07-12",
-      "usd_m": 78.0,
-      "pct_supply": 13.46,
+      "usd_m": 75.9,
+      "pct_supply": 13.47,
       "big": true,
-      "category": "insiders"
-    },
-    {
-      "symbol": "ARB",
-      "name": "Arbitrum",
-      "days": 5.0,
-      "date": "2026-07-16",
-      "usd_m": 5.1,
-      "pct_supply": 0.88,
-      "big": false,
       "category": "insiders"
     },
     {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 5.7,
+      "days": 4.6,
       "date": "2026-07-17",
       "usd_m": 0.2,
       "pct_supply": 1.71,
@@ -85,7 +55,7 @@
     {
       "symbol": "DBR",
       "name": "deBridge",
-      "days": 6.9,
+      "days": 5.8,
       "date": "2026-07-18",
       "usd_m": 1.4,
       "pct_supply": 1.56,
@@ -95,9 +65,9 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 9.2,
+      "days": 8.1,
       "date": "2026-07-20",
-      "usd_m": 4.5,
+      "usd_m": 4.8,
       "pct_supply": 2.96,
       "big": true,
       "category": "noncirculating"
@@ -105,9 +75,9 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 9.7,
+      "days": 8.5,
       "date": "2026-07-20",
-      "usd_m": 9.8,
+      "usd_m": 9.6,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -115,19 +85,19 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 11.7,
+      "days": 10.6,
       "date": "2026-07-22",
       "usd_m": 0.6,
-      "pct_supply": 6.33,
+      "pct_supply": 6.34,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "WLD",
       "name": "Worldcoin",
-      "days": 12.5,
+      "days": 11.4,
       "date": "2026-07-23",
-      "usd_m": 4.3,
+      "usd_m": 4.4,
       "pct_supply": 0.32,
       "big": false,
       "category": "publicSale"
@@ -135,22 +105,52 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 12.7,
+      "days": 11.6,
       "date": "2026-07-23",
       "usd_m": 60.4,
-      "pct_supply": 1.35,
+      "pct_supply": 1.34,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "INIT",
       "name": "Initia",
-      "days": 13.3,
+      "days": 12.2,
       "date": "2026-07-24",
       "usd_m": 0.1,
       "pct_supply": 1.25,
       "big": true,
       "category": "publicSale"
+    },
+    {
+      "symbol": "H",
+      "name": "Humanity",
+      "days": 12.3,
+      "date": "2026-07-24",
+      "usd_m": 7.3,
+      "pct_supply": 5.3,
+      "big": true,
+      "category": "insiders"
+    },
+    {
+      "symbol": "AVAX",
+      "name": "Avalanche",
+      "days": 13.2,
+      "date": "2026-07-25",
+      "usd_m": 10.8,
+      "pct_supply": 0.39,
+      "big": false,
+      "category": "insiders"
+    },
+    {
+      "symbol": "XPL",
+      "name": "Plasma",
+      "days": 14.0,
+      "date": "2026-07-26",
+      "usd_m": 8.1,
+      "pct_supply": 3.42,
+      "big": true,
+      "category": "ecosystem"
     }
   ]
 }

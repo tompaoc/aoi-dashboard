@@ -1,72 +1,23 @@
 {
-  "updated": "2026-07-11T06:15:11+00:00",
-  "etf": {
-    "recent": [
-      {
-        "date": "26 Jun 2026",
-        "flow": -444.5
-      },
-      {
-        "date": "29 Jun 2026",
-        "flow": -231.0
-      },
-      {
-        "date": "30 Jun 2026",
-        "flow": -222.6
-      },
-      {
-        "date": "01 Jul 2026",
-        "flow": -296.0
-      },
-      {
-        "date": "02 Jul 2026",
-        "flow": 223.5
-      },
-      {
-        "date": "06 Jul 2026",
-        "flow": 265.7
-      },
-      {
-        "date": "07 Jul 2026",
-        "flow": 21.5
-      },
-      {
-        "date": "08 Jul 2026",
-        "flow": -84.9
-      },
-      {
-        "date": "09 Jul 2026",
-        "flow": -95.3
-      },
-      {
-        "date": "10 Jul 2026",
-        "flow": 90.4
-      }
-    ],
-    "latest": {
-      "date": "10 Jul 2026",
-      "flow": 90.4
-    },
-    "consec_outflow": 0,
-    "outflow": false
-  },
+  "updated": "2026-07-12T08:59:13+00:00",
+  "etf": null,
   "btcd": {
-    "btcd": 56.32,
+    "btcd": 56.28,
     "status": "alt-favorable",
     "note": "< 58% — เงินเริ่มเข้า alts",
     "chg7": null,
-    "n_hist": 5,
-    "total2": 0.997,
+    "n_hist": 1,
+    "total2": 0.996,
     "total2_chg7": null,
     "rotation": null,
-    "ma10": 55.97,
-    "vs_ma10": "above",
+    "ma10": null,
+    "vs_ma10": null,
     "caveat": "MA 25/50 สัปดาห์แบบครูต้องใช้ข้อมูลเสียเงิน — เวอร์ชันนี้ใช้เกณฑ์ + สะสมทิศเอง"
   },
   "event": {
     "name": "FOMC (ดอกเบี้ย)",
     "date": "2026-07-29",
-    "days": 18,
+    "days": 17,
     "note": "ก่อน event = สภาพคล่องสูง/ผันผวน — 'กำไรเกิดแล้วต้องรักษา' (ครู)"
   },
   "vix": {
@@ -75,9 +26,5 @@
     "note": "🟡 กลางๆ (14-20)",
     "trend": "↓ คลายกังวล"
   },
-  "funding": {
-    "pct": 0.0011,
-    "status": "balanced",
-    "note": "🟡 positioning สมดุล"
-  }
+  "funding": null
 }

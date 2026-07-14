@@ -1,51 +1,21 @@
 {
-  "updated": "2026-07-12T08:59:14+00:00",
+  "updated": "2026-07-14T07:34:37+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "SOL",
-      "name": "Solana",
-      "days": 0.0,
-      "date": "2026-07-12",
-      "usd_m": 31.7,
-      "pct_supply": 0.07,
+      "symbol": "ARB",
+      "name": "Arbitrum Foundation",
+      "days": 2.0,
+      "date": "2026-07-16",
+      "usd_m": 5.1,
+      "pct_supply": 0.88,
       "big": false,
-      "category": "staking"
-    },
-    {
-      "symbol": "APT",
-      "name": "Aptos",
-      "days": 0.3,
-      "date": "2026-07-12",
-      "usd_m": 2.0,
-      "pct_supply": 0.39,
-      "big": false,
-      "category": "noncirculating"
-    },
-    {
-      "symbol": "BB",
-      "name": "BounceBit",
-      "days": 0.4,
-      "date": "2026-07-12",
-      "usd_m": 0.4,
-      "pct_supply": 5.38,
-      "big": true,
-      "category": "privateSale"
-    },
-    {
-      "symbol": "PUMP",
-      "name": "Pump",
-      "days": 0.4,
-      "date": "2026-07-12",
-      "usd_m": 75.9,
-      "pct_supply": 13.47,
-      "big": true,
       "category": "insiders"
     },
     {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 4.6,
+      "days": 2.7,
       "date": "2026-07-17",
       "usd_m": 0.2,
       "pct_supply": 1.71,
@@ -55,19 +25,19 @@
     {
       "symbol": "DBR",
       "name": "deBridge",
-      "days": 5.8,
+      "days": 3.9,
       "date": "2026-07-18",
       "usd_m": 1.4,
-      "pct_supply": 1.56,
+      "pct_supply": 1.57,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 8.1,
+      "days": 6.1,
       "date": "2026-07-20",
-      "usd_m": 4.8,
+      "usd_m": 4.9,
       "pct_supply": 2.96,
       "big": true,
       "category": "noncirculating"
@@ -75,9 +45,9 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 8.5,
+      "days": 6.6,
       "date": "2026-07-20",
-      "usd_m": 9.6,
+      "usd_m": 9.3,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -85,19 +55,19 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 10.6,
+      "days": 8.6,
       "date": "2026-07-22",
       "usd_m": 0.6,
-      "pct_supply": 6.34,
+      "pct_supply": 6.33,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "WLD",
       "name": "Worldcoin",
-      "days": 11.4,
+      "days": 9.4,
       "date": "2026-07-23",
-      "usd_m": 4.4,
+      "usd_m": 4.5,
       "pct_supply": 0.32,
       "big": false,
       "category": "publicSale"
@@ -105,9 +75,9 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 11.6,
+      "days": 9.6,
       "date": "2026-07-23",
-      "usd_m": 60.4,
+      "usd_m": 58.2,
       "pct_supply": 1.34,
       "big": true,
       "category": "farming"
@@ -115,7 +85,7 @@
     {
       "symbol": "INIT",
       "name": "Initia",
-      "days": 12.2,
+      "days": 10.2,
       "date": "2026-07-24",
       "usd_m": 0.1,
       "pct_supply": 1.25,
@@ -125,17 +95,17 @@
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 12.3,
+      "days": 10.4,
       "date": "2026-07-24",
-      "usd_m": 7.3,
-      "pct_supply": 5.3,
+      "usd_m": 7.2,
+      "pct_supply": 5.29,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "AVAX",
       "name": "Avalanche",
-      "days": 13.2,
+      "days": 11.2,
       "date": "2026-07-25",
       "usd_m": 10.8,
       "pct_supply": 0.39,
@@ -145,10 +115,40 @@
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 14.0,
+      "days": 12.1,
       "date": "2026-07-26",
-      "usd_m": 8.1,
+      "usd_m": 8.0,
       "pct_supply": 3.42,
+      "big": true,
+      "category": "ecosystem"
+    },
+    {
+      "symbol": "GRASS",
+      "name": "Grass",
+      "days": 14.6,
+      "date": "2026-07-28",
+      "usd_m": 3.8,
+      "pct_supply": 1.66,
+      "big": true,
+      "category": "privateSale"
+    },
+    {
+      "symbol": "B2",
+      "name": "B2 Buzz",
+      "days": 15.2,
+      "date": "2026-07-29",
+      "usd_m": 0.4,
+      "pct_supply": 1.64,
+      "big": true,
+      "category": "Uncategorized"
+    },
+    {
+      "symbol": "FF",
+      "name": "Falcon Finance",
+      "days": 15.9,
+      "date": "2026-07-30",
+      "usd_m": 4.6,
+      "pct_supply": 2.53,
       "big": true,
       "category": "ecosystem"
     }

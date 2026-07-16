@@ -619,7 +619,11 @@ function renderOptions(){
     ${(m.growth&&m.growth.tracking&&m.growth.top_growing&&m.growth.top_growing.length)?`
     <div class="optcard" style="border-color:rgba(255,176,32,.4)"><div class="h">🔺 เสา OI โต (เป้าขยับ · ${m.growth.days}d)</div>
       ${m.growth.top_growing.slice(0,3).map(g=>`<div class="wall"><span style="color:var(--amber)">$${g.strike.toLocaleString()}</span><span class="zd">+${g.delta.toLocaleString()}</span></div>`).join('')}
-      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.4">${m.growth.note}</div></div>`:''}`;
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.4">${m.growth.note}</div></div>`:''}
+    ${m.iv_hv?`
+    <div class="optcard" style="border-color:${m.iv_hv.state==='rich'?'rgba(255,59,92,.4)':m.iv_hv.state==='cheap'?'rgba(0,230,118,.4)':'rgba(255,255,255,.12)'}"><div class="h">📊 IV vs HV (option แพง/ถูกกว่าจริง)</div>
+      <div class="big" style="font-size:15px;color:${m.iv_hv.state==='rich'?'var(--red)':m.iv_hv.state==='cheap'?'var(--green)':'inherit'}">IV ${m.iv_hv.atm_iv}% ${(m.iv_hv.spread>=0?'≥':'<')} HV ${m.iv_hv.hv10??'—'}%</div>
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.4">${m.iv_hv.note||''}</div></div>`:''}`;
 }
 
 // ---- External Flows (ETF net-flow + BTC Dominance) ----

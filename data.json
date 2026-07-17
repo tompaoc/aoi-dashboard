@@ -1,66 +1,24 @@
 {
-  "updated": "2026-07-16 01:06",
+  "updated": "2026-07-17 01:05",
   "regime": "bear",
   "daily": {
     "start": 5000.0,
-    "balance": 4796.88,
-    "mtm": 4830.0,
-    "return": -3.4,
-    "closed": 7,
-    "wins": 1,
-    "winrate": 14.3,
+    "balance": 4846.18,
+    "mtm": 4831.36,
+    "return": -3.37,
+    "closed": 10,
+    "wins": 3,
+    "winrate": 30.0,
     "open": [
-      {
-        "sym": "TONUSDT",
-        "side": "SHORT",
-        "entry": 1.6,
-        "now": 1.6,
-        "stop": 1.77076764,
-        "trail": 1.71143937,
-        "rr": 1.8,
-        "uR": 0.0,
-        "risk_pct": 10.7,
-        "notional": 468.47,
-        "reason": "เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0",
-        "tf": "1D (รายวัน)"
-      },
-      {
-        "sym": "HEMIUSDT",
-        "side": "SHORT",
-        "entry": 0.00486,
-        "now": 0.00448,
-        "stop": 0.0056747,
-        "trail": 0.00500612,
-        "rr": 2.0,
-        "uR": 0.47,
-        "risk_pct": 16.8,
-        "notional": 298.27,
-        "reason": "เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0",
-        "tf": "1D (รายวัน)"
-      },
-      {
-        "sym": "SAGAUSDT",
-        "side": "SHORT",
-        "entry": 0.01371,
-        "now": 0.01274,
-        "stop": 0.01599716,
-        "trail": 0.01378711,
-        "rr": 2.0,
-        "uR": 0.42,
-        "risk_pct": 16.7,
-        "notional": 299.72,
-        "reason": "เทรนด์ใหญ่ลง(<EMA200) + เด้งชน EMA25 แล้วปิดต่ำกว่า(reject) + MACD<0",
-        "tf": "1D (รายวัน)"
-      },
       {
         "sym": "MORPHOUSDT",
         "side": "LONG",
         "entry": 2.249,
-        "now": 2.049,
+        "now": 2.093,
         "stop": 1.862,
-        "trail": 1.96877043,
+        "trail": 1.98111853,
         "rr": 2.0,
-        "uR": -0.52,
+        "uR": -0.4,
         "risk_pct": 17.2,
         "notional": 128.33,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -70,11 +28,11 @@
         "sym": "KAITOUSDT",
         "side": "LONG",
         "entry": 0.614,
-        "now": 0.7592,
+        "now": 0.8624,
         "stop": 0.614,
-        "trail": 0.59170514,
+        "trail": 0.61222611,
         "rr": 2.0,
-        "uR": 145200000.0,
+        "uR": 248400000.0,
         "risk_pct": 15.3,
         "notional": 80.98,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -84,11 +42,11 @@
         "sym": "ZECUSDT",
         "side": "LONG",
         "entry": 567.22,
-        "now": 567.22,
+        "now": 532.93,
         "stop": 444.0,
-        "trail": 522.84933942,
+        "trail": 496.89799346,
         "rr": 2.0,
-        "uR": 0.0,
+        "uR": -0.28,
         "risk_pct": 21.7,
         "notional": 97.89,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -96,16 +54,6 @@
       }
     ],
     "recent": [
-      {
-        "sym": "MIRAUSDT",
-        "R": -1.0,
-        "pnl": -50.0
-      },
-      {
-        "sym": "SLPUSDT",
-        "R": -0.14,
-        "pnl": -7.0
-      },
       {
         "sym": "MIRAUSDT",
         "R": -1.0,
@@ -130,6 +78,21 @@
         "sym": "KAITOUSDT",
         "R": 0.8,
         "pnl": 16.6
+      },
+      {
+        "sym": "TONUSDT",
+        "R": 0.0,
+        "pnl": 0.0
+      },
+      {
+        "sym": "HEMIUSDT",
+        "R": 0.48,
+        "pnl": 23.9
+      },
+      {
+        "sym": "SAGAUSDT",
+        "R": 0.51,
+        "pnl": 25.4
       }
     ]
   },

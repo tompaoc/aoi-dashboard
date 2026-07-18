@@ -623,7 +623,15 @@ function renderOptions(){
     ${m.iv_hv?`
     <div class="optcard" style="border-color:${m.iv_hv.state==='rich'?'rgba(255,59,92,.4)':m.iv_hv.state==='cheap'?'rgba(0,230,118,.4)':'rgba(255,255,255,.12)'}"><div class="h">📊 IV vs HV (option แพง/ถูกกว่าจริง)</div>
       <div class="big" style="font-size:15px;color:${m.iv_hv.state==='rich'?'var(--red)':m.iv_hv.state==='cheap'?'var(--green)':'inherit'}">IV ${m.iv_hv.atm_iv}% ${(m.iv_hv.spread>=0?'≥':'<')} HV ${m.iv_hv.hv10??'—'}%</div>
-      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.4">${m.iv_hv.note||''}</div></div>`:''}`;
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.4">${m.iv_hv.note||''}</div></div>`:''}
+    ${m.gamma?`
+    <div class="optcard" style="border-color:${m.gamma.squeeze?'rgba(255,176,32,.6)':'rgba(255,255,255,.12)'}"><div class="h">⚡ Gamma Squeeze</div>
+      <div class="big" style="font-size:14px;color:${m.gamma.squeeze?'var(--amber)':'inherit'}">${m.gamma.squeeze?'เสี่ยงพุ่งแรง':'reaction ปกติ'}</div>
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.4">${m.gamma.note||''}</div></div>`:''}
+    ${m.expected_move?`
+    <div class="optcard"><div class="h">📐 Expected Move (SD)</div>
+      <div class="big" style="font-size:14px">±$${m.expected_move.sd1.toLocaleString()} <span class="zd">(±${m.expected_move.pct1}% · 1SD)</span></div>
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.5">น่าอยู่ในกรอบ $${m.expected_move.dn1.toLocaleString()}–$${m.expected_move.up1.toLocaleString()} · 2SD $${m.expected_move.dn2.toLocaleString()}–$${m.expected_move.up2.toLocaleString()}${m.expected_move.call_note?'<br>'+m.expected_move.call_note:''}</div></div>`:''}`;
 }
 
 // ---- External Flows (ETF net-flow + BTC Dominance) ----

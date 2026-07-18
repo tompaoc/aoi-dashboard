@@ -2,13 +2,13 @@
   "name": "SAFE · spot long-only 1x",
   "inception": "2026-07-01",
   "capital": 10000.0,
-  "as_of": "2026-07-17",
-  "mvrv_now": 1.2245682153726962,
+  "as_of": "2026-07-18",
+  "mvrv_now": 1.2064208959075768,
   "gate_open": true,
-  "realized": 98.94,
-  "unrealized": -0.68,
-  "equity": 10098.26,
-  "ret_pct": 0.98,
+  "realized": 105.42,
+  "unrealized": -2.31,
+  "equity": 10103.11,
+  "ret_pct": 1.03,
   "max_dd_pct": 0.3,
   "max_notional": 2620.0,
   "liquidated": null,
@@ -48,6 +48,13 @@
       "equity": 10098.26,
       "realized": 98.94,
       "unrealized": -0.68,
+      "dd": 0.3
+    },
+    {
+      "date": "2026-07-18",
+      "equity": 10103.11,
+      "realized": 105.42,
+      "unrealized": -2.31,
       "dd": 0.3
     }
   ]

@@ -369,6 +369,10 @@ function drawOptLines(){
   optLines.push(candle.createPriceLine({price:m.max_pain,color:'rgba(0,212,255,.6)',lineWidth:1,lineStyle:3,title:'Max Pain'}));
   if(m.call_walls[0])optLines.push(candle.createPriceLine({price:m.call_walls[0].strike,color:'rgba(255,59,92,.4)',lineWidth:1,lineStyle:1,title:'Call wall'}));
   if(m.put_walls[0])optLines.push(candle.createPriceLine({price:m.put_walls[0].strike,color:'rgba(0,230,118,.4)',lineWidth:1,lineStyle:1,title:'Put wall'}));
+  if(m.oi_range){const r=m.oi_range;   // กรอบ OI (fade ขอบ): ต้านบน/รับล่าง/กลาง
+    optLines.push(candle.createPriceLine({price:r.resistance,color:'rgba(255,176,32,.55)',lineWidth:1,lineStyle:2,title:'OI ต้านบน'}));
+    optLines.push(candle.createPriceLine({price:r.support,color:'rgba(255,176,32,.55)',lineWidth:1,lineStyle:2,title:'OI รับล่าง'}));
+    optLines.push(candle.createPriceLine({price:r.mid,color:'rgba(255,176,32,.3)',lineWidth:1,lineStyle:3,title:'กลางกรอบ'}));}
 }
 
 // ---- gauge ----
@@ -631,7 +635,12 @@ function renderOptions(){
     ${m.expected_move?`
     <div class="optcard"><div class="h">📐 Expected Move (SD)</div>
       <div class="big" style="font-size:14px">±$${m.expected_move.sd1.toLocaleString()} <span class="zd">(±${m.expected_move.pct1}% · 1SD)</span></div>
-      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.5">น่าอยู่ในกรอบ $${m.expected_move.dn1.toLocaleString()}–$${m.expected_move.up1.toLocaleString()} · 2SD $${m.expected_move.dn2.toLocaleString()}–$${m.expected_move.up2.toLocaleString()}${m.expected_move.call_note?'<br>'+m.expected_move.call_note:''}</div></div>`:''}`;
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.5">น่าอยู่ในกรอบ $${m.expected_move.dn1.toLocaleString()}–$${m.expected_move.up1.toLocaleString()} · 2SD $${m.expected_move.dn2.toLocaleString()}–$${m.expected_move.up2.toLocaleString()}${m.expected_move.call_note?'<br>'+m.expected_move.call_note:''}</div></div>`:''}
+    ${m.oi_range?(()=>{const r=m.oi_range,edge=r.zone!=='กลางกรอบ';return `
+    <div class="optcard" style="border-color:${edge?'rgba(255,176,32,.55)':'rgba(255,255,255,.12)'}"><div class="h">📦 กรอบ OI (fade ขอบ · เป้า 1 block)</div>
+      <div class="big" style="font-size:14px">$${r.support.toLocaleString()} <span class="zd">↔</span> $${r.resistance.toLocaleString()} <span class="zd" style="font-size:10px">(1 block $${r.block.toLocaleString()} · ${r.block_pct}%)</span></div>
+      <div class="zd" style="margin-top:2px;font-size:10.5px">ราคาอยู่ ${r.pos_pct}% ของกรอบ · <b style="color:${edge?'var(--amber)':'inherit'}">${r.zone}</b> · expiry ${m.days}d${m.days>14?' <span style="color:var(--muted)">(ไกล — pinning อ่อน)</span>':''}</div>
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.45">${r.play}</div></div>`;})():''}`;
 }
 
 // ---- External Flows (ETF net-flow + BTC Dominance) ----

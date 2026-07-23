@@ -1,38 +1,24 @@
 {
-  "updated": "2026-07-22 10:12",
+  "updated": "2026-07-23 01:06",
   "regime": "bear",
   "daily": {
     "start": 5000.0,
-    "balance": 4846.18,
-    "mtm": 4822.71,
-    "return": -3.55,
-    "closed": 10,
+    "balance": 4826.84,
+    "mtm": 4817.78,
+    "return": -3.64,
+    "closed": 11,
     "wins": 3,
-    "winrate": 30.0,
+    "winrate": 27.3,
     "open": [
-      {
-        "sym": "MORPHOUSDT",
-        "side": "LONG",
-        "entry": 2.249,
-        "now": 2.032,
-        "stop": 1.862,
-        "trail": 1.96343256,
-        "rr": 2.0,
-        "uR": -0.56,
-        "risk_pct": 17.2,
-        "notional": 128.33,
-        "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
-        "tf": "1D (รายวัน)"
-      },
       {
         "sym": "KAITOUSDT",
         "side": "LONG",
         "entry": 0.614,
-        "now": 0.9381,
+        "now": 0.9752,
         "stop": 0.614,
-        "trail": 0.70251933,
+        "trail": 0.72542981,
         "rr": 2.0,
-        "uR": 324100000.0,
+        "uR": 361200000.0,
         "risk_pct": 15.3,
         "notional": 80.98,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -42,11 +28,11 @@
         "sym": "ZECUSDT",
         "side": "LONG",
         "entry": 567.22,
-        "now": 516.55,
+        "now": 515.99,
         "stop": 444.0,
-        "trail": 510.73713043,
+        "trail": 508.94680614,
         "rr": 2.0,
-        "uR": -0.41,
+        "uR": -0.42,
         "risk_pct": 21.7,
         "notional": 97.89,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -70,11 +56,11 @@
         "sym": "JSTUSDT",
         "side": "LONG",
         "entry": 0.10223,
-        "now": 0.10124,
+        "now": 0.10214,
         "stop": 0.09563,
-        "trail": 0.09410235,
+        "trail": 0.09474637,
         "rr": 2.0,
-        "uR": -0.15,
+        "uR": -0.01,
         "risk_pct": 6.5,
         "notional": 242.31,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -82,11 +68,6 @@
       }
     ],
     "recent": [
-      {
-        "sym": "MIRAUSDT",
-        "R": -1.0,
-        "pnl": -49.5
-      },
       {
         "sym": "ICPUSDT",
         "R": -0.56,
@@ -121,6 +102,11 @@
         "sym": "SAGAUSDT",
         "R": 0.51,
         "pnl": 25.4
+      },
+      {
+        "sym": "MORPHOUSDT",
+        "R": -0.88,
+        "pnl": -19.3
       }
     ]
   },

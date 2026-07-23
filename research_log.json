@@ -238,6 +238,46 @@
       "week": "0/3",
       "stage": "🟡 ผ่านด่าน 1 (เบรค Day p"
     },
+    "main_regime": null,
+    "fwd_btc": 66155.0,
+    "fwd_toward_maxpain": false,
+    "fwd_wall": "no_touch"
+  },
+  {
+    "date": "2026-07-23",
+    "btc": 66155.0,
+    "oi": {
+      "call_wall": 72000,
+      "put_wall": 60000,
+      "max_pain": 64000,
+      "dist_call_pct": 8.8,
+      "dist_put_pct": -9.3,
+      "dist_mp_pct": -3.3,
+      "grow_top": [
+        {
+          "strike": 72000,
+          "oi": 26631,
+          "delta": 24369
+        }
+      ]
+    },
+    "iv_hv": {
+      "spread": 5.6,
+      "state": "fair"
+    },
+    "cage": {
+      "sup": 60000,
+      "res": 68000,
+      "zone": "ชิดต้านบน",
+      "pos_pct": 77,
+      "block_pct": 12.1,
+      "days": 8.3
+    },
+    "aoi": {
+      "bias": "bull",
+      "week": "0/3",
+      "stage": "🟡 ผ่านด่าน 1 (เบรค Day p"
+    },
     "main_regime": null
   }
 ]

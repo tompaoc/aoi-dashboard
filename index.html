@@ -614,7 +614,7 @@ function renderOptions(){
   document.getElementById('opt-meta').textContent=`· ${o.currency} · หมดอายุ ${m.expiry} (${m.days}วัน)`;
   const wallRow=(w,role)=>`<div class="wall"><span style="color:${role==='c'?'var(--red)':'var(--green)'}">$${w.strike.toLocaleString()}</span><span class="zd">${w.oi.toLocaleString()}</span></div>`;
   box.innerHTML=`
-    <div class="optcard"><div class="h">🎯 Max Pain</div><div class="big cy">$${m.max_pain.toLocaleString()}</div>
+    <div class="optcard"><div class="h">🎯 Max Pain <span style="text-transform:none;letter-spacing:0">(ครู: นัยยะรองจากเสา OI)</span></div><div class="big cy">$${m.max_pain.toLocaleString()}</div>
       <div class="zd" style="margin-top:3px">ราคา ${mpRel>=0?'+':''}${mpRel.toFixed(1)}% จาก max pain</div></div>
     <div class="optcard"><div class="h">🔴 Call walls (ต้าน)</div>${m.call_walls.map(w=>wallRow(w,'c')).join('')}</div>
     <div class="optcard"><div class="h">🟢 Put walls (รับ)</div>${m.put_walls.map(w=>wallRow(w,'p')).join('')}</div>
@@ -636,6 +636,16 @@ function renderOptions(){
     <div class="optcard"><div class="h">📐 Expected Move (SD)</div>
       <div class="big" style="font-size:14px">±$${m.expected_move.sd1.toLocaleString()} <span class="zd">(±${m.expected_move.pct1}% · 1SD)</span></div>
       <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.5">น่าอยู่ในกรอบ $${m.expected_move.dn1.toLocaleString()}–$${m.expected_move.up1.toLocaleString()} · 2SD $${m.expected_move.dn2.toLocaleString()}–$${m.expected_move.up2.toLocaleString()}${m.expected_move.call_note?'<br>'+m.expected_move.call_note:''}</div></div>`:''}
+    ${m.iv_skew?`
+    <div class="optcard" style="border-color:${m.iv_skew.side==='call'?'rgba(0,230,118,.4)':m.iv_skew.side==='put'?'rgba(255,59,92,.4)':'rgba(255,255,255,.12)'}"><div class="h">⚖️ IV Skew (ฝั่งไหนแย่งซื้อ option)</div>
+      <div class="big" style="font-size:14px;color:${m.iv_skew.side==='call'?'var(--green)':m.iv_skew.side==='put'?'var(--red)':'inherit'}">${m.iv_skew.side==='call'?'หนักคอ 📈':m.iv_skew.side==='put'?'หนักพุท 📉':'สมดุล'} <span class="zd" style="font-size:10px">(${m.iv_skew.skew_pp>0?'+':''}${m.iv_skew.skew_pp}pp)</span></div>
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.4">${m.iv_skew.note||''}</div></div>`:''}
+    ${m.confluence?`
+    <div class="optcard" style="border-color:rgba(0,212,255,.4)"><div class="h">🔗 Confluence 2 series</div>
+      <div class="zd" style="font-size:10.5px;line-height:1.45">${m.confluence}</div></div>`:''}
+    ${o.near?`
+    <div class="optcard"><div class="h">📅 ซีรีส์ศุกร์ (${o.near.expiry} · ${o.near.days}d)</div>
+      <div class="zd" style="font-size:10.5px;line-height:1.5">ต้าน: ${o.near.call_walls.slice(0,3).map(w=>'$'+w.strike.toLocaleString()).join(' · ')}<br>รับ: ${o.near.put_walls.slice(0,3).map(w=>'$'+w.strike.toLocaleString()).join(' · ')}</div></div>`:''}
     ${m.oi_range?(()=>{const r=m.oi_range,edge=r.zone!=='กลางกรอบ';return `
     <div class="optcard" style="border-color:${edge?'rgba(255,176,32,.55)':'rgba(255,255,255,.12)'}"><div class="h">📦 กรอบ OI (fade ขอบ · เป้า 1 block)</div>
       <div class="big" style="font-size:14px">$${r.support.toLocaleString()} <span class="zd">↔</span> $${r.resistance.toLocaleString()} <span class="zd" style="font-size:10px">(1 block $${r.block.toLocaleString()} · ${r.block_pct}%)</span></div>

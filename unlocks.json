@@ -1,33 +1,23 @@
 {
-  "updated": "2026-07-25T01:05:59+00:00",
+  "updated": "2026-07-26T01:07:13+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "AVAX",
-      "name": "Avalanche",
-      "days": 0.5,
-      "date": "2026-07-25",
-      "usd_m": 10.4,
-      "pct_supply": 0.39,
-      "big": false,
-      "category": "insiders"
-    },
-    {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 1.3,
+      "days": 0.3,
       "date": "2026-07-26",
-      "usd_m": 7.6,
-      "pct_supply": 3.42,
+      "usd_m": 7.4,
+      "pct_supply": 3.31,
       "big": true,
       "category": "ecosystem"
     },
     {
       "symbol": "GRASS",
       "name": "Grass",
-      "days": 3.9,
+      "days": 2.9,
       "date": "2026-07-28",
-      "usd_m": 3.5,
+      "usd_m": 3.6,
       "pct_supply": 1.66,
       "big": true,
       "category": "privateSale"
@@ -35,7 +25,7 @@
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 4.5,
+      "days": 3.5,
       "date": "2026-07-29",
       "usd_m": 0.3,
       "pct_supply": 1.64,
@@ -45,9 +35,9 @@
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 5.1,
+      "days": 4.1,
       "date": "2026-07-30",
-      "usd_m": 4.6,
+      "usd_m": 4.5,
       "pct_supply": 2.53,
       "big": true,
       "category": "ecosystem"
@@ -55,7 +45,7 @@
     {
       "symbol": "MEGA",
       "name": "MegaETH Bridge",
-      "days": 5.3,
+      "days": 4.3,
       "date": "2026-07-30",
       "usd_m": 0.9,
       "pct_supply": 1.84,
@@ -65,17 +55,17 @@
     {
       "symbol": "L3",
       "name": "Layer3",
-      "days": 5.4,
+      "days": 4.4,
       "date": "2026-07-30",
       "usd_m": 0.1,
-      "pct_supply": 1.38,
+      "pct_supply": 1.36,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "ZORA",
       "name": "ZORA Protocol",
-      "days": 5.8,
+      "days": 4.8,
       "date": "2026-07-30",
       "usd_m": 0.3,
       "pct_supply": 1.17,
@@ -85,17 +75,17 @@
     {
       "symbol": "GUN",
       "name": "Gunz",
-      "days": 6.1,
+      "days": 5.1,
       "date": "2026-07-31",
       "usd_m": 0.2,
-      "pct_supply": 2.52,
+      "pct_supply": 2.51,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "EIGEN",
       "name": "EigenCloud",
-      "days": 7.2,
+      "days": 6.2,
       "date": "2026-08-01",
       "usd_m": 4.1,
       "pct_supply": 2.66,
@@ -105,9 +95,9 @@
     {
       "symbol": "M",
       "name": "MemeCore",
-      "days": 8.6,
+      "days": 7.6,
       "date": "2026-08-02",
-      "usd_m": 9.2,
+      "usd_m": 9.3,
       "pct_supply": 0.58,
       "big": false,
       "category": "insiders"
@@ -115,7 +105,7 @@
     {
       "symbol": "STO",
       "name": "StakeStone",
-      "days": 8.9,
+      "days": 7.9,
       "date": "2026-08-02",
       "usd_m": 0.4,
       "pct_supply": 3.98,
@@ -125,17 +115,17 @@
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 14.4,
+      "days": 13.4,
       "date": "2026-08-08",
-      "usd_m": 33.8,
-      "pct_supply": 3.59,
+      "usd_m": 35.0,
+      "pct_supply": 3.58,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 16.4,
+      "days": 15.4,
       "date": "2026-08-10",
       "usd_m": 0.1,
       "pct_supply": 1.32,
@@ -145,12 +135,22 @@
     {
       "symbol": "ME",
       "name": "Magic Eden",
-      "days": 16.7,
+      "days": 15.7,
       "date": "2026-08-10",
       "usd_m": 0.5,
       "pct_supply": 1.15,
       "big": true,
       "category": "noncirculating"
+    },
+    {
+      "symbol": "RAIN",
+      "name": "Rain",
+      "days": 15.8,
+      "date": "2026-08-10",
+      "usd_m": 167.3,
+      "pct_supply": 1.74,
+      "big": true,
+      "category": "insiders"
     }
   ]
 }

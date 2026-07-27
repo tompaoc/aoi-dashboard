@@ -636,6 +636,10 @@ function renderOptions(){
     <div class="optcard"><div class="h">📐 Expected Move (SD)</div>
       <div class="big" style="font-size:14px">±$${m.expected_move.sd1.toLocaleString()} <span class="zd">(±${m.expected_move.pct1}% · 1SD)</span></div>
       <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.5">น่าอยู่ในกรอบ $${m.expected_move.dn1.toLocaleString()}–$${m.expected_move.up1.toLocaleString()} · 2SD $${m.expected_move.dn2.toLocaleString()}–$${m.expected_move.up2.toLocaleString()}${m.expected_move.call_note?'<br>'+m.expected_move.call_note:''}</div></div>`:''}
+    ${m.edge_side?`
+    <div class="optcard" style="border-color:${m.edge_side.side==='none'?'rgba(255,255,255,.12)':'rgba(0,212,255,.45)'}"><div class="h">🎯 ฝั่งที่มี edge (กำแพงกองมั้ย)</div>
+      <div class="big" style="font-size:14px">${m.edge_side.side==='both'?'เล่นได้ 2 ทาง':m.edge_side.side==='short_only'?'🔴 Short เท่านั้น':m.edge_side.side==='long_only'?'🟢 Long เท่านั้น':'ไม่มีฝั่งได้เปรียบ'}</div>
+      <div class="zd" style="margin-top:3px;font-size:10.5px;line-height:1.45">${m.edge_side.note.replace(/\*\*/g,'')}</div></div>`:''}
     ${m.iv_skew?`
     <div class="optcard" style="border-color:${m.iv_skew.side==='call'?'rgba(0,230,118,.4)':m.iv_skew.side==='put'?'rgba(255,59,92,.4)':'rgba(255,255,255,.12)'}"><div class="h">⚖️ IV Skew (ฝั่งไหนแย่งซื้อ option)</div>
       <div class="big" style="font-size:14px;color:${m.iv_skew.side==='call'?'var(--green)':m.iv_skew.side==='put'?'var(--red)':'inherit'}">${m.iv_skew.side==='call'?'หนักคอ 📈':m.iv_skew.side==='put'?'หนักพุท 📉':'สมดุล'} <span class="zd" style="font-size:10px">(${m.iv_skew.skew_pp>0?'+':''}${m.iv_skew.skew_pp}pp)</span></div>

@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-30 01:08",
+  "updated": "2026-07-31 02:38",
   "regime": "bear",
   "daily": {
     "start": 5000.0,
     "balance": 4813.19,
-    "mtm": 4805.21,
-    "return": -3.9,
+    "mtm": 4812.77,
+    "return": -3.74,
     "closed": 12,
     "wins": 3,
     "winrate": 25.0,
@@ -14,11 +14,11 @@
         "sym": "KAITOUSDT",
         "side": "LONG",
         "entry": 0.614,
-        "now": 1.2487,
+        "now": 1.1367,
         "stop": 0.614,
-        "trail": 0.88371863,
+        "trail": 0.88254256,
         "rr": 2.0,
-        "uR": 634700000.0,
+        "uR": 522700000.0,
         "risk_pct": 15.3,
         "notional": 80.98,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -42,11 +42,11 @@
         "sym": "JSTUSDT",
         "side": "LONG",
         "entry": 0.10223,
-        "now": 0.09886,
+        "now": 0.10205,
         "stop": 0.09563,
-        "trail": 0.09699029,
+        "trail": 0.097438,
         "rr": 2.0,
-        "uR": -0.51,
+        "uR": -0.03,
         "risk_pct": 6.5,
         "notional": 242.31,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -98,124 +98,124 @@
   },
   "m15": {
     "start": 10000.0,
-    "balance": 10072.67,
-    "mtm": 10128.38,
-    "return": 1.28,
-    "closed": 31,
-    "wins": 9,
-    "winrate": 29.0,
+    "balance": 9805.03,
+    "mtm": 9973.44,
+    "return": -0.27,
+    "closed": 51,
+    "wins": 11,
+    "winrate": 21.6,
     "open": [
       {
-        "sym": "VIRTUALUSDT",
+        "sym": "BNBUSDT",
         "side": "LONG",
-        "entry": 0.61,
-        "now": 0.6304,
-        "stop": 0.5747,
-        "trail": 0.62624657,
+        "entry": 574.6,
+        "now": 589.5,
+        "stop": 571.56,
+        "trail": 587.6871647,
         "rr": 2.0,
-        "uR": 0.58,
-        "risk_pct": 5.79,
-        "notional": 995.03,
+        "uR": 4.9,
+        "risk_pct": 0.53,
+        "notional": 975.01,
         "reason": "",
         "tf": "15m"
       },
       {
-        "sym": "KITEUSDT",
+        "sym": "CAKEUSDT",
         "side": "LONG",
-        "entry": 0.1208,
-        "now": 0.1232,
-        "stop": 0.1189,
-        "trail": 0.12063756,
+        "entry": 1.392,
+        "now": 1.445,
+        "stop": 1.379,
+        "trail": 1.43584443,
         "rr": 2.0,
-        "uR": 1.26,
-        "risk_pct": 1.57,
-        "notional": 1009.01,
+        "uR": 4.08,
+        "risk_pct": 0.93,
+        "notional": 982.99,
         "reason": "",
         "tf": "15m"
       },
       {
-        "sym": "DEXEUSDT",
+        "sym": "DCRUSDT",
         "side": "LONG",
-        "entry": 35.881,
-        "now": 35.85,
-        "stop": 34.846,
-        "trail": 35.57163778,
+        "entry": 12.32,
+        "now": 13.76,
+        "stop": 11.94,
+        "trail": 13.30792595,
         "rr": 2.0,
-        "uR": -0.03,
-        "risk_pct": 2.88,
-        "notional": 1008.18,
+        "uR": 3.79,
+        "risk_pct": 3.08,
+        "notional": 977.61,
         "reason": "",
         "tf": "15m"
       },
       {
-        "sym": "SKYUSDT",
+        "sym": "STXUSDT",
         "side": "LONG",
-        "entry": 0.06005,
-        "now": 0.06011,
-        "stop": 0.05912,
-        "trail": 0.05938792,
+        "entry": 0.1414,
+        "now": 0.1408,
+        "stop": 0.1393,
+        "trail": 0.14005423,
         "rr": 2.0,
-        "uR": 0.06,
-        "risk_pct": 1.55,
-        "notional": 1007.29,
+        "uR": -0.29,
+        "risk_pct": 1.49,
+        "notional": 980.5,
         "reason": "",
         "tf": "15m"
       },
       {
-        "sym": "LTCUSDT",
+        "sym": "SNDKBUSDT",
         "side": "LONG",
-        "entry": 44.85,
-        "now": 44.95,
-        "stop": 44.69,
-        "trail": 44.7413666,
+        "entry": 1370.12,
+        "now": 1363.97,
+        "stop": 1320.73,
+        "trail": 1330.80512536,
         "rr": 2.0,
-        "uR": 0.62,
-        "risk_pct": 0.36,
-        "notional": 1007.27,
+        "uR": -0.12,
+        "risk_pct": 3.6,
+        "notional": 980.5,
         "reason": "",
         "tf": "15m"
       }
     ],
     "recent": [
       {
-        "sym": "POLUSDT",
-        "R": 4.0,
-        "pnl": 49.8
-      },
-      {
-        "sym": "LTCUSDT",
-        "R": -0.59,
-        "pnl": -5.1
-      },
-      {
-        "sym": "ICPUSDT",
-        "R": 2.7,
-        "pnl": 22.4
-      },
-      {
-        "sym": "JSTUSDT",
-        "R": 9.27,
-        "pnl": 85.6
-      },
-      {
-        "sym": "SKYUSDT",
-        "R": -0.74,
-        "pnl": -12.8
-      },
-      {
-        "sym": "SHIBUSDT",
+        "sym": "FFUSDT",
         "R": -1.0,
-        "pnl": -8.3
+        "pnl": -21.8
+      },
+      {
+        "sym": "HOLOUSDT",
+        "R": -0.76,
+        "pnl": -19.3
+      },
+      {
+        "sym": "COMPUSDT",
+        "R": -1.0,
+        "pnl": -9.2
+      },
+      {
+        "sym": "TWTUSDT",
+        "R": -1.0,
+        "pnl": -14.5
+      },
+      {
+        "sym": "PAXGUSDT",
+        "R": -0.16,
+        "pnl": -2.9
+      },
+      {
+        "sym": "BTCUSDT",
+        "R": -0.73,
+        "pnl": -5.5
+      },
+      {
+        "sym": "SOLUSDT",
+        "R": -0.34,
+        "pnl": -4.5
       },
       {
         "sym": "ONDOUSDT",
-        "R": -0.73,
-        "pnl": -8.8
-      },
-      {
-        "sym": "ENAUSDT",
-        "R": 0.05,
-        "pnl": -0.3
+        "R": 0.6,
+        "pnl": 11.5
       }
     ]
   }

@@ -1,13 +1,13 @@
 {
-  "updated": "2026-07-30T01:08:08+00:00",
+  "updated": "2026-07-31T02:38:26+00:00",
   "etf": null,
   "btcd": {
-    "btcd": 56.43,
+    "btcd": 56.53,
     "status": "alt-favorable",
     "note": "< 58% — เงินเริ่มเข้า alts",
     "chg7": null,
     "n_hist": 1,
-    "total2": 0.985,
+    "total2": 0.993,
     "total2_chg7": null,
     "rotation": null,
     "ma10": null,
@@ -17,14 +17,14 @@
   "event": {
     "name": "FOMC (ดอกเบี้ย)",
     "date": "2026-09-16",
-    "days": 48,
+    "days": 47,
     "note": "ก่อน event = สภาพคล่องสูง/ผันผวน — 'กำไรเกิดแล้วต้องรักษา' (ครู)"
   },
   "vix": {
-    "vix": 20.66,
-    "status": "elevated",
-    "note": "🟠 VIX 20-30 → อย่า short (หุ้นเริ่มกลัว crypto มักเด้งสวน — เกณฑ์ครู)",
-    "trend": "↑ กังวลเพิ่ม"
+    "vix": 17.09,
+    "status": "mid",
+    "note": "🟡 กลางๆ (14-20)",
+    "trend": "↓ คลายกังวล"
   },
   "funding": null
 }

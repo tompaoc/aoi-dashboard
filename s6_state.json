@@ -1,79 +1,48 @@
 {
   "start": 5000.0,
-  "balance": 4970.4,
+  "balance": 5000.0,
   "open": [],
-  "closed": [
-    {
-      "sym": "ETH",
-      "side": "S",
-      "entry": 1878.38,
-      "stop": 1933.99,
-      "target": 1778,
-      "entry_date": "2026-07-24",
-      "notional": 1000.0,
-      "exit": 1933.99,
-      "R": -1.0,
-      "pnl": -29.6,
-      "note": "stop (กรงแตก)",
-      "exit_date": "2026-07-27"
-    }
-  ],
+  "closed": [],
   "history": [
     {
-      "date": "2026-07-20",
-      "balance": 5000.0,
-      "open": 0
-    },
-    {
-      "date": "2026-07-21",
-      "balance": 5000.0,
-      "open": 0
-    },
-    {
-      "date": "2026-07-22",
-      "balance": 5000.0,
-      "open": 0
-    },
-    {
-      "date": "2026-07-23",
-      "balance": 5000.0,
-      "open": 0
-    },
-    {
-      "date": "2026-07-24",
-      "balance": 5000.0,
-      "open": 1
-    },
-    {
-      "date": "2026-07-25",
-      "balance": 5000.0,
-      "open": 1
-    },
-    {
-      "date": "2026-07-26",
-      "balance": 5000.0,
-      "open": 1
-    },
-    {
-      "date": "2026-07-27",
-      "balance": 4970.4,
-      "open": 0
-    },
-    {
-      "date": "2026-07-28",
-      "balance": 4970.4,
-      "open": 0
-    },
-    {
-      "date": "2026-07-29",
-      "balance": 4970.4,
-      "open": 0
-    },
-    {
       "date": "2026-07-30",
-      "balance": 4970.4,
+      "balance": 5000.0,
+      "open": 0
+    },
+    {
+      "date": "2026-07-31",
+      "balance": 5000.0,
       "open": 0
     }
   ],
-  "note": "S6 OI Cage — sleeve forward-test แยก (ไม่ใช่ 90-day gate / ไม่ใช่เงินจริง)"
+  "note": "S6 OI Cage — sleeve forward-test แยก (ไม่ใช่ 90-day gate / ไม่ใช่เงินจริง)",
+  "archive_v1": {
+    "closed": [
+      {
+        "sym": "ETH",
+        "side": "S",
+        "entry": 1878.38,
+        "stop": 1933.99,
+        "target": 1778,
+        "entry_date": "2026-07-24",
+        "notional": 1000.0,
+        "exit": 1933.99,
+        "R": -1.0,
+        "pnl": -29.6,
+        "note": "stop (กรงแตก)",
+        "exit_date": "2026-07-27"
+      }
+    ],
+    "balance_end": 4970.4,
+    "note": "รอบที่ 1 (20-30 ก.ค. 2026) · กติกาเดิม: TP = 1 block เต็ม, MAXHOLD 16 วัน · ปิดรอบเพราะ EXP-047 พบว่า TP เต็ม block ทะเยอทะยานกว่าที่ครูทำได้จริง 3.2 เท่า และ MAXHOLD 16 วันไม่ใช่สไตล์เดียวกับครู (ถือเฉลี่ย 22.6 ชม.) -> เปลี่ยนเป็น TP ครึ่ง block + MAXHOLD 3 วัน แล้วนับเวลาใหม่"
+  },
+  "reset_date": "2026-07-30",
+  "category": "mean_reversion_option_walls",
+  "notes": [
+    "2026-07-30: รีเซ็ตรอบ 2 · TP = ครึ่ง block (เดิมเต็ม block) · MAXHOLD 3 วัน (เดิม 16) ตาม EXP-047 · ข้อมูลรอบ 1 เก็บไว้ใน archive_v1 · **ห้ามรวมสองรอบในการวิเคราะห์**"
+  ],
+  "ab_role": "A_daily_control",
+  "name": "CAGE-D",
+  "display": "CAGE-D · กรง OI รายวัน (ตัวควบคุม)",
+  "system": "CAGE — OI-wall mean reversion · futures isolated · leverage derived from stop"
 }

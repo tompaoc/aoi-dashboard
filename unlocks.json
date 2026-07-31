@@ -1,63 +1,23 @@
 {
-  "updated": "2026-07-30T01:08:09+00:00",
+  "updated": "2026-07-31T02:38:28+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "FF",
-      "name": "Falcon Finance",
-      "days": 0.1,
-      "date": "2026-07-30",
-      "usd_m": 5.1,
-      "pct_supply": 2.53,
-      "big": true,
-      "category": "ecosystem"
-    },
-    {
-      "symbol": "MEGA",
-      "name": "MegaETH Bridge",
-      "days": 0.3,
-      "date": "2026-07-30",
-      "usd_m": 0.8,
-      "pct_supply": 1.84,
-      "big": true,
-      "category": "publicSale"
-    },
-    {
-      "symbol": "L3",
-      "name": "Layer3",
-      "days": 0.4,
-      "date": "2026-07-30",
-      "usd_m": 0.1,
-      "pct_supply": 1.36,
-      "big": true,
-      "category": "insiders"
-    },
-    {
-      "symbol": "ZORA",
-      "name": "ZORA Protocol",
-      "days": 0.8,
-      "date": "2026-07-30",
-      "usd_m": 0.3,
-      "pct_supply": 1.17,
-      "big": true,
-      "category": "insiders"
-    },
-    {
       "symbol": "GUN",
       "name": "Gunz",
-      "days": 1.1,
+      "days": 0.1,
       "date": "2026-07-31",
       "usd_m": 0.2,
-      "pct_supply": 2.46,
+      "pct_supply": 2.47,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "EIGEN",
       "name": "EigenCloud",
-      "days": 2.2,
+      "days": 1.1,
       "date": "2026-08-01",
-      "usd_m": 3.5,
+      "usd_m": 3.6,
       "pct_supply": 2.66,
       "big": true,
       "category": "privateSale"
@@ -65,9 +25,9 @@
     {
       "symbol": "M",
       "name": "MemeCore",
-      "days": 3.6,
+      "days": 2.6,
       "date": "2026-08-02",
-      "usd_m": 8.7,
+      "usd_m": 7.6,
       "pct_supply": 0.57,
       "big": false,
       "category": "insiders"
@@ -75,37 +35,37 @@
     {
       "symbol": "STO",
       "name": "StakeStone",
-      "days": 3.9,
+      "days": 2.9,
       "date": "2026-08-02",
       "usd_m": 0.3,
-      "pct_supply": 3.99,
+      "pct_supply": 3.97,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 9.4,
+      "days": 8.4,
       "date": "2026-08-08",
-      "usd_m": 31.9,
-      "pct_supply": 3.57,
+      "usd_m": 30.3,
+      "pct_supply": 3.56,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 11.4,
+      "days": 10.4,
       "date": "2026-08-10",
       "usd_m": 0.1,
-      "pct_supply": 1.32,
+      "pct_supply": 1.31,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "ME",
       "name": "Magic Eden",
-      "days": 11.7,
+      "days": 10.6,
       "date": "2026-08-10",
       "usd_m": 0.4,
       "pct_supply": 1.15,
@@ -115,9 +75,9 @@
     {
       "symbol": "RAIN",
       "name": "Rain",
-      "days": 11.8,
+      "days": 10.7,
       "date": "2026-08-10",
-      "usd_m": 163.7,
+      "usd_m": 161.6,
       "pct_supply": 1.74,
       "big": true,
       "category": "insiders"
@@ -125,9 +85,9 @@
     {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 12.8,
+      "days": 11.7,
       "date": "2026-08-11",
-      "usd_m": 29.9,
+      "usd_m": 30.7,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -135,9 +95,9 @@
     {
       "symbol": "LAYER",
       "name": "Solayer",
-      "days": 12.8,
+      "days": 11.8,
       "date": "2026-08-11",
-      "usd_m": 1.0,
+      "usd_m": 1.1,
       "pct_supply": 8.4,
       "big": true,
       "category": "ecosystem"
@@ -145,12 +105,52 @@
     {
       "symbol": "BB",
       "name": "BounceBit",
-      "days": 13.1,
+      "days": 12.1,
       "date": "2026-08-12",
       "usd_m": 0.3,
       "pct_supply": 5.38,
       "big": true,
       "category": "privateSale"
+    },
+    {
+      "symbol": "PUMP",
+      "name": "Pump",
+      "days": 12.1,
+      "date": "2026-08-12",
+      "usd_m": 8.4,
+      "pct_supply": 1.05,
+      "big": true,
+      "category": "insiders"
+    },
+    {
+      "symbol": "CYBER",
+      "name": "CyberConnect",
+      "days": 14.6,
+      "date": "2026-08-14",
+      "usd_m": 0.4,
+      "pct_supply": 1.76,
+      "big": true,
+      "category": "Uncategorized"
+    },
+    {
+      "symbol": "ARB",
+      "name": "Arbitrum Foundation",
+      "days": 15.6,
+      "date": "2026-08-15",
+      "usd_m": 4.4,
+      "pct_supply": 0.85,
+      "big": false,
+      "category": "insiders"
+    },
+    {
+      "symbol": "SIGN",
+      "name": "Sign",
+      "days": 16.5,
+      "date": "2026-08-16",
+      "usd_m": 1.1,
+      "pct_supply": 5.87,
+      "big": true,
+      "category": "ecosystem"
     }
   ]
 }

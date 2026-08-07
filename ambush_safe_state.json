@@ -2,16 +2,16 @@
   "name": "SAFE · spot long-only 1x",
   "inception": "2026-07-01",
   "capital": 10000.0,
-  "as_of": "2026-08-06",
-  "mvrv_now": 1.2162144313735614,
+  "as_of": "2026-08-07",
+  "mvrv_now": 1.2251059832401532,
   "gate_open": true,
-  "realized": 193.63,
-  "unrealized": -140.11,
-  "equity": 10053.52,
-  "ret_pct": 0.54,
+  "realized": 196.91,
+  "unrealized": -153.76,
+  "equity": 10043.15,
+  "ret_pct": 0.43,
   "max_dd_pct": 0.6,
   "max_notional": 3920.0,
-  "notional": 2020.0,
+  "notional": 2140.0,
   "liquidated": null,
   "coins": 16,
   "note": "AMBUSH paper sleeve — ไม่ใช่เงินจริง · แยกจาก 90-day gate",
@@ -189,6 +189,13 @@
       "equity": 10053.52,
       "realized": 193.63,
       "unrealized": -140.11,
+      "dd": 0.6
+    },
+    {
+      "date": "2026-08-07",
+      "equity": 10043.15,
+      "realized": 196.91,
+      "unrealized": -153.76,
       "dd": 0.6
     }
   ]

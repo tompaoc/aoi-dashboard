@@ -2,16 +2,16 @@
   "name": "RISK · futures L+S 3x",
   "inception": "2026-07-01",
   "capital": 10000.0,
-  "as_of": "2026-08-06",
-  "mvrv_now": 1.2162144313735614,
+  "as_of": "2026-08-07",
+  "mvrv_now": 1.2251059832401532,
   "gate_open": true,
-  "realized": 297.46,
-  "unrealized": -132.06,
-  "equity": 10165.4,
-  "ret_pct": 1.65,
+  "realized": 305.46,
+  "unrealized": -147.63,
+  "equity": 10157.83,
+  "ret_pct": 1.58,
   "max_dd_pct": 2.5,
   "max_notional": 6100.0,
-  "notional": 2960.0,
+  "notional": 3380.0,
   "liquidated": null,
   "coins": 16,
   "note": "AMBUSH paper sleeve — ไม่ใช่เงินจริง · แยกจาก 90-day gate",
@@ -189,6 +189,13 @@
       "equity": 10165.4,
       "realized": 297.46,
       "unrealized": -132.06,
+      "dd": 2.5
+    },
+    {
+      "date": "2026-08-07",
+      "equity": 10157.83,
+      "realized": 305.46,
+      "unrealized": -147.63,
       "dd": 2.5
     }
   ]

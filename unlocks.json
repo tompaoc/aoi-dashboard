@@ -1,21 +1,21 @@
 {
-  "updated": "2026-08-06T01:06:25+00:00",
+  "updated": "2026-08-07T01:09:15+00:00",
   "days_ahead": 30,
   "rows": [
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 2.4,
+      "days": 1.4,
       "date": "2026-08-08",
-      "usd_m": 29.2,
-      "pct_supply": 3.54,
+      "usd_m": 29.3,
+      "pct_supply": 3.53,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 4.4,
+      "days": 3.4,
       "date": "2026-08-10",
       "usd_m": 0.1,
       "pct_supply": 1.32,
@@ -25,7 +25,7 @@
     {
       "symbol": "ME",
       "name": "Magic Eden",
-      "days": 4.7,
+      "days": 3.7,
       "date": "2026-08-10",
       "usd_m": 0.4,
       "pct_supply": 1.14,
@@ -33,21 +33,11 @@
       "category": "noncirculating"
     },
     {
-      "symbol": "RAIN",
-      "name": "Rain",
-      "days": 4.8,
-      "date": "2026-08-10",
-      "usd_m": 152.2,
-      "pct_supply": 1.74,
-      "big": true,
-      "category": "insiders"
-    },
-    {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 5.8,
+      "days": 4.8,
       "date": "2026-08-11",
-      "usd_m": 30.4,
+      "usd_m": 29.9,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -55,37 +45,37 @@
     {
       "symbol": "LAYER",
       "name": "Solayer",
-      "days": 5.8,
+      "days": 4.8,
       "date": "2026-08-11",
       "usd_m": 1.1,
-      "pct_supply": 8.4,
+      "pct_supply": 8.39,
       "big": true,
       "category": "ecosystem"
     },
     {
       "symbol": "BB",
       "name": "BounceBit",
-      "days": 6.1,
+      "days": 5.1,
       "date": "2026-08-12",
       "usd_m": 0.3,
-      "pct_supply": 5.38,
+      "pct_supply": 5.39,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 6.2,
+      "days": 5.2,
       "date": "2026-08-12",
-      "usd_m": 10.2,
-      "pct_supply": 1.06,
+      "usd_m": 9.9,
+      "pct_supply": 1.05,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "CYBER",
       "name": "CyberConnect",
-      "days": 8.7,
+      "days": 7.7,
       "date": "2026-08-14",
       "usd_m": 0.4,
       "pct_supply": 2.16,
@@ -95,9 +85,9 @@
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 9.7,
+      "days": 8.7,
       "date": "2026-08-15",
-      "usd_m": 4.5,
+      "usd_m": 4.4,
       "pct_supply": 0.85,
       "big": false,
       "category": "insiders"
@@ -105,17 +95,27 @@
     {
       "symbol": "SIGN",
       "name": "Sign",
-      "days": 10.6,
+      "days": 9.6,
       "date": "2026-08-16",
       "usd_m": 1.0,
-      "pct_supply": 5.87,
+      "pct_supply": 5.88,
       "big": true,
       "category": "ecosystem"
     },
     {
+      "symbol": "SOLV",
+      "name": "Solv Protocol",
+      "days": 10.0,
+      "date": "2026-08-17",
+      "usd_m": 1.1,
+      "pct_supply": 30.08,
+      "big": true,
+      "category": "privateSale"
+    },
+    {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 11.0,
+      "days": 10.0,
       "date": "2026-08-17",
       "usd_m": 0.2,
       "pct_supply": 1.71,
@@ -123,34 +123,34 @@
       "category": "farming"
     },
     {
-      "symbol": "SOLV",
-      "name": "Solv Protocol",
-      "days": 11.0,
-      "date": "2026-08-17",
-      "usd_m": 1.0,
-      "pct_supply": 30.08,
-      "big": true,
-      "category": "privateSale"
-    },
-    {
       "symbol": "RE",
       "name": "Re",
-      "days": 11.8,
+      "days": 10.8,
       "date": "2026-08-17",
-      "usd_m": 2.8,
-      "pct_supply": 4.44,
+      "usd_m": 3.0,
+      "pct_supply": 4.43,
       "big": true,
       "category": "airdrop"
     },
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 13.8,
+      "days": 12.8,
       "date": "2026-08-19",
-      "usd_m": 6.7,
+      "usd_m": 6.5,
       "pct_supply": 2.96,
       "big": true,
       "category": "noncirculating"
+    },
+    {
+      "symbol": "ZRO",
+      "name": "LayerZero",
+      "days": 13.3,
+      "date": "2026-08-20",
+      "usd_m": 8.7,
+      "pct_supply": 3.01,
+      "big": true,
+      "category": "insiders"
     }
   ]
 }

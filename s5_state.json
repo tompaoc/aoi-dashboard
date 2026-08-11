@@ -1,23 +1,23 @@
 {
   "start": 10000.0,
-  "balance": 10014.244214030592,
+  "balance": 10009.516116775105,
   "open": [
     {
-      "inst": "BTC-12AUG26-63000-P",
-      "strike": 63000.0,
+      "inst": "BTC-12AUG26-62000-P",
+      "strike": 62000.0,
       "exp": "2026-08-12",
-      "days": 2.11,
-      "entry_prem": 66.42,
-      "stop_prem": 199.26,
-      "qty": 0.03,
-      "iv": 31.11,
-      "open_date": "2026-08-10",
-      "spot_at_open": 66070.0,
-      "qty_from_risk": 0.754,
-      "qty_from_cap": 0.03,
+      "days": 1.28,
+      "entry_prem": 40.33,
+      "stop_prem": 120.98,
+      "qty": 0.031,
+      "iv": 34.89,
+      "open_date": "2026-08-11",
+      "spot_at_open": 64916.0,
+      "qty_from_risk": 1.241,
+      "qty_from_cap": 0.031,
       "sized_by": "เพดาน exposure",
-      "reason": "IV 31% > HV · ขาย put 63,000 (4% ใต้ราคา) อายุ 2.1วัน · ไซซ์ถูกบีบโดยเพดาน exposure",
-      "open_ts": 1786339552367
+      "reason": "IV 35% > HV · ขาย put 62,000 (4% ใต้ราคา) อายุ 1.3วัน · ไซซ์ถูกบีบโดยเพดาน exposure",
+      "open_ts": 1786410579628
     }
   ],
   "closed": [
@@ -100,6 +100,26 @@
       "real_win": true,
       "opt_win": true,
       "hidden": false
+    },
+    {
+      "inst": "BTC-12AUG26-63000-P",
+      "strike": 63000.0,
+      "exp": "2026-08-12",
+      "entry_prem": 66.42,
+      "stop_prem": 199.26,
+      "qty": 0.03,
+      "iv": 31.11,
+      "open_date": "2026-08-10",
+      "exit_prem": 199.26,
+      "exit_date": "2026-08-11",
+      "pnl": -3.99,
+      "tag": "🛑 ชน stop (high กลางวัน)",
+      "R": -1.0,
+      "risk_amt": 3.99,
+      "reason": "IV 31% > HV · ขาย put 63,000 (4% ใต้ราคา) อายุ 2.1วัน · ไซซ์ถูกบีบโดยเพดาน exposure",
+      "real_win": false,
+      "opt_win": true,
+      "hidden": true
     }
   ],
   "history": [
@@ -162,13 +182,19 @@
       "balance": 10014.24,
       "open": 1,
       "closed": 4
+    },
+    {
+      "date": "2026-08-11",
+      "balance": 10009.52,
+      "open": 1,
+      "closed": 5
     }
   ],
   "note": "S5 short-premium (ขายประกัน BTC put) — sleeve ทดสอบสดแยก · ไม่ใช่เงินจริง",
-  "last_run": "2026-08-10 05:25",
+  "last_run": "2026-08-11 01:09",
   "category": "short_premium",
   "notes": [
     "2026-07-30: ออดิท S5 · เติม R/risk_amt/reason ย้อนหลัง 3 ไม้ (คำนวณจาก stop_prem/entry_prem/qty ที่บันทึกไว้แล้ว) + ติด category=short_premium + เริ่ม history · **พบว่าเพดาน exposure 20% บีบไซซ์ทุกครั้ง ทำให้ \"เสี่ยง 1%\" ไม่เคยมีผล — เสี่ยงจริง ~0.06%/ไม้ (เล็กกว่าที่ตั้งใจ 16 เท่า)**"
   ],
-  "run_count": 9
+  "run_count": 10
 }

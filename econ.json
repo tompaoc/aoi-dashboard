@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-11T01:09:52+00:00",
+  "updated": "2026-08-12T01:07:28+00:00",
   "days_ahead": 30,
   "events": [
     {
       "date": "2026-08-12",
-      "days": 1,
+      "days": 0,
       "code": "CPI",
       "label": "CPI เงินเฟ้อ",
       "forecast": 3.4,
@@ -13,7 +13,7 @@
     },
     {
       "date": "2026-08-13",
-      "days": 2,
+      "days": 1,
       "code": "PPI",
       "label": "PPI ราคาผู้ผลิต",
       "forecast": 0.2,
@@ -22,16 +22,16 @@
     },
     {
       "date": "2026-08-14",
-      "days": 3,
+      "days": 2,
       "code": "RETAIL",
       "label": "ยอดค้าปลีก",
-      "forecast": 0.2,
+      "forecast": 0.1,
       "previous": 0.2,
-      "imminent": false
+      "imminent": true
     },
     {
       "date": "2026-08-19",
-      "days": 8,
+      "days": 7,
       "code": "FED",
       "label": "FOMC",
       "forecast": null,
@@ -40,7 +40,7 @@
     },
     {
       "date": "2026-08-26",
-      "days": 15,
+      "days": 14,
       "code": "GDP",
       "label": "GDP",
       "forecast": 1.5,
@@ -49,7 +49,7 @@
     },
     {
       "date": "2026-08-26",
-      "days": 15,
+      "days": 14,
       "code": "PCE",
       "label": "Core PCE (Fed ดูตัวนี้)",
       "forecast": null,
@@ -58,7 +58,7 @@
     },
     {
       "date": "2026-08-28",
-      "days": 17,
+      "days": 16,
       "code": "NFP",
       "label": "Non-Farm จ้างงาน",
       "forecast": null,
@@ -67,7 +67,7 @@
     },
     {
       "date": "2026-09-01",
-      "days": 21,
+      "days": 20,
       "code": "ISM",
       "label": "ISM ภาคผลิต",
       "forecast": null,

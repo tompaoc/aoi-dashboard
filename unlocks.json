@@ -1,31 +1,11 @@
 {
-  "updated": "2026-08-11T01:09:52+00:00",
+  "updated": "2026-08-12T01:07:28+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "SOL",
-      "name": "Solana",
-      "days": 0.8,
-      "date": "2026-08-11",
-      "usd_m": 31.2,
-      "pct_supply": 0.07,
-      "big": false,
-      "category": "staking"
-    },
-    {
-      "symbol": "LAYER",
-      "name": "Solayer",
-      "days": 0.8,
-      "date": "2026-08-11",
-      "usd_m": 1.1,
-      "pct_supply": 8.4,
-      "big": true,
-      "category": "ecosystem"
-    },
-    {
       "symbol": "BB",
       "name": "BounceBit",
-      "days": 1.1,
+      "days": 0.1,
       "date": "2026-08-12",
       "usd_m": 0.3,
       "pct_supply": 5.38,
@@ -35,9 +15,9 @@
     {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 1.2,
+      "days": 0.2,
       "date": "2026-08-12",
-      "usd_m": 11.6,
+      "usd_m": 11.3,
       "pct_supply": 1.06,
       "big": true,
       "category": "insiders"
@@ -45,7 +25,7 @@
     {
       "symbol": "CYBER",
       "name": "CyberConnect",
-      "days": 3.7,
+      "days": 2.7,
       "date": "2026-08-14",
       "usd_m": 0.4,
       "pct_supply": 2.16,
@@ -55,9 +35,9 @@
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 4.7,
+      "days": 3.7,
       "date": "2026-08-15",
-      "usd_m": 4.5,
+      "usd_m": 4.4,
       "pct_supply": 0.85,
       "big": false,
       "category": "insiders"
@@ -65,7 +45,7 @@
     {
       "symbol": "SIGN",
       "name": "Sign",
-      "days": 5.6,
+      "days": 4.6,
       "date": "2026-08-16",
       "usd_m": 1.0,
       "pct_supply": 5.87,
@@ -73,9 +53,19 @@
       "category": "ecosystem"
     },
     {
+      "symbol": "SOLV",
+      "name": "Solv Protocol",
+      "days": 5.0,
+      "date": "2026-08-17",
+      "usd_m": 1.1,
+      "pct_supply": 8.36,
+      "big": true,
+      "category": "privateSale"
+    },
+    {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 6.0,
+      "days": 5.0,
       "date": "2026-08-17",
       "usd_m": 0.1,
       "pct_supply": 1.71,
@@ -83,31 +73,21 @@
       "category": "farming"
     },
     {
-      "symbol": "SOLV",
-      "name": "Solv Protocol",
-      "days": 6.0,
-      "date": "2026-08-17",
-      "usd_m": 1.1,
-      "pct_supply": 30.11,
-      "big": true,
-      "category": "privateSale"
-    },
-    {
       "symbol": "RE",
       "name": "Re",
-      "days": 6.8,
+      "days": 5.8,
       "date": "2026-08-17",
-      "usd_m": 2.9,
-      "pct_supply": 4.45,
+      "usd_m": 3.0,
+      "pct_supply": 4.44,
       "big": true,
       "category": "airdrop"
     },
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 8.8,
+      "days": 7.8,
       "date": "2026-08-19",
-      "usd_m": 4.8,
+      "usd_m": 4.6,
       "pct_supply": 2.96,
       "big": true,
       "category": "noncirculating"
@@ -115,7 +95,7 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 9.3,
+      "days": 8.3,
       "date": "2026-08-20",
       "usd_m": 9.1,
       "pct_supply": 3.01,
@@ -125,7 +105,7 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 11.3,
+      "days": 10.3,
       "date": "2026-08-22",
       "usd_m": 0.5,
       "pct_supply": 6.33,
@@ -135,7 +115,7 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 12.3,
+      "days": 11.3,
       "date": "2026-08-23",
       "usd_m": 48.7,
       "pct_supply": 1.33,
@@ -145,12 +125,32 @@
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 13.1,
+      "days": 12.1,
       "date": "2026-08-24",
-      "usd_m": 8.6,
+      "usd_m": 9.5,
       "pct_supply": 5.3,
       "big": true,
       "category": "insiders"
+    },
+    {
+      "symbol": "XPL",
+      "name": "Plasma",
+      "days": 13.8,
+      "date": "2026-08-25",
+      "usd_m": 7.0,
+      "pct_supply": 3.31,
+      "big": true,
+      "category": "ecosystem"
+    },
+    {
+      "symbol": "GRASS",
+      "name": "Grass",
+      "days": 16.3,
+      "date": "2026-08-28",
+      "usd_m": 3.2,
+      "pct_supply": 1.6,
+      "big": true,
+      "category": "privateSale"
     }
   ]
 }

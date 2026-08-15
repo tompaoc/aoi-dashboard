@@ -2,7 +2,7 @@
   "name": "RISK · futures L+S 3x",
   "inception": "2026-07-01",
   "capital": 10000.0,
-  "as_of": "2026-08-14",
+  "as_of": "2026-08-15",
   "mvrv_now": 1.2034349432766869,
   "gate_open": true,
   "realized": 364.98,
@@ -228,6 +228,13 @@
     },
     {
       "date": "2026-08-14",
+      "equity": 10104.01,
+      "realized": 364.98,
+      "unrealized": -260.98,
+      "dd": 2.5
+    },
+    {
+      "date": "2026-08-15",
       "equity": 10104.01,
       "realized": 364.98,
       "unrealized": -260.98,

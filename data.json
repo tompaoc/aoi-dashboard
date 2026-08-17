@@ -1,11 +1,11 @@
 {
-  "updated": "2026-08-16 01:09",
+  "updated": "2026-08-17 01:07",
   "regime": "bear",
   "daily": {
     "start": 5000.0,
     "balance": 4829.0,
-    "mtm": 4839.79,
-    "return": -3.2,
+    "mtm": 4854.39,
+    "return": -2.91,
     "closed": 13,
     "wins": 4,
     "winrate": 30.8,
@@ -28,11 +28,11 @@
         "sym": "JSTUSDT",
         "side": "LONG",
         "entry": 0.10223,
-        "now": 0.10641,
+        "now": 0.10944,
         "stop": 0.09563,
-        "trail": 0.10128787,
+        "trail": 0.10192625,
         "rr": 2.0,
-        "uR": 0.63,
+        "uR": 1.09,
         "risk_pct": 6.5,
         "notional": 242.31,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -42,11 +42,11 @@
         "sym": "GPSUSDT",
         "side": "LONG",
         "entry": 0.01053,
-        "now": 0.01059,
+        "now": 0.01109,
         "stop": 0.00908,
-        "trail": 0.00905704,
+        "trail": 0.00909161,
         "rr": 2.0,
-        "uR": 0.04,
+        "uR": 0.39,
         "risk_pct": 13.8,
         "notional": 156.1,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -98,82 +98,82 @@
   },
   "m15": {
     "start": 10000.0,
-    "balance": 9338.12,
-    "mtm": 9340.59,
-    "return": -6.59,
-    "closed": 243,
-    "wins": 62,
-    "winrate": 25.5,
+    "balance": 9264.79,
+    "mtm": 9320.57,
+    "return": -6.79,
+    "closed": 257,
+    "wins": 65,
+    "winrate": 25.3,
     "open": [
       {
-        "sym": "MORPHOUSDT",
+        "sym": "ETHFIUSDT",
         "side": "LONG",
-        "entry": 1.958,
-        "now": 1.957,
-        "stop": 1.938,
-        "trail": 1.95206419,
+        "entry": 0.4795,
+        "now": 0.5024,
+        "stop": 0.4703,
+        "trail": 0.49527215,
         "rr": 2.0,
-        "uR": -0.05,
-        "risk_pct": 1.02,
-        "notional": 936.01,
-        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 68",
+        "uR": 2.49,
+        "risk_pct": 1.92,
+        "notional": 930.97,
+        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 70",
         "tf": "15m"
       },
       {
-        "sym": "WLDUSDT",
+        "sym": "MORPHOUSDT",
         "side": "LONG",
-        "entry": 0.3478,
-        "now": 0.3489,
-        "stop": 0.3409,
-        "trail": 0.34633354,
+        "entry": 1.974,
+        "now": 1.998,
+        "stop": 1.956,
+        "trail": 1.99069708,
         "rr": 2.0,
-        "uR": 0.16,
-        "risk_pct": 1.98,
-        "notional": 934.39,
-        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 77",
+        "uR": 1.33,
+        "risk_pct": 0.91,
+        "notional": 930.77,
+        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 83",
         "tf": "15m"
       }
     ],
     "recent": [
       {
-        "sym": "CFXUSDT",
-        "R": 0.12,
-        "pnl": 1.0
+        "sym": "JSTUSDT",
+        "R": 0.98,
+        "pnl": 4.0
       },
       {
-        "sym": "WLDUSDT",
-        "R": -0.65,
-        "pnl": -19.6
+        "sym": "PAXGUSDT",
+        "R": -0.8,
+        "pnl": -2.0
       },
       {
         "sym": "FFUSDT",
-        "R": 0.12,
-        "pnl": -0.4
+        "R": -0.66,
+        "pnl": -8.2
       },
       {
-        "sym": "DOTUSDT",
-        "R": -0.57,
-        "pnl": -6.2
+        "sym": "TRUMPUSDT",
+        "R": -0.4,
+        "pnl": -7.9
       },
       {
-        "sym": "XTZUSDT",
-        "R": -0.07,
-        "pnl": -2.3
+        "sym": "币安人生USDT",
+        "R": -0.5,
+        "pnl": -24.2
+      },
+      {
+        "sym": "CAKEUSDT",
+        "R": 0.46,
+        "pnl": 2.5
       },
       {
         "sym": "LINKUSDT",
-        "R": -0.36,
-        "pnl": -7.5
+        "R": -1.0,
+        "pnl": -8.6
       },
       {
-        "sym": "GRAMUSDT",
-        "R": 0.27,
-        "pnl": 0.7
-      },
-      {
-        "sym": "COMPUSDT",
-        "R": -0.64,
-        "pnl": -6.6
+        "sym": "SKYUSDT",
+        "R": 0.3,
+        "pnl": 1.4
       }
     ]
   }

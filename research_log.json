@@ -1146,6 +1146,46 @@
       "week": "0/3",
       "stage": "🔴 ก่อนด่าน 1 — ราคายังใต"
     },
+    "main_regime": null,
+    "fwd_btc": 63108.0,
+    "fwd_toward_maxpain": true,
+    "fwd_wall": "no_touch"
+  },
+  {
+    "date": "2026-08-17",
+    "btc": 63108.0,
+    "oi": {
+      "call_wall": 70000,
+      "put_wall": 60000,
+      "max_pain": 70000,
+      "dist_call_pct": 10.9,
+      "dist_put_pct": -4.9,
+      "dist_mp_pct": 10.9,
+      "grow_top": [
+        {
+          "strike": 70000,
+          "oi": 12403,
+          "delta": 2465
+        }
+      ]
+    },
+    "iv_hv": {
+      "spread": 24.0,
+      "state": "rich"
+    },
+    "cage": {
+      "sup": 60000,
+      "res": 70000,
+      "zone": "กลางกรอบ",
+      "pos_pct": 41,
+      "block_pct": 15.6,
+      "days": 39.3
+    },
+    "aoi": {
+      "bias": "bear",
+      "week": "0/3",
+      "stage": "🔴 ก่อนด่าน 1 — ราคายังใต"
+    },
     "main_regime": null
   }
 ]

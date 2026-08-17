@@ -1,63 +1,33 @@
 {
-  "updated": "2026-08-16T01:10:11+00:00",
+  "updated": "2026-08-17T01:08:06+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "SIGN",
-      "name": "Sign",
-      "days": 0.6,
-      "date": "2026-08-16",
-      "usd_m": 1.0,
-      "pct_supply": 5.88,
-      "big": true,
-      "category": "ecosystem"
-    },
-    {
-      "symbol": "RBNT",
-      "name": "Redbelly Network",
-      "days": 1.0,
-      "date": "2026-08-17",
-      "usd_m": 0.1,
-      "pct_supply": 1.71,
-      "big": true,
-      "category": "farming"
-    },
-    {
-      "symbol": "SOLV",
-      "name": "Solv Protocol",
-      "days": 1.0,
-      "date": "2026-08-17",
-      "usd_m": 1.0,
-      "pct_supply": 8.36,
-      "big": true,
-      "category": "privateSale"
-    },
-    {
       "symbol": "RE",
       "name": "Re",
-      "days": 1.8,
+      "days": 0.8,
       "date": "2026-08-17",
-      "usd_m": 3.2,
-      "pct_supply": 4.45,
+      "usd_m": 3.0,
+      "pct_supply": 4.44,
       "big": true,
       "category": "airdrop"
     },
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 3.8,
+      "days": 2.8,
       "date": "2026-08-19",
-      "usd_m": 2.7,
-      "pct_supply": 2.97,
+      "usd_m": 2.5,
+      "pct_supply": 2.96,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 4.3,
+      "days": 3.3,
       "date": "2026-08-20",
-      "usd_m": 8.3,
+      "usd_m": 8.1,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -65,7 +35,7 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 6.3,
+      "days": 5.3,
       "date": "2026-08-22",
       "usd_m": 0.5,
       "pct_supply": 6.33,
@@ -75,9 +45,9 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 7.3,
+      "days": 6.3,
       "date": "2026-08-23",
-      "usd_m": 49.4,
+      "usd_m": 49.0,
       "pct_supply": 1.33,
       "big": true,
       "category": "farming"
@@ -85,19 +55,19 @@
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 8.1,
+      "days": 7.1,
       "date": "2026-08-24",
-      "usd_m": 15.7,
-      "pct_supply": 5.3,
+      "usd_m": 14.2,
+      "pct_supply": 5.32,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 9.8,
+      "days": 8.8,
       "date": "2026-08-25",
-      "usd_m": 6.8,
+      "usd_m": 6.7,
       "pct_supply": 3.31,
       "big": true,
       "category": "ecosystem"
@@ -105,9 +75,9 @@
     {
       "symbol": "GRASS",
       "name": "Grass",
-      "days": 12.3,
+      "days": 11.3,
       "date": "2026-08-28",
-      "usd_m": 3.5,
+      "usd_m": 3.4,
       "pct_supply": 1.6,
       "big": true,
       "category": "privateSale"
@@ -115,7 +85,7 @@
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 12.9,
+      "days": 11.9,
       "date": "2026-08-28",
       "usd_m": 0.3,
       "pct_supply": 1.64,
@@ -125,7 +95,7 @@
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 13.6,
+      "days": 12.6,
       "date": "2026-08-29",
       "usd_m": 4.9,
       "pct_supply": 2.45,
@@ -135,22 +105,52 @@
     {
       "symbol": "GRVT",
       "name": "Grvt",
-      "days": 13.6,
+      "days": 12.6,
       "date": "2026-08-29",
-      "usd_m": 10.0,
-      "pct_supply": 29.65,
+      "usd_m": 9.7,
+      "pct_supply": 29.66,
       "big": true,
       "category": "Uncategorized"
     },
     {
       "symbol": "MEGA",
       "name": "MegaETH Bridge",
-      "days": 13.7,
+      "days": 12.7,
       "date": "2026-08-29",
       "usd_m": 0.7,
       "pct_supply": 1.84,
       "big": true,
       "category": "publicSale"
+    },
+    {
+      "symbol": "L3",
+      "name": "Layer3",
+      "days": 12.9,
+      "date": "2026-08-29",
+      "usd_m": 0.1,
+      "pct_supply": 1.32,
+      "big": true,
+      "category": "insiders"
+    },
+    {
+      "symbol": "ZORA",
+      "name": "ZORA Protocol",
+      "days": 13.2,
+      "date": "2026-08-30",
+      "usd_m": 0.3,
+      "pct_supply": 1.18,
+      "big": true,
+      "category": "insiders"
+    },
+    {
+      "symbol": "GUN",
+      "name": "Gunz",
+      "days": 13.6,
+      "date": "2026-08-30",
+      "usd_m": 0.2,
+      "pct_supply": 2.29,
+      "big": true,
+      "category": "privateSale"
     }
   ]
 }

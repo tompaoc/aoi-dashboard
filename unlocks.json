@@ -1,33 +1,23 @@
 {
-  "updated": "2026-08-17T01:08:06+00:00",
+  "updated": "2026-08-18T01:08:41+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "RE",
-      "name": "Re",
-      "days": 0.8,
-      "date": "2026-08-17",
-      "usd_m": 3.0,
-      "pct_supply": 4.44,
-      "big": true,
-      "category": "airdrop"
-    },
-    {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 2.8,
+      "days": 1.8,
       "date": "2026-08-19",
-      "usd_m": 2.5,
-      "pct_supply": 2.96,
+      "usd_m": 2.4,
+      "pct_supply": 2.95,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 3.3,
+      "days": 2.3,
       "date": "2026-08-20",
-      "usd_m": 8.1,
+      "usd_m": 8.3,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -35,19 +25,19 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 5.3,
+      "days": 4.3,
       "date": "2026-08-22",
       "usd_m": 0.5,
-      "pct_supply": 6.33,
+      "pct_supply": 6.34,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 6.3,
+      "days": 5.3,
       "date": "2026-08-23",
-      "usd_m": 49.0,
+      "usd_m": 48.7,
       "pct_supply": 1.33,
       "big": true,
       "category": "farming"
@@ -55,27 +45,27 @@
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 7.1,
+      "days": 6.1,
       "date": "2026-08-24",
-      "usd_m": 14.2,
-      "pct_supply": 5.32,
+      "usd_m": 12.7,
+      "pct_supply": 5.3,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 8.8,
+      "days": 7.8,
       "date": "2026-08-25",
-      "usd_m": 6.7,
-      "pct_supply": 3.31,
+      "usd_m": 6.8,
+      "pct_supply": 3.3,
       "big": true,
       "category": "ecosystem"
     },
     {
       "symbol": "GRASS",
       "name": "Grass",
-      "days": 11.3,
+      "days": 10.3,
       "date": "2026-08-28",
       "usd_m": 3.4,
       "pct_supply": 1.6,
@@ -85,7 +75,7 @@
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 11.9,
+      "days": 10.9,
       "date": "2026-08-28",
       "usd_m": 0.3,
       "pct_supply": 1.64,
@@ -95,9 +85,9 @@
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 12.6,
+      "days": 11.6,
       "date": "2026-08-29",
-      "usd_m": 4.9,
+      "usd_m": 4.8,
       "pct_supply": 2.45,
       "big": true,
       "category": "ecosystem"
@@ -105,27 +95,27 @@
     {
       "symbol": "GRVT",
       "name": "Grvt",
-      "days": 12.6,
+      "days": 11.6,
       "date": "2026-08-29",
-      "usd_m": 9.7,
-      "pct_supply": 29.66,
+      "usd_m": 9.6,
+      "pct_supply": 29.67,
       "big": true,
       "category": "Uncategorized"
     },
     {
       "symbol": "MEGA",
       "name": "MegaETH Bridge",
-      "days": 12.7,
+      "days": 11.7,
       "date": "2026-08-29",
       "usd_m": 0.7,
-      "pct_supply": 1.84,
+      "pct_supply": 1.85,
       "big": true,
       "category": "publicSale"
     },
     {
       "symbol": "L3",
       "name": "Layer3",
-      "days": 12.9,
+      "days": 11.9,
       "date": "2026-08-29",
       "usd_m": 0.1,
       "pct_supply": 1.32,
@@ -135,20 +125,30 @@
     {
       "symbol": "ZORA",
       "name": "ZORA Protocol",
-      "days": 13.2,
+      "days": 12.2,
       "date": "2026-08-30",
       "usd_m": 0.3,
-      "pct_supply": 1.18,
+      "pct_supply": 1.17,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "GUN",
       "name": "Gunz",
-      "days": 13.6,
+      "days": 12.6,
       "date": "2026-08-30",
       "usd_m": 0.2,
-      "pct_supply": 2.29,
+      "pct_supply": 2.28,
+      "big": true,
+      "category": "privateSale"
+    },
+    {
+      "symbol": "EIGEN",
+      "name": "EigenCloud",
+      "days": 13.6,
+      "date": "2026-08-31",
+      "usd_m": 3.4,
+      "pct_supply": 2.26,
       "big": true,
       "category": "privateSale"
     }

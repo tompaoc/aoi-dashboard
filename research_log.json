@@ -1226,6 +1226,46 @@
       "week": "0/3",
       "stage": "🟡 ผ่านด่าน 1 (เบรค Day p"
     },
+    "main_regime": null,
+    "fwd_btc": 64526.0,
+    "fwd_toward_maxpain": true,
+    "fwd_wall": "no_touch"
+  },
+  {
+    "date": "2026-08-19",
+    "btc": 64526.0,
+    "oi": {
+      "call_wall": 70000,
+      "put_wall": 60000,
+      "max_pain": 70000,
+      "dist_call_pct": 8.5,
+      "dist_put_pct": -7.0,
+      "dist_mp_pct": 8.5,
+      "grow_top": [
+        {
+          "strike": 70000,
+          "oi": 12356,
+          "delta": 2418
+        }
+      ]
+    },
+    "iv_hv": {
+      "spread": 13.5,
+      "state": "rich"
+    },
+    "cage": {
+      "sup": 60000,
+      "res": 70000,
+      "zone": "กลางกรอบ",
+      "pos_pct": 55,
+      "block_pct": 15.3,
+      "days": 37.3
+    },
+    "aoi": {
+      "bias": "mixed",
+      "week": "0/3",
+      "stage": "🟡 ผ่านด่าน 1 (เบรค Day p"
+    },
     "main_regime": null
   }
 ]

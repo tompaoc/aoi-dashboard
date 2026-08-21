@@ -1,21 +1,11 @@
 {
-  "updated": "2026-08-20T01:12:31+00:00",
+  "updated": "2026-08-21T01:10:23+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "ZRO",
-      "name": "LayerZero",
-      "days": 0.3,
-      "date": "2026-08-20",
-      "usd_m": 9.0,
-      "pct_supply": 3.01,
-      "big": true,
-      "category": "insiders"
-    },
-    {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 2.3,
+      "days": 1.3,
       "date": "2026-08-22",
       "usd_m": 0.5,
       "pct_supply": 6.33,
@@ -25,29 +15,29 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 3.3,
+      "days": 2.3,
       "date": "2026-08-23",
-      "usd_m": 49.8,
-      "pct_supply": 1.33,
+      "usd_m": 50.5,
+      "pct_supply": 1.32,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 4.1,
+      "days": 3.1,
       "date": "2026-08-24",
-      "usd_m": 9.2,
-      "pct_supply": 5.29,
+      "usd_m": 8.5,
+      "pct_supply": 5.3,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 5.8,
+      "days": 4.8,
       "date": "2026-08-25",
-      "usd_m": 7.2,
+      "usd_m": 7.7,
       "pct_supply": 3.31,
       "big": true,
       "category": "ecosystem"
@@ -55,27 +45,27 @@
     {
       "symbol": "GRASS",
       "name": "Grass",
-      "days": 8.3,
+      "days": 7.3,
       "date": "2026-08-28",
-      "usd_m": 3.2,
-      "pct_supply": 1.6,
+      "usd_m": 3.3,
+      "pct_supply": 1.61,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 8.9,
+      "days": 7.9,
       "date": "2026-08-28",
       "usd_m": 0.3,
-      "pct_supply": 1.64,
+      "pct_supply": 1.63,
       "big": true,
       "category": "Uncategorized"
     },
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 9.6,
+      "days": 8.6,
       "date": "2026-08-29",
       "usd_m": 4.9,
       "pct_supply": 2.45,
@@ -85,9 +75,9 @@
     {
       "symbol": "GRVT",
       "name": "Grvt",
-      "days": 9.6,
+      "days": 8.6,
       "date": "2026-08-29",
-      "usd_m": 10.4,
+      "usd_m": 9.5,
       "pct_supply": 29.66,
       "big": true,
       "category": "Uncategorized"
@@ -95,27 +85,27 @@
     {
       "symbol": "MEGA",
       "name": "MegaETH Bridge",
-      "days": 9.7,
+      "days": 8.7,
       "date": "2026-08-29",
-      "usd_m": 0.7,
-      "pct_supply": 1.85,
+      "usd_m": 0.8,
+      "pct_supply": 1.84,
       "big": true,
       "category": "publicSale"
     },
     {
       "symbol": "L3",
       "name": "Layer3",
-      "days": 9.9,
+      "days": 8.9,
       "date": "2026-08-29",
       "usd_m": 0.1,
-      "pct_supply": 1.32,
+      "pct_supply": 1.31,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "ZORA",
       "name": "ZORA Protocol",
-      "days": 10.2,
+      "days": 9.2,
       "date": "2026-08-30",
       "usd_m": 0.3,
       "pct_supply": 1.17,
@@ -125,32 +115,42 @@
     {
       "symbol": "GUN",
       "name": "Gunz",
-      "days": 10.6,
+      "days": 9.6,
       "date": "2026-08-30",
       "usd_m": 0.2,
-      "pct_supply": 2.26,
+      "pct_supply": 2.25,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "EIGEN",
       "name": "EigenCloud",
-      "days": 11.6,
+      "days": 10.6,
       "date": "2026-08-31",
-      "usd_m": 3.7,
-      "pct_supply": 2.26,
+      "usd_m": 3.9,
+      "pct_supply": 2.25,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "M",
       "name": "MemeCore",
-      "days": 13.1,
+      "days": 12.1,
       "date": "2026-09-02",
-      "usd_m": 9.5,
+      "usd_m": 8.9,
       "pct_supply": 0.34,
       "big": false,
       "category": "insiders"
+    },
+    {
+      "symbol": "STO",
+      "name": "StakeStone",
+      "days": 12.4,
+      "date": "2026-09-02",
+      "usd_m": 0.4,
+      "pct_supply": 3.97,
+      "big": true,
+      "category": "privateSale"
     }
   ]
 }

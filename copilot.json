@@ -1,28 +1,9 @@
 {
-  "updated": "2026-08-22T01:16:05+00:00",
+  "updated": "2026-08-23T01:15:35+00:00",
   "regime": "sideway",
-  "scanned": 88,
-  "flip": true,
+  "scanned": 93,
+  "flip": false,
   "setups": [
-    {
-      "symbol": "BBUSDT",
-      "dir": "SHORT",
-      "rr": 2.0,
-      "rsi7": 40.96126301317015,
-      "entry": 0.01077,
-      "stop": 0.014,
-      "target": 0.004309999999999999,
-      "risk": 29.990714948932222,
-      "score": 3,
-      "with_regime": false,
-      "trail": 10,
-      "bars_ago": 1,
-      "still": true,
-      "chasing": false,
-      "rs": -6.5,
-      "d75": 59.8,
-      "reason": null
-    },
     {
       "symbol": "TONUSDT",
       "dir": "SHORT",

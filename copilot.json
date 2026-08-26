@@ -1,28 +1,9 @@
 {
-  "updated": "2026-08-25T01:11:25+00:00",
+  "updated": "2026-08-26T01:12:17+00:00",
   "regime": "sideway",
   "scanned": 86,
   "flip": false,
   "setups": [
-    {
-      "symbol": "INJUSDT",
-      "dir": "LONG",
-      "rr": 1.9999999999999996,
-      "rsi7": 82.42958530057511,
-      "entry": 5.764,
-      "stop": 3.957,
-      "target": 9.378,
-      "risk": 31.349757113115896,
-      "score": 2,
-      "with_regime": false,
-      "trail": 75,
-      "bars_ago": 2,
-      "still": true,
-      "chasing": false,
-      "rs": 41.1,
-      "d75": -16.8,
-      "reason": null
-    },
     {
       "symbol": "TONUSDT",
       "dir": "SHORT",

@@ -2,13 +2,13 @@
   "name": "YOLO · futures L+S 10x (ไม่มี SL)",
   "inception": "2026-07-01",
   "capital": 10000.0,
-  "as_of": "2026-08-25",
-  "mvrv_now": 1.4682707685313898,
+  "as_of": "2026-08-26",
+  "mvrv_now": 1.4906241300604754,
   "gate_open": false,
   "realized": 562.2,
-  "unrealized": -1063.91,
-  "equity": 9498.29,
-  "ret_pct": -5.02,
+  "unrealized": -966.03,
+  "equity": 9596.17,
+  "ret_pct": -4.04,
   "max_dd_pct": 9.7,
   "max_notional": 7760.0,
   "notional": 5440.0,
@@ -309,7 +309,14 @@
       "realized": 562.2,
       "unrealized": -1063.91,
       "dd": 9.7
+    },
+    {
+      "date": "2026-08-26",
+      "equity": 9596.17,
+      "realized": 562.2,
+      "unrealized": -966.03,
+      "dd": 9.7
     }
   ],
-  "last_tick": "2026-08-25 01:06"
+  "last_tick": "2026-08-26 01:08"
 }

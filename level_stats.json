@@ -1,16 +1,16 @@
 {
-  "updated": "2026-08-26T01:09:59+00:00",
+  "updated": "2026-09-01T01:10:35+00:00",
   "method": "swing-pivot reject/overshoot, Daily, WIN=10",
   "assets": {
     "ETHUSDT": {
-      "n_interactions": 41,
-      "n_reject": 35,
+      "n_interactions": 42,
+      "n_reject": 36,
       "n_break": 6,
-      "reject_rate": 0.854,
-      "overshoot_median": 5.06,
-      "overshoot_p75": 8.85,
-      "overshoot_p90": 11.12,
-      "n_overshoot": 32
+      "reject_rate": 0.857,
+      "overshoot_median": 4.83,
+      "overshoot_p75": 8.82,
+      "overshoot_p90": 11.05,
+      "n_overshoot": 33
     },
     "BTCUSDT": {
       "n_interactions": 27,
@@ -30,13 +30,13 @@
     }
   },
   "ALL": {
-    "n_interactions": 4826,
-    "n_reject": 3717,
-    "n_break": 1109,
-    "reject_rate": 0.77,
+    "n_interactions": 4852,
+    "n_reject": 3742,
+    "n_break": 1110,
+    "reject_rate": 0.771,
     "overshoot_median": 4.82,
     "overshoot_p75": 9.82,
     "overshoot_p90": 15.74,
-    "n_overshoot": 3389
+    "n_overshoot": 3410
   }
 }

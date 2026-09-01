@@ -1,77 +1,77 @@
 {
-  "updated": "2026-08-26T01:09:49+00:00",
+  "updated": "2026-09-01T01:10:25+00:00",
   "days_ahead": 30,
   "events": [
     {
-      "date": "2026-08-26",
-      "days": 0,
-      "code": "GDP",
-      "label": "GDP",
-      "forecast": 1.5,
-      "previous": 2.1,
-      "imminent": true
-    },
-    {
-      "date": "2026-08-26",
-      "days": 0,
-      "code": "PCE",
-      "label": "Core PCE (Fed ดูตัวนี้)",
-      "forecast": 0.2,
-      "previous": 0.1,
-      "imminent": true
-    },
-    {
-      "date": "2026-08-28",
-      "days": 2,
-      "code": "FED",
-      "label": "Fed Chair แถลง",
-      "forecast": null,
-      "previous": null,
-      "imminent": true
-    },
-    {
-      "date": "2026-08-28",
-      "days": 2,
-      "code": "NFP",
-      "label": "Non-Farm จ้างงาน",
-      "forecast": null,
-      "previous": -911,
-      "imminent": true
-    },
-    {
       "date": "2026-09-01",
-      "days": 6,
+      "days": 0,
       "code": "ISM",
       "label": "ISM ภาคผลิต",
-      "forecast": null,
+      "forecast": 55.2,
       "previous": 55.6,
-      "imminent": false
+      "imminent": true
     },
     {
       "date": "2026-09-01",
-      "days": 6,
+      "days": 0,
       "code": "JOLTS",
       "label": "JOLTs ตำแหน่งงาน",
-      "forecast": null,
+      "forecast": 7.3,
       "previous": 7.359,
-      "imminent": false
+      "imminent": true
     },
     {
       "date": "2026-09-03",
-      "days": 8,
+      "days": 2,
       "code": "ISM",
       "label": "ISM ภาคบริการ",
-      "forecast": null,
+      "forecast": 54.3,
       "previous": 54.1,
-      "imminent": false
+      "imminent": true
     },
     {
       "date": "2026-09-04",
-      "days": 9,
+      "days": 3,
       "code": "NFP",
       "label": "Non-Farm จ้างงาน",
-      "forecast": null,
+      "forecast": 58,
       "previous": -23,
+      "imminent": false
+    },
+    {
+      "date": "2026-09-10",
+      "days": 9,
+      "code": "PPI",
+      "label": "PPI ราคาผู้ผลิต",
+      "forecast": null,
+      "previous": 0,
+      "imminent": false
+    },
+    {
+      "date": "2026-09-11",
+      "days": 10,
+      "code": "CPI",
+      "label": "CPI เงินเฟ้อ",
+      "forecast": null,
+      "previous": 0.2,
+      "imminent": false
+    },
+    {
+      "date": "2026-09-16",
+      "days": 15,
+      "code": "FED",
+      "label": "Fed ดอกเบี้ย (FOMC)",
+      "forecast": null,
+      "previous": 3.75,
+      "imminent": false
+    },
+    {
+      "date": "2026-09-16",
+      "days": 15,
+      "code": "RETAIL",
+      "label": "ยอดค้าปลีก",
+      "forecast": null,
+      "previous": -0.6,
       "imminent": false
     }
   ]

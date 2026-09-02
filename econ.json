@@ -1,28 +1,10 @@
 {
-  "updated": "2026-09-01T01:10:25+00:00",
+  "updated": "2026-09-02T01:11:37+00:00",
   "days_ahead": 30,
   "events": [
     {
-      "date": "2026-09-01",
-      "days": 0,
-      "code": "ISM",
-      "label": "ISM ภาคผลิต",
-      "forecast": 55.2,
-      "previous": 55.6,
-      "imminent": true
-    },
-    {
-      "date": "2026-09-01",
-      "days": 0,
-      "code": "JOLTS",
-      "label": "JOLTs ตำแหน่งงาน",
-      "forecast": 7.3,
-      "previous": 7.359,
-      "imminent": true
-    },
-    {
       "date": "2026-09-03",
-      "days": 2,
+      "days": 1,
       "code": "ISM",
       "label": "ISM ภาคบริการ",
       "forecast": 54.3,
@@ -31,16 +13,16 @@
     },
     {
       "date": "2026-09-04",
-      "days": 3,
+      "days": 2,
       "code": "NFP",
       "label": "Non-Farm จ้างงาน",
       "forecast": 58,
       "previous": -23,
-      "imminent": false
+      "imminent": true
     },
     {
       "date": "2026-09-10",
-      "days": 9,
+      "days": 8,
       "code": "PPI",
       "label": "PPI ราคาผู้ผลิต",
       "forecast": null,
@@ -49,7 +31,7 @@
     },
     {
       "date": "2026-09-11",
-      "days": 10,
+      "days": 9,
       "code": "CPI",
       "label": "CPI เงินเฟ้อ",
       "forecast": null,
@@ -58,7 +40,7 @@
     },
     {
       "date": "2026-09-16",
-      "days": 15,
+      "days": 14,
       "code": "FED",
       "label": "Fed ดอกเบี้ย (FOMC)",
       "forecast": null,
@@ -67,11 +49,29 @@
     },
     {
       "date": "2026-09-16",
-      "days": 15,
+      "days": 14,
       "code": "RETAIL",
       "label": "ยอดค้าปลีก",
       "forecast": null,
       "previous": -0.6,
+      "imminent": false
+    },
+    {
+      "date": "2026-09-29",
+      "days": 27,
+      "code": "JOLTS",
+      "label": "JOLTs ตำแหน่งงาน",
+      "forecast": null,
+      "previous": 7.271,
+      "imminent": false
+    },
+    {
+      "date": "2026-09-30",
+      "days": 28,
+      "code": "GDP",
+      "label": "GDP",
+      "forecast": 1.5,
+      "previous": 2.1,
       "imminent": false
     }
   ]

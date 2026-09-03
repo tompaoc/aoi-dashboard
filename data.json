@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-02 01:11",
+  "updated": "2026-09-03 01:12",
   "regime": "sideway",
   "daily": {
     "start": 5000.0,
     "balance": 4845.77,
-    "mtm": 4863.11,
-    "return": -2.74,
+    "mtm": 4856.55,
+    "return": -2.87,
     "closed": 16,
     "wins": 5,
     "winrate": 31.2,
@@ -28,11 +28,11 @@
         "sym": "MORPHOUSDT",
         "side": "LONG",
         "entry": 2.308,
-        "now": 2.62,
+        "now": 2.502,
         "stop": 1.913,
-        "trail": 2.40891879,
+        "trail": 2.39181381,
         "rr": 2.0,
-        "uR": 0.79,
+        "uR": 0.49,
         "risk_pct": 17.1,
         "notional": 128.25,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought · [ทะเลปิด: ครึ่งไซซ์]",
@@ -84,124 +84,124 @@
   },
   "m15": {
     "start": 10000.0,
-    "balance": 9855.35,
-    "mtm": 9948.17,
-    "return": -0.52,
-    "closed": 353,
-    "wins": 98,
-    "winrate": 27.8,
+    "balance": 9898.55,
+    "mtm": 10101.41,
+    "return": 1.01,
+    "closed": 360,
+    "wins": 102,
+    "winrate": 28.3,
     "open": [
       {
         "sym": "PYTHUSDT",
         "side": "LONG",
         "entry": 0.05049,
-        "now": 0.05208,
+        "now": 0.05738,
         "stop": 0.04819,
-        "trail": 0.05032455,
+        "trail": 0.05599599,
         "rr": 2.0,
-        "uR": 0.69,
+        "uR": 3.0,
         "risk_pct": 4.56,
         "notional": 994.19,
         "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 65",
         "tf": "15m"
       },
       {
-        "sym": "TIAUSDT",
+        "sym": "CFXUSDT",
         "side": "LONG",
-        "entry": 0.3427,
-        "now": 0.3557,
-        "stop": 0.3338,
-        "trail": 0.34505159,
+        "entry": 0.04737,
+        "now": 0.04758,
+        "stop": 0.04647,
+        "trail": 0.04725537,
         "rr": 2.0,
-        "uR": 1.46,
-        "risk_pct": 2.6,
-        "notional": 994.19,
-        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 63",
+        "uR": 0.23,
+        "risk_pct": 1.9,
+        "notional": 992.21,
+        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 75",
         "tf": "15m"
       },
       {
-        "sym": "LTCUSDT",
+        "sym": "ARBUSDT",
         "side": "LONG",
-        "entry": 49.49,
-        "now": 49.63,
-        "stop": 48.87,
-        "trail": 49.483527,
+        "entry": 0.1175,
+        "now": 0.124,
+        "stop": 0.1105,
+        "trail": 0.1226365,
         "rr": 2.0,
-        "uR": 0.23,
-        "risk_pct": 1.25,
-        "notional": 990.87,
+        "uR": 0.93,
+        "risk_pct": 5.96,
+        "notional": 992.21,
         "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA10 · RSI7 73",
         "tf": "15m"
       },
       {
         "sym": "FILUSDT",
         "side": "LONG",
-        "entry": 0.7677,
-        "now": 0.7812,
-        "stop": 0.7174,
-        "trail": 0.76700846,
+        "entry": 0.8002,
+        "now": 0.8023,
+        "stop": 0.7613,
+        "trail": 0.78445124,
         "rr": 2.0,
-        "uR": 0.27,
-        "risk_pct": 6.55,
-        "notional": 953.14,
-        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA10 · RSI7 70",
+        "uR": 0.05,
+        "risk_pct": 4.86,
+        "notional": 989.86,
+        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 83",
         "tf": "15m"
       },
       {
-        "sym": "UNIUSDT",
+        "sym": "ALGOUSDT",
         "side": "LONG",
-        "entry": 5.822,
-        "now": 5.847,
-        "stop": 5.656,
-        "trail": 5.78224998,
+        "entry": 0.0925,
+        "now": 0.093,
+        "stop": 0.0903,
+        "trail": 0.09235839,
         "rr": 2.0,
-        "uR": 0.15,
-        "risk_pct": 2.85,
-        "notional": 985.54,
+        "uR": 0.23,
+        "risk_pct": 2.38,
+        "notional": 980.81,
         "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA10 · RSI7 72",
         "tf": "15m"
       }
     ],
     "recent": [
       {
-        "sym": "PYTHUSDT",
-        "R": -1.0,
-        "pnl": -27.4
-      },
-      {
-        "sym": "CVXUSDT",
-        "R": 0.49,
-        "pnl": 13.3
-      },
-      {
-        "sym": "DASHUSDT",
-        "R": -0.64,
-        "pnl": -19.4
-      },
-      {
-        "sym": "ASTERUSDT",
-        "R": -1.0,
-        "pnl": -17.0
-      },
-      {
-        "sym": "JSTUSDT",
-        "R": -1.0,
-        "pnl": -6.7
-      },
-      {
-        "sym": "HBARUSDT",
-        "R": -1.0,
-        "pnl": -12.7
-      },
-      {
-        "sym": "ARBUSDT",
-        "R": -0.91,
-        "pnl": -69.3
-      },
-      {
         "sym": "APTUSDT",
         "R": 0.17,
         "pnl": 2.2
+      },
+      {
+        "sym": "LTCUSDT",
+        "R": -0.47,
+        "pnl": -7.3
+      },
+      {
+        "sym": "UNIUSDT",
+        "R": 2.25,
+        "pnl": 61.8
+      },
+      {
+        "sym": "FFUSDT",
+        "R": 0.75,
+        "pnl": 14.4
+      },
+      {
+        "sym": "ARBUSDT",
+        "R": -0.81,
+        "pnl": -33.4
+      },
+      {
+        "sym": "FILUSDT",
+        "R": 0.18,
+        "pnl": 10.1
+      },
+      {
+        "sym": "TIAUSDT",
+        "R": 0.88,
+        "pnl": 21.1
+      },
+      {
+        "sym": "SYRUPUSDT",
+        "R": -0.51,
+        "pnl": -23.6
       }
     ]
   }

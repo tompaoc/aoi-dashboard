@@ -18,7 +18,7 @@
       "sized_by": "เพดาน exposure",
       "reason": "IV 39% > HV · ขาย put 75,500 (4% ใต้ราคา) อายุ 2.3วัน · ไซซ์ถูกบีบโดยเพดาน exposure",
       "open_ts": 1788224935523,
-      "now_prem": 99.79,
+      "now_prem": 97.85,
       "peak_prem": 252.0
     }
   ],
@@ -332,13 +332,19 @@
       "balance": 10013.71,
       "open": 1,
       "closed": 7
+    },
+    {
+      "date": "2026-09-03",
+      "balance": 10013.71,
+      "open": 1,
+      "closed": 7
     }
   ],
   "note": "S5 short-premium (ขายประกัน BTC put) — sleeve ทดสอบสดแยก · ไม่ใช่เงินจริง",
-  "last_run": "2026-09-02 01:09",
+  "last_run": "2026-09-03 01:11",
   "category": "short_premium",
   "notes": [
     "2026-07-30: ออดิท S5 · เติม R/risk_amt/reason ย้อนหลัง 3 ไม้ (คำนวณจาก stop_prem/entry_prem/qty ที่บันทึกไว้แล้ว) + ติด category=short_premium + เริ่ม history · **พบว่าเพดาน exposure 20% บีบไซซ์ทุกครั้ง ทำให้ \"เสี่ยง 1%\" ไม่เคยมีผล — เสี่ยงจริง ~0.06%/ไม้ (เล็กกว่าที่ตั้งใจ 16 เท่า)**"
   ],
-  "run_count": 27
+  "run_count": 28
 }

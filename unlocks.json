@@ -1,61 +1,31 @@
 {
-  "updated": "2026-09-02T01:11:37+00:00",
+  "updated": "2026-09-03T01:13:05+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "M",
-      "name": "MemeCore",
-      "days": 0.1,
-      "date": "2026-09-02",
-      "usd_m": 8.1,
-      "pct_supply": 0.34,
-      "big": false,
-      "category": "insiders"
-    },
-    {
-      "symbol": "STO",
-      "name": "StakeStone",
-      "days": 0.4,
-      "date": "2026-09-02",
-      "usd_m": 0.4,
-      "pct_supply": 3.97,
-      "big": true,
-      "category": "privateSale"
-    },
-    {
-      "symbol": "OPN",
-      "name": "OPINION",
-      "days": 0.8,
-      "date": "2026-09-02",
-      "usd_m": 1.1,
-      "pct_supply": 11.0,
-      "big": true,
-      "category": "airdrop"
-    },
-    {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 5.9,
+      "days": 4.9,
       "date": "2026-09-07",
-      "usd_m": 25.5,
-      "pct_supply": 3.43,
+      "usd_m": 25.2,
+      "pct_supply": 3.42,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 7.9,
+      "days": 6.9,
       "date": "2026-09-09",
       "usd_m": 0.2,
-      "pct_supply": 1.31,
+      "pct_supply": 1.32,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "ME",
       "name": "Magic Eden",
-      "days": 8.1,
+      "days": 7.1,
       "date": "2026-09-10",
       "usd_m": 0.4,
       "pct_supply": 1.13,
@@ -65,9 +35,9 @@
     {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 9.2,
+      "days": 8.2,
       "date": "2026-09-11",
-      "usd_m": 40.7,
+      "usd_m": 40.4,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -75,9 +45,9 @@
     {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 9.6,
+      "days": 8.6,
       "date": "2026-09-11",
-      "usd_m": 18.3,
+      "usd_m": 16.8,
       "pct_supply": 1.05,
       "big": true,
       "category": "insiders"
@@ -85,7 +55,7 @@
     {
       "symbol": "CONX",
       "name": "Connex",
-      "days": 12.7,
+      "days": 11.7,
       "date": "2026-09-14",
       "usd_m": 4.2,
       "pct_supply": 0,
@@ -95,9 +65,9 @@
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 13.1,
+      "days": 12.1,
       "date": "2026-09-15",
-      "usd_m": 6.2,
+      "usd_m": 6.9,
       "pct_supply": 0.84,
       "big": false,
       "category": "insiders"
@@ -105,7 +75,7 @@
     {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 15.0,
+      "days": 13.9,
       "date": "2026-09-17",
       "usd_m": 0.1,
       "pct_supply": 1.73,
@@ -115,9 +85,9 @@
     {
       "symbol": "RE",
       "name": "Re",
-      "days": 15.3,
+      "days": 14.3,
       "date": "2026-09-17",
-      "usd_m": 3.4,
+      "usd_m": 3.3,
       "pct_supply": 4.44,
       "big": true,
       "category": "airdrop"
@@ -125,9 +95,9 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 17.3,
+      "days": 16.2,
       "date": "2026-09-19",
-      "usd_m": 2.2,
+      "usd_m": 2.1,
       "pct_supply": 2.97,
       "big": true,
       "category": "noncirculating"
@@ -135,9 +105,9 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 17.7,
+      "days": 16.7,
       "date": "2026-09-19",
-      "usd_m": 10.8,
+      "usd_m": 10.7,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -145,12 +115,42 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 19.8,
+      "days": 18.8,
       "date": "2026-09-21",
       "usd_m": 0.6,
-      "pct_supply": 6.33,
+      "pct_supply": 6.31,
       "big": true,
       "category": "privateSale"
+    },
+    {
+      "symbol": "GRAM",
+      "name": "TON",
+      "days": 19.8,
+      "date": "2026-09-22",
+      "usd_m": 48.5,
+      "pct_supply": 1.32,
+      "big": true,
+      "category": "farming"
+    },
+    {
+      "symbol": "H",
+      "name": "Humanity",
+      "days": 20.5,
+      "date": "2026-09-23",
+      "usd_m": 8.3,
+      "pct_supply": 5.3,
+      "big": true,
+      "category": "insiders"
+    },
+    {
+      "symbol": "XPL",
+      "name": "Plasma",
+      "days": 22.2,
+      "date": "2026-09-25",
+      "usd_m": 7.3,
+      "pct_supply": 3.2,
+      "big": true,
+      "category": "ecosystem"
     }
   ]
 }

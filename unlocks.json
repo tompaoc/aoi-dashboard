@@ -1,21 +1,21 @@
 {
-  "updated": "2026-09-05T01:11:17+00:00",
+  "updated": "2026-09-06T01:10:09+00:00",
   "days_ahead": 30,
   "rows": [
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 2.9,
+      "days": 1.9,
       "date": "2026-09-07",
-      "usd_m": 25.7,
-      "pct_supply": 3.42,
+      "usd_m": 25.4,
+      "pct_supply": 3.41,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 4.9,
+      "days": 3.9,
       "date": "2026-09-09",
       "usd_m": 0.2,
       "pct_supply": 1.32,
@@ -25,9 +25,9 @@
     {
       "symbol": "ME",
       "name": "Magic Eden",
-      "days": 5.1,
+      "days": 4.1,
       "date": "2026-09-10",
-      "usd_m": 0.4,
+      "usd_m": 0.5,
       "pct_supply": 1.13,
       "big": true,
       "category": "noncirculating"
@@ -35,9 +35,9 @@
     {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 6.2,
+      "days": 5.2,
       "date": "2026-09-11",
-      "usd_m": 41.3,
+      "usd_m": 41.9,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -45,9 +45,9 @@
     {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 6.6,
+      "days": 5.6,
       "date": "2026-09-11",
-      "usd_m": 17.5,
+      "usd_m": 16.4,
       "pct_supply": 1.05,
       "big": true,
       "category": "insiders"
@@ -55,7 +55,7 @@
     {
       "symbol": "CONX",
       "name": "Connex",
-      "days": 9.7,
+      "days": 8.7,
       "date": "2026-09-14",
       "usd_m": 4.3,
       "pct_supply": 0,
@@ -65,9 +65,9 @@
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 10.1,
+      "days": 9.1,
       "date": "2026-09-15",
-      "usd_m": 7.3,
+      "usd_m": 10.2,
       "pct_supply": 0.84,
       "big": false,
       "category": "insiders"
@@ -75,7 +75,7 @@
     {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 12.0,
+      "days": 11.0,
       "date": "2026-09-17",
       "usd_m": 0.1,
       "pct_supply": 1.73,
@@ -85,9 +85,9 @@
     {
       "symbol": "RE",
       "name": "Re",
-      "days": 12.3,
+      "days": 11.3,
       "date": "2026-09-17",
-      "usd_m": 3.1,
+      "usd_m": 3.2,
       "pct_supply": 4.44,
       "big": true,
       "category": "airdrop"
@@ -95,7 +95,7 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 14.3,
+      "days": 13.3,
       "date": "2026-09-19",
       "usd_m": 2.2,
       "pct_supply": 2.97,
@@ -105,9 +105,9 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 14.7,
+      "days": 13.7,
       "date": "2026-09-19",
-      "usd_m": 11.0,
+      "usd_m": 11.3,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -115,7 +115,7 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 16.8,
+      "days": 15.8,
       "date": "2026-09-21",
       "usd_m": 0.6,
       "pct_supply": 6.33,
@@ -125,19 +125,19 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 17.8,
+      "days": 16.8,
       "date": "2026-09-22",
-      "usd_m": 51.0,
-      "pct_supply": 1.31,
+      "usd_m": 52.4,
+      "pct_supply": 1.32,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 18.5,
+      "days": 17.5,
       "date": "2026-09-23",
-      "usd_m": 8.6,
+      "usd_m": 8.0,
       "pct_supply": 5.3,
       "big": true,
       "category": "insiders"
@@ -145,9 +145,9 @@
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 20.2,
+      "days": 19.2,
       "date": "2026-09-25",
-      "usd_m": 8.2,
+      "usd_m": 8.3,
       "pct_supply": 3.2,
       "big": true,
       "category": "ecosystem"

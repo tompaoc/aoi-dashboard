@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-12T01:14:06+00:00",
+  "updated": "2026-09-13T01:10:41+00:00",
   "days_ahead": 30,
   "rows": [
     {
       "symbol": "CONX",
       "name": "Connex",
-      "days": 2.7,
+      "days": 1.7,
       "date": "2026-09-14",
       "usd_m": 4.2,
       "pct_supply": 0,
@@ -15,7 +15,7 @@
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 3.1,
+      "days": 2.1,
       "date": "2026-09-15",
       "usd_m": 7.8,
       "pct_supply": 0.84,
@@ -25,19 +25,19 @@
     {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 4.9,
+      "days": 4.0,
       "date": "2026-09-17",
       "usd_m": 0.1,
-      "pct_supply": 1.56,
+      "pct_supply": 1.57,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "RE",
       "name": "Re",
-      "days": 5.3,
+      "days": 4.3,
       "date": "2026-09-17",
-      "usd_m": 3.2,
+      "usd_m": 3.1,
       "pct_supply": 4.44,
       "big": true,
       "category": "airdrop"
@@ -45,7 +45,7 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 7.2,
+      "days": 6.3,
       "date": "2026-09-19",
       "usd_m": 2.2,
       "pct_supply": 2.96,
@@ -55,9 +55,9 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 7.7,
+      "days": 6.7,
       "date": "2026-09-19",
-      "usd_m": 10.4,
+      "usd_m": 10.8,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -65,7 +65,7 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 9.8,
+      "days": 8.8,
       "date": "2026-09-21",
       "usd_m": 0.6,
       "pct_supply": 6.33,
@@ -75,9 +75,9 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 10.8,
+      "days": 9.8,
       "date": "2026-09-22",
-      "usd_m": 49.8,
+      "usd_m": 50.5,
       "pct_supply": 1.31,
       "big": true,
       "category": "farming"
@@ -85,19 +85,19 @@
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 11.5,
+      "days": 10.5,
       "date": "2026-09-23",
-      "usd_m": 8.8,
-      "pct_supply": 5.3,
+      "usd_m": 8.5,
+      "pct_supply": 5.29,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 13.2,
+      "days": 12.2,
       "date": "2026-09-25",
-      "usd_m": 7.3,
+      "usd_m": 7.1,
       "pct_supply": 3.2,
       "big": true,
       "category": "ecosystem"
@@ -105,9 +105,9 @@
     {
       "symbol": "GRASS",
       "name": "Grass",
-      "days": 15.8,
+      "days": 14.8,
       "date": "2026-09-27",
-      "usd_m": 3.4,
+      "usd_m": 3.5,
       "pct_supply": 1.55,
       "big": true,
       "category": "privateSale"
@@ -115,7 +115,7 @@
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 16.4,
+      "days": 15.4,
       "date": "2026-09-28",
       "usd_m": 0.3,
       "pct_supply": 1.64,
@@ -125,9 +125,9 @@
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 17.0,
+      "days": 16.0,
       "date": "2026-09-29",
-      "usd_m": 11.6,
+      "usd_m": 11.2,
       "pct_supply": 2.39,
       "big": true,
       "category": "ecosystem"
@@ -135,7 +135,7 @@
     {
       "symbol": "MEGA",
       "name": "MegaETH Bridge",
-      "days": 17.1,
+      "days": 16.1,
       "date": "2026-09-29",
       "usd_m": 0.8,
       "pct_supply": 1.84,
@@ -145,10 +145,10 @@
     {
       "symbol": "L3",
       "name": "Layer3",
-      "days": 17.3,
+      "days": 16.3,
       "date": "2026-09-29",
       "usd_m": 0.1,
-      "pct_supply": 1.28,
+      "pct_supply": 1.27,
       "big": true,
       "category": "insiders"
     }

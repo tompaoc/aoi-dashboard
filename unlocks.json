@@ -1,21 +1,11 @@
 {
-  "updated": "2026-09-15T01:13:21+00:00",
+  "updated": "2026-09-16T01:12:23+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "ARB",
-      "name": "Arbitrum Foundation",
-      "days": 0.1,
-      "date": "2026-09-15",
-      "usd_m": 7.5,
-      "pct_supply": 0.84,
-      "big": false,
-      "category": "insiders"
-    },
-    {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 1.9,
+      "days": 0.9,
       "date": "2026-09-17",
       "usd_m": 0.1,
       "pct_supply": 1.56,
@@ -25,9 +15,9 @@
     {
       "symbol": "RE",
       "name": "Re",
-      "days": 2.3,
+      "days": 1.3,
       "date": "2026-09-17",
-      "usd_m": 3.1,
+      "usd_m": 2.9,
       "pct_supply": 4.44,
       "big": true,
       "category": "airdrop"
@@ -35,9 +25,9 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 4.2,
+      "days": 3.2,
       "date": "2026-09-19",
-      "usd_m": 2.1,
+      "usd_m": 2.0,
       "pct_supply": 2.97,
       "big": true,
       "category": "noncirculating"
@@ -45,9 +35,9 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 4.7,
+      "days": 3.7,
       "date": "2026-09-19",
-      "usd_m": 10.5,
+      "usd_m": 10.4,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -55,9 +45,9 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 6.8,
+      "days": 5.8,
       "date": "2026-09-21",
-      "usd_m": 0.5,
+      "usd_m": 0.4,
       "pct_supply": 6.33,
       "big": true,
       "category": "privateSale"
@@ -65,9 +55,9 @@
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 7.8,
+      "days": 6.8,
       "date": "2026-09-22",
-      "usd_m": 49.5,
+      "usd_m": 48.3,
       "pct_supply": 1.31,
       "big": true,
       "category": "farming"
@@ -75,9 +65,9 @@
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 8.5,
+      "days": 7.5,
       "date": "2026-09-23",
-      "usd_m": 8.7,
+      "usd_m": 8.9,
       "pct_supply": 5.3,
       "big": true,
       "category": "insiders"
@@ -85,9 +75,9 @@
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 10.2,
+      "days": 9.2,
       "date": "2026-09-25",
-      "usd_m": 7.5,
+      "usd_m": 7.2,
       "pct_supply": 3.2,
       "big": true,
       "category": "ecosystem"
@@ -95,9 +85,9 @@
     {
       "symbol": "GRASS",
       "name": "Grass",
-      "days": 12.8,
+      "days": 11.8,
       "date": "2026-09-27",
-      "usd_m": 3.5,
+      "usd_m": 3.3,
       "pct_supply": 1.55,
       "big": true,
       "category": "privateSale"
@@ -105,19 +95,19 @@
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 13.4,
+      "days": 12.4,
       "date": "2026-09-28",
       "usd_m": 0.3,
-      "pct_supply": 1.63,
+      "pct_supply": 1.64,
       "big": true,
       "category": "Uncategorized"
     },
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 14.0,
+      "days": 13.0,
       "date": "2026-09-29",
-      "usd_m": 9.6,
+      "usd_m": 10.4,
       "pct_supply": 2.39,
       "big": true,
       "category": "ecosystem"
@@ -125,7 +115,7 @@
     {
       "symbol": "MEGA",
       "name": "MegaETH Bridge",
-      "days": 14.1,
+      "days": 13.1,
       "date": "2026-09-29",
       "usd_m": 0.7,
       "pct_supply": 1.84,
@@ -135,7 +125,7 @@
     {
       "symbol": "L3",
       "name": "Layer3",
-      "days": 14.3,
+      "days": 13.3,
       "date": "2026-09-29",
       "usd_m": 0.1,
       "pct_supply": 1.27,
@@ -145,12 +135,22 @@
     {
       "symbol": "ZORA",
       "name": "ZORA Protocol",
-      "days": 14.6,
+      "days": 13.6,
       "date": "2026-09-29",
       "usd_m": 0.4,
       "pct_supply": 1.17,
       "big": true,
       "category": "insiders"
+    },
+    {
+      "symbol": "FLX",
+      "name": "FlowX Finance",
+      "days": 13.8,
+      "date": "2026-09-29",
+      "usd_m": 0.0,
+      "pct_supply": 1.17,
+      "big": true,
+      "category": "farming"
     }
   ]
 }

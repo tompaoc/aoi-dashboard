@@ -2146,6 +2146,46 @@
       "week": "1/3",
       "stage": "🟡 ผ่านด่าน 1 (เบรค Day p"
     },
+    "main_regime": null,
+    "fwd_btc": 75793.0,
+    "fwd_toward_maxpain": true,
+    "fwd_wall": "held_sup"
+  },
+  {
+    "date": "2026-09-16",
+    "btc": 75793.0,
+    "oi": {
+      "call_wall": 70000,
+      "put_wall": 75000,
+      "max_pain": 72000,
+      "dist_call_pct": -7.6,
+      "dist_put_pct": -1.0,
+      "dist_mp_pct": -5.0,
+      "grow_top": [
+        {
+          "strike": 70000,
+          "oi": 20287,
+          "delta": 10349
+        }
+      ]
+    },
+    "iv_hv": {
+      "spread": 8.9,
+      "state": "rich"
+    },
+    "cage": {
+      "sup": 75000,
+      "res": 78000,
+      "zone": "ชิดรับล่าง",
+      "pos_pct": 27,
+      "block_pct": 4.0,
+      "days": 9.3
+    },
+    "aoi": {
+      "bias": "mixed",
+      "week": "1/3",
+      "stage": "🔴 ก่อนด่าน 1 — ราคายังใต"
+    },
     "main_regime": null
   }
 ]

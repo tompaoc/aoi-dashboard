@@ -1,61 +1,61 @@
 {
   "symbol": "BTCUSDT",
-  "price": 85914.21,
+  "price": 86697.2,
   "tfs": [
     {
       "tf": "4H",
-      "price": 85914.22,
-      "premium": 79622.05,
+      "price": 86697.2,
+      "premium": 80583.28,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 1917.2,
-      "macd_gap": 462.6,
-      "macd_widening": true,
-      "rsi": 79,
+      "macd": 1860.0,
+      "macd_gap": 88.2,
+      "macd_widening": false,
+      "rsi": 76,
       "rsi_ob": true,
       "rsi_os": false,
       "rsi_reject_ob": true,
-      "ema10": 84221.85,
-      "ema25": 82005.05,
-      "ema50": 80367.84,
+      "ema10": 85632.04,
+      "ema25": 83589.57,
+      "ema50": 81597.93,
       "trend": "up",
       "ma_cross": "golden"
     },
     {
       "tf": "Day",
-      "price": 85914.21,
-      "premium": 78706.01,
+      "price": 86697.2,
+      "premium": 79341.62,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 2299.5,
-      "macd_gap": 583.6,
+      "macd": 2613.3,
+      "macd_gap": 714.2,
       "macd_widening": true,
-      "rsi": 71,
+      "rsi": 73,
       "rsi_ob": true,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 81327.76,
-      "ema25": 78706.01,
-      "ema50": 75442.01,
+      "ema10": 82347.81,
+      "ema25": 79341.62,
+      "ema50": 75894.48,
       "trend": "up",
       "ma_cross": "golden"
     },
     {
       "tf": "Week",
-      "price": 85914.21,
-      "premium": 74086.16,
+      "price": 86697.2,
+      "premium": 74146.39,
       "above_premium": true,
       "macd_pos": true,
-      "macd": 981.1,
-      "macd_gap": 2877.9,
+      "macd": 1043.6,
+      "macd_gap": 2927.9,
       "macd_widening": true,
       "rsi": 63,
       "rsi_ob": false,
       "rsi_os": false,
       "rsi_reject_ob": false,
-      "ema10": 76104.33,
-      "ema25": 74086.16,
-      "ema50": 77871.26,
+      "ema10": 76246.69,
+      "ema25": 74146.39,
+      "ema50": 77901.96,
       "trend": "up",
       "ma_cross": "golden"
     }
@@ -64,7 +64,7 @@
   "week_conditions": [
     {
       "n": 1,
-      "txt": "เบรค Premium Week (EMA25 $74,086)",
+      "txt": "เบรค Premium Week (EMA25 $74,146)",
       "ok": true
     },
     {
@@ -83,7 +83,7 @@
   "scenarios": [
     {
       "dir": "ขึ้น",
-      "if": "เบรค Day premium $78,706 + RSI overbought",
+      "if": "เบรค Day premium $79,342 + RSI overbought",
       "then": "มีโอกาสวิ่งเทส supply โซนบน (เช่น Week premium) ทีละ step"
     },
     {
@@ -181,7 +181,7 @@
       "cells": [
         {
           "s": "bull",
-          "t": "เหนือ 0 ⇗กว้าง"
+          "t": "เหนือ 0 ⇘แคบ"
         },
         {
           "s": "bull",
@@ -198,11 +198,11 @@
       "cells": [
         {
           "s": "neutral",
-          "t": "79 reject ⚠️"
+          "t": "76 reject ⚠️"
         },
         {
           "s": "bull",
-          "t": "71 OB 🔥"
+          "t": "73 OB 🔥"
         },
         {
           "s": "neutral",
@@ -221,76 +221,76 @@
   "flips": [
     {
       "price": 84136.38,
-      "dist": -2.1,
+      "dist": -3.0,
       "role": "support"
     },
     {
       "price": 82517.19,
-      "dist": -4.0,
+      "dist": -4.8,
       "role": "support"
     },
     {
       "price": 80094.57,
-      "dist": -6.8,
+      "dist": -7.6,
       "role": "support"
     },
     {
       "price": 87237.36,
-      "dist": 1.5,
+      "dist": 0.6,
       "role": "resistance"
     },
     {
       "price": 90411.69,
-      "dist": 5.2,
+      "dist": 4.3,
       "role": "resistance"
     },
     {
       "price": 94447.04,
-      "dist": 9.9,
+      "dist": 8.9,
       "role": "resistance"
     }
   ],
   "ladder_buy": [
     {
       "name": "4H EMA25 (เส้น trim)",
-      "price": 82005.05,
-      "dist": -4.6
+      "price": 83589.57,
+      "dist": -3.6
     },
     {
       "name": "Day EMA25 (premium)",
-      "price": 78706.01,
-      "dist": -8.4
+      "price": 79341.62,
+      "dist": -8.5
     },
     {
       "name": "Day EMA50",
-      "price": 75442.01,
-      "dist": -12.2
+      "price": 75894.48,
+      "dist": -12.5
     },
     {
       "name": "Week EMA25 (premium ใหญ่)",
-      "price": 74086.16,
-      "dist": -13.8
+      "price": 74146.39,
+      "dist": -14.5
     }
   ],
   "ladder_trim": [
     {
       "name": "Swing low (Day)",
       "price": 106304.34,
-      "dist": 23.7
+      "dist": 22.6
     },
     {
       "name": "Swing low (Day)",
       "price": 108620.07,
-      "dist": 26.4
+      "dist": 25.3
     }
   ],
   "absorption": {
-    "buy_pct": 77,
+    "buy_pct": 81,
     "side": "buy",
-    "txt": "🟢 แรงซื้อครอง — ผู้ขายถูกดูดซับ (77% แรงเป็นเขียว)",
+    "txt": "🟢 แรงซื้อครอง — ผู้ขายถูกดูดซับ (81% แรงเป็นเขียว)",
     "run": 1,
-    "run_dir": "ลง",
-    "net10": 11.8
+    "run_dir": "ขึ้น",
+    "net10": 10.9
   },
   "relay": {
     "rungs": [
@@ -302,13 +302,13 @@
       },
       {
         "tf": "4H",
-        "rsi": 79,
+        "rsi": 76,
         "macd_pos": true,
         "state": "ob"
       },
       {
         "tf": "Day",
-        "rsi": 71,
+        "rsi": 73,
         "macd_pos": true,
         "state": "ob"
       },
@@ -327,35 +327,46 @@
   "behavior": {
     "respect": {
       "period": 25,
-      "pct": 60,
-      "touches": 10,
-      "holds": 6,
+      "pct": 56,
+      "touches": 9,
+      "holds": 5,
       "above_pct": 73,
       "side": "support",
-      "value": 78706.01,
-      "dist_pct": -8.39
+      "value": 79341.62,
+      "dist_pct": -8.48
     },
     "active_line": {
       "period": 5,
-      "pct": 62,
-      "touches": 24,
+      "pct": 65,
+      "touches": 23,
       "holds": 15,
-      "above_pct": 52,
+      "above_pct": 53,
       "side": "resistance",
-      "value": 83353.46,
-      "dist_pct": -2.98,
+      "value": 84533.45,
+      "dist_pct": -2.5,
       "tf": "Day"
     },
     "near_lines": [
       {
+        "period": 5,
+        "pct": 87,
+        "touches": 30,
+        "holds": 26,
+        "above_pct": 75,
+        "side": "support",
+        "value": 86430.65,
+        "dist_pct": -0.31,
+        "tf": "1H"
+      },
+      {
         "period": 10,
-        "pct": 77,
-        "touches": 13,
+        "pct": 67,
+        "touches": 15,
         "holds": 10,
-        "above_pct": 62,
-        "side": "resistance",
-        "value": 86031.89,
-        "dist_pct": 0.14,
+        "above_pct": 77,
+        "side": "support",
+        "value": 86342.53,
+        "dist_pct": -0.41,
         "tf": "1H"
       },
       {
@@ -363,37 +374,26 @@
         "pct": 77,
         "touches": 26,
         "holds": 20,
-        "above_pct": 67,
+        "above_pct": 70,
         "side": "support",
-        "value": 86169.72,
-        "dist_pct": 0.3,
-        "tf": "1H"
-      },
-      {
-        "period": 5,
-        "pct": 71,
-        "touches": 24,
-        "holds": 17,
-        "above_pct": 67,
-        "side": "support",
-        "value": 85486.15,
+        "value": 86266.79,
         "dist_pct": -0.5,
         "tf": "4H"
       },
       {
         "period": 25,
-        "pct": 89,
-        "touches": 9,
-        "holds": 8,
-        "above_pct": 80,
+        "pct": 100,
+        "touches": 6,
+        "holds": 6,
+        "above_pct": 100,
         "side": "support",
-        "value": 84837.49,
-        "dist_pct": -1.25,
+        "value": 86019.44,
+        "dist_pct": -0.78,
         "tf": "1H"
       }
     ],
     "drive": {
-      "bars": 5,
+      "bars": 6,
       "above": true
     },
     "exhaustion": {
@@ -406,16 +406,16 @@
   },
   "tags": [
     {
+      "icon": "🚀",
+      "txt": "Full-body break — ปิดทะลุโซนไส้ supply เดิม (เพดานเริ่มโล่ง)"
+    },
+    {
       "icon": "🚫",
       "txt": "No-trade zone — balance (ไม่มี TF ไหนเข้า OB/OS; RSI เข้า critical ไม่ได้)"
     },
     {
-      "icon": "🟦",
-      "txt": "เบรคกล่องขึ้น — เป้า 1:1 $85,920 (ระยะกล่อง 5,476)"
-    },
-    {
       "icon": "🟩",
-      "txt": "Imbalance midpoint (Day) $83,899 — โซน reaction ใต้ราคา (แท่งเขียวล้วนใหญ่ · 1 แท่งก่อน)"
+      "txt": "Imbalance midpoint (Day) $83,899 — โซน reaction ใต้ราคา (แท่งเขียวล้วนใหญ่ · 2 แท่งก่อน)"
     }
   ],
   "grade": {
@@ -425,18 +425,13 @@
     "policy": "พอใช้ — เก็บสั้น TP เร็ว ไม่รันเทรนด์"
   },
   "wickzone": {
-    "px": 85914.21,
+    "px": 86697.2,
     "supply": {
-      "lo": 86620.0,
+      "lo": 86697.2,
       "hi": 87395.67,
-      "touches": 2
-    },
-    "demand": {
-      "lo": 62535.24,
-      "hi": 62900.0,
       "touches": 3
     },
-    "break_up": false,
+    "break_up": true,
     "break_down": false
   },
   "golden": {
@@ -445,32 +440,20 @@
     "swing_hi": 79890.0,
     "swing_lo": 76264.0
   },
-  "box": {
-    "hi": 80443.99,
-    "lo": 74967.97,
-    "mid": 77705.98,
-    "height": 5476.02,
-    "bars": 11,
-    "trailing": 5,
-    "state": "broke-up",
-    "pos": null,
-    "target_up": 85920.01,
-    "target_dn": 69491.95,
-    "false_break": 5
-  },
+  "box": null,
   "week_derisk": {
     "below_ema10": false,
-    "ema10": 76104.33,
+    "ema10": 76246.69,
     "note": "🟢 Week ยังยืนเหนือ EMA10 — FOMO ยังอยู่ (ยังไม่ใช่จุดถอยราย week)"
   },
   "imbalance": {
-    "px": 85914.21,
+    "px": 86697.2,
     "nearest_below": {
       "mid": 83899.01,
       "lo": 81178.01,
       "hi": 86620.0,
       "dir": "up",
-      "age": 1
+      "age": 2
     },
     "nearest_above": null
   },

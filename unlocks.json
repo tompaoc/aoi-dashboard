@@ -1,23 +1,13 @@
 {
-  "updated": "2026-09-23T01:12:57+00:00",
+  "updated": "2026-09-24T01:10:41+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "H",
-      "name": "Humanity",
-      "days": 0.5,
-      "date": "2026-09-23",
-      "usd_m": 6.8,
-      "pct_supply": 5.31,
-      "big": true,
-      "category": "insiders"
-    },
-    {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 2.2,
+      "days": 1.2,
       "date": "2026-09-25",
-      "usd_m": 8.4,
+      "usd_m": 8.0,
       "pct_supply": 3.2,
       "big": true,
       "category": "ecosystem"
@@ -25,9 +15,9 @@
     {
       "symbol": "GRASS",
       "name": "Grass",
-      "days": 4.8,
+      "days": 3.8,
       "date": "2026-09-27",
-      "usd_m": 4.5,
+      "usd_m": 4.7,
       "pct_supply": 1.55,
       "big": true,
       "category": "privateSale"
@@ -35,9 +25,9 @@
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 5.4,
+      "days": 4.4,
       "date": "2026-09-28",
-      "usd_m": 0.4,
+      "usd_m": 0.3,
       "pct_supply": 1.64,
       "big": true,
       "category": "Uncategorized"
@@ -45,9 +35,9 @@
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 6.0,
+      "days": 5.0,
       "date": "2026-09-29",
-      "usd_m": 9.6,
+      "usd_m": 9.7,
       "pct_supply": 2.39,
       "big": true,
       "category": "ecosystem"
@@ -55,9 +45,9 @@
     {
       "symbol": "MEGA",
       "name": "MegaETH Bridge",
-      "days": 6.1,
+      "days": 5.1,
       "date": "2026-09-29",
-      "usd_m": 1.0,
+      "usd_m": 0.9,
       "pct_supply": 1.84,
       "big": true,
       "category": "publicSale"
@@ -65,7 +55,7 @@
     {
       "symbol": "L3",
       "name": "Layer3",
-      "days": 6.3,
+      "days": 5.3,
       "date": "2026-09-29",
       "usd_m": 0.1,
       "pct_supply": 1.26,
@@ -75,17 +65,17 @@
     {
       "symbol": "ZORA",
       "name": "ZORA Protocol",
-      "days": 6.6,
+      "days": 5.6,
       "date": "2026-09-29",
       "usd_m": 0.5,
-      "pct_supply": 1.18,
+      "pct_supply": 1.17,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "FLX",
       "name": "FlowX Finance",
-      "days": 6.8,
+      "days": 5.8,
       "date": "2026-09-29",
       "usd_m": 0.0,
       "pct_supply": 1.17,
@@ -95,37 +85,27 @@
     {
       "symbol": "GUN",
       "name": "Gunz",
-      "days": 7.0,
+      "days": 6.0,
       "date": "2026-09-30",
       "usd_m": 0.2,
-      "pct_supply": 2.01,
+      "pct_supply": 2.0,
       "big": true,
       "category": "privateSale"
     },
     {
-      "symbol": "SUI",
-      "name": "Sui Foundation",
-      "days": 7.6,
-      "date": "2026-09-30",
-      "usd_m": 2.1,
-      "pct_supply": 0.05,
-      "big": false,
-      "category": "noncirculating"
-    },
-    {
       "symbol": "EIGEN",
       "name": "EigenCloud",
-      "days": 8.1,
+      "days": 7.1,
       "date": "2026-10-01",
-      "usd_m": 4.9,
-      "pct_supply": 2.14,
+      "usd_m": 4.6,
+      "pct_supply": 2.13,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "P",
       "name": "Pike",
-      "days": 8.1,
+      "days": 7.1,
       "date": "2026-10-01",
       "usd_m": 0.0,
       "pct_supply": 2.58,
@@ -135,9 +115,9 @@
     {
       "symbol": "2Z",
       "name": "DoubleZero",
-      "days": 8.9,
+      "days": 8.0,
       "date": "2026-10-02",
-      "usd_m": 30.7,
+      "usd_m": 29.7,
       "pct_supply": 16.57,
       "big": true,
       "category": "insiders"
@@ -145,12 +125,32 @@
     {
       "symbol": "M",
       "name": "MemeCore",
-      "days": 9.5,
+      "days": 8.5,
       "date": "2026-10-02",
-      "usd_m": 10.0,
+      "usd_m": 9.3,
       "pct_supply": 0.34,
       "big": false,
       "category": "insiders"
+    },
+    {
+      "symbol": "STO",
+      "name": "StakeStone",
+      "days": 8.8,
+      "date": "2026-10-02",
+      "usd_m": 0.4,
+      "pct_supply": 3.98,
+      "big": true,
+      "category": "privateSale"
+    },
+    {
+      "symbol": "STABLE",
+      "name": "Stable",
+      "days": 14.3,
+      "date": "2026-10-08",
+      "usd_m": 23.4,
+      "pct_supply": 3.34,
+      "big": true,
+      "category": "farming"
     }
   ]
 }

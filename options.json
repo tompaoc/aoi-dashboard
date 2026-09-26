@@ -1,361 +1,562 @@
 {
-  "updated": "2026-09-25T01:15:34+00:00",
+  "updated": "2026-09-26T01:14:10+00:00",
   "currencies": {
     "BTC": {
       "currency": "BTC",
-      "spot": 86764.81,
+      "spot": 85973.62,
       "main": {
-        "expiry": "25SEP26",
-        "days": 0.3,
-        "max_pain": 78000,
-        "call_oi": 92975,
-        "put_oi": 77824,
-        "pcr": 0.84,
+        "expiry": "30OCT26",
+        "days": 34.3,
+        "max_pain": 74000,
+        "call_oi": 89929,
+        "put_oi": 27094,
+        "pcr": 0.3,
         "call_walls": [
           {
-            "strike": 70000,
-            "oi": 7823
+            "strike": 95000,
+            "oi": 23300
           },
           {
             "strike": 90000,
-            "oi": 7137
+            "oi": 19652
           },
           {
             "strike": 100000,
-            "oi": 6950
+            "oi": 12890
           },
           {
-            "strike": 95000,
-            "oi": 4948
+            "strike": 70000,
+            "oi": 5769
           }
         ],
         "put_walls": [
           {
+            "strike": 88000,
+            "oi": 2383
+          },
+          {
             "strike": 70000,
-            "oi": 7682
+            "oi": 1800
           },
           {
-            "strike": 60000,
-            "oi": 5571
+            "strike": 80000,
+            "oi": 1397
           },
           {
-            "strike": 75000,
-            "oi": 4253
-          },
-          {
-            "strike": 50000,
-            "oi": 3812
+            "strike": 68000,
+            "oi": 1321
           }
         ],
         "gamma": {
           "near_wall": 90000,
           "squeeze_target": 95000,
           "gap_pct": 5.6,
-          "squeeze": false,
-          "corridor_empty": false,
+          "squeeze": true,
+          "corridor_empty": true,
           "gap_ok": true,
           "min_gap_pct": 4,
-          "note": "เสา $90,000↔$95,000 ใกล้กัน (5.6%) และช่องกลางไม่ว่าง → reaction เล็ก ไม่ squeeze"
+          "note": "⚡ เบรค $90,000 → gamma squeeze พุ่งถึง $95,000 (หลุม 5.6% · MM แย่ง hedge)"
         },
         "iv_hv": {
-          "atm_iv": 42.2,
-          "atm_strike": 87000,
-          "hv10": 52.2,
-          "hv30": 42.9,
-          "spread": -10.0,
+          "atm_iv": 34.2,
+          "atm_strike": 86000,
+          "hv10": 53.4,
+          "hv30": 42.7,
+          "spread": -19.2,
           "state": "cheap",
-          "note": "IV 42.2% < HV 52.2% (-10.0) — option ถูก = คนซื้อคุ้ม / ขายไม่คุ้ม"
+          "note": "IV 34.2% < HV 53.4% (-19.2) — option ถูก = คนซื้อคุ้ม / ขายไม่คุ้ม"
         },
         "expected_move": {
-          "sd1": 1050,
-          "pct1": 1.2,
-          "up1": 87815,
-          "dn1": 85715,
-          "up2": 88864,
-          "dn2": 84665,
-          "call_sd": 3.1,
+          "sd1": 9013,
+          "pct1": 10.5,
+          "up1": 94987,
+          "dn1": 76960,
+          "up2": 104001,
+          "dn2": 67947,
+          "call_sd": 0.4,
           "call_wall": 90000,
-          "call_note": "Call wall $90,000 = 3.1SD (ยากมาก (>2SD))",
-          "put_sd": 16.0,
-          "note": "1SD ±$1,050 (±1.2%) ถึงหมดอายุ · กรอบ $85,715–$87,815 (ครอบจริง ~60% — IV คือพื้นไม่ใช่เพดาน · ขอบไม่ใช่สัญญาณ EXP-029)"
+          "call_note": "Call wall $90,000 = 0.4SD (ในกรอบ (น่าถึง))",
+          "note": "1SD ±$9,013 (±10.5%) ถึงหมดอายุ · กรอบ $76,960–$94,987 (ครอบจริง ~60% — IV คือพื้นไม่ใช่เพดาน · ขอบไม่ใช่สัญญาณ EXP-029)"
         },
         "in_reach": {
-          "sd1": 1050,
+          "sd1": 9013,
           "band": [
-            85715,
-            87815
+            76960,
+            94987
           ],
-          "walls": [],
-          "note": "ไม่มีเสาไหนอยู่ในระยะ 1SD — กระดานนี้ไม่มีแม่เหล็กใกล้ตัว"
-        },
-        "oi_range": {
-          "support": 75000,
-          "resistance": 90000,
-          "mid": 82500,
-          "block": 15000,
-          "block_pct": 17.3,
-          "block_unit": 2655,
-          "pos_pct": 78,
-          "zone": "กลางกรอบ",
-          "play": "ยังไม่ถึงขอบ — ห่างกำแพงใกล้สุด $3,235 (ต้องเข้าใน 1 block $2,655 ก่อน)",
-          "note": "กรอบ OI $75,000–$90,000 (กว้าง $15,000 · block ครู $2,655) · กลางกรอบ"
-        },
-        "iv_skew": {
-          "call_iv": 71.3,
-          "put_iv": 72.3,
-          "skew_pp": -0.9,
-          "side": "balanced",
-          "note": "สมดุล (call 71% ≈ put 72%) — ไม่มีฝั่งไหนแย่งซื้อชัด"
-        },
-        "edge_side": {
-          "side": "none",
-          "note": "ไม่มีกำแพงกองชัดทั้งสองฝั่ง — สัญญากระจาย ไม่มีจุดได้เปรียบ รอ data ใหม่",
-          "call": {
-            "strike": 90000,
-            "oi": 7137,
-            "conc": 37,
-            "dist_pct": 3.7
-          },
-          "put": {
-            "strike": 70000,
-            "oi": 7682,
-            "conc": 36,
-            "dist_pct": 19.3
-          }
-        },
-        "growth": {
-          "tracking": true,
-          "base_date": "2026-08-12",
-          "days": 44,
-          "top_growing": [
+          "walls": [
             {
-              "strike": 81000,
-              "oi": 6329,
-              "delta": 6329
-            },
-            {
-              "strike": 85000,
-              "oi": 5668,
-              "delta": 4013
+              "strike": 88000,
+              "oi": 2383,
+              "side": "put",
+              "dist_pct": 2.4,
+              "sd": 0.2
             },
             {
               "strike": 90000,
-              "oi": 7492,
-              "delta": 3887
+              "oi": 19652,
+              "side": "call",
+              "dist_pct": 4.7,
+              "sd": 0.4
             },
             {
-              "strike": 79000,
-              "oi": 5356,
-              "delta": 5356
+              "strike": 80000,
+              "oi": 1397,
+              "side": "put",
+              "dist_pct": -6.9,
+              "sd": 0.7
+            },
+            {
+              "strike": 95000,
+              "oi": 23300,
+              "side": "call",
+              "dist_pct": 10.5,
+              "sd": 1.0
             }
-          ],
-          "note": "เสาโตเด่นที่ $81,000 (+6,329 OI ใน 44d, ใกล้ราคา = แนวรับ) — เจ้ามือเติมประกัน → เป้า/แนวขยับเข้าหา"
+          ]
+        },
+        "oi_range": {
+          "support": 80000,
+          "resistance": 90000,
+          "mid": 85000,
+          "block": 10000,
+          "block_pct": 11.6,
+          "block_unit": 2631,
+          "pos_pct": 60,
+          "zone": "กลางกรอบ",
+          "play": "ยังไม่ถึงขอบ — ห่างกำแพงใกล้สุด $4,026 (ต้องเข้าใน 1 block $2,631 ก่อน)",
+          "note": "กรอบ OI $80,000–$90,000 (กว้าง $10,000 · block ครู $2,631) · กลางกรอบ"
+        },
+        "iv_skew": {
+          "call_iv": 34.8,
+          "put_iv": 35.1,
+          "skew_pp": -0.3,
+          "side": "balanced",
+          "note": "สมดุล (call 35% ≈ put 35%) — ไม่มีฝั่งไหนแย่งซื้อชัด"
+        },
+        "edge_side": {
+          "side": "short_only",
+          "note": "มีแต่กำแพงฝั่งบน ($95,000 · 42% ของฝั่ง) ไม่มี Put wall กอง → **ไม่มี edge ฝั่ง Long** (ไม่รู้จะเริ่มขึ้นจากไหน) · เล่นได้คือรอ Short ที่ reaction ขอบบน",
+          "call": {
+            "strike": 95000,
+            "oi": 23300,
+            "conc": 42,
+            "dist_pct": 10.5
+          },
+          "put": {
+            "strike": 70000,
+            "oi": 1800,
+            "conc": 40,
+            "dist_pct": 18.6
+          }
+        },
+        "growth": {
+          "tracking": false,
+          "note": "เริ่มเก็บ snapshot วันนี้ — รอ 2-3 วันเห็นเสาโต"
         },
         "magnets": {
-          "vol_magnet": 70000,
-          "vol_24h": 5883.1,
-          "vol_dist_pct": -19.3,
-          "oi_magnet": 70000,
-          "oi_at_magnet": 15506,
-          "oi_dist_pct": -19.3,
-          "total_vol_24h": 30336.1,
+          "vol_magnet": 74000,
+          "vol_24h": 716.0,
+          "vol_dist_pct": -13.9,
+          "oi_magnet": 95000,
+          "oi_at_magnet": 23501,
+          "oi_dist_pct": 10.5,
+          "total_vol_24h": 4580.1,
           "stale_oi": false,
-          "note": "แม่เหล็กตรงกัน: วอลลุ่มวันนี้ $70,000 (-19.3%) ≈ กำแพง OI $70,000 (-19.3%) — โซนนี้ทั้งเก่าและใหม่เห็นตรงกัน = แข็ง"
+          "note": "แม่เหล็กตรงกัน: วอลลุ่มวันนี้ $74,000 (-13.9%) ≈ กำแพง OI $95,000 (+10.5%) — โซนนี้ทั้งเก่าและใหม่เห็นตรงกัน = แข็ง"
         },
         "roll": {
-          "main": "25SEP26",
-          "days": 0.3,
-          "rolled": false,
+          "main": "30OCT26",
+          "days": 34.3,
+          "rolled": true,
           "prev": "25SEP26",
           "next": {
-            "expiry": "30OCT26",
-            "days": 35.3,
-            "oi": 115220,
-            "max_pain": 73000,
-            "support": 80000,
-            "resistance": 95000,
-            "edge_side": "short_only"
+            "expiry": "27NOV26",
+            "days": 62.3,
+            "oi": 14374,
+            "max_pain": 79000,
+            "support": 75000,
+            "resistance": 88000,
+            "edge_side": "none"
           },
-          "note": "🔔 อีก 0.3 วันเปลี่ยนซีรีย์ — เตรียมตัวว่ากรอบจะสลับชุด · ซีรีย์ถัดไป 30OCT26: กรอบ $80,000-$95,000 MaxPain $73,000 edge=short_only"
+          "note": "⚠️ เปลี่ยนซีรีย์วันนี้: 25SEP26 → 30OCT26 — กรอบ/กำแพง/edge ชุดใหม่ทั้งหมด **ไม่ใช่สัญญาณตลาด** · อย่าอ่านการกระโดดเป็นการเคลื่อนไหวจริง"
+        }
+      },
+      "near": {
+        "expiry": "2OCT26",
+        "days": 6.3,
+        "max_pain": 82000,
+        "call_oi": 11540,
+        "put_oi": 14146,
+        "pcr": 1.23,
+        "call_walls": [
+          {
+            "strike": 88000,
+            "oi": 1721
+          },
+          {
+            "strike": 82000,
+            "oi": 1532
+          },
+          {
+            "strike": 85000,
+            "oi": 1067
+          },
+          {
+            "strike": 80000,
+            "oi": 869
+          }
+        ],
+        "put_walls": [
+          {
+            "strike": 78000,
+            "oi": 1527
+          },
+          {
+            "strike": 82000,
+            "oi": 1351
+          },
+          {
+            "strike": 74000,
+            "oi": 1271
+          },
+          {
+            "strike": 73000,
+            "oi": 1128
+          }
+        ],
+        "gamma": {
+          "near_wall": 88000,
+          "squeeze": false,
+          "note": "เสาต้านใกล้สุด $88,000 — ไม่มีเสาใหญ่ถัดไป (เบรคแล้วโล่ง)"
+        },
+        "iv_hv": {
+          "atm_iv": 29.3,
+          "atm_strike": 86000,
+          "hv10": 53.4,
+          "hv30": 42.7,
+          "spread": -24.1,
+          "state": "cheap",
+          "note": "IV 29.3% < HV 53.4% (-24.1) — option ถูก = คนซื้อคุ้ม / ขายไม่คุ้ม"
+        },
+        "expected_move": {
+          "sd1": 3309,
+          "pct1": 3.8,
+          "up1": 89283,
+          "dn1": 82664,
+          "up2": 92593,
+          "dn2": 79355,
+          "call_sd": 0.6,
+          "call_wall": 88000,
+          "call_note": "Call wall $88,000 = 0.6SD (ในกรอบ (น่าถึง))",
+          "put_sd": 2.4,
+          "note": "1SD ±$3,309 (±3.8%) ถึงหมดอายุ · กรอบ $82,664–$89,283 (ครอบจริง ~60% — IV คือพื้นไม่ใช่เพดาน · ขอบไม่ใช่สัญญาณ EXP-029)"
+        },
+        "in_reach": {
+          "sd1": 3309,
+          "band": [
+            82664,
+            89283
+          ],
+          "walls": [
+            {
+              "strike": 85000,
+              "oi": 1067,
+              "side": "call",
+              "dist_pct": -1.1,
+              "sd": 0.3
+            },
+            {
+              "strike": 88000,
+              "oi": 1721,
+              "side": "call",
+              "dist_pct": 2.4,
+              "sd": 0.6
+            }
+          ]
         }
       }
     },
     "ETH": {
       "currency": "ETH",
-      "spot": 2712.63,
+      "spot": 2706.05,
       "main": {
-        "expiry": "25SEP26",
-        "days": 0.3,
-        "max_pain": 2350,
-        "call_oi": 477358,
-        "put_oi": 315908,
-        "pcr": 0.66,
+        "expiry": "30OCT26",
+        "days": 34.3,
+        "max_pain": 2450,
+        "call_oi": 95719,
+        "put_oi": 85326,
+        "pcr": 0.89,
         "call_walls": [
           {
-            "strike": 3000,
-            "oi": 38549
-          },
-          {
-            "strike": 2000,
-            "oi": 29042
-          },
-          {
-            "strike": 3500,
-            "oi": 24288
+            "strike": 3200,
+            "oi": 13538
           },
           {
             "strike": 2600,
-            "oi": 23325
+            "oi": 6518
+          },
+          {
+            "strike": 2500,
+            "oi": 6334
+          },
+          {
+            "strike": 3600,
+            "oi": 6258
           }
         ],
         "put_walls": [
           {
+            "strike": 2300,
+            "oi": 17997
+          },
+          {
+            "strike": 2400,
+            "oi": 8147
+          },
+          {
+            "strike": 2150,
+            "oi": 4854
+          },
+          {
             "strike": 2100,
-            "oi": 35190
-          },
-          {
-            "strike": 2600,
-            "oi": 23866
-          },
-          {
-            "strike": 2000,
-            "oi": 21167
-          },
-          {
-            "strike": 1900,
-            "oi": 19314
+            "oi": 4843
           }
         ],
         "gamma": {
-          "near_wall": 2800,
-          "squeeze_target": 2900,
-          "gap_pct": 3.6,
+          "near_wall": 3200,
+          "squeeze_target": 3600,
+          "gap_pct": 12.5,
+          "squeeze": false,
+          "corridor_empty": false,
+          "gap_ok": true,
+          "min_gap_pct": 4,
+          "note": "เสา $3,200↔$3,600 ใกล้กัน (12.5%) และช่องกลางไม่ว่าง → reaction เล็ก ไม่ squeeze"
+        },
+        "iv_hv": {
+          "atm_iv": 47.2,
+          "atm_strike": 2700,
+          "hv10": 50.9,
+          "hv30": 45.7,
+          "spread": -3.7,
+          "state": "cheap",
+          "note": "IV 47.2% < HV 50.9% (-3.7) — option ถูก = คนซื้อคุ้ม / ขายไม่คุ้ม"
+        },
+        "expected_move": {
+          "sd1": 392,
+          "pct1": 14.5,
+          "up1": 3098,
+          "dn1": 2315,
+          "up2": 3489,
+          "dn2": 1923,
+          "call_sd": 1.3,
+          "call_wall": 3200,
+          "call_note": "Call wall $3,200 = 1.3SD (ยากแต่มีสิทธิ์)",
+          "put_sd": 1.0,
+          "note": "1SD ±$392 (±14.5%) ถึงหมดอายุ · กรอบ $2,315–$3,098 (ครอบจริง ~60% — IV คือพื้นไม่ใช่เพดาน · ขอบไม่ใช่สัญญาณ EXP-029)"
+        },
+        "in_reach": {
+          "sd1": 392,
+          "band": [
+            2315,
+            3098
+          ],
+          "walls": [
+            {
+              "strike": 2600,
+              "oi": 6518,
+              "side": "call",
+              "dist_pct": -3.9,
+              "sd": 0.3
+            },
+            {
+              "strike": 2500,
+              "oi": 6334,
+              "side": "call",
+              "dist_pct": -7.6,
+              "sd": 0.5
+            },
+            {
+              "strike": 2400,
+              "oi": 8147,
+              "side": "put",
+              "dist_pct": -11.3,
+              "sd": 0.8
+            },
+            {
+              "strike": 2300,
+              "oi": 17997,
+              "side": "put",
+              "dist_pct": -15.0,
+              "sd": 1.0
+            }
+          ]
+        },
+        "oi_range": {
+          "support": 2400,
+          "resistance": 3200,
+          "mid": 2800,
+          "block": 800,
+          "block_pct": 29.6,
+          "block_unit": 142,
+          "pos_pct": 38,
+          "zone": "กลางกรอบ",
+          "play": "ยังไม่ถึงขอบ — ห่างกำแพงใกล้สุด $306 (ต้องเข้าใน 1 block $142 ก่อน)",
+          "note": "กรอบ OI $2,400–$3,200 (กว้าง $800 · block ครู $142) · กลางกรอบ"
+        },
+        "iv_skew": {
+          "call_iv": 47.9,
+          "put_iv": 48.1,
+          "skew_pp": -0.2,
+          "side": "balanced",
+          "note": "สมดุล (call 48% ≈ put 48%) — ไม่มีฝั่งไหนแย่งซื้อชัด"
+        },
+        "edge_side": {
+          "side": "both",
+          "note": "มีกำแพงทั้งสองฝั่ง — หาจุดเข้าได้ทั้ง Long/Short",
+          "call": {
+            "strike": 3200,
+            "oi": 13538,
+            "conc": 68,
+            "dist_pct": 18.3
+          },
+          "put": {
+            "strike": 2300,
+            "oi": 17997,
+            "conc": 50,
+            "dist_pct": 15.0
+          }
+        },
+        "growth": {
+          "tracking": false,
+          "note": "เริ่มเก็บ snapshot วันนี้ — รอ 2-3 วันเห็นเสาโต"
+        },
+        "magnets": {
+          "vol_magnet": 2300,
+          "vol_24h": 1497.0,
+          "vol_dist_pct": -15.0,
+          "oi_magnet": 2300,
+          "oi_at_magnet": 19147,
+          "oi_dist_pct": -15.0,
+          "total_vol_24h": 12128.0,
+          "stale_oi": false,
+          "note": "แม่เหล็กตรงกัน: วอลลุ่มวันนี้ $2,300 (-15.0%) ≈ กำแพง OI $2,300 (-15.0%) — โซนนี้ทั้งเก่าและใหม่เห็นตรงกัน = แข็ง"
+        },
+        "roll": {
+          "main": "30OCT26",
+          "days": 34.3,
+          "rolled": true,
+          "prev": "25SEP26",
+          "next": {
+            "expiry": "27NOV26",
+            "days": 62.3,
+            "oi": 66203,
+            "max_pain": 2650,
+            "support": 2500,
+            "resistance": 3200,
+            "edge_side": "none"
+          },
+          "note": "⚠️ เปลี่ยนซีรีย์วันนี้: 25SEP26 → 30OCT26 — กรอบ/กำแพง/edge ชุดใหม่ทั้งหมด **ไม่ใช่สัญญาณตลาด** · อย่าอ่านการกระโดดเป็นการเคลื่อนไหวจริง"
+        }
+      },
+      "near": {
+        "expiry": "26SEP26",
+        "days": 0.3,
+        "max_pain": 2700,
+        "call_oi": 26399,
+        "put_oi": 16036,
+        "pcr": 0.61,
+        "call_walls": [
+          {
+            "strike": 2800,
+            "oi": 6560
+          },
+          {
+            "strike": 2700,
+            "oi": 2996
+          },
+          {
+            "strike": 3000,
+            "oi": 2055
+          },
+          {
+            "strike": 2720,
+            "oi": 2003
+          }
+        ],
+        "put_walls": [
+          {
+            "strike": 2500,
+            "oi": 2083
+          },
+          {
+            "strike": 2450,
+            "oi": 1712
+          },
+          {
+            "strike": 2660,
+            "oi": 1487
+          },
+          {
+            "strike": 2680,
+            "oi": 1285
+          }
+        ],
+        "gamma": {
+          "near_wall": 2720,
+          "squeeze_target": 2800,
+          "gap_pct": 2.9,
           "squeeze": false,
           "corridor_empty": false,
           "gap_ok": false,
           "min_gap_pct": 4,
-          "note": "เสา $2,800↔$2,900 ใกล้กัน (3.6%) และช่องกลางไม่ว่าง → reaction เล็ก ไม่ squeeze"
+          "note": "เสา $2,720↔$2,800 ใกล้กัน (2.9%) และช่องกลางไม่ว่าง → reaction เล็ก ไม่ squeeze"
         },
         "iv_hv": {
-          "atm_iv": 36.6,
-          "atm_strike": 2720,
-          "hv10": 50.3,
+          "atm_iv": 21.7,
+          "atm_strike": 2700,
+          "hv10": 50.9,
           "hv30": 45.7,
-          "spread": -13.7,
+          "spread": -29.2,
           "state": "cheap",
-          "note": "IV 36.6% < HV 50.3% (-13.7) — option ถูก = คนซื้อคุ้ม / ขายไม่คุ้ม"
+          "note": "IV 21.7% < HV 50.9% (-29.2) — option ถูก = คนซื้อคุ้ม / ขายไม่คุ้ม"
         },
         "expected_move": {
-          "sd1": 28,
-          "pct1": 1.0,
-          "up1": 2741,
-          "dn1": 2684,
-          "up2": 2770,
-          "dn2": 2656,
-          "call_sd": 3.1,
-          "call_wall": 2800,
-          "call_note": "Call wall $2,800 = 3.1SD (ยากมาก (>2SD))",
-          "put_sd": 21.5,
-          "note": "1SD ±$28 (±1.0%) ถึงหมดอายุ · กรอบ $2,684–$2,741 (ครอบจริง ~60% — IV คือพื้นไม่ใช่เพดาน · ขอบไม่ใช่สัญญาณ EXP-029)"
+          "sd1": 17,
+          "pct1": 0.6,
+          "up1": 2723,
+          "dn1": 2689,
+          "up2": 2740,
+          "dn2": 2672,
+          "call_sd": 0.8,
+          "call_wall": 2720,
+          "call_note": "Call wall $2,720 = 0.8SD (ในกรอบ (น่าถึง))",
+          "put_sd": 12.2,
+          "note": "1SD ±$17 (±0.6%) ถึงหมดอายุ · กรอบ $2,689–$2,723 (ครอบจริง ~60% — IV คือพื้นไม่ใช่เพดาน · ขอบไม่ใช่สัญญาณ EXP-029)"
         },
         "in_reach": {
-          "sd1": 28,
+          "sd1": 17,
           "band": [
-            2684,
-            2741
+            2689,
+            2723
           ],
-          "walls": [],
-          "note": "ไม่มีเสาไหนอยู่ในระยะ 1SD — กระดานนี้ไม่มีแม่เหล็กใกล้ตัว"
-        },
-        "oi_range": {
-          "support": 2600,
-          "resistance": 2800,
-          "mid": 2700,
-          "block": 200,
-          "block_pct": 7.4,
-          "block_unit": 142,
-          "pos_pct": 56,
-          "zone": "กลางกรอบ",
-          "play": "ยังไม่ถึงขอบ — ห่างกำแพงใกล้สุด $87 (ต้องเข้าใน 1 block $142 ก่อน)",
-          "note": "กรอบ OI $2,600–$2,800 (กว้าง $200 · block ครู $142) · กลางกรอบ"
-        },
-        "iv_skew": {
-          "call_iv": 75.8,
-          "put_iv": 91.5,
-          "skew_pp": -15.8,
-          "side": "put",
-          "note": "หนักพุท (IV put 92% > call 76%) — ตลาดกลัวลง/ซื้อประกันขาลงหนัก"
-        },
-        "edge_side": {
-          "side": "short_only",
-          "note": "มีแต่กำแพงฝั่งบน ($3,000 · 61% ของฝั่ง) ไม่มี Put wall กอง → **ไม่มี edge ฝั่ง Long** (ไม่รู้จะเริ่มขึ้นจากไหน) · เล่นได้คือรอ Short ที่ reaction ขอบบน",
-          "call": {
-            "strike": 3000,
-            "oi": 38549,
-            "conc": 61,
-            "dist_pct": 10.6
-          },
-          "put": {
-            "strike": 2100,
-            "oi": 35190,
-            "conc": 35,
-            "dist_pct": 22.6
-          }
-        },
-        "growth": {
-          "tracking": true,
-          "base_date": "2026-08-12",
-          "days": 44,
-          "top_growing": [
+          "walls": [
             {
-              "strike": 2600,
-              "oi": 47191,
-              "delta": 27952
+              "strike": 2700,
+              "oi": 2996,
+              "side": "call",
+              "dist_pct": -0.2,
+              "sd": 0.4
             },
             {
-              "strike": 2750,
-              "oi": 13015,
-              "delta": 13015
-            },
-            {
-              "strike": 2800,
-              "oi": 20600,
-              "delta": 11946
-            },
-            {
-              "strike": 2650,
-              "oi": 8853,
-              "delta": 8853
+              "strike": 2720,
+              "oi": 2003,
+              "side": "call",
+              "dist_pct": 0.5,
+              "sd": 0.8
             }
           ],
-          "note": "เสาโตเด่นที่ $2,600 (+27,952 OI ใน 44d, ใกล้ราคา = แนวรับ) — เจ้ามือเติมประกัน → เป้า/แนวขยับเข้าหา"
-        },
-        "magnets": {
-          "vol_magnet": 2600,
-          "vol_24h": 13951.0,
-          "vol_dist_pct": -4.2,
-          "oi_magnet": 2000,
-          "oi_at_magnet": 50209,
-          "oi_dist_pct": -26.3,
-          "total_vol_24h": 59198.0,
-          "stale_oi": true,
-          "note": "⚠️ แม่เหล็กคนละที่: วอลลุ่มวันนี้กองที่ $2,600 (-4.2% จากราคา) แต่กำแพง OI อยู่ $2,000 (-26.3%) — **OI เป็นของสะสมเก่า** สนามรบจริงวันนี้อยู่ที่ $2,600"
-        },
-        "roll": {
-          "main": "25SEP26",
-          "days": 0.3,
-          "rolled": false,
-          "prev": "25SEP26",
-          "next": {
-            "expiry": "30OCT26",
-            "days": 35.3,
-            "oi": 175234,
-            "max_pain": 2400,
-            "support": 2400,
-            "resistance": 3200,
-            "edge_side": "both"
-          },
-          "note": "🔔 อีก 0.3 วันเปลี่ยนซีรีย์ — เตรียมตัวว่ากรอบจะสลับชุด · ซีรีย์ถัดไป 30OCT26: กรอบ $2,400-$3,200 MaxPain $2,400 edge=both"
+          "note": "⚠️ เสา OI หนาสุด $2,800 อยู่ 5.5SD (+3.5%) = ไปไม่ถึงก่อนหมดอายุ — ตัวที่มีผลจริงคือ $2,700"
         }
       }
     }

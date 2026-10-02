@@ -1,63 +1,13 @@
 {
-  "updated": "2026-10-01T01:13:06+00:00",
+  "updated": "2026-10-02T01:12:41+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "mav",
-      "name": "Maverick Protocol",
-      "days": 0.1,
-      "date": "2026-10-01",
-      "usd_m": 0.3,
-      "pct_supply": 2.56,
-      "big": true,
-      "category": "privateSale"
-    },
-    {
-      "symbol": "EIGEN",
-      "name": "EigenCloud",
-      "days": 0.1,
-      "date": "2026-10-01",
-      "usd_m": 4.8,
-      "pct_supply": 2.04,
-      "big": true,
-      "category": "privateSale"
-    },
-    {
-      "symbol": "P",
-      "name": "Pike",
-      "days": 0.1,
-      "date": "2026-10-01",
-      "usd_m": 0.0,
-      "pct_supply": 2.58,
-      "big": true,
-      "category": "insiders"
-    },
-    {
-      "symbol": "SUI",
-      "name": "Sui Foundation",
-      "days": 0.8,
-      "date": "2026-10-01",
-      "usd_m": 8.5,
-      "pct_supply": 0.18,
-      "big": false,
-      "category": "insiders"
-    },
-    {
-      "symbol": "2Z",
-      "name": "DoubleZero",
-      "days": 0.9,
-      "date": "2026-10-02",
-      "usd_m": 34.2,
-      "pct_supply": 11.22,
-      "big": true,
-      "category": "insiders"
-    },
-    {
       "symbol": "M",
       "name": "MemeCore",
-      "days": 1.5,
+      "days": 0.5,
       "date": "2026-10-02",
-      "usd_m": 7.9,
+      "usd_m": 8.0,
       "pct_supply": 0.33,
       "big": false,
       "category": "insiders"
@@ -65,7 +15,7 @@
     {
       "symbol": "STO",
       "name": "StakeStone",
-      "days": 1.8,
+      "days": 0.8,
       "date": "2026-10-02",
       "usd_m": 0.4,
       "pct_supply": 3.98,
@@ -75,17 +25,17 @@
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 7.3,
+      "days": 6.3,
       "date": "2026-10-08",
-      "usd_m": 24.6,
-      "pct_supply": 3.32,
+      "usd_m": 25.3,
+      "pct_supply": 3.31,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 9.3,
+      "days": 8.3,
       "date": "2026-10-10",
       "usd_m": 0.2,
       "pct_supply": 1.32,
@@ -95,7 +45,7 @@
     {
       "symbol": "ME",
       "name": "Magic Eden",
-      "days": 9.6,
+      "days": 8.6,
       "date": "2026-10-10",
       "usd_m": 0.5,
       "pct_supply": 1.13,
@@ -105,9 +55,9 @@
     {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 10.7,
+      "days": 9.7,
       "date": "2026-10-11",
-      "usd_m": 47.4,
+      "usd_m": 47.5,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -115,7 +65,7 @@
     {
       "symbol": "APT",
       "name": "Aptos",
-      "days": 10.9,
+      "days": 9.9,
       "date": "2026-10-11",
       "usd_m": 2.5,
       "pct_supply": 0.37,
@@ -125,32 +75,82 @@
     {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 11.0,
+      "days": 10.0,
       "date": "2026-10-12",
-      "usd_m": 24.6,
-      "pct_supply": 0.89,
+      "usd_m": 24.3,
+      "pct_supply": 0.9,
       "big": false,
       "category": "insiders"
     },
     {
       "symbol": "PEAQ",
       "name": "peaq",
-      "days": 12.0,
+      "days": 11.0,
       "date": "2026-10-13",
-      "usd_m": 2.5,
+      "usd_m": 2.3,
       "pct_supply": 2.3,
       "big": true,
       "category": "privateSale"
     },
     {
+      "symbol": "AGT",
+      "name": "Alaya AI",
+      "days": 12.4,
+      "date": "2026-10-14",
+      "usd_m": 2.0,
+      "pct_supply": 0,
+      "big": false,
+      "category": "farming"
+    },
+    {
       "symbol": "CONX",
       "name": "Connex",
-      "days": 14.1,
+      "days": 13.1,
       "date": "2026-10-15",
-      "usd_m": 8.7,
+      "usd_m": 8.3,
       "pct_supply": 0,
       "big": false,
       "category": "noncirculating"
+    },
+    {
+      "symbol": "ARB",
+      "name": "Arbitrum Foundation",
+      "days": 13.5,
+      "date": "2026-10-15",
+      "usd_m": 11.2,
+      "pct_supply": 0.83,
+      "big": false,
+      "category": "insiders"
+    },
+    {
+      "symbol": "RBNT",
+      "name": "Redbelly Network",
+      "days": 14.9,
+      "date": "2026-10-17",
+      "usd_m": 0.1,
+      "pct_supply": 1.59,
+      "big": true,
+      "category": "farming"
+    },
+    {
+      "symbol": "DBR",
+      "name": "deBridge",
+      "days": 15.4,
+      "date": "2026-10-17",
+      "usd_m": 1.6,
+      "pct_supply": 1.41,
+      "big": true,
+      "category": "noncirculating"
+    },
+    {
+      "symbol": "RE",
+      "name": "Re",
+      "days": 15.7,
+      "date": "2026-10-17",
+      "usd_m": 3.6,
+      "pct_supply": 4.44,
+      "big": true,
+      "category": "airdrop"
     }
   ]
 }

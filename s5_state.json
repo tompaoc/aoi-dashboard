@@ -1,6 +1,6 @@
 {
   "start": 10000.0,
-  "balance": 10008.081918296773,
+  "balance": 10009.341760879388,
   "open": [
     {
       "inst": "BTC-3OCT26-80000-P",
@@ -17,7 +17,26 @@
       "qty_from_cap": 0.024,
       "sized_by": "เพดาน exposure",
       "reason": "IV 42% > HV · ขาย put 80,000 (4% ใต้ราคา) อายุ 2.3วัน · ไซซ์ถูกบีบโดยเพดาน exposure",
-      "open_ts": 1790817067987
+      "open_ts": 1790817067987,
+      "now_prem": 32.59,
+      "peak_prem": 108.61
+    },
+    {
+      "inst": "BTC-3OCT26-81000-P",
+      "strike": 81000.0,
+      "exp": "2026-10-03",
+      "days": 1.28,
+      "entry_prem": 52.51,
+      "stop_prem": 157.53,
+      "qty": 0.024,
+      "iv": 46.47,
+      "open_date": "2026-10-02",
+      "spot_at_open": 84695.0,
+      "qty_from_risk": 0.953,
+      "qty_from_cap": 0.024,
+      "sized_by": "เพดาน exposure",
+      "reason": "IV 46% > HV · ขาย put 81,000 (4% ใต้ราคา) อายุ 1.3วัน · ไซซ์ถูกบีบโดยเพดาน exposure",
+      "open_ts": 1790903458301
     }
   ],
   "closed": [
@@ -584,13 +603,19 @@
       "balance": 10008.08,
       "open": 1,
       "closed": 11
+    },
+    {
+      "date": "2026-10-02",
+      "balance": 10009.34,
+      "open": 2,
+      "closed": 11
     }
   ],
   "note": "S5 short-premium (ขายประกัน BTC put) — sleeve ทดสอบสดแยก · ไม่ใช่เงินจริง",
-  "last_run": "2026-10-01 01:11",
+  "last_run": "2026-10-02 01:10",
   "category": "short_premium",
   "notes": [
     "2026-07-30: ออดิท S5 · เติม R/risk_amt/reason ย้อนหลัง 3 ไม้ (คำนวณจาก stop_prem/entry_prem/qty ที่บันทึกไว้แล้ว) + ติด category=short_premium + เริ่ม history · **พบว่าเพดาน exposure 20% บีบไซซ์ทุกครั้ง ทำให้ \"เสี่ยง 1%\" ไม่เคยมีผล — เสี่ยงจริง ~0.06%/ไม้ (เล็กกว่าที่ตั้งใจ 16 เท่า)**"
   ],
-  "run_count": 56
+  "run_count": 57
 }

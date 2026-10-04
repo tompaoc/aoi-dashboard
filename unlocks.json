@@ -1,21 +1,21 @@
 {
-  "updated": "2026-10-03T01:12:25+00:00",
+  "updated": "2026-10-04T01:11:38+00:00",
   "days_ahead": 30,
   "rows": [
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 5.3,
+      "days": 4.3,
       "date": "2026-10-08",
-      "usd_m": 24.8,
-      "pct_supply": 3.31,
+      "usd_m": 23.8,
+      "pct_supply": 3.3,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 7.3,
+      "days": 6.3,
       "date": "2026-10-10",
       "usd_m": 0.2,
       "pct_supply": 1.32,
@@ -25,19 +25,19 @@
     {
       "symbol": "ME",
       "name": "Magic Eden",
-      "days": 7.6,
+      "days": 6.6,
       "date": "2026-10-10",
       "usd_m": 0.5,
-      "pct_supply": 1.13,
+      "pct_supply": 1.12,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 8.7,
+      "days": 7.7,
       "date": "2026-10-11",
-      "usd_m": 47.6,
+      "usd_m": 48.1,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -45,9 +45,9 @@
     {
       "symbol": "APT",
       "name": "Aptos",
-      "days": 8.9,
+      "days": 7.9,
       "date": "2026-10-11",
-      "usd_m": 2.5,
+      "usd_m": 2.6,
       "pct_supply": 0.37,
       "big": false,
       "category": "noncirculating"
@@ -55,9 +55,9 @@
     {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 9.0,
+      "days": 8.0,
       "date": "2026-10-12",
-      "usd_m": 22.4,
+      "usd_m": 26.1,
       "pct_supply": 0.9,
       "big": false,
       "category": "insiders"
@@ -65,9 +65,9 @@
     {
       "symbol": "PEAQ",
       "name": "peaq",
-      "days": 10.0,
+      "days": 9.0,
       "date": "2026-10-13",
-      "usd_m": 2.3,
+      "usd_m": 2.6,
       "pct_supply": 2.3,
       "big": true,
       "category": "privateSale"
@@ -75,9 +75,9 @@
     {
       "symbol": "CONX",
       "name": "Connex",
-      "days": 12.1,
+      "days": 11.1,
       "date": "2026-10-15",
-      "usd_m": 8.3,
+      "usd_m": 8.4,
       "pct_supply": 0,
       "big": false,
       "category": "noncirculating"
@@ -85,9 +85,9 @@
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 12.5,
+      "days": 11.5,
       "date": "2026-10-15",
-      "usd_m": 10.9,
+      "usd_m": 11.2,
       "pct_supply": 0.83,
       "big": false,
       "category": "insiders"
@@ -95,7 +95,7 @@
     {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 13.9,
+      "days": 13.0,
       "date": "2026-10-17",
       "usd_m": 0.1,
       "pct_supply": 1.59,
@@ -105,7 +105,7 @@
     {
       "symbol": "DBR",
       "name": "deBridge",
-      "days": 14.4,
+      "days": 13.4,
       "date": "2026-10-17",
       "usd_m": 1.6,
       "pct_supply": 1.41,
@@ -115,29 +115,29 @@
     {
       "symbol": "RE",
       "name": "Re",
-      "days": 14.7,
+      "days": 13.7,
       "date": "2026-10-17",
       "usd_m": 3.6,
-      "pct_supply": 4.45,
+      "pct_supply": 4.44,
       "big": true,
       "category": "airdrop"
     },
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 16.7,
+      "days": 15.7,
       "date": "2026-10-19",
-      "usd_m": 2.4,
-      "pct_supply": 2.97,
+      "usd_m": 2.5,
+      "pct_supply": 2.96,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 17.2,
+      "days": 16.2,
       "date": "2026-10-20",
-      "usd_m": 18.5,
+      "usd_m": 21.4,
       "pct_supply": 3.01,
       "big": true,
       "category": "insiders"
@@ -145,7 +145,7 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 19.2,
+      "days": 18.2,
       "date": "2026-10-22",
       "usd_m": 0.3,
       "pct_supply": 6.33,

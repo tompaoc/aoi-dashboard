@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-04T01:11:38+00:00",
+  "updated": "2026-10-05T01:11:37+00:00",
   "days_ahead": 30,
   "events": [
     {
       "date": "2026-10-05",
-      "days": 1,
+      "days": 0,
       "code": "ISM",
       "label": "ISM ภาคบริการ",
       "forecast": 55.7,
@@ -13,16 +13,16 @@
     },
     {
       "date": "2026-10-07",
-      "days": 3,
+      "days": 2,
       "code": "FED",
       "label": "FOMC",
       "forecast": null,
       "previous": null,
-      "imminent": false
+      "imminent": true
     },
     {
       "date": "2026-10-14",
-      "days": 10,
+      "days": 9,
       "code": "CPI",
       "label": "CPI เงินเฟ้อ",
       "forecast": null,
@@ -31,7 +31,7 @@
     },
     {
       "date": "2026-10-15",
-      "days": 11,
+      "days": 10,
       "code": "PPI",
       "label": "PPI ราคาผู้ผลิต",
       "forecast": null,
@@ -40,7 +40,7 @@
     },
     {
       "date": "2026-10-15",
-      "days": 11,
+      "days": 10,
       "code": "RETAIL",
       "label": "ยอดค้าปลีก",
       "forecast": null,
@@ -49,7 +49,7 @@
     },
     {
       "date": "2026-10-28",
-      "days": 24,
+      "days": 23,
       "code": "FED",
       "label": "Fed ดอกเบี้ย (FOMC)",
       "forecast": null,
@@ -58,7 +58,7 @@
     },
     {
       "date": "2026-10-29",
-      "days": 25,
+      "days": 24,
       "code": "GDP",
       "label": "GDP",
       "forecast": null,
@@ -67,7 +67,7 @@
     },
     {
       "date": "2026-10-29",
-      "days": 25,
+      "days": 24,
       "code": "PCE",
       "label": "Core PCE (Fed ดูตัวนี้)",
       "forecast": null,

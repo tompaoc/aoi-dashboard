@@ -1,33 +1,13 @@
 {
-  "updated": "2026-10-11T01:15:07+00:00",
+  "updated": "2026-10-12T01:15:28+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "SOL",
-      "name": "Solana",
-      "days": 0.7,
-      "date": "2026-10-11",
-      "usd_m": 44.2,
-      "pct_supply": 0.07,
-      "big": false,
-      "category": "staking"
-    },
-    {
-      "symbol": "APT",
-      "name": "Aptos",
-      "days": 0.9,
-      "date": "2026-10-11",
-      "usd_m": 2.8,
-      "pct_supply": 0.37,
-      "big": false,
-      "category": "noncirculating"
-    },
-    {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 1.0,
+      "days": 0.0,
       "date": "2026-10-12",
-      "usd_m": 22.9,
+      "usd_m": 23.4,
       "pct_supply": 0.9,
       "big": false,
       "category": "insiders"
@@ -35,7 +15,7 @@
     {
       "symbol": "PEAQ",
       "name": "peaq",
-      "days": 2.0,
+      "days": 1.0,
       "date": "2026-10-13",
       "usd_m": 2.5,
       "pct_supply": 2.29,
@@ -45,9 +25,9 @@
     {
       "symbol": "STRK",
       "name": "Starknet Bridge",
-      "days": 3.5,
+      "days": 2.5,
       "date": "2026-10-14",
-      "usd_m": 3.7,
+      "usd_m": 4.4,
       "pct_supply": 0.48,
       "big": false,
       "category": "insiders"
@@ -55,7 +35,7 @@
     {
       "symbol": "CONX",
       "name": "Connex",
-      "days": 4.1,
+      "days": 3.1,
       "date": "2026-10-15",
       "usd_m": 7.5,
       "pct_supply": 0,
@@ -65,9 +45,9 @@
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 4.5,
+      "days": 3.5,
       "date": "2026-10-15",
-      "usd_m": 10.7,
+      "usd_m": 11.2,
       "pct_supply": 0.83,
       "big": false,
       "category": "insiders"
@@ -75,7 +55,7 @@
     {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 5.9,
+      "days": 4.9,
       "date": "2026-10-17",
       "usd_m": 0.1,
       "pct_supply": 1.59,
@@ -85,7 +65,7 @@
     {
       "symbol": "DBR",
       "name": "deBridge",
-      "days": 6.4,
+      "days": 5.4,
       "date": "2026-10-17",
       "usd_m": 1.6,
       "pct_supply": 1.41,
@@ -95,7 +75,7 @@
     {
       "symbol": "RE",
       "name": "Re",
-      "days": 6.7,
+      "days": 5.7,
       "date": "2026-10-17",
       "usd_m": 3.2,
       "pct_supply": 4.44,
@@ -105,19 +85,19 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 8.7,
+      "days": 7.7,
       "date": "2026-10-19",
       "usd_m": 2.3,
-      "pct_supply": 2.96,
+      "pct_supply": 2.97,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 9.2,
+      "days": 8.2,
       "date": "2026-10-20",
-      "usd_m": 21.2,
+      "usd_m": 22.5,
       "pct_supply": 2.66,
       "big": true,
       "category": "insiders"
@@ -125,19 +105,19 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 11.2,
+      "days": 10.2,
       "date": "2026-10-22",
       "usd_m": 0.3,
-      "pct_supply": 6.34,
+      "pct_supply": 6.33,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 12.2,
+      "days": 11.2,
       "date": "2026-10-23",
-      "usd_m": 53.7,
+      "usd_m": 53.1,
       "pct_supply": 1.3,
       "big": true,
       "category": "farming"
@@ -145,12 +125,32 @@
     {
       "symbol": "APR",
       "name": "aPriori",
-      "days": 12.2,
+      "days": 11.2,
       "date": "2026-10-23",
       "usd_m": 0.7,
-      "pct_supply": 3.46,
+      "pct_supply": 3.45,
       "big": true,
       "category": "noncirculating"
+    },
+    {
+      "symbol": "INIT",
+      "name": "Initia",
+      "days": 11.8,
+      "date": "2026-10-23",
+      "usd_m": 0.6,
+      "pct_supply": 2.31,
+      "big": true,
+      "category": "noncirculating"
+    },
+    {
+      "symbol": "H",
+      "name": "Humanity",
+      "days": 11.9,
+      "date": "2026-10-23",
+      "usd_m": 6.4,
+      "pct_supply": 4.98,
+      "big": true,
+      "category": "insiders"
     }
   ]
 }

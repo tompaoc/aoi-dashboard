@@ -3180,6 +3180,46 @@
       "week": "2/3",
       "stage": "🟡 ผ่านด่าน 1 (เบรค Day p"
     },
+    "main_regime": null,
+    "fwd_btc": 83897.0,
+    "fwd_toward_maxpain": false,
+    "fwd_wall": "no_touch"
+  },
+  {
+    "date": "2026-10-12",
+    "btc": 83897.0,
+    "oi": {
+      "call_wall": 95000,
+      "put_wall": 80000,
+      "max_pain": 78000,
+      "dist_call_pct": 13.2,
+      "dist_put_pct": -4.6,
+      "dist_mp_pct": -7.0,
+      "grow_top": [
+        {
+          "strike": 80000,
+          "oi": 4154,
+          "delta": 1360
+        }
+      ]
+    },
+    "iv_hv": {
+      "spread": 6.7,
+      "state": "fair"
+    },
+    "cage": {
+      "sup": 80000,
+      "res": 90000,
+      "zone": "กลางกรอบ",
+      "pos_pct": 39,
+      "block_pct": 11.9,
+      "days": 18.3
+    },
+    "aoi": {
+      "bias": "bull",
+      "week": "2/3",
+      "stage": "🟡 ผ่านด่าน 1 (เบรค Day p"
+    },
     "main_regime": null
   }
 ]

@@ -1,41 +1,21 @@
 {
-  "updated": "2026-10-15T01:13:02+00:00",
+  "updated": "2026-10-16T01:13:58+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "CONX",
-      "name": "Connex",
-      "days": 0.1,
-      "date": "2026-10-15",
-      "usd_m": 7.4,
-      "pct_supply": 0,
-      "big": false,
-      "category": "noncirculating"
-    },
-    {
-      "symbol": "ARB",
-      "name": "Arbitrum Foundation",
-      "days": 0.5,
-      "date": "2026-10-15",
-      "usd_m": 10.2,
-      "pct_supply": 0.83,
-      "big": false,
-      "category": "insiders"
-    },
-    {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 1.9,
+      "days": 0.9,
       "date": "2026-10-17",
       "usd_m": 0.1,
-      "pct_supply": 1.59,
+      "pct_supply": 1.58,
       "big": true,
       "category": "farming"
     },
     {
       "symbol": "DBR",
       "name": "deBridge",
-      "days": 2.4,
+      "days": 1.4,
       "date": "2026-10-17",
       "usd_m": 1.6,
       "pct_supply": 1.41,
@@ -45,7 +25,7 @@
     {
       "symbol": "RE",
       "name": "Re",
-      "days": 2.7,
+      "days": 1.7,
       "date": "2026-10-17",
       "usd_m": 3.0,
       "pct_supply": 4.44,
@@ -55,7 +35,7 @@
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 4.7,
+      "days": 3.7,
       "date": "2026-10-19",
       "usd_m": 2.1,
       "pct_supply": 2.96,
@@ -65,9 +45,9 @@
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 5.2,
+      "days": 4.2,
       "date": "2026-10-20",
-      "usd_m": 20.3,
+      "usd_m": 22.3,
       "pct_supply": 2.66,
       "big": true,
       "category": "insiders"
@@ -75,19 +55,19 @@
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 7.2,
+      "days": 6.2,
       "date": "2026-10-22",
       "usd_m": 0.3,
-      "pct_supply": 6.33,
+      "pct_supply": 6.34,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 8.2,
+      "days": 7.2,
       "date": "2026-10-23",
-      "usd_m": 49.7,
+      "usd_m": 50.5,
       "pct_supply": 1.29,
       "big": true,
       "category": "farming"
@@ -95,19 +75,19 @@
     {
       "symbol": "APR",
       "name": "aPriori",
-      "days": 8.2,
+      "days": 7.2,
       "date": "2026-10-23",
-      "usd_m": 0.5,
-      "pct_supply": 3.45,
+      "usd_m": 0.4,
+      "pct_supply": 3.46,
       "big": true,
       "category": "noncirculating"
     },
     {
       "symbol": "INIT",
       "name": "Initia",
-      "days": 8.8,
+      "days": 7.8,
       "date": "2026-10-23",
-      "usd_m": 0.6,
+      "usd_m": 0.7,
       "pct_supply": 2.31,
       "big": true,
       "category": "noncirculating"
@@ -115,9 +95,9 @@
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 8.9,
+      "days": 7.9,
       "date": "2026-10-23",
-      "usd_m": 5.8,
+      "usd_m": 6.1,
       "pct_supply": 4.98,
       "big": true,
       "category": "insiders"
@@ -125,7 +105,7 @@
     {
       "symbol": "AVAX",
       "name": "Avalanche",
-      "days": 9.8,
+      "days": 8.8,
       "date": "2026-10-24",
       "usd_m": 16.7,
       "pct_supply": 0.38,
@@ -135,9 +115,9 @@
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 10.6,
+      "days": 9.6,
       "date": "2026-10-25",
-      "usd_m": 7.2,
+      "usd_m": 7.6,
       "pct_supply": 1.96,
       "big": true,
       "category": "ecosystem"
@@ -145,12 +125,32 @@
     {
       "symbol": "KNTQ",
       "name": "Kinetiq",
-      "days": 12.8,
+      "days": 11.8,
       "date": "2026-10-27",
       "usd_m": 3.0,
       "pct_supply": 3.12,
       "big": true,
       "category": "insiders"
+    },
+    {
+      "symbol": "B2",
+      "name": "B2 Buzz",
+      "days": 12.8,
+      "date": "2026-10-28",
+      "usd_m": 0.3,
+      "pct_supply": 1.63,
+      "big": true,
+      "category": "Uncategorized"
+    },
+    {
+      "symbol": "FF",
+      "name": "Falcon Finance",
+      "days": 13.4,
+      "date": "2026-10-29",
+      "usd_m": 8.4,
+      "pct_supply": 2.24,
+      "big": true,
+      "category": "ecosystem"
     }
   ]
 }

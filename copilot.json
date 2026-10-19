@@ -1,28 +1,9 @@
 {
-  "updated": "2026-10-18T01:19:25+00:00",
+  "updated": "2026-10-19T01:17:52+00:00",
   "regime": "bull",
-  "scanned": 81,
+  "scanned": 77,
   "flip": false,
   "setups": [
-    {
-      "symbol": "TIAUSDT",
-      "dir": "LONG",
-      "rr": 2.0,
-      "rsi7": 65.0572907372156,
-      "entry": 0.6458,
-      "stop": 0.4624,
-      "target": 1.0126000000000002,
-      "risk": 28.398885103747297,
-      "score": 5,
-      "with_regime": true,
-      "trail": 25,
-      "bars_ago": 2,
-      "still": false,
-      "chasing": true,
-      "rs": 11.2,
-      "d75": -30.7,
-      "reason": null
-    },
     {
       "symbol": "TONUSDT",
       "dir": "SHORT",

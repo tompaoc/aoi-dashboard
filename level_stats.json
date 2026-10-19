@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T01:16:36+00:00",
+  "updated": "2026-10-19T01:14:54+00:00",
   "method": "swing-pivot reject/overshoot, Daily, WIN=10",
   "assets": {
     "SOLUSDT": {
@@ -30,13 +30,13 @@
     }
   },
   "ALL": {
-    "n_interactions": 4999,
-    "n_reject": 3851,
+    "n_interactions": 5001,
+    "n_reject": 3853,
     "n_break": 1148,
     "reject_rate": 0.77,
     "overshoot_median": 4.77,
-    "overshoot_p75": 9.71,
+    "overshoot_p75": 9.72,
     "overshoot_p90": 15.72,
-    "n_overshoot": 3514
+    "n_overshoot": 3516
   }
 }

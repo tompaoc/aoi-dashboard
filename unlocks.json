@@ -1,23 +1,23 @@
 {
-  "updated": "2026-10-21T01:15:24+00:00",
+  "updated": "2026-10-22T01:17:50+00:00",
   "days_ahead": 30,
   "rows": [
     {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 1.2,
+      "days": 0.2,
       "date": "2026-10-22",
-      "usd_m": 0.4,
-      "pct_supply": 6.36,
+      "usd_m": 0.3,
+      "pct_supply": 6.33,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 2.2,
+      "days": 1.2,
       "date": "2026-10-23",
-      "usd_m": 49.3,
+      "usd_m": 49.7,
       "pct_supply": 1.29,
       "big": true,
       "category": "farming"
@@ -25,7 +25,7 @@
     {
       "symbol": "APR",
       "name": "aPriori",
-      "days": 2.2,
+      "days": 1.2,
       "date": "2026-10-23",
       "usd_m": 0.3,
       "pct_supply": 3.46,
@@ -35,7 +35,7 @@
     {
       "symbol": "INIT",
       "name": "Initia",
-      "days": 2.8,
+      "days": 1.8,
       "date": "2026-10-23",
       "usd_m": 0.6,
       "pct_supply": 2.31,
@@ -45,9 +45,9 @@
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 2.9,
+      "days": 1.9,
       "date": "2026-10-23",
-      "usd_m": 6.0,
+      "usd_m": 6.2,
       "pct_supply": 4.98,
       "big": true,
       "category": "insiders"
@@ -55,9 +55,9 @@
     {
       "symbol": "AVAX",
       "name": "Avalanche",
-      "days": 3.8,
+      "days": 2.8,
       "date": "2026-10-24",
-      "usd_m": 16.3,
+      "usd_m": 16.1,
       "pct_supply": 0.38,
       "big": false,
       "category": "insiders"
@@ -65,9 +65,9 @@
     {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 4.6,
+      "days": 3.6,
       "date": "2026-10-25",
-      "usd_m": 7.0,
+      "usd_m": 7.3,
       "pct_supply": 1.96,
       "big": true,
       "category": "ecosystem"
@@ -75,9 +75,9 @@
     {
       "symbol": "KNTQ",
       "name": "Kinetiq",
-      "days": 6.8,
+      "days": 5.8,
       "date": "2026-10-27",
-      "usd_m": 3.4,
+      "usd_m": 4.1,
       "pct_supply": 3.11,
       "big": true,
       "category": "insiders"
@@ -85,7 +85,7 @@
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 7.8,
+      "days": 6.8,
       "date": "2026-10-28",
       "usd_m": 0.3,
       "pct_supply": 1.64,
@@ -95,9 +95,9 @@
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 8.4,
+      "days": 7.4,
       "date": "2026-10-29",
-      "usd_m": 8.3,
+      "usd_m": 8.0,
       "pct_supply": 2.24,
       "big": true,
       "category": "ecosystem"
@@ -105,19 +105,19 @@
     {
       "symbol": "L3",
       "name": "Layer3",
-      "days": 8.7,
+      "days": 7.7,
       "date": "2026-10-29",
       "usd_m": 0.1,
-      "pct_supply": 1.22,
+      "pct_supply": 1.21,
       "big": true,
       "category": "insiders"
     },
     {
       "symbol": "ZORA",
       "name": "ZORA Protocol",
-      "days": 9.1,
+      "days": 8.1,
       "date": "2026-10-30",
-      "usd_m": 0.3,
+      "usd_m": 0.4,
       "pct_supply": 1.17,
       "big": true,
       "category": "insiders"
@@ -125,7 +125,7 @@
     {
       "symbol": "FLX",
       "name": "FlowX Finance",
-      "days": 9.2,
+      "days": 8.2,
       "date": "2026-10-30",
       "usd_m": 0.0,
       "pct_supply": 1.17,
@@ -135,17 +135,17 @@
     {
       "symbol": "GUN",
       "name": "Gunz",
-      "days": 9.4,
+      "days": 8.4,
       "date": "2026-10-30",
       "usd_m": 0.2,
-      "pct_supply": 1.84,
+      "pct_supply": 1.83,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "SUI",
       "name": "Sui Foundation",
-      "days": 10.1,
+      "days": 9.1,
       "date": "2026-10-31",
       "usd_m": 2.1,
       "pct_supply": 0.05,

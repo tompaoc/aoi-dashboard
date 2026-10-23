@@ -1,14 +1,14 @@
 {
-  "updated": "2026-10-22 01:17",
+  "updated": "2026-10-23 01:15",
   "regime": "bull",
   "daily": {
     "start": 5000.0,
-    "balance": 4765.23,
-    "mtm": 4853.53,
-    "return": -2.93,
-    "closed": 22,
+    "balance": 4737.05,
+    "mtm": 4776.47,
+    "return": -4.47,
+    "closed": 23,
     "wins": 7,
-    "winrate": 31.8,
+    "winrate": 30.4,
     "open": [
       {
         "sym": "COCOSUSDT",
@@ -28,11 +28,11 @@
         "sym": "NEARUSDT",
         "side": "LONG",
         "entry": 2.177,
-        "now": 5.29,
+        "now": 4.899,
         "stop": 2.177,
-        "trail": 4.61423404,
+        "trail": 4.5895381,
         "rr": 2.0,
-        "uR": 3113000000.0,
+        "uR": 2722000000.0,
         "risk_pct": 18.3,
         "notional": 143.99,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
@@ -42,11 +42,11 @@
         "sym": "JSTUSDT",
         "side": "LONG",
         "entry": 0.11044,
-        "now": 0.14053,
+        "now": 0.13935,
         "stop": 0.09373,
-        "trail": 0.11882605,
+        "trail": 0.11937216,
         "rr": 2.0,
-        "uR": 1.8,
+        "uR": 1.73,
         "risk_pct": 15.1,
         "notional": 289.99,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
@@ -56,27 +56,13 @@
         "sym": "BTCUSDT",
         "side": "LONG",
         "entry": 81623.11,
-        "now": 84186.65,
+        "now": 81446.0,
         "stop": 74967.97,
-        "trail": 79965.95892133,
+        "trail": 79830.73325742,
         "rr": 2.0,
-        "uR": 0.39,
+        "uR": -0.03,
         "risk_pct": 8.2,
         "notional": 488.24,
-        "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
-        "tf": "1D (รายวัน)"
-      },
-      {
-        "sym": "FILUSDT",
-        "side": "LONG",
-        "entry": 1.0848,
-        "now": 1.0509,
-        "stop": 0.93251263,
-        "trail": 1.01225004,
-        "rr": 1.6,
-        "uR": -0.22,
-        "risk_pct": 14.0,
-        "notional": 299.09,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
         "tf": "1D (รายวัน)"
       },
@@ -84,11 +70,11 @@
         "sym": "COMPUSDT",
         "side": "LONG",
         "entry": 25.63,
-        "now": 26.02,
+        "now": 24.63,
         "stop": 20.62,
-        "trail": 20.84009372,
+        "trail": 20.88237735,
         "rr": 2.0,
-        "uR": 0.08,
+        "uR": -0.2,
         "risk_pct": 19.5,
         "notional": 216.07,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
@@ -98,11 +84,11 @@
         "sym": "PEPEUSDT",
         "side": "LONG",
         "entry": 4.61e-06,
-        "now": 4.61e-06,
+        "now": 4.41e-06,
         "stop": 3.76e-06,
-        "trail": 3.85e-06,
+        "trail": 3.71e-06,
         "rr": 2.0,
-        "uR": 0.0,
+        "uR": -0.24,
         "risk_pct": 18.4,
         "notional": 231.27,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
@@ -112,11 +98,11 @@
         "sym": "CRVUSDT",
         "side": "LONG",
         "entry": 0.3997,
-        "now": 0.3997,
+        "now": 0.3643,
         "stop": 0.3108,
-        "trail": 0.3332561,
+        "trail": 0.31867378,
         "rr": 2.0,
-        "uR": 0.0,
+        "uR": -0.4,
         "risk_pct": 22.2,
         "notional": 191.72,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
@@ -124,11 +110,6 @@
       }
     ],
     "recent": [
-      {
-        "sym": "JSTUSDT",
-        "R": -0.03,
-        "pnl": -0.4
-      },
       {
         "sym": "GPSUSDT",
         "R": 0.0,
@@ -163,17 +144,22 @@
         "sym": "ETHUSDT",
         "R": -0.75,
         "pnl": -32.7
+      },
+      {
+        "sym": "FILUSDT",
+        "R": -0.67,
+        "pnl": -28.2
       }
     ]
   },
   "m15": {
     "start": 10000.0,
-    "balance": 10456.96,
-    "mtm": 10493.69,
-    "return": 4.94,
-    "closed": 803,
-    "wins": 238,
-    "winrate": 29.6,
+    "balance": 10481.73,
+    "mtm": 10486.0,
+    "return": 4.86,
+    "closed": 804,
+    "wins": 239,
+    "winrate": 29.7,
     "open": [
       {
         "sym": "BFUSDUSDT",
@@ -181,7 +167,7 @@
         "entry": 0.9998,
         "now": 0.9999,
         "stop": 0.99969404,
-        "trail": 0.99978813,
+        "trail": 0.99989655,
         "rr": 2.0,
         "uR": 0.94,
         "risk_pct": 0.01,
@@ -190,26 +176,21 @@
         "tf": "15m"
       },
       {
-        "sym": "NEARUSDT",
+        "sym": "DASHUSDT",
         "side": "LONG",
-        "entry": 5.086,
-        "now": 5.267,
-        "stop": 4.963,
-        "trail": 5.24691407,
+        "entry": 52.84,
+        "now": 53.05,
+        "stop": 50.55,
+        "trail": 51.73586464,
         "rr": 2.0,
-        "uR": 1.47,
-        "risk_pct": 2.42,
-        "notional": 1029.39,
-        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA50 · RSI7 73",
+        "uR": 0.09,
+        "risk_pct": 4.33,
+        "notional": 1048.17,
+        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA25 · RSI7 80",
         "tf": "15m"
       }
     ],
     "recent": [
-      {
-        "sym": "SKYUSDT",
-        "R": 3.24,
-        "pnl": 60.9
-      },
       {
         "sym": "SUIUSDT",
         "R": 0.42,
@@ -244,6 +225,11 @@
         "sym": "ETHUSDT",
         "R": 0.69,
         "pnl": 4.8
+      },
+      {
+        "sym": "NEARUSDT",
+        "R": 1.06,
+        "pnl": 24.8
       }
     ]
   }

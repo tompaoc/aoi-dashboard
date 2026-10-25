@@ -1,23 +1,13 @@
 {
-  "updated": "2026-10-24T01:15:57+00:00",
+  "updated": "2026-10-25T01:16:22+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "AVAX",
-      "name": "Avalanche",
-      "days": 0.8,
-      "date": "2026-10-24",
-      "usd_m": 14.9,
-      "pct_supply": 0.38,
-      "big": false,
-      "category": "insiders"
-    },
-    {
       "symbol": "XPL",
       "name": "Plasma",
-      "days": 1.6,
+      "days": 0.6,
       "date": "2026-10-25",
-      "usd_m": 6.6,
+      "usd_m": 6.5,
       "pct_supply": 1.96,
       "big": true,
       "category": "ecosystem"
@@ -25,9 +15,9 @@
     {
       "symbol": "KNTQ",
       "name": "Kinetiq",
-      "days": 3.8,
+      "days": 2.8,
       "date": "2026-10-27",
-      "usd_m": 3.9,
+      "usd_m": 3.7,
       "pct_supply": 3.1,
       "big": true,
       "category": "insiders"
@@ -35,27 +25,27 @@
     {
       "symbol": "B2",
       "name": "B2 Buzz",
-      "days": 4.8,
+      "days": 3.8,
       "date": "2026-10-28",
       "usd_m": 0.3,
-      "pct_supply": 1.63,
+      "pct_supply": 1.64,
       "big": true,
       "category": "Uncategorized"
     },
     {
       "symbol": "FF",
       "name": "Falcon Finance",
-      "days": 5.4,
+      "days": 4.4,
       "date": "2026-10-29",
       "usd_m": 7.4,
-      "pct_supply": 2.24,
+      "pct_supply": 2.25,
       "big": true,
       "category": "ecosystem"
     },
     {
       "symbol": "L3",
       "name": "Layer3",
-      "days": 5.7,
+      "days": 4.7,
       "date": "2026-10-29",
       "usd_m": 0.1,
       "pct_supply": 1.21,
@@ -65,9 +55,9 @@
     {
       "symbol": "ZORA",
       "name": "ZORA Protocol",
-      "days": 6.1,
+      "days": 5.1,
       "date": "2026-10-30",
-      "usd_m": 0.3,
+      "usd_m": 0.4,
       "pct_supply": 1.17,
       "big": true,
       "category": "insiders"
@@ -75,7 +65,7 @@
     {
       "symbol": "FLX",
       "name": "FlowX Finance",
-      "days": 6.2,
+      "days": 5.2,
       "date": "2026-10-30",
       "usd_m": 0.0,
       "pct_supply": 1.17,
@@ -85,17 +75,17 @@
     {
       "symbol": "GUN",
       "name": "Gunz",
-      "days": 6.4,
+      "days": 5.4,
       "date": "2026-10-30",
       "usd_m": 0.1,
-      "pct_supply": 1.81,
+      "pct_supply": 1.82,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "EIGEN",
       "name": "EigenCloud",
-      "days": 7.5,
+      "days": 6.5,
       "date": "2026-10-31",
       "usd_m": 4.0,
       "pct_supply": 2.02,
@@ -105,7 +95,7 @@
     {
       "symbol": "P",
       "name": "Pike",
-      "days": 7.6,
+      "days": 6.6,
       "date": "2026-10-31",
       "usd_m": 0.0,
       "pct_supply": 2.58,
@@ -115,9 +105,9 @@
     {
       "symbol": "M",
       "name": "MemeCore",
-      "days": 8.9,
+      "days": 7.9,
       "date": "2026-11-01",
-      "usd_m": 6.8,
+      "usd_m": 6.9,
       "pct_supply": 0.33,
       "big": false,
       "category": "insiders"
@@ -125,19 +115,19 @@
     {
       "symbol": "STO",
       "name": "StakeStone",
-      "days": 9.2,
+      "days": 8.2,
       "date": "2026-11-02",
       "usd_m": 0.3,
-      "pct_supply": 3.97,
+      "pct_supply": 3.98,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 14.8,
+      "days": 13.8,
       "date": "2026-11-07",
-      "usd_m": 23.2,
+      "usd_m": 24.0,
       "pct_supply": 4.94,
       "big": true,
       "category": "farming"
@@ -145,10 +135,20 @@
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 16.7,
+      "days": 15.7,
       "date": "2026-11-09",
       "usd_m": 0.2,
       "pct_supply": 1.32,
+      "big": true,
+      "category": "noncirculating"
+    },
+    {
+      "symbol": "ME",
+      "name": "Magic Eden",
+      "days": 16.0,
+      "date": "2026-11-10",
+      "usd_m": 0.4,
+      "pct_supply": 1.12,
       "big": true,
       "category": "noncirculating"
     }

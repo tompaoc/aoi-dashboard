@@ -1,17 +1,7 @@
 {
-  "updated": "2026-10-27T01:15:33+00:00",
+  "updated": "2026-11-01T01:18:17+00:00",
   "method": "swing-pivot reject/overshoot, Daily, WIN=10",
   "assets": {
-    "SOLUSDT": {
-      "n_interactions": 35,
-      "n_reject": 24,
-      "n_break": 11,
-      "reject_rate": 0.686,
-      "overshoot_median": 7.68,
-      "overshoot_p75": 9.61,
-      "overshoot_p90": 14.62,
-      "n_overshoot": 24
-    },
     "ETHUSDT": {
       "n_interactions": 42,
       "n_reject": 36,
@@ -22,6 +12,16 @@
       "overshoot_p90": 11.05,
       "n_overshoot": 33
     },
+    "SOLUSDT": {
+      "n_interactions": 35,
+      "n_reject": 24,
+      "n_break": 11,
+      "reject_rate": 0.686,
+      "overshoot_median": 7.68,
+      "overshoot_p75": 9.61,
+      "overshoot_p90": 14.62,
+      "n_overshoot": 24
+    },
     "BTCUSDT": {
       "n_interactions": 27,
       "n_reject": 18,
@@ -30,13 +30,13 @@
     }
   },
   "ALL": {
-    "n_interactions": 5015,
-    "n_reject": 3866,
+    "n_interactions": 5017,
+    "n_reject": 3868,
     "n_break": 1149,
     "reject_rate": 0.771,
     "overshoot_median": 4.77,
     "overshoot_p75": 9.7,
-    "overshoot_p90": 15.67,
-    "n_overshoot": 3529
+    "overshoot_p90": 15.66,
+    "n_overshoot": 3531
   }
 }

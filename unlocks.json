@@ -1,23 +1,13 @@
 {
-  "updated": "2026-11-02T01:14:55+00:00",
+  "updated": "2026-11-03T01:19:30+00:00",
   "days_ahead": 30,
   "rows": [
     {
-      "symbol": "STO",
-      "name": "StakeStone",
-      "days": 0.2,
-      "date": "2026-11-02",
-      "usd_m": 0.3,
-      "pct_supply": 3.98,
-      "big": true,
-      "category": "privateSale"
-    },
-    {
       "symbol": "STABLE",
       "name": "Stable",
-      "days": 5.8,
+      "days": 4.8,
       "date": "2026-11-07",
-      "usd_m": 23.7,
+      "usd_m": 23.8,
       "pct_supply": 4.94,
       "big": true,
       "category": "farming"
@@ -25,9 +15,9 @@
     {
       "symbol": "AGI",
       "name": "Delysium",
-      "days": 7.7,
+      "days": 6.7,
       "date": "2026-11-09",
-      "usd_m": 0.2,
+      "usd_m": 0.1,
       "pct_supply": 1.32,
       "big": true,
       "category": "noncirculating"
@@ -35,7 +25,7 @@
     {
       "symbol": "ME",
       "name": "Magic Eden",
-      "days": 8.0,
+      "days": 7.0,
       "date": "2026-11-10",
       "usd_m": 0.4,
       "pct_supply": 1.09,
@@ -45,9 +35,9 @@
     {
       "symbol": "SOL",
       "name": "Solana",
-      "days": 9.1,
+      "days": 8.1,
       "date": "2026-11-11",
-      "usd_m": 37.2,
+      "usd_m": 36.5,
       "pct_supply": 0.07,
       "big": false,
       "category": "staking"
@@ -55,7 +45,7 @@
     {
       "symbol": "LAYER",
       "name": "Solayer",
-      "days": 9.1,
+      "days": 8.1,
       "date": "2026-11-11",
       "usd_m": 1.0,
       "pct_supply": 8.4,
@@ -63,49 +53,39 @@
       "category": "ecosystem"
     },
     {
-      "symbol": "APT",
-      "name": "Aptos",
-      "days": 9.4,
-      "date": "2026-11-11",
-      "usd_m": 2.0,
-      "pct_supply": 0.36,
-      "big": false,
-      "category": "noncirculating"
-    },
-    {
       "symbol": "PUMP",
       "name": "Pump",
-      "days": 9.5,
+      "days": 8.5,
       "date": "2026-11-11",
-      "usd_m": 17.2,
-      "pct_supply": 0.91,
+      "usd_m": 16.5,
+      "pct_supply": 0.9,
       "big": false,
       "category": "insiders"
     },
     {
       "symbol": "PEAQ",
       "name": "peaq",
-      "days": 10.4,
+      "days": 9.4,
       "date": "2026-11-12",
       "usd_m": 1.0,
-      "pct_supply": 1.27,
+      "pct_supply": 1.25,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "cyber",
       "name": "CyberConnect",
-      "days": 12.0,
+      "days": 11.0,
       "date": "2026-11-14",
       "usd_m": 0.3,
-      "pct_supply": 2.05,
+      "pct_supply": 2.04,
       "big": true,
       "category": "Uncategorized"
     },
     {
       "symbol": "CONX",
       "name": "Connex",
-      "days": 12.5,
+      "days": 11.5,
       "date": "2026-11-14",
       "usd_m": 11.5,
       "pct_supply": 0,
@@ -115,27 +95,27 @@
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 13.0,
+      "days": 12.0,
       "date": "2026-11-15",
-      "usd_m": 9.2,
-      "pct_supply": 0.81,
+      "usd_m": 8.7,
+      "pct_supply": 0.82,
       "big": false,
       "category": "insiders"
     },
     {
       "symbol": "SIGN",
       "name": "Sign",
-      "days": 13.9,
+      "days": 12.9,
       "date": "2026-11-15",
       "usd_m": 1.5,
-      "pct_supply": 5.28,
+      "pct_supply": 5.27,
       "big": true,
       "category": "ecosystem"
     },
     {
       "symbol": "VANA",
       "name": "Vana",
-      "days": 14.0,
+      "days": 13.0,
       "date": "2026-11-16",
       "usd_m": 0.4,
       "pct_supply": 1.56,
@@ -145,10 +125,30 @@
     {
       "symbol": "ZEST",
       "name": "Zest",
-      "days": 14.9,
+      "days": 13.9,
       "date": "2026-11-17",
       "usd_m": 1.6,
       "pct_supply": 6.16,
+      "big": true,
+      "category": "airdrop"
+    },
+    {
+      "symbol": "RBNT",
+      "name": "Redbelly Network",
+      "days": 13.9,
+      "date": "2026-11-17",
+      "usd_m": 0.1,
+      "pct_supply": 1.61,
+      "big": true,
+      "category": "farming"
+    },
+    {
+      "symbol": "RE",
+      "name": "Re",
+      "days": 14.1,
+      "date": "2026-11-17",
+      "usd_m": 2.3,
+      "pct_supply": 4.42,
       "big": true,
       "category": "airdrop"
     }

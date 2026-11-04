@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-03T01:22:33+00:00",
-  "regime": "bull",
-  "scanned": 69,
-  "flip": false,
+  "updated": "2026-11-04T01:17:08+00:00",
+  "regime": "sideway",
+  "scanned": 71,
+  "flip": true,
   "setups": [
     {
       "symbol": "TONUSDT",

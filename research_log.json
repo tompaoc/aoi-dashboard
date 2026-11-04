@@ -3934,6 +3934,46 @@
       "week": "2/3",
       "stage": "🔴 ก่อนด่าน 1 — ราคายังใต"
     },
+    "main_regime": null,
+    "fwd_btc": 76900.0,
+    "fwd_toward_maxpain": false,
+    "fwd_wall": "no_touch"
+  },
+  {
+    "date": "2026-11-04",
+    "btc": 76900.0,
+    "oi": {
+      "call_wall": 90000,
+      "put_wall": 75000,
+      "max_pain": 80000,
+      "dist_call_pct": 17.0,
+      "dist_put_pct": -2.5,
+      "dist_mp_pct": 4.0,
+      "grow_top": [
+        {
+          "strike": 71000,
+          "oi": 1189,
+          "delta": 781
+        }
+      ]
+    },
+    "iv_hv": {
+      "spread": 5.0,
+      "state": "fair"
+    },
+    "cage": {
+      "sup": 75000,
+      "res": 80000,
+      "zone": "กลางกรอบ",
+      "pos_pct": 40,
+      "block_pct": 6.5,
+      "days": 23.3
+    },
+    "aoi": {
+      "bias": "bear",
+      "week": "2/3",
+      "stage": "🔴 ก่อนด่าน 1 — ราคายังใต"
+    },
     "main_regime": null
   }
 ]

@@ -1,28 +1,9 @@
 {
-  "updated": "2026-11-06T01:20:47+00:00",
+  "updated": "2026-11-07T01:20:55+00:00",
   "regime": "sideway",
   "scanned": 71,
-  "flip": true,
+  "flip": false,
   "setups": [
-    {
-      "symbol": "DOGEUSDT",
-      "dir": "SHORT",
-      "rr": 2.0,
-      "rsi7": 32.52127436825525,
-      "entry": 0.07199,
-      "stop": 0.07834,
-      "target": 0.05928999999999998,
-      "risk": 8.820669537435768,
-      "score": 3,
-      "with_regime": false,
-      "trail": 25,
-      "bars_ago": 2,
-      "still": true,
-      "chasing": false,
-      "rs": -5.2,
-      "d75": 14.0,
-      "reason": null
-    },
     {
       "symbol": "TONUSDT",
       "dir": "SHORT",

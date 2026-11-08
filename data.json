@@ -1,14 +1,14 @@
 {
-  "updated": "2026-11-07 01:18",
+  "updated": "2026-11-08 01:18",
   "regime": "sideway",
   "daily": {
     "start": 5000.0,
-    "balance": 4885.09,
-    "mtm": 4968.62,
-    "return": -0.63,
-    "closed": 27,
-    "wins": 8,
-    "winrate": 29.6,
+    "balance": 4890.01,
+    "mtm": 4901.55,
+    "return": -1.97,
+    "closed": 29,
+    "wins": 9,
+    "winrate": 31.0,
     "open": [
       {
         "sym": "COCOSUSDT",
@@ -28,13 +28,13 @@
         "sym": "JSTUSDT",
         "side": "LONG",
         "entry": 0.11044,
-        "now": 0.14329,
-        "stop": 0.09373,
-        "trail": 0.12593338,
+        "now": 0.14404,
+        "stop": 0.11044,
+        "trail": 0.1264412,
         "rr": 2.0,
-        "uR": 1.97,
+        "uR": 33600000.0,
         "risk_pct": 15.1,
-        "notional": 289.99,
+        "notional": 173.99,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
         "tf": "1D (รายวัน)"
       },
@@ -42,42 +42,18 @@
         "sym": "PEPEUSDT",
         "side": "LONG",
         "entry": 4.61e-06,
-        "now": 5e-06,
+        "now": 4.84e-06,
         "stop": 3.76e-06,
-        "trail": 3.96e-06,
+        "trail": 3.98e-06,
         "rr": 2.0,
-        "uR": 0.46,
+        "uR": 0.27,
         "risk_pct": 18.4,
         "notional": 231.27,
-        "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
-        "tf": "1D (รายวัน)"
-      },
-      {
-        "sym": "HOTUSDT",
-        "side": "LONG",
-        "entry": 0.000444,
-        "now": 0.000379,
-        "stop": 0.000306,
-        "trail": 0.00036337,
-        "rr": 2.0,
-        "uR": -0.47,
-        "risk_pct": 31.1,
-        "notional": 152.23,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
         "tf": "1D (รายวัน)"
       }
     ],
     "recent": [
-      {
-        "sym": "ASTERUSDT",
-        "R": -0.86,
-        "pnl": -38.7
-      },
-      {
-        "sym": "MORPHOUSDT",
-        "R": -0.61,
-        "pnl": -27.5
-      },
       {
         "sym": "ETHUSDT",
         "R": -0.75,
@@ -107,78 +83,44 @@
         "sym": "CRVUSDT",
         "R": -1.0,
         "pnl": -42.6
+      },
+      {
+        "sym": "JSTUSDT",
+        "R": 0.8,
+        "pnl": 35.1
+      },
+      {
+        "sym": "HOTUSDT",
+        "R": -0.64,
+        "pnl": -30.2
       }
     ]
   },
   "m15": {
     "start": 10000.0,
-    "balance": 9973.6,
-    "mtm": 10002.6,
-    "return": 0.03,
-    "closed": 892,
+    "balance": 9901.93,
+    "mtm": 9902.12,
+    "return": -0.98,
+    "closed": 898,
     "wins": 257,
-    "winrate": 28.8,
+    "winrate": 28.6,
     "open": [
       {
         "sym": "BFUSDUSDT",
         "side": "LONG",
         "entry": 0.9997,
-        "now": 0.9997,
+        "now": 0.9999,
         "stop": 0.99957701,
-        "trail": 0.99958397,
+        "trail": 0.99986348,
         "rr": 2.0,
-        "uR": 0.0,
+        "uR": 1.63,
         "risk_pct": 0.01,
         "notional": 993.54,
         "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.0≥1.5 · trail EMA75 · RSI7 71",
         "tf": "15m"
-      },
-      {
-        "sym": "XTZUSDT",
-        "side": "LONG",
-        "entry": 0.2683,
-        "now": 0.2761,
-        "stop": 0.2615,
-        "trail": 0.27504349,
-        "rr": 2.1,
-        "uR": 1.15,
-        "risk_pct": 2.53,
-        "notional": 997.61,
-        "reason": "15m: เทรนด์ 15m ขาขึ้น (classify_trend=up) + find_long ผ่าน RR 2.1≥1.5 · trail EMA10 · RSI7 71",
-        "tf": "15m"
       }
     ],
     "recent": [
-      {
-        "sym": "XAUTUSDT",
-        "R": 13.92,
-        "pnl": 39.0
-      },
-      {
-        "sym": "BCHUSDT",
-        "R": -1.0,
-        "pnl": -17.9
-      },
-      {
-        "sym": "UUSDT",
-        "R": -0.67,
-        "pnl": -1.7
-      },
-      {
-        "sym": "JSTUSDT",
-        "R": -0.65,
-        "pnl": -4.6
-      },
-      {
-        "sym": "GNOUSDT",
-        "R": 1.6,
-        "pnl": 45.2
-      },
-      {
-        "sym": "ARBUSDT",
-        "R": -0.48,
-        "pnl": -10.9
-      },
       {
         "sym": "RAYUSDT",
         "R": 0.82,
@@ -188,6 +130,36 @@
         "sym": "PEPEUSDT",
         "R": -0.4,
         "pnl": -17.2
+      },
+      {
+        "sym": "XTZUSDT",
+        "R": 0.06,
+        "pnl": -0.0
+      },
+      {
+        "sym": "币安人生USDT",
+        "R": -1.0,
+        "pnl": -20.7
+      },
+      {
+        "sym": "STXUSDT",
+        "R": -0.92,
+        "pnl": -17.2
+      },
+      {
+        "sym": "SPCXBUSDT",
+        "R": -1.0,
+        "pnl": -14.6
+      },
+      {
+        "sym": "GNOUSDT",
+        "R": -1.0,
+        "pnl": -11.3
+      },
+      {
+        "sym": "AAVEUSDT",
+        "R": -0.25,
+        "pnl": -7.8
       }
     ]
   }

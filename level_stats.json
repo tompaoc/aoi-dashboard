@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T01:18:45+00:00",
+  "updated": "2026-11-09T01:16:15+00:00",
   "method": "swing-pivot reject/overshoot, Daily, WIN=10",
   "assets": {
     "ETHUSDT": {
@@ -30,13 +30,13 @@
     }
   },
   "ALL": {
-    "n_interactions": 5025,
-    "n_reject": 3874,
+    "n_interactions": 5030,
+    "n_reject": 3879,
     "n_break": 1151,
     "reject_rate": 0.771,
-    "overshoot_median": 4.76,
-    "overshoot_p75": 9.69,
-    "overshoot_p90": 15.68,
-    "n_overshoot": 3537
+    "overshoot_median": 4.75,
+    "overshoot_p75": 9.68,
+    "overshoot_p90": 15.66,
+    "n_overshoot": 3542
   }
 }

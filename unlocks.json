@@ -1,33 +1,33 @@
 {
-  "updated": "2026-11-12T01:18:31+00:00",
+  "updated": "2026-11-13T01:18:21+00:00",
   "days_ahead": 30,
   "rows": [
     {
       "symbol": "cyber",
       "name": "CyberConnect",
-      "days": 2.0,
+      "days": 1.0,
       "date": "2026-11-14",
       "usd_m": 0.3,
-      "pct_supply": 2.03,
+      "pct_supply": 2.04,
       "big": true,
       "category": "Uncategorized"
     },
     {
       "symbol": "CONX",
       "name": "Connex",
-      "days": 2.5,
+      "days": 1.5,
       "date": "2026-11-14",
-      "usd_m": 7.9,
+      "usd_m": 7.7,
       "pct_supply": 0,
       "big": false,
-      "category": "noncirculating"
+      "category": ""
     },
     {
       "symbol": "ARB",
       "name": "Arbitrum Foundation",
-      "days": 3.0,
+      "days": 2.0,
       "date": "2026-11-15",
-      "usd_m": 8.6,
+      "usd_m": 8.5,
       "pct_supply": 0.82,
       "big": false,
       "category": "insiders"
@@ -35,17 +35,17 @@
     {
       "symbol": "SIGN",
       "name": "Sign",
-      "days": 3.9,
+      "days": 2.9,
       "date": "2026-11-15",
       "usd_m": 1.4,
-      "pct_supply": 5.28,
+      "pct_supply": 5.29,
       "big": true,
       "category": "ecosystem"
     },
     {
       "symbol": "VANA",
       "name": "Vana",
-      "days": 4.0,
+      "days": 3.0,
       "date": "2026-11-16",
       "usd_m": 0.3,
       "pct_supply": 1.56,
@@ -55,9 +55,9 @@
     {
       "symbol": "ZEST",
       "name": "Zest",
-      "days": 4.9,
+      "days": 3.9,
       "date": "2026-11-17",
-      "usd_m": 0.9,
+      "usd_m": 1.0,
       "pct_supply": 6.16,
       "big": true,
       "category": "airdrop"
@@ -65,19 +65,19 @@
     {
       "symbol": "RBNT",
       "name": "Redbelly Network",
-      "days": 4.9,
+      "days": 3.9,
       "date": "2026-11-17",
       "usd_m": 0.1,
       "pct_supply": 1.61,
       "big": true,
-      "category": "farming"
+      "category": ""
     },
     {
       "symbol": "RE",
       "name": "Re",
-      "days": 5.1,
+      "days": 4.1,
       "date": "2026-11-17",
-      "usd_m": 2.0,
+      "usd_m": 1.9,
       "pct_supply": 4.46,
       "big": true,
       "category": "airdrop"
@@ -85,27 +85,27 @@
     {
       "symbol": "ELSA",
       "name": "HeyElsa",
-      "days": 6.9,
+      "days": 5.9,
       "date": "2026-11-19",
       "usd_m": 0.2,
-      "pct_supply": 1.14,
+      "pct_supply": 1.16,
       "big": true,
-      "category": "noncirculating"
+      "category": "insiders"
     },
     {
       "symbol": "KAITO",
       "name": "Kaito",
-      "days": 7.1,
+      "days": 6.1,
       "date": "2026-11-19",
       "usd_m": 1.5,
-      "pct_supply": 2.98,
+      "pct_supply": 2.97,
       "big": true,
-      "category": "noncirculating"
+      "category": "insiders"
     },
     {
       "symbol": "ZRO",
       "name": "LayerZero",
-      "days": 7.6,
+      "days": 6.6,
       "date": "2026-11-19",
       "usd_m": 16.5,
       "pct_supply": 2.67,
@@ -113,42 +113,42 @@
       "category": "insiders"
     },
     {
+      "symbol": "MORPHO",
+      "name": "Morpho",
+      "days": 7.4,
+      "date": "2026-11-20",
+      "usd_m": 2.0,
+      "pct_supply": 0.14,
+      "big": false,
+      "category": "liquidity"
+    },
+    {
       "symbol": "LMTS",
       "name": "Limitless Exchange",
-      "days": 9.6,
+      "days": 8.6,
       "date": "2026-11-21",
       "usd_m": 0.2,
-      "pct_supply": 6.33,
+      "pct_supply": 6.32,
       "big": true,
       "category": "privateSale"
     },
     {
       "symbol": "GRAM",
       "name": "TON",
-      "days": 10.6,
+      "days": 9.6,
       "date": "2026-11-22",
-      "usd_m": 42.9,
+      "usd_m": 41.6,
       "pct_supply": 1.28,
       "big": true,
-      "category": "farming"
+      "category": ""
     },
     {
       "symbol": "H",
       "name": "Humanity",
-      "days": 11.4,
+      "days": 10.4,
       "date": "2026-11-23",
-      "usd_m": 2.9,
-      "pct_supply": 5.02,
-      "big": true,
-      "category": "insiders"
-    },
-    {
-      "symbol": "MON",
-      "name": "Monad",
-      "days": 12.2,
-      "date": "2026-11-24",
-      "usd_m": 178.9,
-      "pct_supply": 90.83,
+      "usd_m": 2.5,
+      "pct_supply": 5.0,
       "big": true,
       "category": "insiders"
     }

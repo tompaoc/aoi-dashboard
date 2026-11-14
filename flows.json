@@ -1,13 +1,62 @@
 {
-  "updated": "2026-11-13T01:18:20+00:00",
-  "etf": null,
+  "updated": "2026-11-14T01:18:11+00:00",
+  "etf": {
+    "recent": [
+      {
+        "date": "02 Nov 2026",
+        "flow": -398.6
+      },
+      {
+        "date": "03 Nov 2026",
+        "flow": -115.6
+      },
+      {
+        "date": "04 Nov 2026",
+        "flow": 74.6
+      },
+      {
+        "date": "05 Nov 2026",
+        "flow": -430.2
+      },
+      {
+        "date": "06 Nov 2026",
+        "flow": -411.9
+      },
+      {
+        "date": "09 Nov 2026",
+        "flow": -201.0
+      },
+      {
+        "date": "10 Nov 2026",
+        "flow": -95.0
+      },
+      {
+        "date": "11 Nov 2026",
+        "flow": -299.8
+      },
+      {
+        "date": "12 Nov 2026",
+        "flow": -284.1
+      },
+      {
+        "date": "13 Nov 2026",
+        "flow": 0.0
+      }
+    ],
+    "latest": {
+      "date": "13 Nov 2026",
+      "flow": 0.0
+    },
+    "consec_outflow": 0,
+    "outflow": false
+  },
   "btcd": {
-    "btcd": 59.31,
+    "btcd": 58.9,
     "status": "neutral",
     "note": "กลางๆ (58-62%)",
     "chg7": null,
     "n_hist": 1,
-    "total2": 0.975,
+    "total2": 0.955,
     "total2_chg7": null,
     "rotation": null,
     "ma10": null,
@@ -17,11 +66,11 @@
   "event": {
     "name": "FOMC (ดอกเบี้ย)",
     "date": "2026-12-09",
-    "days": 26,
+    "days": 25,
     "note": "ก่อน event = สภาพคล่องสูง/ผันผวน — 'กำไรเกิดแล้วต้องรักษา' (ครู)"
   },
   "vix": {
-    "vix": 18.7,
+    "vix": 19.3,
     "status": "mid",
     "note": "🟡 กลางๆ (14-20)",
     "trend": "↓ คลายกังวล"

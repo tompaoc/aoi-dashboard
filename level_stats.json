@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T01:18:23+00:00",
+  "updated": "2026-11-15T01:17:41+00:00",
   "method": "swing-pivot reject/overshoot, Daily, WIN=10",
   "assets": {
     "BTCUSDT": {
@@ -30,13 +30,13 @@
     }
   },
   "ALL": {
-    "n_interactions": 5037,
-    "n_reject": 3883,
+    "n_interactions": 5039,
+    "n_reject": 3885,
     "n_break": 1154,
     "reject_rate": 0.771,
     "overshoot_median": 4.75,
     "overshoot_p75": 9.68,
-    "overshoot_p90": 15.66,
-    "n_overshoot": 3546
+    "overshoot_p90": 15.65,
+    "n_overshoot": 3548
   }
 }

@@ -1,14 +1,14 @@
 {
-  "updated": "2026-11-14 01:18",
+  "updated": "2026-11-15 01:17",
   "regime": "sideway",
   "daily": {
     "start": 5000.0,
-    "balance": 4890.01,
-    "mtm": 4888.83,
-    "return": -2.22,
-    "closed": 29,
+    "balance": 4851.38,
+    "mtm": 4856.25,
+    "return": -2.87,
+    "closed": 30,
     "wins": 9,
-    "winrate": 31.0,
+    "winrate": 30.0,
     "open": [
       {
         "sym": "COCOSUSDT",
@@ -28,27 +28,13 @@
         "sym": "JSTUSDT",
         "side": "LONG",
         "entry": 0.11044,
-        "now": 0.145,
+        "now": 0.14186,
         "stop": 0.11044,
-        "trail": 0.1288785,
+        "trail": 0.12906216,
         "rr": 2.0,
-        "uR": 34560000.0,
+        "uR": 31420000.0,
         "risk_pct": 15.1,
         "notional": 173.99,
-        "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
-        "tf": "1D (รายวัน)"
-      },
-      {
-        "sym": "PEPEUSDT",
-        "side": "LONG",
-        "entry": 4.61e-06,
-        "now": 4.43e-06,
-        "stop": 3.76e-06,
-        "trail": 4.05e-06,
-        "rr": 2.0,
-        "uR": -0.21,
-        "risk_pct": 18.4,
-        "notional": 231.27,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
         "tf": "1D (รายวัน)"
       },
@@ -56,11 +42,11 @@
         "sym": "NIGHTUSDT",
         "side": "LONG",
         "entry": 0.04541,
-        "now": 0.04686,
+        "now": 0.04631,
         "stop": 0.03721,
-        "trail": 0.0374212,
+        "trail": 0.03762575,
         "rr": 2.0,
-        "uR": 0.18,
+        "uR": 0.11,
         "risk_pct": 18.1,
         "notional": 245.7,
         "reason": "เทรนด์ใหญ่ขึ้น(>EMA200) + close>EMA50 + MACD>0 + RSI7 overbought",
@@ -68,11 +54,6 @@
       }
     ],
     "recent": [
-      {
-        "sym": "ETHUSDT",
-        "R": -0.75,
-        "pnl": -32.7
-      },
       {
         "sym": "FILUSDT",
         "R": -0.67,
@@ -107,6 +88,11 @@
         "sym": "HOTUSDT",
         "R": -0.64,
         "pnl": -30.2
+      },
+      {
+        "sym": "PEPEUSDT",
+        "R": -0.91,
+        "pnl": -38.6
       }
     ]
   },

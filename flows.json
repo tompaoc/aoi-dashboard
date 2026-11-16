@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T01:17:30+00:00",
+  "updated": "2026-11-16T01:18:01+00:00",
   "etf": {
     "recent": [
       {
@@ -51,12 +51,12 @@
     "outflow": true
   },
   "btcd": {
-    "btcd": 58.52,
+    "btcd": 59.38,
     "status": "neutral",
     "note": "กลางๆ (58-62%)",
     "chg7": null,
     "n_hist": 1,
-    "total2": 0.894,
+    "total2": 0.89,
     "total2_chg7": null,
     "rotation": null,
     "ma10": null,
@@ -66,7 +66,7 @@
   "event": {
     "name": "FOMC (ดอกเบี้ย)",
     "date": "2026-12-09",
-    "days": 24,
+    "days": 23,
     "note": "ก่อน event = สภาพคล่องสูง/ผันผวน — 'กำไรเกิดแล้วต้องรักษา' (ครู)"
   },
   "vix": {

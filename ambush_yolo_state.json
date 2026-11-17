@@ -2,16 +2,16 @@
   "name": "YOLO · futures L+S 10x (ไม่มี SL)",
   "inception": "2026-07-01",
   "capital": 10000.0,
-  "as_of": "2026-11-16",
-  "mvrv_now": 1.187798073608769,
+  "as_of": "2026-11-17",
+  "mvrv_now": 1.2097400850398004,
   "gate_open": true,
-  "realized": 682.36,
-  "unrealized": -283.0,
-  "equity": 10399.36,
-  "ret_pct": 3.99,
-  "max_dd_pct": 21.7,
+  "realized": 150.16,
+  "unrealized": 0.0,
+  "equity": 10150.16,
+  "ret_pct": 1.5,
+  "max_dd_pct": 5.1,
   "max_notional": 7760.0,
-  "notional": 5800.0,
+  "notional": 0.0,
   "liquidated": null,
   "coins": 16,
   "note": "AMBUSH paper sleeve — ไม่ใช่เงินจริง · แยกจาก 90-day gate",
@@ -827,7 +827,14 @@
       "realized": 682.36,
       "unrealized": -283.0,
       "dd": 21.7
+    },
+    {
+      "date": "2026-11-17",
+      "equity": 10150.16,
+      "realized": 150.16,
+      "unrealized": 0.0,
+      "dd": 5.1
     }
   ],
-  "last_tick": "2026-11-16 01:16"
+  "last_tick": "2026-11-17 00:23"
 }

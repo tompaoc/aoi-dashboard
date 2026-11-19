@@ -1,46 +1,7 @@
 {
-  "updated": "2026-11-18T01:18:43+00:00",
+  "updated": "2026-11-19T01:22:42+00:00",
   "regime": "bear",
-  "scanned": 75,
+  "scanned": 74,
   "flip": false,
-  "setups": [
-    {
-      "symbol": "LUNCUSDT",
-      "dir": "SHORT",
-      "rr": 2.0,
-      "rsi7": 58.13410736615604,
-      "entry": 4.013e-05,
-      "stop": 4.403089393685479e-05,
-      "target": 3.2328212126290416e-05,
-      "risk": 9.72064275318911,
-      "score": 6,
-      "with_regime": true,
-      "trail": 25,
-      "bars_ago": 1,
-      "still": true,
-      "chasing": false,
-      "rs": 5.1,
-      "d75": 14.6,
-      "reason": null
-    },
-    {
-      "symbol": "ATMUSDT",
-      "dir": "SHORT",
-      "rr": 2.0,
-      "rsi7": 43.45025006785758,
-      "entry": 0.717,
-      "stop": 0.868,
-      "target": 0.4149999999999999,
-      "risk": 21.059972105997215,
-      "score": 6,
-      "with_regime": true,
-      "trail": 10,
-      "bars_ago": 1,
-      "still": true,
-      "chasing": false,
-      "rs": -1.2,
-      "d75": 38.4,
-      "reason": null
-    }
-  ]
+  "setups": []
 }

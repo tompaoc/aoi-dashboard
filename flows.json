@@ -1,11 +1,7 @@
 {
-  "updated": "2026-11-20T01:20:10+00:00",
+  "updated": "2026-11-21T01:20:53+00:00",
   "etf": {
     "recent": [
-      {
-        "date": "06 Nov 2026",
-        "flow": -411.9
-      },
       {
         "date": "09 Nov 2026",
         "flow": -201.0
@@ -40,23 +36,27 @@
       },
       {
         "date": "19 Nov 2026",
-        "flow": 4.7
+        "flow": -582.3
+      },
+      {
+        "date": "20 Nov 2026",
+        "flow": -52.1
       }
     ],
     "latest": {
-      "date": "19 Nov 2026",
-      "flow": 4.7
+      "date": "20 Nov 2026",
+      "flow": -52.1
     },
-    "consec_outflow": 0,
-    "outflow": false
+    "consec_outflow": 4,
+    "outflow": true
   },
   "btcd": {
-    "btcd": 58.01,
-    "status": "neutral",
-    "note": "กลางๆ (58-62%)",
+    "btcd": 57.87,
+    "status": "alt-favorable",
+    "note": "< 58% — เงินเริ่มเข้า alts",
     "chg7": null,
     "n_hist": 1,
-    "total2": 0.904,
+    "total2": 0.865,
     "total2_chg7": null,
     "rotation": null,
     "ma10": null,
@@ -66,13 +66,13 @@
   "event": {
     "name": "FOMC (ดอกเบี้ย)",
     "date": "2026-12-09",
-    "days": 19,
+    "days": 18,
     "note": "ก่อน event = สภาพคล่องสูง/ผันผวน — 'กำไรเกิดแล้วต้องรักษา' (ครู)"
   },
   "vix": {
-    "vix": 28.44,
-    "status": "elevated",
-    "note": "🟠 VIX 20-30 → อย่า short (หุ้นเริ่มกลัว crypto มักเด้งสวน — เกณฑ์ครู)",
+    "vix": 35.89,
+    "status": "fear",
+    "note": "🔴 VIX >30 → อย่า long (risk-off อันตราย — เกณฑ์ครู)",
     "trend": "↑ กังวลเพิ่ม"
   },
   "funding": null

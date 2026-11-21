@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-20T01:20:13+00:00",
+  "updated": "2026-11-21T01:20:55+00:00",
   "days_ahead": 30,
   "events": [
     {
       "date": "2026-11-25",
-      "days": 5,
+      "days": 4,
       "code": "GDP",
       "label": "GDP",
       "forecast": 3.4,
@@ -13,7 +13,7 @@
     },
     {
       "date": "2026-11-25",
-      "days": 5,
+      "days": 4,
       "code": "PCE",
       "label": "Core PCE (Fed ดูตัวนี้)",
       "forecast": 0.3,
@@ -22,7 +22,7 @@
     },
     {
       "date": "2026-12-01",
-      "days": 11,
+      "days": 10,
       "code": "ISM",
       "label": "ISM ภาคผลิต",
       "forecast": null,
@@ -31,7 +31,7 @@
     },
     {
       "date": "2026-12-01",
-      "days": 11,
+      "days": 10,
       "code": "JOLTS",
       "label": "JOLTs ตำแหน่งงาน",
       "forecast": null,
@@ -40,7 +40,7 @@
     },
     {
       "date": "2026-12-03",
-      "days": 13,
+      "days": 12,
       "code": "ISM",
       "label": "ISM ภาคบริการ",
       "forecast": null,
@@ -49,16 +49,16 @@
     },
     {
       "date": "2026-12-04",
-      "days": 14,
+      "days": 13,
       "code": "NFP",
       "label": "Non-Farm จ้างงาน",
-      "forecast": null,
+      "forecast": 93,
       "previous": 165,
       "imminent": false
     },
     {
       "date": "2026-12-10",
-      "days": 20,
+      "days": 19,
       "code": "CPI",
       "label": "CPI เงินเฟ้อ",
       "forecast": null,
@@ -67,7 +67,7 @@
     },
     {
       "date": "2026-12-15",
-      "days": 25,
+      "days": 24,
       "code": "PPI",
       "label": "PPI ราคาผู้ผลิต",
       "forecast": null,
